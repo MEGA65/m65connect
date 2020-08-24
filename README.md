@@ -1,16 +1,12 @@
 # M65Connect
 
-M65Connect is a Gui tool written with Xojo to access the MEGA65 by the JTAG adapter. It supports Windows, Mac and Linux.
+M65Connect is a GUI tool written with Xojo to access the MEGA65 for . It supports Windows, Mac and Linux.
 
-DOWNLOAD
---------
-You can download the latest builds from here: https://mega.scryptos.com/sharefolder/MEGA/MEGA65+filehost
+Supported functions
+-------------------
 
+FILE OPERATIONS
 
-SUPPORTED FUNCTIONS
-
-File operations
----------------
 - Send PRG file
 - Send SID file
 - Send Bitstream file
@@ -25,11 +21,33 @@ File operations
 - Send supported file types by Drag&Drop
 
 
+COMMAND OPERATIONS
 
-Command operations
-------------------
 - Reset MEGA65
 - Switch to 64 mode
 - Switch graphic mode
 - Take screenshot
 - Dis/Connect to MEGA65 at runtime
+- Use Terminal mode to interact directly with the MEGA65
+
+
+Hardware Requirements
+---------------------
+In order to use M65Connect you need a MEGA65 Prototype, DevKit, final MEGA65 or equivalent hardware (Nexys board) with an attached JTAG device.
+See further details in the inline manual.
+
+
+Download Builds
+---------------
+You can download the latest builds for Windows, Mac and Linux from here: https://mega.scryptos.com/sharefolder/MEGA/MEGA65+filehost
+
+
+Project Installation
+--------------------
+1. Folder Code holds the whole project, copy it to where you want to have it
+2. Folder Resources holds additional/external parts of the tool. The project expects the files/folders in it here: .../Documents/Mega65Resources/Mega65Connect
+
+
+Change Log
+----------
+- 23/08/2020: V1.0 released
