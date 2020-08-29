@@ -6,26 +6,26 @@
 					AppliesTo = 0
 					Destination = 3
 					Subdirectory = M65Connect Libs
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L0xpbnV4L0QyWFgvbGliZnRkMnh4LnNvLjEuNC44
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTGludXgvRDJYWC9saWJmdGQyeHguc28uMS40Ljg=
 				End
 				Begin CopyFilesBuildStep M65Linux
 					AppliesTo = 0
 					Destination = 1
 					Subdirectory = 
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L0xpbnV4L202NS9tNjU=
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTGludXgvbTY1L202NQ==
 				End
 				Begin CopyFilesBuildStep Bit2McsLinux
 					AppliesTo = 0
 					Destination = 1
 					Subdirectory = 
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L0xpbnV4L202NS9iaXQybWNz
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTGludXgvbTY1L2JpdDJtY3M=
 				End
 				Begin CopyFilesBuildStep BSDiffPatchLinux
 					AppliesTo = 0
 					Destination = 1
 					Subdirectory = 
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L0xpbnV4L2JzZGlmZi9ic2RpZmY=
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L0xpbnV4L2JzZGlmZi9ic3BhdGNo
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTGludXgvYnNkaWZmL2JzZGlmZg==
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTGludXgvYnNkaWZmL2JzcGF0Y2g=
 				End
 			End
 			Begin BuildStepList Mac OS X
@@ -35,27 +35,27 @@
 					AppliesTo = 0
 					Destination = 1
 					Subdirectory = 
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L01hYy9EMlhYL2xpYmZ0ZDJ4eC4xLjQuMTYuZHlsaWI=
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTWFjL0QyWFgvbGliZnRkMnh4LjEuNC4xNi5keWxpYg==
 				End
 				Begin CopyFilesBuildStep M65Mac
 					AppliesTo = 0
 					Destination = 1
 					Subdirectory = 
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L01hYy9tNjUvbGlicG5nMTYuMTYuZHlsaWI=
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L01hYy9tNjUvbTY1Lm9zeA==
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTWFjL202NS9saWJwbmcxNi4xNi5keWxpYg==
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTWFjL202NS9tNjUub3N4
 				End
 				Begin CopyFilesBuildStep Bit2McsMac
 					AppliesTo = 0
 					Destination = 1
 					Subdirectory = 
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L01hYy9tNjUvYml0Mm1jcw==
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTWFjL202NS9iaXQybWNz
 				End
 				Begin CopyFilesBuildStep BSDiffPatchMac
 					AppliesTo = 0
 					Destination = 1
 					Subdirectory = 
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L01hYy9ic2RpZmYvYnNkaWZm
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L01hYy9ic2RpZmYvYnNwYXRjaA==
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTWFjL2JzZGlmZi9ic2RpZmY=
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTWFjL2JzZGlmZi9ic3BhdGNo
 				End
 			End
 			Begin BuildStepList Windows
@@ -65,37 +65,37 @@
 					AppliesTo = 0
 					Destination = 1
 					Subdirectory = 
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L1dpbmRvd3MvbTY1L2xpYnVzYi0xLjAuZGxs
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L1dpbmRvd3MvbTY1L2xvY2F0ZV92aXZhZG8uYmF0
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L1dpbmRvd3MvbTY1L202NS5leGU=
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy9tNjUvbGlidXNiLTEuMC5kbGw=
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy9tNjUvbG9jYXRlX3ZpdmFkby5iYXQ=
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy9tNjUvbTY1LmV4ZQ==
 				End
 				Begin CopyFilesBuildStep ftd2xxWin
 					AppliesTo = 0
 					Destination = 1
 					Subdirectory = 
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L1dpbmRvd3MvRDJYWC9mdGQyeHguZGxs
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy9EMlhYL2Z0ZDJ4eC5kbGw=
 				End
 				Begin CopyFilesBuildStep xc3sprog
 					AppliesTo = 0
 					Destination = 1
 					Subdirectory = 
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L1dpbmRvd3MveGMzc3Byb2cv
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy94YzNzcHJvZy8=
 				End
 				Begin CopyFilesBuildStep Bit2McsWin
 					AppliesTo = 0
 					Destination = 1
 					Subdirectory = 
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L1dpbmRvd3MvbTY1L2JpdDJtY3MuZXhl
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy9tNjUvYml0Mm1jcy5leGU=
 				End
 				Begin CopyFilesBuildStep BSDiffPatchWin
 					AppliesTo = 0
 					Destination = 1
 					Subdirectory = 
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L1dpbmRvd3MvYnNkaWZmL2JzZGlmZi5leGU=
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L1dpbmRvd3MvYnNkaWZmL2JzcGF0Y2guZXhl
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L2J1bnppcDIuZXhl
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L2J6aXAyLmRsbA==
-					FolderItem = Li4vLi4vLi4vRG9jdW1lbnRzL01lZ2E2NVJlc291cmNlcy9NZWdhNjVDb25uZWN0L2J6aXAyLmV4ZQ==
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy9ic2RpZmYvYnNkaWZmLmV4ZQ==
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy9ic2RpZmYvYnNwYXRjaC5leGU=
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvYnVuemlwMi5leGU=
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvYnppcDIuZGxs
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvYnppcDIuZXhl
 				End
 			End
 #tag EndBuildAutomation

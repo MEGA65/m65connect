@@ -49,7 +49,7 @@ Begin Window WinSetConnection
       TabIndex        =   4
       TabPanelIndex   =   0
       TabStop         =   True
-      Tooltip         =   "Save settings and close window\n\nBe aware that changing Connection settings (excluding 'Write Mode') while there is an active connection to the MEGA65 will not be considered. Reconnect to take effect of changed settings"
+      Tooltip         =   "Save settings and close window"
       Top             =   80
       Transparent     =   False
       Underline       =   False
@@ -232,6 +232,9 @@ End
 		  
 		  WinSetConnection.Close
 		  
+		  Exception err
+		    MessageBox("Unable to save settings, most probably missing permissions. Make sure Home/Documents and below is granted to user for read/write access. " + Chr(10) + Chr(13) + "(Code: " + err.ErrorNumber.ToString) + ")"
+		    
 		End Sub
 	#tag EndEvent
 #tag EndEvents

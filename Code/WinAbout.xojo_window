@@ -237,6 +237,7 @@ Begin Window WinAbout
       AllowFocusRing  =   True
       AllowTabs       =   False
       Backdrop        =   113825791
+      DoubleBuffer    =   False
       Enabled         =   True
       Height          =   65
       Index           =   -2147483648

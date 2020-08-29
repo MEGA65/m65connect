@@ -597,9 +597,8 @@ End
 		  WinSetConnection.Close
 		  WinSetConsole.Close
 		  
-		  Exception err As IOException
-		    MessageBox("Unable to save settings, most probably missing permissions. Make sure Home/Documents/MEGA65 and below is granted to user for read/write access. " + Chr(10) + Chr(13) + "(Code: " + err.ErrorNumber.ToString) + ")"
-		    
+		  Exception err
+		    MessageBox("Unable to save settings, most probably missing permissions. Make sure Home/Documents and below is granted to user for read/write access. " + Chr(10) + Chr(13) + "(Code: " + err.ErrorNumber.ToString) + ")"
 		End Sub
 	#tag EndEvent
 #tag EndEvents

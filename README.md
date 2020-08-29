@@ -28,12 +28,13 @@ COMMAND OPERATIONS
 - Switch graphic mode
 - Take screenshot
 - Dis/Connect to MEGA65 at runtime
+- Use remote keyboard to type on MEGA65
 - Use Terminal mode to interact directly with the MEGA65
 
 
 Hardware Requirements
 ---------------------
-In order to use M65Connect you need a MEGA65 Prototype, DevKit, final MEGA65 or equivalent hardware (Nexys board) with an attached JTAG device.
+In order to use M65Connect you need a MEGA65 Prototype, DevKit, final MEGA65 or equivalent hardware (Nexys board) with an attached JTAG (TE0790-03) device.
 See further details in the inline manual.
 
 
@@ -50,4 +51,5 @@ Project Installation
 
 Change Log
 ----------
-- 23/08/2020: V1.0 released
+- 29/08/2020: V1.1 : Screenshot fix for Mac to start M65Connect from anywhere
+- 23/08/2020: V1.0 : Initial version released

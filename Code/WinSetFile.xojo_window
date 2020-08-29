@@ -639,7 +639,7 @@ End
 		  // Can't be closed in case of autoshow
 		  // WinSetFile.Close
 		  
-		  Exception err As IOException
+		  Exception err
 		    MessageBox("Unable to save settings, most probably missing permissions. Make sure Home/Documents/MEGA65 and below is granted to user for read/write access. " + Chr(10) + Chr(13) + "(Code: " + err.ErrorNumber.ToString) + ")"
 		    
 		End Sub

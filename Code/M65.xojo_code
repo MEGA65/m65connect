@@ -121,13 +121,14 @@ Protected Class M65
 		  if Command = "PIC" Then
 		    WinPreview.M65Mode = True
 		    
-		    // Switch to location where screenshot will be stored
-		    Var ScreenshotFolder As FolderItem = SpecialFolder.Resources.Parent().Child("Screenshots")
-		    //Var ImageFolder As FolderItem = SpecialFolder.Documents.child("MEGA65").Child("M65Connect").Child("Screenshots")
-		    
+		    // If M65Connect is not stored in C: screenshot will not work
 		    #If TargetWindows Then
+		      // Windows: Switch to Resources/Screenshots
+		      Var ScreenshotFolder As FolderItem = SpecialFolder.Resources.Parent().Child("Screenshots")
 		      M65Send = "cd " + Chr(34) + ScreenshotFolder.NativePath + Chr(34) + " && " + M65Send + " -S"
 		    #Else
+		      // Mac/Linux: Switch to Preferences/Screenshots
+		      Var ScreenshotFolder As FolderItem = SpecialFolder.Documents.child("MEGA65").Child("M65Connect").Child("Screenshots")
 		      M65Send = "cd " + Chr(34) + ScreenshotFolder.NativePath + Chr(34) + " ; " + M65Send + " -S"
 		    #EndIf
 		    

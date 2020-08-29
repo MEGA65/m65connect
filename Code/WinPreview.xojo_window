@@ -254,8 +254,13 @@ End
 
 	#tag Method, Flags = &h0
 		Shared Sub RefreshImageList()
-		  // Var ImageFolder As FolderItem = SpecialFolder.Documents.child("MEGA65").Child("M65Connect").Child("Screenshots")
-		  Var ScreenshotFolder As FolderItem = SpecialFolder.Resources.Parent().Child("Screenshots")
+		  // If M65Connect is not stored in C: screenshot will not work
+		  #If TargetWindows Then
+		    Var ScreenshotFolder As FolderItem = SpecialFolder.Resources.Parent().Child("Screenshots")
+		  #Else
+		    // Mac/Linux
+		    Var ScreenshotFolder As FolderItem = SpecialFolder.Documents.child("MEGA65").Child("M65Connect").Child("Screenshots")
+		  #EndIf
 		  
 		  Var OldIndex As Integer = -1
 		  Var NewIndex As Integer = -1
@@ -289,7 +294,6 @@ End
 		    // Get index of new or latest screenshot
 		    If NewIndex = -1 And ActiveList.IndexOf( NewList(I) ) = -1 Then
 		      NewIndex = NewList.LastRowIndex - I
-		      
 		    End If
 		    
 		    // Get index on highest number (ensured by reverse insert)
@@ -298,10 +302,12 @@ End
 		    End If
 		  Next
 		  
+		  //msgbox (str(NewIndex))
+		  
 		  // Backup new list to current list
 		  ActiveList = NewList
 		  
-		  // Set list to  found MEGA65 screenshot
+		  // Set list to new MEGA65 screenshot
 		  If NewIndex > -1 Then 
 		    WinPreview.ImageList.SelectedRowIndex = NewIndex
 		  Else
@@ -312,7 +318,7 @@ End
 		    End If
 		  End 
 		  
-		  // Show initial image
+		  // Show image based on dropdown list 
 		  Var FileName As String = WinPreview.ImageList.SelectedRowValue 
 		  WinPreview.ScreenshotView.Image = Picture.Open( ScreenshotFolder.Child(FileName) )
 		  
@@ -346,8 +352,13 @@ End
 #tag Events ImageList
 	#tag Event
 		Sub Change()
-		  //Var ImageFolder As FolderItem = SpecialFolder.Documents.child("MEGA65").Child("M65Connect").Child("Screenshots")
-		  Var ScreenshotFolder As FolderItem = SpecialFolder.Resources.Parent().Child("Screenshots")
+		  // If M65Connect is not stored in C: screenshot will not work
+		  #If TargetWindows Then
+		    Var ScreenshotFolder As FolderItem = SpecialFolder.Resources.Parent().Child("Screenshots")
+		  #Else
+		    // Mac/Linux
+		    Var ScreenshotFolder As FolderItem = SpecialFolder.Documents.child("MEGA65").Child("M65Connect").Child("Screenshots")
+		  #EndIf
 		  
 		  Var FileName As String = ImageList.SelectedRowValue 
 		  
@@ -372,19 +383,31 @@ End
 #tag Events PushDelete
 	#tag Event
 		Sub Action()
-		  // Var ImageFolder As FolderItem = SpecialFolder.Documents.child("MEGA65").Child("M65Connect").Child("Screenshots")
-		  Var ScreenshotFolder As FolderItem = SpecialFolder.Resources.Parent().Child("Screenshots")
+		  // If M65Connect is not stored in C: screenshot will not work
+		  #If TargetWindows Then
+		    Var ScreenshotFolder As FolderItem = SpecialFolder.Resources.Parent().Child("Screenshots")
+		  #Else
+		    // Mac/Linux
+		    Var ScreenshotFolder As FolderItem = SpecialFolder.Documents.child("MEGA65").Child("M65Connect").Child("Screenshots")
+		  #EndIf
 		  
 		  // Append chosen image
 		  Var Image As FolderItem = ScreenshotFolder.Child(ImageList.SelectedRowValue)
-		  
 		  
 		  If Image.Exists Then
 		    // Delete image
 		    Image.Remove
 		    
+		    // Find and remove deleted image in activeList
+		    For i As Integer = ActiveList.LastRowIndex To 0 Step -1
+		      If ImageList.SelectedRowValue = ActiveList(i) Then
+		        ActiveList.RemoveRowAt(i)
+		        Exit
+		      End If
+		    Next
+		    
+		    // Remove image from dropdown list
 		    Var Index As Integer = ImageList.SelectedRowIndex
-		    // Remove from list
 		    ImageList.RemoveRowAt(Index)
 		    
 		    // Set next image if available
@@ -407,7 +430,13 @@ End
 #tag Events PushSaveAs
 	#tag Event
 		Sub Action()
-		  Var ImageFolder As FolderItem = SpecialFolder.Documents.child("MEGA65").Child("M65Connect").Child("Screenshots")
+		  // If M65Connect is not stored in C: screenshot will not work
+		  #If TargetWindows Then
+		    Var ImageFolder As FolderItem = SpecialFolder.Resources.Parent().Child("Screenshots")
+		  #Else
+		    // Mac/Linux
+		    Var ImageFolder As FolderItem = SpecialFolder.Documents.child("MEGA65").Child("M65Connect").Child("Screenshots")
+		  #EndIf
 		  
 		  // Append chosen image
 		  Var Image As FolderItem = ImageFolder.Child(ImageList.SelectedRowValue)

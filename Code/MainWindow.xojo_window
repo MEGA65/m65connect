@@ -853,8 +853,10 @@ Begin Window MainWindow
       ExecuteMode     =   "1"
       ExitCode        =   0
       Index           =   -2147483648
+      IsRunning       =   False
       LockedInPosition=   False
       PID             =   0
+      Result          =   ""
       Scope           =   0
       TabPanelIndex   =   0
       TimeOut         =   0

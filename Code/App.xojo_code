@@ -25,7 +25,7 @@ Inherits Application
 		    StartFolder.Child("MEGA65").CreateFolder
 		  End If
 		  
-		  // Create folder M65Connect Documents
+		  // Create folder M65Connect in Documents
 		  If Not StartFolder.Child("MEGA65").Child("M65Connect").Exists Then
 		    StartFolder.Child("MEGA65").Child("M65Connect").CreateFolder
 		  End If
@@ -58,10 +58,19 @@ Inherits Application
 		    PathSource.CopyTo(TargetPref.Child("path"))
 		  End If
 		  
-		  // Create folder Screenshots in M65Connect
-		  If Not AppRoot.Child("Screenshots").Exists Then
-		    AppRoot.Child("Screenshots").CreateFolder
-		  End If
+		  
+		  // If M65Connect is not stored in C: screenshot will not work
+		  #If TargetWindows Then
+		    // Create folder Screenshots in M65Connect
+		    If Not AppRoot.Child("Screenshots").Exists Then
+		      AppRoot.Child("Screenshots").CreateFolder
+		    End If
+		  #Else
+		    // Mac/Linux
+		    If Not StartFolder.Child("MEGA65").Child("M65Connect").Child("Screenshots").Exists Then
+		      StartFolder.Child("MEGA65").Child("M65Connect").Child("Screenshots").CreateFolder
+		    End If
+		  #EndIf
 		  
 		  // Read and set current Connection settings
 		  If TargetPref.Child("connection").Exists Then
@@ -209,7 +218,9 @@ Inherits Application
 		    MainWindow.TerminalMode.Height = 24
 		  #EndIf
 		  
-		  
+		  Exception err As IOException
+		    MessageBox("Unable to create directory structure, most probably missing permissions. Make sure Home/Documents is granted to user for read/write access. " + Chr(10) + Chr(13) + "(Code: " + err.ErrorNumber.ToString) + ")"
+		    
 		End Sub
 	#tag EndEvent
 

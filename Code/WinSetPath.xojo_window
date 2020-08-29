@@ -1382,6 +1382,9 @@ End
 		  Terminal.SetM65Options()
 		  
 		  WinSetPath.Close
+		  
+		  Exception err
+		    MessageBox("Unable to save settings, most probably missing permissions. Make sure Home/Documents and below is granted to user for read/write access. " + Chr(10) + Chr(13) + "(Code: " + err.ErrorNumber.ToString) + ")"
 		End Sub
 	#tag EndEvent
 #tag EndEvents
