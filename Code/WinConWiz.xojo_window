@@ -3,7 +3,7 @@ Begin Window WinConWiz
    Backdrop        =   0
    BackgroundColor =   &cFFFFFF00
    Composite       =   False
-   DefaultLocation =   "0"
+   DefaultLocation =   0
    FullScreen      =   False
    HasBackgroundColor=   False
    HasCloseButton  =   False
@@ -21,7 +21,7 @@ Begin Window WinConWiz
    MinimumWidth    =   64
    Resizeable      =   False
    Title           =   "Connection Wizard"
-   Type            =   "1"
+   Type            =   1
    Visible         =   True
    Width           =   500
    Begin PushButton PushPortProceed
@@ -44,7 +44,7 @@ Begin Window WinConWiz
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   4
       TabPanelIndex   =   0
@@ -76,7 +76,7 @@ Begin Window WinConWiz
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   3
       TabPanelIndex   =   0
@@ -113,7 +113,7 @@ Begin Window WinConWiz
       TabIndex        =   1
       TabPanelIndex   =   0
       TabStop         =   False
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   20
@@ -148,7 +148,7 @@ Begin Window WinConWiz
       TabIndex        =   2
       TabPanelIndex   =   0
       TabStop         =   False
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   64

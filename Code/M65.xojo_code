@@ -66,7 +66,14 @@ Protected Class M65
 		  // Prepare findpath and execute command
 		  Var VivadoFinder As New FolderItem( SpecialFolder.Resources.child("locate_vivado.bat") )
 		  Var Command As String = Chr(34) + VivadoFinder.NativePath + Chr(34)
-		  MainWindow.WinPathExec.Execute(Command)
+		  
+		  // MainWindow.WinPathExec.Execute(Command)
+		  
+		  Exception err As IOException
+		    MessageBox(err.Message + ". Error Code: " + err.ErrorNumber.ToString)
+		    
+		    
+		    
 		End Sub
 	#tag EndMethod
 

@@ -3,7 +3,7 @@ Begin Window WinSetConnection
    Backdrop        =   0
    BackgroundColor =   &cFFFFFF00
    Composite       =   False
-   DefaultLocation =   "0"
+   DefaultLocation =   0
    FullScreen      =   False
    HasBackgroundColor=   False
    HasCloseButton  =   True
@@ -21,7 +21,7 @@ Begin Window WinSetConnection
    MinimumWidth    =   64
    Resizeable      =   False
    Title           =   "Connection Settings"
-   Type            =   "1"
+   Type            =   1
    Visible         =   False
    Width           =   450
    Begin PushButton PushSave
@@ -44,7 +44,7 @@ Begin Window WinSetConnection
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   False
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   4
       TabPanelIndex   =   0
@@ -76,7 +76,7 @@ Begin Window WinSetConnection
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   False
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   5
       TabPanelIndex   =   0
@@ -108,7 +108,7 @@ Begin Window WinSetConnection
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   False
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   3
       TabPanelIndex   =   0
@@ -145,7 +145,7 @@ Begin Window WinSetConnection
       TabIndex        =   1
       TabPanelIndex   =   0
       TabStop         =   False
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   20

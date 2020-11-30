@@ -58,7 +58,6 @@ Inherits Application
 		    PathSource.CopyTo(TargetPref.Child("path"))
 		  End If
 		  
-		  
 		  // If M65Connect is not stored in C: screenshot will not work
 		  #If TargetWindows Then
 		    // Create folder Screenshots in M65Connect

@@ -71,9 +71,10 @@
 				End
 				Begin CopyFilesBuildStep ftd2xxWin
 					AppliesTo = 0
-					Destination = 1
+					Destination = 0
 					Subdirectory = 
 					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy9EMlhYL2Z0ZDJ4eC5kbGw=
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy9EMlhYL3JlYWRtZV9kcml2ZXJfaW5zdGFsbGF0aW9uLnR4dA==
 				End
 				Begin CopyFilesBuildStep xc3sprog
 					AppliesTo = 0

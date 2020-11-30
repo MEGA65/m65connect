@@ -3,7 +3,7 @@ Begin Window WinSendBasic
    Backdrop        =   0
    BackgroundColor =   &cFFFFFF00
    Composite       =   False
-   DefaultLocation =   "0"
+   DefaultLocation =   0
    FullScreen      =   False
    HasBackgroundColor=   False
    HasCloseButton  =   False
@@ -21,7 +21,7 @@ Begin Window WinSendBasic
    MinimumWidth    =   64
    Resizeable      =   False
    Title           =   "Send BASIC Program"
-   Type            =   "1"
+   Type            =   1
    Visible         =   True
    Width           =   800
    Begin PushButton PushClose
@@ -44,7 +44,7 @@ Begin Window WinSendBasic
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   5
       TabPanelIndex   =   0
@@ -93,12 +93,13 @@ Begin Window WinSendBasic
       TabIndex        =   1
       TabPanelIndex   =   0
       TabStop         =   True
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   55
       Transparent     =   False
       Underline       =   False
+      UnicodeMode     =   0
       ValidationMask  =   ""
       Value           =   ""
       Visible         =   True
@@ -124,7 +125,7 @@ Begin Window WinSendBasic
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   4
       TabPanelIndex   =   0
@@ -156,7 +157,7 @@ Begin Window WinSendBasic
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   2
       TabPanelIndex   =   0
@@ -188,7 +189,7 @@ Begin Window WinSendBasic
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   3
       TabPanelIndex   =   0
@@ -225,7 +226,7 @@ Begin Window WinSendBasic
       TabIndex        =   0
       TabPanelIndex   =   0
       TabStop         =   False
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   20

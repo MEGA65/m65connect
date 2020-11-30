@@ -3,7 +3,7 @@ Begin Window WinCreateCOR
    Backdrop        =   0
    BackgroundColor =   &cFFFFFF00
    Composite       =   False
-   DefaultLocation =   "0"
+   DefaultLocation =   0
    FullScreen      =   False
    HasBackgroundColor=   False
    HasCloseButton  =   True
@@ -21,7 +21,7 @@ Begin Window WinCreateCOR
    MinimumWidth    =   64
    Resizeable      =   True
    Title           =   "Create COR file"
-   Type            =   "1"
+   Type            =   1
    Visible         =   True
    Width           =   550
    Begin TextField TextSourceFile
@@ -56,7 +56,7 @@ Begin Window WinCreateCOR
       TabIndex        =   0
       TabPanelIndex   =   0
       TabStop         =   False
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   "Source file of type BIT"
       Top             =   54
@@ -92,7 +92,7 @@ Begin Window WinCreateCOR
       TabIndex        =   1
       TabPanelIndex   =   0
       TabStop         =   True
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   20
@@ -106,13 +106,13 @@ Begin Window WinCreateCOR
       AllowAutoDeactivate=   True
       AllowFocus      =   True
       BackgroundColor =   &c00000000
-      BevelStyle      =   "0"
+      BevelStyle      =   0
       Bold            =   False
-      ButtonStyle     =   "0"
+      ButtonStyle     =   0
       Caption         =   ""
-      CaptionAlignment=   "3"
+      CaptionAlignment=   3
       CaptionDelta    =   0
-      CaptionPosition =   "1"
+      CaptionPosition =   1
       Enabled         =   True
       FontName        =   "System"
       FontSize        =   0.0
@@ -120,7 +120,7 @@ Begin Window WinCreateCOR
       HasBackgroundColor=   False
       Height          =   32
       Icon            =   2139172863
-      IconAlignment   =   "1"
+      IconAlignment   =   1
       IconDeltaX      =   0
       IconDeltaY      =   0
       Index           =   -2147483648
@@ -132,7 +132,7 @@ Begin Window WinCreateCOR
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   True
-      MenuStyle       =   "0"
+      MenuStyle       =   0
       Scope           =   0
       TabIndex        =   1
       TabPanelIndex   =   0
@@ -178,7 +178,7 @@ Begin Window WinCreateCOR
       TabIndex        =   1
       TabPanelIndex   =   0
       TabStop         =   True
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   "Displayed name in the COR selection list (required)"
       Top             =   132
@@ -214,7 +214,7 @@ Begin Window WinCreateCOR
       TabIndex        =   4
       TabPanelIndex   =   0
       TabStop         =   True
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   98
@@ -249,7 +249,7 @@ Begin Window WinCreateCOR
       TabIndex        =   5
       TabPanelIndex   =   0
       TabStop         =   True
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   179
@@ -279,7 +279,7 @@ Begin Window WinCreateCOR
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   4
       TabPanelIndex   =   0
@@ -323,7 +323,7 @@ Begin Window WinCreateCOR
       TabIndex        =   3
       TabPanelIndex   =   0
       TabStop         =   True
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   "Displayed version in the COR selection list (optional)"
       Top             =   212
@@ -354,7 +354,7 @@ Begin Window WinCreateCOR
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   5
       TabPanelIndex   =   0

@@ -3,7 +3,7 @@ Begin Window WinCreatePatch
    Backdrop        =   0
    BackgroundColor =   &cFFFFFF00
    Composite       =   False
-   DefaultLocation =   "0"
+   DefaultLocation =   0
    FullScreen      =   False
    HasBackgroundColor=   False
    HasCloseButton  =   True
@@ -21,7 +21,7 @@ Begin Window WinCreatePatch
    MinimumWidth    =   64
    Resizeable      =   True
    Title           =   "Create ROM Patch File"
-   Type            =   "1"
+   Type            =   1
    Visible         =   True
    Width           =   550
    Begin TextField OriginalFile
@@ -56,7 +56,7 @@ Begin Window WinCreatePatch
       TabIndex        =   0
       TabPanelIndex   =   0
       TabStop         =   False
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   "Path to unchanged ROM file"
       Top             =   54
@@ -92,7 +92,7 @@ Begin Window WinCreatePatch
       TabIndex        =   1
       TabPanelIndex   =   0
       TabStop         =   True
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   20
@@ -106,13 +106,13 @@ Begin Window WinCreatePatch
       AllowAutoDeactivate=   True
       AllowFocus      =   True
       BackgroundColor =   &c00000000
-      BevelStyle      =   "0"
+      BevelStyle      =   0
       Bold            =   False
-      ButtonStyle     =   "0"
+      ButtonStyle     =   0
       Caption         =   ""
-      CaptionAlignment=   "3"
+      CaptionAlignment=   3
       CaptionDelta    =   0
-      CaptionPosition =   "1"
+      CaptionPosition =   1
       Enabled         =   True
       FontName        =   "System"
       FontSize        =   0.0
@@ -120,7 +120,7 @@ Begin Window WinCreatePatch
       HasBackgroundColor=   False
       Height          =   32
       Icon            =   2139172863
-      IconAlignment   =   "1"
+      IconAlignment   =   1
       IconDeltaX      =   0
       IconDeltaY      =   0
       Index           =   -2147483648
@@ -132,7 +132,7 @@ Begin Window WinCreatePatch
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   True
-      MenuStyle       =   "0"
+      MenuStyle       =   0
       Scope           =   0
       TabIndex        =   1
       TabPanelIndex   =   0
@@ -166,7 +166,7 @@ Begin Window WinCreatePatch
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   False
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   4
       TabPanelIndex   =   0
@@ -198,7 +198,7 @@ Begin Window WinCreatePatch
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   False
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   5
       TabPanelIndex   =   0
@@ -242,7 +242,7 @@ Begin Window WinCreatePatch
       TabIndex        =   2
       TabPanelIndex   =   0
       TabStop         =   False
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   "Path to modified ROM file"
       Top             =   132
@@ -278,7 +278,7 @@ Begin Window WinCreatePatch
       TabIndex        =   11
       TabPanelIndex   =   0
       TabStop         =   True
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   98
@@ -292,13 +292,13 @@ Begin Window WinCreatePatch
       AllowAutoDeactivate=   True
       AllowFocus      =   True
       BackgroundColor =   &c00000000
-      BevelStyle      =   "0"
+      BevelStyle      =   0
       Bold            =   False
-      ButtonStyle     =   "0"
+      ButtonStyle     =   0
       Caption         =   ""
-      CaptionAlignment=   "3"
+      CaptionAlignment=   3
       CaptionDelta    =   0
-      CaptionPosition =   "1"
+      CaptionPosition =   1
       Enabled         =   True
       FontName        =   "System"
       FontSize        =   0.0
@@ -306,7 +306,7 @@ Begin Window WinCreatePatch
       HasBackgroundColor=   False
       Height          =   32
       Icon            =   2139172863
-      IconAlignment   =   "1"
+      IconAlignment   =   1
       IconDeltaX      =   0
       IconDeltaY      =   0
       Index           =   -2147483648
@@ -318,7 +318,7 @@ Begin Window WinCreatePatch
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   True
-      MenuStyle       =   "0"
+      MenuStyle       =   0
       Scope           =   0
       TabIndex        =   3
       TabPanelIndex   =   0

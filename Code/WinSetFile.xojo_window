@@ -3,7 +3,7 @@ Begin Window WinSetFile
    Backdrop        =   0
    BackgroundColor =   &cFFFFFF00
    Composite       =   False
-   DefaultLocation =   "0"
+   DefaultLocation =   0
    FullScreen      =   False
    HasBackgroundColor=   False
    HasCloseButton  =   True
@@ -21,7 +21,7 @@ Begin Window WinSetFile
    MinimumWidth    =   64
    Resizeable      =   True
    Title           =   "PRG File Send Settings"
-   Type            =   "1"
+   Type            =   1
    Visible         =   False
    Width           =   400
    Begin CheckBox SetReset
@@ -45,6 +45,7 @@ Begin Window WinSetFile
       LockRight       =   False
       LockTop         =   True
       Scope           =   0
+      State           =   1
       TabIndex        =   1
       TabPanelIndex   =   0
       TabStop         =   True
@@ -52,9 +53,8 @@ Begin Window WinSetFile
       Top             =   20
       Transparent     =   False
       Underline       =   False
-      Value           =   False
+      Value           =   True
       Visible         =   True
-      VisualState     =   "1"
       Width           =   350
    End
    Begin CheckBox SetRun
@@ -78,6 +78,7 @@ Begin Window WinSetFile
       LockRight       =   False
       LockTop         =   True
       Scope           =   0
+      State           =   1
       TabIndex        =   11
       TabPanelIndex   =   0
       TabStop         =   True
@@ -85,9 +86,8 @@ Begin Window WinSetFile
       Top             =   247
       Transparent     =   False
       Underline       =   False
-      Value           =   False
+      Value           =   True
       Visible         =   True
-      VisualState     =   "1"
       Width           =   360
    End
    Begin GroupBox GroupBoxLoadWith
@@ -229,7 +229,7 @@ Begin Window WinSetFile
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   False
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   14
       TabPanelIndex   =   0
@@ -262,6 +262,7 @@ Begin Window WinSetFile
       LockRight       =   False
       LockTop         =   True
       Scope           =   0
+      State           =   1
       TabIndex        =   13
       TabPanelIndex   =   0
       TabStop         =   True
@@ -269,9 +270,8 @@ Begin Window WinSetFile
       Top             =   277
       Transparent     =   False
       Underline       =   False
-      Value           =   False
+      Value           =   True
       Visible         =   True
-      VisualState     =   "1"
       Width           =   350
    End
    Begin PushButton PushClose
@@ -294,7 +294,7 @@ Begin Window WinSetFile
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   False
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   16
       TabPanelIndex   =   0
@@ -327,6 +327,7 @@ Begin Window WinSetFile
       LockRight       =   False
       LockTop         =   True
       Scope           =   0
+      State           =   1
       TabIndex        =   2
       TabPanelIndex   =   0
       TabStop         =   True
@@ -334,9 +335,8 @@ Begin Window WinSetFile
       Top             =   51
       Transparent     =   False
       Underline       =   False
-      Value           =   False
+      Value           =   True
       Visible         =   True
-      VisualState     =   "1"
       Width           =   331
    End
    Begin Label LabelForceVideo
@@ -364,7 +364,7 @@ Begin Window WinSetFile
       TabIndex        =   0
       TabPanelIndex   =   0
       TabStop         =   False
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   164
@@ -518,7 +518,7 @@ Begin Window WinSetFile
       TabIndex        =   0
       TabPanelIndex   =   0
       TabStop         =   False
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   84
@@ -548,7 +548,7 @@ Begin Window WinSetFile
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   False
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   17
       TabPanelIndex   =   0

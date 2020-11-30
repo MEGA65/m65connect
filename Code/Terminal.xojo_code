@@ -267,7 +267,15 @@ Protected Class Terminal
 		    Var EndOfLine As String = EndOfLine.UNIX
 		  #EndIf
 		  
+		  // For testing purposes
+		  'If System.IsFunctionAvailable("FT_CreateDeviceInfoList", D2XXLib) Then
+		  'msgbox ("Function found")
+		  'else
+		  'msgbox ("Function not found")
+		  'end if
+		  
 		  Soft Declare Function CreateDeviceInfoList Lib D2XXLib Alias "FT_CreateDeviceInfoList" (ByRef NumDevs As UInt64) As UInt32
+		  
 		  
 		  // CreateDeviceInfoList to get amount of available FTDI devices
 		  Status = CreateDeviceInfoList(numDevs)
@@ -300,7 +308,9 @@ Protected Class Terminal
 		    MainWindow.StatusText.Value = "Not connected to MEGA65"
 		  End If 
 		  
-		  
+		  Exception err As FunctionNotFoundException
+		    MsgBox("There is a problem with the installed USB serial driver. Please check out readme_driver_installation.txt (where M65Connect.exe is located)")
+		    
 		End Sub
 	#tag EndMethod
 

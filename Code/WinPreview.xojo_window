@@ -3,7 +3,7 @@ Begin Window WinPreview
    Backdrop        =   0
    BackgroundColor =   &cFFFFFF00
    Composite       =   False
-   DefaultLocation =   "0"
+   DefaultLocation =   0
    FullScreen      =   False
    HasBackgroundColor=   False
    HasCloseButton  =   True
@@ -21,7 +21,7 @@ Begin Window WinPreview
    MinimumWidth    =   780
    Resizeable      =   True
    Title           =   "Screenshot MEGA65"
-   Type            =   "1"
+   Type            =   1
    Visible         =   False
    Width           =   780
    Begin ImageWell ScreenshotView
@@ -99,7 +99,7 @@ Begin Window WinPreview
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   False
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   5
       TabPanelIndex   =   0
@@ -131,7 +131,7 @@ Begin Window WinPreview
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   False
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   4
       TabPanelIndex   =   0
@@ -163,7 +163,7 @@ Begin Window WinPreview
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   False
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   2
       TabPanelIndex   =   0
@@ -195,7 +195,7 @@ Begin Window WinPreview
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   False
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   3
       TabPanelIndex   =   0

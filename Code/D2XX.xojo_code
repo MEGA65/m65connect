@@ -27,6 +27,9 @@ Protected Class D2XX
 		  Else
 		    MainWindow.StatusText.Value = "Error closing connection (" + Status.ToString + ")"
 		  End If
+		  
+		  Exception err As FunctionNotFoundException
+		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
 		End Sub
 	#tag EndMethod
 
@@ -67,7 +70,10 @@ Protected Class D2XX
 		  
 		  Return  numDevs
 		  
-		  
+		  Exception err As FunctionNotFoundException
+		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
+		    
+		    
 		End Function
 	#tag EndMethod
 
@@ -102,6 +108,9 @@ Protected Class D2XX
 		    MainWindow.StatusText.Value = "Error on setting BitMode (" + Status.ToString + ")"
 		  End If
 		  
+		  Exception err As FunctionNotFoundException
+		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
+		    
 		End Sub
 	#tag EndMethod
 
@@ -139,6 +148,9 @@ Protected Class D2XX
 		    MainWindow.StatusText.Value = "Error on reading ComPort number (" + Status.ToString + ")"
 		    Return -1
 		  End If
+		  
+		  Exception err As FunctionNotFoundException
+		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
 		End Function
 	#tag EndMethod
 
@@ -245,7 +257,11 @@ Protected Class D2XX
 		  
 		  Return Status
 		  
-		  
+		  Exception err As FunctionNotFoundException
+		    msgbox("drin3")
+		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
+		    
+		    
 		End Function
 	#tag EndMethod
 
@@ -278,6 +294,9 @@ Protected Class D2XX
 		  Else
 		    MainWindow.StatusText.Value = "Error reading Latency Timer (" + Status.ToString + ")"
 		  End If
+		  
+		  Exception err As FunctionNotFoundException
+		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
 		End Sub
 	#tag EndMethod
 
@@ -311,6 +330,9 @@ Protected Class D2XX
 		  Else
 		    MainWindow.StatusText.Value = "Error on reading queue status (" + Status.ToString + ")"
 		  End If
+		  
+		  Exception err As FunctionNotFoundException
+		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
 		End Sub
 	#tag EndMethod
 
@@ -348,6 +370,9 @@ Protected Class D2XX
 		    Return false
 		  End If
 		  
+		  Exception err As FunctionNotFoundException
+		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
+		    
 		End Function
 	#tag EndMethod
 
@@ -387,7 +412,10 @@ Protected Class D2XX
 		    MainWindow.StatusText.Value = "Unable to read data (" + Status.ToString + ")"
 		  End If
 		  
-		  
+		  Exception err As FunctionNotFoundException
+		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
+		    
+		    
 		End Sub
 	#tag EndMethod
 
@@ -421,7 +449,10 @@ Protected Class D2XX
 		    MainWindow.StatusText.Value = "Error resetting device (" + Status.ToString + ")"
 		  End If
 		  
-		  
+		  Exception err As FunctionNotFoundException
+		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
+		    
+		    
 		End Sub
 	#tag EndMethod
 
@@ -455,7 +486,9 @@ Protected Class D2XX
 		    MainWindow.StatusText.Value = "Error on setting baud rate (" + Status.ToString + ")"
 		  End If
 		  
-		  
+		  Exception err As FunctionNotFoundException
+		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
+		    
 		End Sub
 	#tag EndMethod
 
@@ -492,6 +525,8 @@ Protected Class D2XX
 		    MainWindow.StatusText.Value = "Error on setting BitMode (" + Status.ToString + ")"
 		  End If
 		  
+		  Exception err As FunctionNotFoundException
+		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
 		End Sub
 	#tag EndMethod
 
@@ -529,7 +564,10 @@ Protected Class D2XX
 		    MainWindow.StatusText.Value = "Error on setting chars (" + Status.ToString + ")"
 		  End If
 		  
-		  
+		  Exception err As FunctionNotFoundException
+		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
+		    
+		    
 		End Sub
 	#tag EndMethod
 
@@ -565,8 +603,11 @@ Protected Class D2XX
 		    MainWindow.StatusText.Value = "Error setting data characteristics (" + Status.ToString + ")"
 		  End If
 		  
-		  
-		  
+		  Exception err As FunctionNotFoundException
+		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
+		    
+		    
+		    
 		End Sub
 	#tag EndMethod
 
@@ -602,9 +643,12 @@ Protected Class D2XX
 		    MainWindow.StatusText.Value = "Error setting flow control (" + Status.ToString + ")"
 		  End If
 		  
-		  
-		  
-		  
+		  Exception err As FunctionNotFoundException
+		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
+		    
+		    
+		    
+		    
 		End Sub
 	#tag EndMethod
 
@@ -637,6 +681,9 @@ Protected Class D2XX
 		  Else
 		    MainWindow.StatusText.Value = "Error setting Latency Timer (" + Status.ToString + ")"
 		  End If
+		  
+		  Exception err As FunctionNotFoundException
+		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
 		End Sub
 	#tag EndMethod
 
@@ -671,6 +718,9 @@ Protected Class D2XX
 		  Else
 		    MainWindow.StatusText.Value = "Error setting Read/write Timeouts (" + Status.ToString + ")"
 		  End If
+		  
+		  Exception err As FunctionNotFoundException
+		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
 		End Sub
 	#tag EndMethod
 
@@ -705,6 +755,9 @@ Protected Class D2XX
 		  Else
 		    MainWindow.StatusText.Value = "Error setting transfer size"
 		  End If
+		  
+		  Exception err As FunctionNotFoundException
+		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
 		End Sub
 	#tag EndMethod
 
@@ -746,6 +799,9 @@ Protected Class D2XX
 		    MainWindow.StatusText.Value = "Unable to write data (" + Status.ToString + ")"
 		  End If
 		  
+		  Exception err As FunctionNotFoundException
+		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
+		    
 		End Sub
 	#tag EndMethod
 

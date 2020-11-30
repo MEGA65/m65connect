@@ -3,7 +3,7 @@ Begin Window WinSetConsole
    Backdrop        =   0
    BackgroundColor =   &cFFFFFF00
    Composite       =   False
-   DefaultLocation =   "0"
+   DefaultLocation =   0
    FullScreen      =   False
    HasBackgroundColor=   False
    HasCloseButton  =   True
@@ -21,7 +21,7 @@ Begin Window WinSetConsole
    MinimumWidth    =   64
    Resizeable      =   False
    Title           =   "Console Settings"
-   Type            =   "1"
+   Type            =   1
    Visible         =   False
    Width           =   440
    Begin TextArea ConsolePreview
@@ -61,12 +61,13 @@ Begin Window WinSetConsole
       TabIndex        =   5
       TabPanelIndex   =   0
       TabStop         =   False
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c35353500
       Tooltip         =   ""
       Top             =   161
       Transparent     =   False
       Underline       =   False
+      UnicodeMode     =   0
       ValidationMask  =   ""
       Value           =   "Preview of how text is displayed inside the Console.\nYou can change font type, font size, font color and background color of the Console"
       Visible         =   True
@@ -156,7 +157,7 @@ Begin Window WinSetConsole
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   8
       TabPanelIndex   =   0
@@ -188,7 +189,7 @@ Begin Window WinSetConsole
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   10
       TabPanelIndex   =   0
@@ -220,7 +221,7 @@ Begin Window WinSetConsole
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   9
       TabPanelIndex   =   0
@@ -257,7 +258,7 @@ Begin Window WinSetConsole
       TabIndex        =   6
       TabPanelIndex   =   0
       TabStop         =   True
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   20
@@ -292,7 +293,7 @@ Begin Window WinSetConsole
       TabIndex        =   7
       TabPanelIndex   =   0
       TabStop         =   True
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   64
@@ -327,7 +328,7 @@ Begin Window WinSetConsole
       TabIndex        =   10
       TabPanelIndex   =   0
       TabStop         =   True
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   126
@@ -357,7 +358,7 @@ Begin Window WinSetConsole
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   3
       TabPanelIndex   =   0
@@ -390,6 +391,7 @@ Begin Window WinSetConsole
       LockRight       =   False
       LockTop         =   True
       Scope           =   0
+      State           =   1
       TabIndex        =   6
       TabPanelIndex   =   0
       TabStop         =   True
@@ -397,9 +399,8 @@ Begin Window WinSetConsole
       Top             =   287
       Transparent     =   False
       Underline       =   False
-      Value           =   False
+      Value           =   True
       Visible         =   True
-      VisualState     =   "1"
       Width           =   400
    End
    Begin PushButton PushConsoleColor
@@ -422,7 +423,7 @@ Begin Window WinSetConsole
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   4
       TabPanelIndex   =   0
@@ -464,7 +465,7 @@ Begin Window WinSetConsole
       Underline       =   False
       Value           =   False
       Visible         =   True
-      VisualState     =   "0"
+      VisualState     =   0
       Width           =   400
    End
 End
@@ -492,7 +493,7 @@ End
 		  
 		  // Default = System font
 		  FontType.AddRow("Default")
-		   
+		  
 		  For i As Integer = 0 To System.FontCount-1
 		    FontType.AddRow(System.FontAt(i))
 		  Next

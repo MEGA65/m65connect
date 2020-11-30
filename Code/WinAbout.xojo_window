@@ -3,7 +3,7 @@ Begin Window WinAbout
    Backdrop        =   0
    BackgroundColor =   &cFFFFFF00
    Composite       =   False
-   DefaultLocation =   "0"
+   DefaultLocation =   0
    FullScreen      =   False
    HasBackgroundColor=   False
    HasCloseButton  =   False
@@ -21,7 +21,7 @@ Begin Window WinAbout
    MinimumWidth    =   64
    Resizeable      =   False
    Title           =   "About M65Connect"
-   Type            =   "1"
+   Type            =   1
    Visible         =   True
    Width           =   500
    Begin PushButton PushClose
@@ -44,7 +44,7 @@ Begin Window WinAbout
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MacButtonStyle  =   "0"
+      MacButtonStyle  =   0
       Scope           =   0
       TabIndex        =   1
       TabPanelIndex   =   0
@@ -81,13 +81,13 @@ Begin Window WinAbout
       TabIndex        =   6
       TabPanelIndex   =   0
       TabStop         =   False
-      TextAlignment   =   "2"
+      TextAlignment   =   2
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   20
       Transparent     =   False
       Underline       =   False
-      Value           =   "M65Connect - Version 1.0"
+      Value           =   "M65Connect - Version 1.2"
       Visible         =   True
       Width           =   460
    End
@@ -116,13 +116,13 @@ Begin Window WinAbout
       TabIndex        =   7
       TabPanelIndex   =   0
       TabStop         =   False
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   180
       Transparent     =   False
       Underline       =   False
-      Value           =   "Anton Schneider-Michallek, Detlef Hastik, Günther Reiter (Snoopy), Martin Streit, n-o-d and Paul Gardner-Stephen\n\nfor providing, testing, improvements, suggestions, ideas, support and many more things!\n"
+      Value           =   "Anton Schneider-Michallek, Detlef Hastik, Günther Reiter (Snoopy), Heinz, Martin Streit, n-o-d, Paul Gardner-Stephen and Udo\n\nfor providing, testing, improvements, suggestions, ideas, support and many more things!\n"
       Visible         =   True
       Width           =   436
    End
@@ -151,7 +151,7 @@ Begin Window WinAbout
       TabIndex        =   8
       TabPanelIndex   =   0
       TabStop         =   False
-      TextAlignment   =   "2"
+      TextAlignment   =   2
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   56
@@ -186,7 +186,7 @@ Begin Window WinAbout
       TabIndex        =   9
       TabPanelIndex   =   0
       TabStop         =   False
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   100
@@ -221,7 +221,7 @@ Begin Window WinAbout
       TabIndex        =   10
       TabPanelIndex   =   0
       TabStop         =   False
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   144

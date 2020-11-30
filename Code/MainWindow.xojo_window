@@ -3,7 +3,7 @@ Begin Window MainWindow
    Backdrop        =   0
    BackgroundColor =   &cFFFFFF00
    Composite       =   False
-   DefaultLocation =   "0"
+   DefaultLocation =   0
    FullScreen      =   False
    HasBackgroundColor=   False
    HasCloseButton  =   True
@@ -21,7 +21,7 @@ Begin Window MainWindow
    MinimumWidth    =   1000
    Resizeable      =   True
    Title           =   "M65Connect"
-   Type            =   "0"
+   Type            =   0
    Visible         =   True
    Width           =   1000
    Begin TextArea Console
@@ -61,12 +61,13 @@ Begin Window MainWindow
       TabIndex        =   0
       TabPanelIndex   =   0
       TabStop         =   False
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c35353500
       Tooltip         =   ""
       Top             =   105
       Transparent     =   False
       Underline       =   False
+      UnicodeMode     =   0
       ValidationMask  =   ""
       Value           =   ""
       Visible         =   True
@@ -86,19 +87,20 @@ Begin Window MainWindow
       Handle          =   0
       Index           =   -2147483648
       LockedInPosition=   False
-      Parity          =   "0"
+      Parity          =   0
       RequestToSend   =   False
       RingIndicator   =   False
       Scope           =   0
-      StopBit         =   "0"
+      StopBit         =   0
       TabPanelIndex   =   0
       XON             =   False
    End
    Begin Timer DeviceListUpdater
+      Enabled         =   True
       Index           =   -2147483648
       LockedInPosition=   False
       Period          =   500
-      RunMode         =   "2"
+      RunMode         =   2
       Scope           =   0
       TabPanelIndex   =   0
    End
@@ -151,7 +153,7 @@ Begin Window MainWindow
          TabIndex        =   0
          TabPanelIndex   =   0
          TabStop         =   True
-         TextAlignment   =   "0"
+         TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   "Displays latest action status"
          Top             =   667
@@ -186,7 +188,7 @@ Begin Window MainWindow
          TabIndex        =   1
          TabPanelIndex   =   0
          TabStop         =   True
-         TextAlignment   =   "0"
+         TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
          Top             =   667
@@ -222,7 +224,7 @@ Begin Window MainWindow
       TabIndex        =   0
       TabPanelIndex   =   0
       TabStop         =   False
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   72
@@ -291,7 +293,7 @@ Begin Window MainWindow
       TabIndex        =   1
       TabPanelIndex   =   0
       TabStop         =   True
-      TextAlignment   =   "0"
+      TextAlignment   =   0
       TextColor       =   &c41424200
       Tooltip         =   "Terminal mode: enter command and press key ENTER \nKeyboard mode: enter char to send"
       Top             =   566
@@ -306,7 +308,7 @@ Begin Window MainWindow
       Arguments       =   ""
       Backend         =   ""
       Canonical       =   False
-      ExecuteMode     =   "1"
+      ExecuteMode     =   1
       ExitCode        =   0
       Index           =   -2147483648
       IsRunning       =   False
@@ -315,13 +317,13 @@ Begin Window MainWindow
       Result          =   ""
       Scope           =   0
       TabPanelIndex   =   0
-      TimeOut         =   0
+      TimeOut         =   20000
    End
    Begin Shell WinPathExec
       Arguments       =   ""
       Backend         =   ""
       Canonical       =   False
-      ExecuteMode     =   "1"
+      ExecuteMode     =   1
       ExitCode        =   0
       Index           =   -2147483648
       IsRunning       =   False
@@ -343,12 +345,14 @@ Begin Window MainWindow
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   False
-      MacButtonStyle  =   "5"
+      MacButtonStyle  =   5
       Scope           =   0
       Segments        =   "Terminal\n\nTrue\rKeyboard\n\nFalse"
-      SelectionStyle  =   "0"
+      SelectionStyle  =   0
       TabIndex        =   2
       TabPanelIndex   =   0
+      TabStop         =   True
+      Tooltip         =   ""
       Top             =   566
       Transparent     =   False
       Visible         =   True
@@ -358,13 +362,13 @@ Begin Window MainWindow
       AllowAutoDeactivate=   True
       AllowFocus      =   True
       BackgroundColor =   &cB5CAEA00
-      BevelStyle      =   "0"
+      BevelStyle      =   0
       Bold            =   True
-      ButtonStyle     =   "0"
+      ButtonStyle     =   0
       Caption         =   "D81"
-      CaptionAlignment=   "3"
+      CaptionAlignment=   3
       CaptionDelta    =   0
-      CaptionPosition =   "1"
+      CaptionPosition =   1
       Enabled         =   False
       FontName        =   "System"
       FontSize        =   0.0
@@ -372,7 +376,7 @@ Begin Window MainWindow
       HasBackgroundColor=   True
       Height          =   30
       Icon            =   0
-      IconAlignment   =   "0"
+      IconAlignment   =   0
       IconDeltaX      =   0
       IconDeltaY      =   0
       Index           =   -2147483648
@@ -384,7 +388,7 @@ Begin Window MainWindow
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MenuStyle       =   "0"
+      MenuStyle       =   0
       Scope           =   0
       TabIndex        =   3
       TabPanelIndex   =   0
@@ -402,13 +406,13 @@ Begin Window MainWindow
       AllowAutoDeactivate=   True
       AllowFocus      =   True
       BackgroundColor =   &cB5CAEA00
-      BevelStyle      =   "0"
+      BevelStyle      =   0
       Bold            =   True
-      ButtonStyle     =   "0"
+      ButtonStyle     =   0
       Caption         =   "PRG"
-      CaptionAlignment=   "3"
+      CaptionAlignment=   3
       CaptionDelta    =   0
-      CaptionPosition =   "1"
+      CaptionPosition =   1
       Enabled         =   False
       FontName        =   "System"
       FontSize        =   0.0
@@ -416,7 +420,7 @@ Begin Window MainWindow
       HasBackgroundColor=   True
       Height          =   30
       Icon            =   0
-      IconAlignment   =   "0"
+      IconAlignment   =   0
       IconDeltaX      =   0
       IconDeltaY      =   0
       Index           =   -2147483648
@@ -428,7 +432,7 @@ Begin Window MainWindow
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MenuStyle       =   "0"
+      MenuStyle       =   0
       Scope           =   0
       TabIndex        =   4
       TabPanelIndex   =   0
@@ -446,13 +450,13 @@ Begin Window MainWindow
       AllowAutoDeactivate=   True
       AllowFocus      =   True
       BackgroundColor =   &cB5CAEA00
-      BevelStyle      =   "0"
+      BevelStyle      =   0
       Bold            =   True
-      ButtonStyle     =   "0"
+      ButtonStyle     =   0
       Caption         =   "SID"
-      CaptionAlignment=   "3"
+      CaptionAlignment=   3
       CaptionDelta    =   0
-      CaptionPosition =   "1"
+      CaptionPosition =   1
       Enabled         =   False
       FontName        =   "System"
       FontSize        =   0.0
@@ -460,7 +464,7 @@ Begin Window MainWindow
       HasBackgroundColor=   True
       Height          =   30
       Icon            =   0
-      IconAlignment   =   "0"
+      IconAlignment   =   0
       IconDeltaX      =   0
       IconDeltaY      =   0
       Index           =   -2147483648
@@ -472,7 +476,7 @@ Begin Window MainWindow
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MenuStyle       =   "0"
+      MenuStyle       =   0
       Scope           =   0
       TabIndex        =   5
       TabPanelIndex   =   0
@@ -490,13 +494,13 @@ Begin Window MainWindow
       AllowAutoDeactivate=   True
       AllowFocus      =   True
       BackgroundColor =   &cB5CAEA00
-      BevelStyle      =   "0"
+      BevelStyle      =   0
       Bold            =   True
-      ButtonStyle     =   "0"
+      ButtonStyle     =   0
       Caption         =   "BIT"
-      CaptionAlignment=   "3"
+      CaptionAlignment=   3
       CaptionDelta    =   0
-      CaptionPosition =   "1"
+      CaptionPosition =   1
       Enabled         =   False
       FontName        =   "System"
       FontSize        =   0.0
@@ -504,7 +508,7 @@ Begin Window MainWindow
       HasBackgroundColor=   True
       Height          =   30
       Icon            =   0
-      IconAlignment   =   "0"
+      IconAlignment   =   0
       IconDeltaX      =   0
       IconDeltaY      =   0
       Index           =   -2147483648
@@ -516,7 +520,7 @@ Begin Window MainWindow
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MenuStyle       =   "0"
+      MenuStyle       =   0
       Scope           =   0
       TabIndex        =   6
       TabPanelIndex   =   0
@@ -534,13 +538,13 @@ Begin Window MainWindow
       AllowAutoDeactivate=   True
       AllowFocus      =   True
       BackgroundColor =   &cB5CAEA00
-      BevelStyle      =   "0"
+      BevelStyle      =   0
       Bold            =   True
-      ButtonStyle     =   "0"
+      ButtonStyle     =   0
       Caption         =   "HIC"
-      CaptionAlignment=   "3"
+      CaptionAlignment=   3
       CaptionDelta    =   0
-      CaptionPosition =   "1"
+      CaptionPosition =   1
       Enabled         =   False
       FontName        =   "System"
       FontSize        =   0.0
@@ -548,7 +552,7 @@ Begin Window MainWindow
       HasBackgroundColor=   True
       Height          =   30
       Icon            =   0
-      IconAlignment   =   "0"
+      IconAlignment   =   0
       IconDeltaX      =   0
       IconDeltaY      =   0
       Index           =   -2147483648
@@ -560,7 +564,7 @@ Begin Window MainWindow
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MenuStyle       =   "0"
+      MenuStyle       =   0
       Scope           =   0
       TabIndex        =   7
       TabPanelIndex   =   0
@@ -578,13 +582,13 @@ Begin Window MainWindow
       AllowAutoDeactivate=   True
       AllowFocus      =   True
       BackgroundColor =   &cB5CAEA00
-      BevelStyle      =   "0"
+      BevelStyle      =   0
       Bold            =   True
-      ButtonStyle     =   "0"
+      ButtonStyle     =   0
       Caption         =   "ROM"
-      CaptionAlignment=   "3"
+      CaptionAlignment=   3
       CaptionDelta    =   0
-      CaptionPosition =   "1"
+      CaptionPosition =   1
       Enabled         =   False
       FontName        =   "System"
       FontSize        =   0.0
@@ -592,7 +596,7 @@ Begin Window MainWindow
       HasBackgroundColor=   True
       Height          =   30
       Icon            =   0
-      IconAlignment   =   "0"
+      IconAlignment   =   0
       IconDeltaX      =   0
       IconDeltaY      =   0
       Index           =   -2147483648
@@ -604,7 +608,7 @@ Begin Window MainWindow
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MenuStyle       =   "0"
+      MenuStyle       =   0
       Scope           =   0
       TabIndex        =   8
       TabPanelIndex   =   0
@@ -622,13 +626,13 @@ Begin Window MainWindow
       AllowAutoDeactivate=   True
       AllowFocus      =   True
       BackgroundColor =   &cA8D3AC00
-      BevelStyle      =   "0"
+      BevelStyle      =   0
       Bold            =   True
-      ButtonStyle     =   "0"
+      ButtonStyle     =   0
       Caption         =   "Go64"
-      CaptionAlignment=   "3"
+      CaptionAlignment=   3
       CaptionDelta    =   0
-      CaptionPosition =   "1"
+      CaptionPosition =   1
       Enabled         =   False
       FontName        =   "System"
       FontSize        =   0.0
@@ -636,7 +640,7 @@ Begin Window MainWindow
       HasBackgroundColor=   True
       Height          =   30
       Icon            =   0
-      IconAlignment   =   "0"
+      IconAlignment   =   0
       IconDeltaX      =   0
       IconDeltaY      =   0
       Index           =   -2147483648
@@ -648,7 +652,7 @@ Begin Window MainWindow
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   True
-      MenuStyle       =   "0"
+      MenuStyle       =   0
       Scope           =   0
       TabIndex        =   10
       TabPanelIndex   =   0
@@ -666,13 +670,13 @@ Begin Window MainWindow
       AllowAutoDeactivate=   True
       AllowFocus      =   True
       BackgroundColor =   &cA8D3AC00
-      BevelStyle      =   "0"
+      BevelStyle      =   0
       Bold            =   True
-      ButtonStyle     =   "0"
+      ButtonStyle     =   0
       Caption         =   "Reset"
-      CaptionAlignment=   "3"
+      CaptionAlignment=   3
       CaptionDelta    =   0
-      CaptionPosition =   "1"
+      CaptionPosition =   1
       Enabled         =   False
       FontName        =   "System"
       FontSize        =   0.0
@@ -680,7 +684,7 @@ Begin Window MainWindow
       HasBackgroundColor=   True
       Height          =   30
       Icon            =   0
-      IconAlignment   =   "0"
+      IconAlignment   =   0
       IconDeltaX      =   0
       IconDeltaY      =   0
       Index           =   -2147483648
@@ -692,7 +696,7 @@ Begin Window MainWindow
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   True
-      MenuStyle       =   "0"
+      MenuStyle       =   0
       Scope           =   0
       TabIndex        =   9
       TabPanelIndex   =   0
@@ -710,13 +714,13 @@ Begin Window MainWindow
       AllowAutoDeactivate=   True
       AllowFocus      =   True
       BackgroundColor =   &cA8D3AC00
-      BevelStyle      =   "0"
+      BevelStyle      =   0
       Bold            =   True
-      ButtonStyle     =   "0"
+      ButtonStyle     =   0
       Caption         =   "PAL"
-      CaptionAlignment=   "3"
+      CaptionAlignment=   3
       CaptionDelta    =   0
-      CaptionPosition =   "1"
+      CaptionPosition =   1
       Enabled         =   False
       FontName        =   "System"
       FontSize        =   0.0
@@ -724,7 +728,7 @@ Begin Window MainWindow
       HasBackgroundColor=   True
       Height          =   30
       Icon            =   0
-      IconAlignment   =   "0"
+      IconAlignment   =   0
       IconDeltaX      =   0
       IconDeltaY      =   0
       Index           =   -2147483648
@@ -736,7 +740,7 @@ Begin Window MainWindow
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   True
-      MenuStyle       =   "0"
+      MenuStyle       =   0
       Scope           =   0
       TabIndex        =   12
       TabPanelIndex   =   0
@@ -754,13 +758,13 @@ Begin Window MainWindow
       AllowAutoDeactivate=   True
       AllowFocus      =   True
       BackgroundColor =   &cA8D3AC00
-      BevelStyle      =   "0"
+      BevelStyle      =   0
       Bold            =   True
-      ButtonStyle     =   "0"
+      ButtonStyle     =   0
       Caption         =   "NTSC"
-      CaptionAlignment=   "3"
+      CaptionAlignment=   3
       CaptionDelta    =   0
-      CaptionPosition =   "1"
+      CaptionPosition =   1
       Enabled         =   False
       FontName        =   "System"
       FontSize        =   0.0
@@ -768,7 +772,7 @@ Begin Window MainWindow
       HasBackgroundColor=   True
       Height          =   30
       Icon            =   0
-      IconAlignment   =   "0"
+      IconAlignment   =   0
       IconDeltaX      =   0
       IconDeltaY      =   0
       Index           =   -2147483648
@@ -780,7 +784,7 @@ Begin Window MainWindow
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   True
-      MenuStyle       =   "0"
+      MenuStyle       =   0
       Scope           =   0
       TabIndex        =   11
       TabPanelIndex   =   0
@@ -798,13 +802,13 @@ Begin Window MainWindow
       AllowAutoDeactivate=   True
       AllowFocus      =   True
       BackgroundColor =   &cA8D3AC00
-      BevelStyle      =   "0"
+      BevelStyle      =   0
       Bold            =   True
-      ButtonStyle     =   "0"
+      ButtonStyle     =   0
       Caption         =   "Screenshot"
-      CaptionAlignment=   "3"
+      CaptionAlignment=   3
       CaptionDelta    =   0
-      CaptionPosition =   "1"
+      CaptionPosition =   1
       Enabled         =   False
       FontName        =   "System"
       FontSize        =   0.0
@@ -812,7 +816,7 @@ Begin Window MainWindow
       HasBackgroundColor=   True
       Height          =   30
       Icon            =   0
-      IconAlignment   =   "0"
+      IconAlignment   =   0
       IconDeltaX      =   0
       IconDeltaY      =   0
       Index           =   -2147483648
@@ -824,7 +828,7 @@ Begin Window MainWindow
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   True
-      MenuStyle       =   "0"
+      MenuStyle       =   0
       Scope           =   0
       TabIndex        =   13
       TabPanelIndex   =   0
@@ -839,10 +843,11 @@ Begin Window MainWindow
       Width           =   110
    End
    Begin Timer PRGListener
+      Enabled         =   True
       Index           =   -2147483648
       LockedInPosition=   False
       Period          =   1000
-      RunMode         =   "0"
+      RunMode         =   0
       Scope           =   0
       TabPanelIndex   =   0
    End
@@ -850,7 +855,7 @@ Begin Window MainWindow
       Arguments       =   ""
       Backend         =   ""
       Canonical       =   False
-      ExecuteMode     =   "1"
+      ExecuteMode     =   1
       ExitCode        =   0
       Index           =   -2147483648
       IsRunning       =   False
@@ -1675,13 +1680,13 @@ Begin Window MainWindow
       AllowAutoDeactivate=   True
       AllowFocus      =   True
       BackgroundColor =   &cB5CAEA00
-      BevelStyle      =   "0"
+      BevelStyle      =   0
       Bold            =   True
-      ButtonStyle     =   "0"
+      ButtonStyle     =   0
       Caption         =   "BAS"
-      CaptionAlignment=   "3"
+      CaptionAlignment=   3
       CaptionDelta    =   0
-      CaptionPosition =   "1"
+      CaptionPosition =   1
       Enabled         =   False
       FontName        =   "System"
       FontSize        =   0.0
@@ -1689,7 +1694,7 @@ Begin Window MainWindow
       HasBackgroundColor=   True
       Height          =   30
       Icon            =   0
-      IconAlignment   =   "0"
+      IconAlignment   =   0
       IconDeltaX      =   0
       IconDeltaY      =   0
       Index           =   -2147483648
@@ -1701,7 +1706,7 @@ Begin Window MainWindow
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MenuStyle       =   "0"
+      MenuStyle       =   0
       Scope           =   0
       TabIndex        =   15
       TabPanelIndex   =   0
@@ -2704,6 +2709,10 @@ End
 		  // Set options on (not) found Vivado path
 		  Terminal.SetM65Options()
 		  
+		  
+		  
+		  
+		  
 		End Sub
 	#tag EndEvent
 	#tag Event
@@ -2757,6 +2766,7 @@ End
 		    M65.SetPathVivado  = VivadoPathList(0)
 		    WinPathExec.Close()
 		  End If
+		  
 		  
 		End Sub
 	#tag EndEvent
