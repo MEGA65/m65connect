@@ -40,7 +40,7 @@ See further details in the inline manual.
 
 Download Builds
 ---------------
-You can download the latest builds for Windows, Mac and Linux from here: https://mega.scryptos.com/sharefolder/MEGA/MEGA65+filehost
+You can download the latest builds for Windows, Mac and Linux from here: https://files.mega65.org
 
 
 Project Installation
@@ -51,5 +51,6 @@ Project Installation
 
 Change Log
 ----------
+- 30/11/2020: V1.2 : Exception handler added for wrong drivers (Win), latest m65 version implemented (Win, Mac, Linux)
 - 29/08/2020: V1.1 : Screenshot fix for Mac to start M65Connect from anywhere
 - 23/08/2020: V1.0 : Initial version released
