@@ -631,6 +631,11 @@ End
 #tag WindowCode
 	#tag Event
 		Sub Open()
+		  // If Connection is set but MEGA65 not connected the WinSDCard opens, close it
+		  If Terminal.M65Connect = False Then
+		    Return
+		  End If
+		  
 		  // Default layout is optimized for Linux, adjust layout for Windows and Mac
 		  #If TargetWindows Then
 		    PushClose.Height = 22
