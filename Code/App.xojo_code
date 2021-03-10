@@ -6,6 +6,7 @@ Inherits Application
 		  // Stop possible active processes
 		  MainWindow.DeviceListUpdater.Enabled = False
 		  MainWindow.PRGListener.RunMode = Timer.RunModes.Off
+		  
 		  Terminal.Disconnect()
 		  
 		End Sub

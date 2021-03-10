@@ -302,8 +302,6 @@ End
 		    End If
 		  Next
 		  
-		  //msgbox (str(NewIndex))
-		  
 		  // Backup new list to current list
 		  ActiveList = NewList
 		  

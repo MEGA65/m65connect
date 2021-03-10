@@ -7,11 +7,11 @@
 		MacType=
 		Name=MEGA65 file
 		UTI=
-		UTIConformsTo=,public.data
+		UTIConformsTo=, public.data
 		Description=All supported MEGA65 files
 		MimeType=
 		Imported=True
-		HandlerRank=&h9
+		HandlerRank=&h3
 		UTIPhysicalType=public.data
 	#tag EndFileType
 

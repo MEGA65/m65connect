@@ -1,6 +1,7 @@
 # M65Connect
 
-M65Connect is a GUI tool written with Xojo to access the MEGA65 for . It supports Windows, Mac and Linux.
+M65Connect is a GUI tool written with Xojo to access the MEGA65. It supports Windows, Mac and Linux.
+
 
 Supported functions
 -------------------
@@ -19,6 +20,7 @@ FILE OPERATIONS
 - Create COR file
 - Create MCS file
 - Send supported file types by Drag&Drop
+- Access the internal SD Card by the SD Card Manager
 
 
 COMMAND OPERATIONS
@@ -51,6 +53,8 @@ Project Installation
 
 Change Log
 ----------
+- 10/03/2021: V1.3 : SD Card Manager implemented to acces the internal SD Card, minor improvements
 - 30/11/2020: V1.2 : Exception handler added for wrong drivers (Win), latest m65 version implemented (Win, Mac, Linux)
 - 29/08/2020: V1.1 : Screenshot fix for Mac to start M65Connect from anywhere
 - 23/08/2020: V1.0 : Initial version released
+

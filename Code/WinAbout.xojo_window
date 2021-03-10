@@ -10,7 +10,7 @@ Begin Window WinAbout
    HasFullScreenButton=   False
    HasMaximizeButton=   False
    HasMinimizeButton=   False
-   Height          =   340
+   Height          =   400
    ImplicitInstance=   True
    MacProcID       =   0
    MaximumHeight   =   32000
@@ -50,7 +50,7 @@ Begin Window WinAbout
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   288
+      Top             =   348
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -87,7 +87,7 @@ Begin Window WinAbout
       Top             =   20
       Transparent     =   False
       Underline       =   False
-      Value           =   "M65Connect - Version 1.2"
+      Value           =   "M65Connect - Version 1.3"
       Visible         =   True
       Width           =   460
    End
@@ -100,7 +100,7 @@ Begin Window WinAbout
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   96
+      Height          =   129
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -122,7 +122,7 @@ Begin Window WinAbout
       Top             =   180
       Transparent     =   False
       Underline       =   False
-      Value           =   "Anton Schneider-Michallek, Detlef Hastik, Günther Reiter (Snoopy), Heinz, Martin Streit, n-o-d, Paul Gardner-Stephen and Udo\n\nfor providing, testing, improvements, suggestions, ideas, support and many more things!\n"
+      Value           =   "Anton Schneider-Michallek, Detlef Hastik, Gurce, Günther Reiter (Snoopy), Heinz, Martin Streit, n-o-d, Paul Gardner-Stephen, rdpeake and Udo\n\nfor providing, testing, improvements, suggestions, ideas, support and many more things!\n"
       Visible         =   True
       Width           =   436
    End

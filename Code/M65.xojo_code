@@ -98,7 +98,6 @@ Protected Class M65
 		  Var M65Send As String
 		  Var Port As String = " -l "
 		  Var Baud As String = " -s 2000000"
-		  //Var Execute As String = " -r "
 		  
 		  M65Send = M65Send + Chr(34) + M65Executable.NativePath + Chr(34)
 		  
@@ -281,7 +280,8 @@ Protected Class M65
 		          // Use X3C in second order / http://xc3sprog.sourceforge.net/manpage.php
 		          Var XC3Path As FolderItem = SpecialFolder.Resources.Child("xc3sprog")
 		          
-		          M65Send = "cd " + Chr(34) + XC3Path.NativePath + Chr(34) + " && xc3sprog.exe -c ftdi "  + Chr(34) + File + Chr(34)
+		          // -v (additional infos) -L (ignore Libsub)
+		          M65Send = "cd " + Chr(34) + XC3Path.NativePath + Chr(34) + " && xc3sprog.exe -c ftdi -v "  + Chr(34) + File + Chr(34)
 		        End If
 		        
 		      #Else

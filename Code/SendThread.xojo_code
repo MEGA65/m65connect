@@ -2,6 +2,20 @@
 Protected Class SendThread
 Inherits Thread
 	#tag Method, Flags = &h0
+		Shared Sub FTPProgress(Duration As Integer)
+		  WinSDCard.FTPBar.Value = 0
+		  WinSDCard.FTPBar.MaximumValue = 2000
+		  
+		  For i As Integer = 0 To Duration / 200
+		    WinSDCard.FTPBar.Value = WinSDCard.FTPBar.Value + 200
+		    WinSDCard.FTPBar.Invalidate()
+		    App.SleepCurrentThread(200)
+		  Next
+		  
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Shared Sub InitKeyList()
 		  // Create arrays for mapping keys
 		  // The array index represents the keycode (ASCII) value
@@ -414,6 +428,10 @@ Inherits Thread
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		Shared FTPTimer As Integer
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		Shared Key1List() As String
 	#tag EndProperty
 
@@ -427,6 +445,53 @@ Inherits Thread
 
 
 	#tag ViewBehavior
+		#tag ViewProperty
+			Name="Left"
+			Visible=true
+			Group="Position"
+			InitialValue="0"
+			Type="Integer"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="Top"
+			Visible=true
+			Group="Position"
+			InitialValue="0"
+			Type="Integer"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="DebugIdentifier"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="String"
+			EditorType="MultiLineEditor"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="ThreadID"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Integer"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="ThreadState"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="ThreadStates"
+			EditorType="Enum"
+			#tag EnumValues
+				"0 - Running"
+				"1 - Waiting"
+				"2 - Paused"
+				"3 - Sleeping"
+				"4 - NotRunning"
+			#tag EndEnumValues
+		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Name"
 			Visible=true

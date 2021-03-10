@@ -358,14 +358,14 @@ Begin Window MainWindow
       Visible         =   True
       Width           =   187
    End
-   Begin BevelButton BevelD81
+   Begin BevelButton BevelSDCard
       AllowAutoDeactivate=   True
       AllowFocus      =   True
       BackgroundColor =   &cB5CAEA00
       BevelStyle      =   0
       Bold            =   True
       ButtonStyle     =   0
-      Caption         =   "D81"
+      Caption         =   "SD Card"
       CaptionAlignment=   3
       CaptionDelta    =   0
       CaptionPosition =   1
@@ -382,7 +382,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   20
+      Left            =   402
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -394,57 +394,13 @@ Begin Window MainWindow
       TabPanelIndex   =   0
       TabStop         =   True
       TextColor       =   &c00000000
-      Tooltip         =   "Send D81 file"
+      Tooltip         =   "Open SD Card Manager"
       Top             =   20
       Transparent     =   False
       Underline       =   False
       Value           =   False
       Visible         =   True
-      Width           =   50
-   End
-   Begin BevelButton BevelPRG
-      AllowAutoDeactivate=   True
-      AllowFocus      =   True
-      BackgroundColor =   &cB5CAEA00
-      BevelStyle      =   0
-      Bold            =   True
-      ButtonStyle     =   0
-      Caption         =   "PRG"
-      CaptionAlignment=   3
-      CaptionDelta    =   0
-      CaptionPosition =   1
-      Enabled         =   False
-      FontName        =   "System"
-      FontSize        =   0.0
-      FontUnit        =   0
-      HasBackgroundColor=   True
-      Height          =   30
-      Icon            =   0
-      IconAlignment   =   0
-      IconDeltaX      =   0
-      IconDeltaY      =   0
-      Index           =   -2147483648
-      InitialParent   =   ""
-      Italic          =   False
-      Left            =   82
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      MenuStyle       =   0
-      Scope           =   0
-      TabIndex        =   4
-      TabPanelIndex   =   0
-      TabStop         =   True
-      TextColor       =   &c00000000
-      Tooltip         =   "Send PRG file"
-      Top             =   20
-      Transparent     =   False
-      Underline       =   False
-      Value           =   False
-      Visible         =   True
-      Width           =   50
+      Width           =   80
    End
    Begin BevelButton BevelSID
       AllowAutoDeactivate=   True
@@ -470,7 +426,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   144
+      Left            =   82
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -514,7 +470,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   206
+      Left            =   144
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -558,7 +514,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   268
+      Left            =   206
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -602,7 +558,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   330
+      Left            =   268
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1700,7 +1656,7 @@ Begin Window MainWindow
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   397
+      Left            =   335
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1719,6 +1675,50 @@ Begin Window MainWindow
       Value           =   False
       Visible         =   True
       Width           =   55
+   End
+   Begin BevelButton BevelPRG
+      AllowAutoDeactivate=   True
+      AllowFocus      =   True
+      BackgroundColor =   &cB5CAEA00
+      BevelStyle      =   0
+      Bold            =   True
+      ButtonStyle     =   0
+      Caption         =   "PRG"
+      CaptionAlignment=   3
+      CaptionDelta    =   0
+      CaptionPosition =   1
+      Enabled         =   False
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      HasBackgroundColor=   True
+      Height          =   30
+      Icon            =   0
+      IconAlignment   =   0
+      IconDeltaX      =   0
+      IconDeltaY      =   0
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   20
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      MenuStyle       =   0
+      Scope           =   0
+      TabIndex        =   16
+      TabPanelIndex   =   0
+      TabStop         =   True
+      TextColor       =   &c00000000
+      Tooltip         =   "Send PRG file"
+      Top             =   20
+      Transparent     =   False
+      Underline       =   False
+      Value           =   False
+      Visible         =   True
+      Width           =   50
    End
 End
 #tag EndWindow
@@ -1849,6 +1849,7 @@ End
 		      WinConWiz.ShowModal
 		    End If
 		  #EndIf
+		  
 		  
 		End Sub
 	#tag EndEvent
@@ -2023,6 +2024,13 @@ End
 	#tag EndMenuHandler
 
 	#tag MenuHandler
+		Function FileSDCard() As Boolean Handles FileSDCard.Action
+			// Open SD Card Manager
+			WinSDCard.ShowModal()
+		End Function
+	#tag EndMenuHandler
+
+	#tag MenuHandler
 		Function FileSendBasic() As Boolean Handles FileSendBasic.Action
 			WinSendBasic.ShowModal()
 		End Function
@@ -2034,13 +2042,6 @@ End
 			MainWindow.SendBIT()
 			
 			
-		End Function
-	#tag EndMenuHandler
-
-	#tag MenuHandler
-		Function FileSendD81() As Boolean Handles FileSendD81.Action
-			// Choose and send a D81 file
-			MainWindow.SendD81()
 		End Function
 	#tag EndMenuHandler
 
@@ -2359,10 +2360,18 @@ End
 		Sub DataReceived()
 		  // Ignore return values from Keyboard
 		  If Terminal.Mode = "T" Then
+		    
 		    // Wait until all data received
 		    If SerialConnect.BytesAvailable <> Terminal.BufferSize Then
 		      Terminal.BufferSize = SerialConnect.BytesAvailable
 		    Else
+		      
+		      // If MEGA65 File Transfer helper is open it flushes the Terminal with "MEGA65FT1.0" > force Reset
+		      If SerialConnect.Read(10, Encodings.UTF8).IndexOf("MEGA65FT") <> -1 Then
+		        M65.Send("Reset", "", "", False, False, "", False)
+		        Exit
+		      End If
+		      
 		      Console.Value = Console.Value + SerialConnect.ReadAll(Encodings.UTF8)
 		      
 		      Terminal.BufferSize = 0
@@ -2375,7 +2384,10 @@ End
 		    // Keyboard mode, ignore returned signs
 		    Var Nirvana As String = SerialConnect.ReadAll()
 		    Terminal.BufferSize = 0
+		    
 		  End If
+		  
+		  
 		  
 		End Sub
 	#tag EndEvent
@@ -2527,6 +2539,10 @@ End
 		        Terminal.M65Connect = False
 		        Terminal.Disconnect()
 		        
+		        // Close possibliy opened SD Card Commander
+		        WinSDCard.Close()
+		        
+		        
 		        // Set M65 options
 		        Terminal.SetM65Options()
 		      Else
@@ -2646,6 +2662,8 @@ End
 		  If Terminal.SetM65Output Then 
 		    Console.Value = ShellExec.Result
 		  End If
+		  
+		  
 		End Sub
 	#tag EndEvent
 	#tag Event
@@ -2791,20 +2809,11 @@ End
 		End Sub
 	#tag EndEvent
 #tag EndEvents
-#tag Events BevelD81
+#tag Events BevelSDCard
 	#tag Event
 		Sub Action()
 		  // Choose a and send D81 file
-		  MainWindow.SendD81()
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events BevelPRG
-	#tag Event
-		Sub Action()
-		  // Choose and send a PRG file
-		  MainWindow.SendPRG()
-		  
+		  WinSDCard.showModal()
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -2987,6 +2996,7 @@ End
 	#tag Event
 		Sub DataAvailable()
 		  Console.Value = ExternalExec.Result
+		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -3775,6 +3785,15 @@ End
 		Sub Action()
 		  // Choose and send a BASIC file
 		  MainWindow.SendBAS()
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events BevelPRG
+	#tag Event
+		Sub Action()
+		  // Choose and send a PRG file
+		  MainWindow.SendPRG()
+		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents

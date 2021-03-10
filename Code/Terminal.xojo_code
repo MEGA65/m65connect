@@ -41,6 +41,13 @@ Protected Class Terminal
 		    
 		    Terminal.M65Connect = True
 		    
+		    //  Reset Mega65 on leaving SD Card Manager
+		    If ResetMega65 Then
+		      ResetMega65 = False
+		      M65.Send("Reset", "", "", False, False, "", False)
+		    End If
+		    
+		    
 		  Catch error As IOException
 		    MainWindow.StatusText.Value = "The serial connection could not be established (" + error.ErrorNumber.tostring + ")"
 		    Terminal.M65Connect = False
@@ -51,7 +58,7 @@ Protected Class Terminal
 
 	#tag Method, Flags = &h0
 		Shared Sub DisableM65Options()
-		  FileSendD81.AutoEnabled = False
+		  FileSDCard.AutoEnabled = False
 		  FileSendPRG.AutoEnabled = False
 		  FileSendSID.AutoEnabled = False
 		  FileSendBitstream.AutoEnabled = False
@@ -66,13 +73,13 @@ Protected Class Terminal
 		  CommandPAL.AutoEnabled = False
 		  CommandManualDisCon.Value = "Connect to MEGA65"
 		  
-		  MainWindow.BevelD81.Enabled = False
 		  MainWindow.BevelPRG.Enabled = False
 		  MainWindow.BevelSID.Enabled = False
 		  MainWindow.BevelBIT.Enabled = False
 		  MainWindow.BevelHIC.Enabled = False
 		  MainWindow.BevelROM.Enabled = False
 		  MainWindow.BevelBAS.Enabled = False
+		  MainWindow.BevelSDCard.Enabled = False
 		  MainWindow.BevelNTSC.Enabled = False
 		  MainWindow.BevelPAL.Enabled = False
 		  MainWindow.BevelReset.Enabled = False
@@ -95,7 +102,7 @@ Protected Class Terminal
 
 	#tag Method, Flags = &h0
 		Shared Sub EnableM65Options()
-		  //FileSendD81.AutoEnabled = True
+		  FileSDCard.AutoEnabled = True
 		  FileSendPRG.AutoEnabled = True
 		  FileSendSID.AutoEnabled = True
 		  FileSendBitstream.AutoEnabled = True
@@ -124,13 +131,13 @@ Protected Class Terminal
 		  CommandManualDisCon.AutoEnabled = True
 		  CommandManualDisCon.Value = "Disconnect from MEGA65"
 		  
-		  // MainWindow.BevelD81.Enabled = True
 		  MainWindow.BevelPRG.Enabled = True
 		  MainWindow.BevelSID.Enabled = True
 		  MainWindow.BevelBIT.Enabled = True
 		  MainWindow.BevelHIC.Enabled = True
 		  MainWindow.BevelROM.Enabled = True
 		  MainWindow.BevelBAS.Enabled = True
+		  MainWindow.BevelSDCard.Enabled = True
 		  MainWindow.BevelNTSC.Enabled = True
 		  MainWindow.BevelPAL.Enabled = True
 		  MainWindow.BevelReset.Enabled = True
@@ -353,6 +360,10 @@ Protected Class Terminal
 
 	#tag Property, Flags = &h0
 		Shared PortList() As String
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		Shared ResetMega65 As Boolean = False
 	#tag EndProperty
 
 	#tag Property, Flags = &h0

@@ -10,7 +10,7 @@ Begin Window WinSetPath
    HasFullScreenButton=   False
    HasMaximizeButton=   False
    HasMinimizeButton=   False
-   Height          =   620
+   Height          =   630
    ImplicitInstance=   True
    MacProcID       =   0
    MaximumHeight   =   32000
@@ -43,7 +43,7 @@ Begin Window WinSetPath
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
-      Left            =   26
+      Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -59,13 +59,13 @@ Begin Window WinSetPath
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   "Default directory for choosing a PRG file"
-      Top             =   124
+      Top             =   130
       Transparent     =   False
       Underline       =   False
       ValidationMask  =   ""
       Value           =   ""
       Visible         =   True
-      Width           =   290
+      Width           =   315
    End
    Begin Label LabelPRG
       AllowAutoDeactivate=   True
@@ -80,7 +80,7 @@ Begin Window WinSetPath
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   26
+      Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -95,7 +95,7 @@ Begin Window WinSetPath
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   92
+      Top             =   97
       Transparent     =   False
       Underline       =   False
       Value           =   "Path PRG"
@@ -128,7 +128,7 @@ Begin Window WinSetPath
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   568
+      Top             =   578
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -160,89 +160,11 @@ Begin Window WinSetPath
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   568
+      Top             =   578
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   80
-   End
-   Begin TextField PathD81
-      AllowAutoDeactivate=   True
-      AllowFocusRing  =   True
-      AllowSpellChecking=   False
-      AllowTabs       =   False
-      BackgroundColor =   &cFFFFFF00
-      Bold            =   False
-      DataField       =   ""
-      DataSource      =   ""
-      Enabled         =   False
-      FontName        =   "System"
-      FontSize        =   0.0
-      FontUnit        =   0
-      Format          =   ""
-      HasBorder       =   True
-      Height          =   32
-      Hint            =   ""
-      Index           =   -2147483648
-      Italic          =   False
-      Left            =   26
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      MaximumCharactersAllowed=   0
-      Password        =   False
-      ReadOnly        =   False
-      Scope           =   0
-      TabIndex        =   0
-      TabPanelIndex   =   0
-      TabStop         =   False
-      TextAlignment   =   0
-      TextColor       =   &c00000000
-      Tooltip         =   "Default directory for choosing a D81 file"
-      Top             =   52
-      Transparent     =   False
-      Underline       =   False
-      ValidationMask  =   ""
-      Value           =   ""
-      Visible         =   True
-      Width           =   290
-   End
-   Begin Label LabelD81
-      AllowAutoDeactivate=   True
-      Bold            =   False
-      DataField       =   ""
-      DataSource      =   ""
-      Enabled         =   True
-      FontName        =   "System"
-      FontSize        =   0.0
-      FontUnit        =   0
-      Height          =   32
-      Index           =   -2147483648
-      InitialParent   =   ""
-      Italic          =   False
-      Left            =   26
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      Multiline       =   False
-      Scope           =   0
-      Selectable      =   False
-      TabIndex        =   6
-      TabPanelIndex   =   0
-      TabStop         =   False
-      TextAlignment   =   0
-      TextColor       =   &c00000000
-      Tooltip         =   ""
-      Top             =   20
-      Transparent     =   False
-      Underline       =   False
-      Value           =   "Path D81"
-      Visible         =   True
-      Width           =   241
    End
    Begin BevelButton PushFolderPRGAdd
       AllowAutoDeactivate=   True
@@ -268,7 +190,7 @@ Begin Window WinSetPath
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   330
+      Left            =   347
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -281,7 +203,7 @@ Begin Window WinSetPath
       TabStop         =   True
       TextColor       =   &c00000000
       Tooltip         =   "Set an optional default path for PRG files"
-      Top             =   124
+      Top             =   130
       Transparent     =   False
       Underline       =   False
       Value           =   False
@@ -307,7 +229,7 @@ Begin Window WinSetPath
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
-      Left            =   26
+      Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -323,13 +245,13 @@ Begin Window WinSetPath
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   "Default directory for choosing a SID file"
-      Top             =   196
+      Top             =   206
       Transparent     =   False
       Underline       =   False
       ValidationMask  =   ""
       Value           =   ""
       Visible         =   True
-      Width           =   290
+      Width           =   315
    End
    Begin Label LabelSID
       AllowAutoDeactivate=   True
@@ -344,7 +266,7 @@ Begin Window WinSetPath
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   26
+      Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -359,56 +281,12 @@ Begin Window WinSetPath
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   164
+      Top             =   174
       Transparent     =   False
       Underline       =   False
       Value           =   "Path SID"
       Visible         =   True
       Width           =   234
-   End
-   Begin BevelButton PushFolderD81Add
-      AllowAutoDeactivate=   True
-      AllowFocus      =   True
-      BackgroundColor =   &c00000000
-      BevelStyle      =   0
-      Bold            =   False
-      ButtonStyle     =   0
-      Caption         =   ""
-      CaptionAlignment=   3
-      CaptionDelta    =   0
-      CaptionPosition =   1
-      Enabled         =   True
-      FontName        =   "System"
-      FontSize        =   0.0
-      FontUnit        =   0
-      HasBackgroundColor=   False
-      Height          =   32
-      Icon            =   2139172863
-      IconAlignment   =   1
-      IconDeltaX      =   0
-      IconDeltaY      =   0
-      Index           =   -2147483648
-      InitialParent   =   ""
-      Italic          =   False
-      Left            =   330
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      MenuStyle       =   0
-      Scope           =   0
-      TabIndex        =   1
-      TabPanelIndex   =   0
-      TabStop         =   True
-      TextColor       =   &c00000000
-      Tooltip         =   "Set an optional default path for D81 files"
-      Top             =   52
-      Transparent     =   False
-      Underline       =   False
-      Value           =   False
-      Visible         =   True
-      Width           =   50
    End
    Begin BevelButton PushFolderSIDAdd
       AllowAutoDeactivate=   True
@@ -434,7 +312,7 @@ Begin Window WinSetPath
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   330
+      Left            =   347
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -447,51 +325,7 @@ Begin Window WinSetPath
       TabStop         =   True
       TextColor       =   &c00000000
       Tooltip         =   "Set an optional default path for SID files"
-      Top             =   196
-      Transparent     =   False
-      Underline       =   False
-      Value           =   False
-      Visible         =   True
-      Width           =   50
-   End
-   Begin BevelButton PushFolderD81Del
-      AllowAutoDeactivate=   True
-      AllowFocus      =   True
-      BackgroundColor =   &c00000000
-      BevelStyle      =   0
-      Bold            =   False
-      ButtonStyle     =   0
-      Caption         =   ""
-      CaptionAlignment=   3
-      CaptionDelta    =   0
-      CaptionPosition =   1
-      Enabled         =   True
-      FontName        =   "System"
-      FontSize        =   0.0
-      FontUnit        =   0
-      HasBackgroundColor=   False
-      Height          =   32
-      Icon            =   1904519167
-      IconAlignment   =   1
-      IconDeltaX      =   0
-      IconDeltaY      =   0
-      Index           =   -2147483648
-      InitialParent   =   ""
-      Italic          =   False
-      Left            =   393
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      MenuStyle       =   0
-      Scope           =   0
-      TabIndex        =   2
-      TabPanelIndex   =   0
-      TabStop         =   True
-      TextColor       =   &c00000000
-      Tooltip         =   "Remove default path for D81 files"
-      Top             =   52
+      Top             =   206
       Transparent     =   False
       Underline       =   False
       Value           =   False
@@ -522,7 +356,7 @@ Begin Window WinSetPath
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   393
+      Left            =   410
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -535,7 +369,7 @@ Begin Window WinSetPath
       TabStop         =   True
       TextColor       =   &c00000000
       Tooltip         =   "Remove default path for PRG files"
-      Top             =   124
+      Top             =   130
       Transparent     =   False
       Underline       =   False
       Value           =   False
@@ -566,7 +400,7 @@ Begin Window WinSetPath
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   393
+      Left            =   410
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -579,7 +413,7 @@ Begin Window WinSetPath
       TabStop         =   True
       TextColor       =   &c00000000
       Tooltip         =   "Remove default path for SID files"
-      Top             =   196
+      Top             =   206
       Transparent     =   False
       Underline       =   False
       Value           =   False
@@ -605,7 +439,7 @@ Begin Window WinSetPath
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
-      Left            =   26
+      Left            =   19
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -621,13 +455,13 @@ Begin Window WinSetPath
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   "Default directory for automated loading of PRG files"
-      Top             =   414
+      Top             =   433
       Transparent     =   False
       Underline       =   False
       ValidationMask  =   ""
       Value           =   ""
       Visible         =   True
-      Width           =   290
+      Width           =   316
    End
    Begin BevelButton PushFolderPRGAutoAdd
       AllowAutoDeactivate=   True
@@ -653,7 +487,7 @@ Begin Window WinSetPath
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   330
+      Left            =   346
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -666,7 +500,7 @@ Begin Window WinSetPath
       TabStop         =   True
       TextColor       =   &c00000000
       Tooltip         =   "Set an optional default path for SID files"
-      Top             =   414
+      Top             =   433
       Transparent     =   False
       Underline       =   False
       Value           =   False
@@ -686,7 +520,7 @@ Begin Window WinSetPath
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   26
+      Left            =   19
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -701,7 +535,7 @@ Begin Window WinSetPath
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   382
+      Top             =   401
       Transparent     =   False
       Underline       =   False
       Value           =   "Path PRG Autoload"
@@ -732,7 +566,7 @@ Begin Window WinSetPath
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   393
+      Left            =   409
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -745,7 +579,7 @@ Begin Window WinSetPath
       TabStop         =   True
       TextColor       =   &c00000000
       Tooltip         =   "Remove default path for SID files"
-      Top             =   414
+      Top             =   433
       Transparent     =   False
       Underline       =   False
       Value           =   False
@@ -775,55 +609,11 @@ Begin Window WinSetPath
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   458
+      Top             =   476
       Transparent     =   True
       Underline       =   False
       Visible         =   False
       Width           =   459
-      Begin TextField PathVivado
-         AllowAutoDeactivate=   True
-         AllowFocusRing  =   True
-         AllowSpellChecking=   False
-         AllowTabs       =   False
-         BackgroundColor =   &cFFFFFF00
-         Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
-         Enabled         =   False
-         FontName        =   "System"
-         FontSize        =   0.0
-         FontUnit        =   0
-         Format          =   ""
-         HasBorder       =   True
-         Height          =   32
-         Hint            =   ""
-         Index           =   -2147483648
-         InitialParent   =   "GroupVivadoPath"
-         Italic          =   False
-         Left            =   26
-         LockBottom      =   False
-         LockedInPosition=   False
-         LockLeft        =   True
-         LockRight       =   False
-         LockTop         =   True
-         MaximumCharactersAllowed=   0
-         Password        =   False
-         ReadOnly        =   False
-         Scope           =   0
-         TabIndex        =   0
-         TabPanelIndex   =   0
-         TabStop         =   False
-         TextAlignment   =   0
-         TextColor       =   &c00000000
-         Tooltip         =   "Path to Vivados vivado*.bat file"
-         Top             =   495
-         Transparent     =   False
-         Underline       =   False
-         ValidationMask  =   ""
-         Value           =   ""
-         Visible         =   True
-         Width           =   290
-      End
       Begin BevelButton PushFolderVivadoFind
          AllowAutoDeactivate=   True
          AllowFocus      =   True
@@ -848,7 +638,7 @@ Begin Window WinSetPath
          Index           =   -2147483648
          InitialParent   =   "GroupVivadoPath"
          Italic          =   False
-         Left            =   393
+         Left            =   408
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
@@ -861,7 +651,7 @@ Begin Window WinSetPath
          TabStop         =   True
          TextColor       =   &c00000000
          Tooltip         =   "Start searching for vivado*.bat"
-         Top             =   495
+         Top             =   513
          Transparent     =   False
          Underline       =   False
          Value           =   False
@@ -892,7 +682,7 @@ Begin Window WinSetPath
          Index           =   -2147483648
          InitialParent   =   "GroupVivadoPath"
          Italic          =   False
-         Left            =   330
+         Left            =   346
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
@@ -905,7 +695,7 @@ Begin Window WinSetPath
          TabStop         =   True
          TextColor       =   &c00000000
          Tooltip         =   "Choose the folder in which vivado.bat or vivado_lab.bat is located"
-         Top             =   495
+         Top             =   513
          Transparent     =   False
          Underline       =   False
          Value           =   False
@@ -925,7 +715,7 @@ Begin Window WinSetPath
          Index           =   -2147483648
          InitialParent   =   "GroupVivadoPath"
          Italic          =   False
-         Left            =   26
+         Left            =   19
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
@@ -940,12 +730,56 @@ Begin Window WinSetPath
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   470
+         Top             =   487
          Transparent     =   False
          Underline       =   False
          Value           =   "Path Vivado"
          Visible         =   True
          Width           =   234
+      End
+      Begin TextField PathVivado
+         AllowAutoDeactivate=   True
+         AllowFocusRing  =   True
+         AllowSpellChecking=   False
+         AllowTabs       =   False
+         BackgroundColor =   &cFFFFFF00
+         Bold            =   False
+         DataField       =   ""
+         DataSource      =   ""
+         Enabled         =   False
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
+         Format          =   ""
+         HasBorder       =   True
+         Height          =   32
+         Hint            =   ""
+         Index           =   -2147483648
+         InitialParent   =   "GroupVivadoPath"
+         Italic          =   False
+         Left            =   19
+         LockBottom      =   False
+         LockedInPosition=   False
+         LockLeft        =   True
+         LockRight       =   False
+         LockTop         =   True
+         MaximumCharactersAllowed=   0
+         Password        =   False
+         ReadOnly        =   False
+         Scope           =   0
+         TabIndex        =   17
+         TabPanelIndex   =   0
+         TabStop         =   False
+         TextAlignment   =   0
+         TextColor       =   &c00000000
+         Tooltip         =   "Path to Vivados vivado*.bat file"
+         Top             =   513
+         Transparent     =   False
+         Underline       =   False
+         ValidationMask  =   ""
+         Value           =   ""
+         Visible         =   True
+         Width           =   315
       End
    End
    Begin TextField PathBIT
@@ -967,7 +801,7 @@ Begin Window WinSetPath
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
-      Left            =   26
+      Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -983,13 +817,13 @@ Begin Window WinSetPath
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   "Default directory for automated loading of Bitstream files"
-      Top             =   268
+      Top             =   282
       Transparent     =   False
       Underline       =   False
       ValidationMask  =   ""
       Value           =   ""
       Visible         =   True
-      Width           =   290
+      Width           =   315
    End
    Begin BevelButton PushFolderBITAdd
       AllowAutoDeactivate=   True
@@ -1015,7 +849,7 @@ Begin Window WinSetPath
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   330
+      Left            =   347
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1028,7 +862,7 @@ Begin Window WinSetPath
       TabStop         =   True
       TextColor       =   &c00000000
       Tooltip         =   "Set an optional default path for Bitstream files"
-      Top             =   268
+      Top             =   282
       Transparent     =   False
       Underline       =   False
       Value           =   False
@@ -1048,7 +882,7 @@ Begin Window WinSetPath
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   26
+      Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1063,7 +897,7 @@ Begin Window WinSetPath
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   236
+      Top             =   250
       Transparent     =   False
       Underline       =   False
       Value           =   "Path BIT"
@@ -1094,7 +928,7 @@ Begin Window WinSetPath
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   393
+      Left            =   410
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1107,7 +941,7 @@ Begin Window WinSetPath
       TabStop         =   True
       TextColor       =   &c00000000
       Tooltip         =   "Remove default path for Bitstream files"
-      Top             =   268
+      Top             =   282
       Transparent     =   False
       Underline       =   False
       Value           =   False
@@ -1133,7 +967,7 @@ Begin Window WinSetPath
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
-      Left            =   26
+      Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1149,13 +983,13 @@ Begin Window WinSetPath
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   "Default directory for automated loading of ROM files"
-      Top             =   338
+      Top             =   357
       Transparent     =   False
       Underline       =   False
       ValidationMask  =   ""
       Value           =   ""
       Visible         =   True
-      Width           =   290
+      Width           =   315
    End
    Begin BevelButton PushFolderROMAdd
       AllowAutoDeactivate=   True
@@ -1181,7 +1015,7 @@ Begin Window WinSetPath
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   330
+      Left            =   347
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1194,7 +1028,7 @@ Begin Window WinSetPath
       TabStop         =   True
       TextColor       =   &c00000000
       Tooltip         =   "Set an optional default path for ROM files"
-      Top             =   338
+      Top             =   357
       Transparent     =   False
       Underline       =   False
       Value           =   False
@@ -1225,7 +1059,7 @@ Begin Window WinSetPath
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   393
+      Left            =   410
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1238,7 +1072,7 @@ Begin Window WinSetPath
       TabStop         =   True
       TextColor       =   &c00000000
       Tooltip         =   "Remove default path for ROM files"
-      Top             =   338
+      Top             =   357
       Transparent     =   False
       Underline       =   False
       Value           =   False
@@ -1258,7 +1092,7 @@ Begin Window WinSetPath
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   26
+      Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -1273,12 +1107,178 @@ Begin Window WinSetPath
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   306
+      Top             =   326
       Transparent     =   False
       Underline       =   False
       Value           =   "Path ROM"
       Visible         =   True
       Width           =   234
+   End
+   Begin Label LabelD81
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      DataField       =   ""
+      DataSource      =   ""
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   32
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   20
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      Multiline       =   False
+      Scope           =   0
+      Selectable      =   False
+      TabIndex        =   29
+      TabPanelIndex   =   0
+      TabStop         =   False
+      Text            =   "Path D81"
+      TextAlignment   =   0
+      TextColor       =   &c00000000
+      Tooltip         =   ""
+      Top             =   20
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   234
+   End
+   Begin TextField PathD81
+      AllowAutoDeactivate=   True
+      AllowFocusRing  =   True
+      AllowSpellChecking=   False
+      AllowTabs       =   False
+      BackgroundColor =   &cFFFFFF00
+      Bold            =   False
+      DataField       =   ""
+      DataSource      =   ""
+      Enabled         =   False
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Format          =   ""
+      HasBorder       =   True
+      Height          =   32
+      Hint            =   ""
+      Index           =   -2147483648
+      Italic          =   False
+      Left            =   20
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      MaximumCharactersAllowed=   0
+      Password        =   False
+      ReadOnly        =   False
+      Scope           =   0
+      TabIndex        =   30
+      TabPanelIndex   =   0
+      TabStop         =   False
+      Text            =   ""
+      TextAlignment   =   0
+      TextColor       =   &c00000000
+      Tooltip         =   "Default directory for choosing a PRG file"
+      Top             =   53
+      Transparent     =   False
+      Underline       =   False
+      ValidationMask  =   ""
+      Visible         =   True
+      Width           =   314
+   End
+   Begin BevelButton PushFolderD81Add
+      AllowAutoDeactivate=   True
+      AllowFocus      =   True
+      BackgroundColor =   &c00000000
+      BevelStyle      =   0
+      Bold            =   False
+      ButtonStyle     =   0
+      Caption         =   ""
+      CaptionAlignment=   3
+      CaptionDelta    =   0
+      CaptionPosition =   1
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      HasBackgroundColor=   False
+      Height          =   32
+      Icon            =   2139172863
+      IconAlignment   =   1
+      IconDeltaX      =   0
+      IconDeltaY      =   0
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   348
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      MenuStyle       =   0
+      Scope           =   0
+      TabIndex        =   31
+      TabPanelIndex   =   0
+      TabStop         =   True
+      TextColor       =   &c00000000
+      Tooltip         =   "Set an optional default path for PRG files"
+      Top             =   53
+      Transparent     =   False
+      Underline       =   False
+      Value           =   False
+      Visible         =   True
+      Width           =   50
+   End
+   Begin BevelButton PushFolderD81Del
+      AllowAutoDeactivate=   True
+      AllowFocus      =   True
+      BackgroundColor =   &c00000000
+      BevelStyle      =   0
+      Bold            =   False
+      ButtonStyle     =   0
+      Caption         =   ""
+      CaptionAlignment=   3
+      CaptionDelta    =   0
+      CaptionPosition =   1
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      HasBackgroundColor=   False
+      Height          =   32
+      Icon            =   1904519167
+      IconAlignment   =   1
+      IconDeltaX      =   0
+      IconDeltaY      =   0
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   410
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      MenuStyle       =   0
+      Scope           =   0
+      TabIndex        =   32
+      TabPanelIndex   =   0
+      TabStop         =   True
+      TextColor       =   &c00000000
+      Tooltip         =   "Remove default path for PRG files"
+      Top             =   53
+      Transparent     =   False
+      Underline       =   False
+      Value           =   False
+      Visible         =   True
+      Width           =   50
    End
 End
 #tag EndWindow
@@ -1315,7 +1315,7 @@ End
 		  
 		  // No space needed for Vivado on Mac and Linux
 		  #If TargetMacOS Or TargetLinux Then
-		    WinSetPath.Height = 540
+		    WinSetPath.Height = 550
 		  #Endif
 		  
 		  // Set settings
@@ -1407,17 +1407,6 @@ End
 		End Sub
 	#tag EndEvent
 #tag EndEvents
-#tag Events PushFolderD81Add
-	#tag Event
-		Sub Action()
-		  Var Path As FolderItem
-		  Path = Folderitem.ShowSelectFolderDialog
-		  If Path <> Nil Then
-		    PathD81.Value = Path.NativePath
-		  End If
-		End Sub
-	#tag EndEvent
-#tag EndEvents
 #tag Events PushFolderSIDAdd
 	#tag Event
 		Sub Action()
@@ -1426,13 +1415,6 @@ End
 		  If Path <> Nil Then
 		    PathSID.Value = Path.NativePath
 		  End If
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events PushFolderD81Del
-	#tag Event
-		Sub Action()
-		  WinSetPath.PathD81.Value = ""
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -1544,6 +1526,24 @@ End
 	#tag Event
 		Sub Action()
 		  WinSetPath.PathROM.Value = ""
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events PushFolderD81Add
+	#tag Event
+		Sub Action()
+		  Var Path As FolderItem
+		  Path = Folderitem.ShowSelectFolderDialog
+		  If Path <> Nil Then
+		    PathD81.Value = Path.NativePath
+		  End If
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events PushFolderD81Del
+	#tag Event
+		Sub Action()
+		  WinSetPath.PathD81.Value = ""
 		End Sub
 	#tag EndEvent
 #tag EndEvents
