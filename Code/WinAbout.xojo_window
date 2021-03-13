@@ -87,7 +87,7 @@ Begin Window WinAbout
       Top             =   20
       Transparent     =   False
       Underline       =   False
-      Value           =   "M65Connect - Version 1.3"
+      Value           =   "M65Connect - Version 1.4"
       Visible         =   True
       Width           =   460
    End

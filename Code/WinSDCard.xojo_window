@@ -302,7 +302,7 @@ Begin Window WinSDCard
          Transparent     =   False
          Underline       =   False
          Visible         =   True
-         Width           =   70
+         Width           =   58
       End
       Begin Label StatusText
          AllowAutoDeactivate=   False
@@ -625,6 +625,49 @@ Begin Window WinSDCard
       Visible         =   True
       Width           =   543
    End
+   Begin TextField SDPath
+      AllowAutoDeactivate=   True
+      AllowFocusRing  =   False
+      AllowSpellChecking=   False
+      AllowTabs       =   False
+      BackgroundColor =   &cFFFFFF00
+      Bold            =   False
+      DataField       =   ""
+      DataSource      =   ""
+      Enabled         =   False
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Format          =   ""
+      HasBorder       =   True
+      Height          =   32
+      Hint            =   ""
+      Index           =   -2147483648
+      Italic          =   False
+      Left            =   627
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      MaximumCharactersAllowed=   0
+      Password        =   False
+      ReadOnly        =   False
+      Scope           =   0
+      TabIndex        =   19
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Text            =   ""
+      TextAlignment   =   0
+      TextColor       =   &c00000000
+      Tooltip         =   "Enter path you want to switch, press ENTER or TAB after"
+      Top             =   617
+      Transparent     =   False
+      Underline       =   False
+      ValidationMask  =   ""
+      Visible         =   True
+      Width           =   285
+   End
 End
 #tag EndWindow
 
@@ -644,6 +687,7 @@ End
 		    DriveList.Top = 24
 		    DriveList.Height = 22
 		    ManualPath.Height = 24
+		    SDPath.Height = 24
 		    PushClose.Height = 24
 		  #EndIf
 		  
@@ -652,20 +696,15 @@ End
 		    FTPBar.Top = 662
 		    DriveList.Top = 24
 		    DriveList.Height = 22
-		    ManualPath.Height = 24
+		    ManualPath.Height = 25
+		    SDPath.Height = 25
+		    PushClose.Top = 619
 		    PushClose.Height = 24
 		  #EndIf
 		  
 		  // Empty values
 		  SdCardInfo = ""
 		  TargetFilename = ""
-		  
-		  // Init rootpath button
-		  #If TargetWindows Then
-		    CmdRoot.Caption = "\"
-		  #Else
-		    CmdRoot.Caption = "/"
-		  #EndIf
 		  
 		  CmdCopy.Icon = cmdcopyright
 		  ListLocal.SetFocus
@@ -840,7 +879,7 @@ End
 	#tag Method, Flags = &h0
 		Shared Sub RefreshLocalDir()
 		  // Visible/allowed files to transfer
-		  Var Accept() As String = Array("prg", "d81", "d64", "bit", "cor", "rom", "m65", "sid", "bin", "fpk", "tap", "pzx", "z80", "sna", "scr", "trd", "scl", "pok", "ay", "pt3", "sqt", "stc", "tfm", "wav", "ko", "sys", "cfg", "txt", "scr")
+		  Var Accept() As String = Array("prg", "d81", "d64", "bit", "cor", "rom", "m65", "sid", "bin", "fpk", "tap", "pzx", "z80", "sna", "scr", "trd", "scl", "pok", "ay", "pt3", "sqt", "stc", "tfm", "wav", "ko", "sys", "cfg", "txt", "scr", "gb", "gbc", "gbcolor")
 		  Var File As FolderItem
 		  Var Size As String
 		  Var FilePart() As String
@@ -1333,9 +1372,10 @@ End
 		    Var Filename As String
 		    Var Size As String
 		    Var Extension As String
-		    Var Accept() As String = Array(".prg", ".d81", ".d64", ".bit", ".cor", ".rom", ".m65", ".sid", ".bin", ".fpk", ".tap", ".pzx", ".z80", ".sna", ".scr", ".trd", ".scl", ".pok", ".ay", ".pt3", ".sqt", ".stc", ".tfm", ".wav", ".ko", ".sys", ".cfg", ".txt", ".scr")
+		    Var Accept() As String = Array(".prg", ".d81", ".d64", ".bit", ".cor", ".rom", ".m65", ".sid", ".bin", ".fpk", ".tap", ".pzx", ".z80", ".sna", ".scr", ".trd", ".scl", ".pok", ".ay", ".pt3", ".sqt", ".stc", ".tfm", ".wav", ".ko", ".sys", ".cfg", ".txt", ".scr", ".gb", ".gbc", ".gbcolor")
 		    
 		    Var FileAttribute() As String
+		    Var Fileparts() As String
 		    Var SDCardList() As String
 		    Var reg As New RegEx
 		    Var match As RegExMatch
@@ -1353,23 +1393,25 @@ End
 		      SdCardInfo = ShellFTP.Result.Middle(InfoCardStart, InfoCardEnd-InfoCardStart).Trim
 		    End If
 		    
-		    
 		    // Split directory list
 		    SDCardList = ShellFTP.ReadAll().Split(LineEnd)
 		    
 		    // Filter for valid files and directories
 		    For i As Integer = 0 To SDCardList.LastIndex
+		      Extension = SDCardList(i).Right (SDCardList(i).Length - SDCardList(i).IndexOf("."))
 		      
-		      If Accept.IndexOf(SDCardList(i).Right(4)) <> -1 Or Trim(SDCardList(i)).BeginsWith("<dir", ComparisonOptions.CaseInsensitive) Then
+		      If Accept.IndexOf(Extension) <> -1 Or Trim(SDCardList(i)).BeginsWith("<dir", ComparisonOptions.CaseInsensitive) Then
 		        FileAttribute = Trim(SDCardList(i)).Split(" ")
 		        // Fiilename must start with letter or number
 		        match = reg.Search( FileAttribute(1) )
 		        
 		        If match <> Nil Then
-		          If Accept.IndexOf(SDCardList(i).Right(4)) <> -1 Then
+		          If Accept.IndexOf(Extension) <> -1 Then
 		            // File
-		            Filename = Left(FileAttribute(1), FileAttribute(1).Length -4)
-		            Extension = Trim(SDCardList(i)).Right(3)
+		            Fileparts = FileAttribute(1).Split(".")
+		            
+		            Filename = Fileparts(0) // Left(FileAttribute(1), FileAttribute(1).Length -4)
+		            Extension = Fileparts(1) // Trim(SDCardList(i)).Right(3)
 		            Size = Right("          " + FileAttribute(0) , 10)
 		          Else
 		            // Directory
@@ -1388,6 +1430,14 @@ End
 		    // Sort by current set choice
 		    WinSDCard.ListRemote.HasHeader = True
 		    WinSDCard.ListRemote.Sort
+		    
+		    // Refresh SD path
+		    If ActiveRemoteDirectory.Length = 1 Then
+		      SDPath.Value = ActiveRemoteDirectory
+		    Else
+		      SDPath.Value = ActiveRemoteDirectory.Left(ActiveRemoteDirectory.Length -1)
+		    End If
+		    
 		    
 		    ActiveCommand = ""
 		    WinSDCard.StatusText.Value = "Done"
@@ -1729,6 +1779,48 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag Events ManualPath
+	#tag Event
+		Sub LostFocus()
+		  // Check/switch only if path has changed
+		  If ManualPath.Value.Trim <> PathBackup Then
+		    Var NewPath As FolderItem =  New FolderItem(ManualPath.Value.Trim, FolderItem.PathModes.Native)
+		    
+		    // Check if entered path exists
+		    If NewPath.Exists Then
+		      ActiveLocalDirectory = NewPath
+		      RefreshLocalDir()
+		      ManualPath.SetFocus
+		    Else
+		      #If TargetWindows Then
+		        Var LineEnd As String = Chr(13)
+		      #Else
+		        Var LineEnd As String = Chr(10)
+		      #Endif
+		      
+		      MsgBox ("Invalid path" + LineEnd + LineEnd + WinSDCard.ManualPath.Value)
+		      WinSDCard.ManualPath.Value = PathBackup
+		      ManualPath.SetFocus
+		    End If
+		  End If
+		  
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub GotFocus()
+		  PathBackup = ManualPath.Value.Trim
+		  
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub KeyUp(Key As String)
+		  // Trigger check event by removing focus
+		  If key = Chr(10) Or key = Chr(13) Then
+		    ListLocal.SetFocus
+		  End If
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events SDPath
 	#tag Event
 		Sub LostFocus()
 		  // Check/switch only if path has changed

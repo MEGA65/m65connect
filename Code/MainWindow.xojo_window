@@ -84,6 +84,7 @@ Begin Window MainWindow
       DataSetReady    =   False
       DataTerminalReady=   False
       DTR             =   False
+      Enabled         =   True
       Handle          =   0
       Index           =   -2147483648
       LockedInPosition=   False
@@ -122,6 +123,7 @@ Begin Window MainWindow
       Scope           =   0
       TabIndex        =   14
       TabPanelIndex   =   0
+      TabStop         =   True
       Tooltip         =   "Displays latest action status"
       Top             =   661
       TopLeftColor    =   &cC4C5C400
@@ -308,6 +310,7 @@ Begin Window MainWindow
       Arguments       =   ""
       Backend         =   ""
       Canonical       =   False
+      Enabled         =   True
       ExecuteMode     =   1
       ExitCode        =   0
       Index           =   -2147483648
@@ -323,6 +326,7 @@ Begin Window MainWindow
       Arguments       =   ""
       Backend         =   ""
       Canonical       =   False
+      Enabled         =   True
       ExecuteMode     =   1
       ExitCode        =   0
       Index           =   -2147483648
@@ -811,6 +815,7 @@ Begin Window MainWindow
       Arguments       =   ""
       Backend         =   ""
       Canonical       =   False
+      Enabled         =   True
       ExecuteMode     =   1
       ExitCode        =   0
       Index           =   -2147483648
