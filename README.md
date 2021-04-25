@@ -53,6 +53,8 @@ Project Installation
 
 Change Log
 ----------
+- 25/04/2021: V1.5 : Latest mega65_ftp and m65 added, minor visual adjustments
+- 13/03/2021: V1.4 : SD Card Manager: further and shorter file extensions supported, current SD Card path added
 - 10/03/2021: V1.3 : SD Card Manager implemented to acces the internal SD Card, minor improvements
 - 30/11/2020: V1.2 : Exception handler added for wrong drivers (Win), latest m65 version implemented (Win, Mac, Linux)
 - 29/08/2020: V1.1 : Screenshot fix for Mac to start M65Connect from anywhere
