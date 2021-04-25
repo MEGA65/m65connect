@@ -1,0 +1,7 @@
+Important Note
+
+Due to Copyright ressons the ROM file is missing here. You can get C65 ROMs from other sources. 
+Rename it to MEGA65.ROM before you copy it onto the SD Card.
+
+Newer versions of all other files can be found at https://files.mega65.org
+Replace them in M65Connect Resources/SD Card Essentials

@@ -115,7 +115,7 @@ Begin Window WinPreview
       AllowAutoDeactivate=   True
       Bold            =   False
       Cancel          =   False
-      Caption         =   "Screenshot"
+      Caption         =   "Take Screenshot"
       Default         =   False
       Enabled         =   True
       FontName        =   "System"
@@ -125,7 +125,7 @@ Begin Window WinPreview
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   485
+      Left            =   506
       LockBottom      =   True
       LockedInPosition=   False
       LockLeft        =   False
@@ -141,7 +141,7 @@ Begin Window WinPreview
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   110
+      Width           =   140
    End
    Begin PushButton PushDelete
       AllowAutoDeactivate=   True
