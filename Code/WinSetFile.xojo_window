@@ -620,16 +620,16 @@ End
 		  Var PreferenceFolder As FolderItem = SpecialFolder.Documents.Child("MEGA65").Child("M65Connect").Child("Preferences")
 		  Var FilePref As FolderItem = PreferenceFolder.Child("file")
 		  
-		  Var Settings As String = "{""RESET"": " + WinSetFile.SetReset.Value.ToString + _
-		  ", ""GO64"": " + WinSetFile.SetGo64.Value.ToString + _
-		  ", ""LOAD8"": " + WinSetFile.SetLoad8.Value.ToString + _
-		  ", ""LOAD81"": " + WinSetFile.Setload81.Value.ToString + _
-		  ", ""LOADAUTO"": " + WinSetFile.SetloadAuto.Value.ToString + _
-		  ", ""GFXNTSC"": " + WinSetFile.SetGFXNTSC.Value.ToString + _
-		  ", ""GFXPAL"": " + WinSetFile.SetGFXPAL.Value.ToString + _
-		  ", ""GFXAUTO"": " + WinSetFile.SetGFXAuto.Value.ToString + _
-		  ", ""RUN"": " + WinSetFile.SetRun.Value.ToString + _
-		  ", ""SHOW"": " + WinSetFile.SetShow.Value.ToString + _
+		  Var Settings As String = "{""RESET"": """ + WinSetFile.SetReset.Value.ToString + """" + _
+		  ", ""GO64"": """ + WinSetFile.SetGo64.Value.ToString + """"  + _
+		  ", ""LOAD8"": """ + WinSetFile.SetLoad8.Value.ToString + """"  + _
+		  ", ""LOAD81"": """ + WinSetFile.Setload81.Value.ToString + """"  + _
+		  ", ""LOADAUTO"": """ + WinSetFile.SetloadAuto.Value.ToString + """"  + _
+		  ", ""GFXNTSC"": """ + WinSetFile.SetGFXNTSC.Value.ToString + """"  + _
+		  ", ""GFXPAL"": """ + WinSetFile.SetGFXPAL.Value.ToString + """"  + _
+		  ", ""GFXAUTO"": """ + WinSetFile.SetGFXAuto.Value.ToString + """"  + _
+		  ", ""RUN"": """ + WinSetFile.SetRun.Value.ToString + """"  + _
+		  ", ""SHOW"": """ + WinSetFile.SetShow.Value.ToString + """"  + _
 		  "}" 
 		  
 		  Var Output As TextOutputStream = TextOutputStream.Create(FilePref) 

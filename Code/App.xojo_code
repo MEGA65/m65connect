@@ -96,6 +96,10 @@ Inherits Application
 		    Var ConsoleRead As TextInputStream = TextInputStream.Open(TargetPref.Child("console"))
 		    Var ConsoleData As String = ConsoleRead.ReadAll
 		    
+		    // Encapsulate True/False in quotes
+		    ConsoleData = ConsoleData.ReplaceAll(" ", "")
+		    ConsoleData = ConsoleData.ReplaceAll(":True", ":""True""").ReplaceAll(":False", ":""False""").ReplaceAll(":TRUE", ":""True""").ReplaceAll(":FALSE", ":""False""")
+		    
 		    // Load as JSON
 		    Var Console As New JSONItem
 		    Console.Load(ConsoleData)
@@ -105,8 +109,8 @@ Inherits Application
 		    Terminal.SetFontSize = Console.Lookup("FONTSIZE", 0)
 		    Terminal.SetFontColor = Console.Lookup("FONTCOLOR", "&c454545")
 		    Terminal.SetConsoleColor = Console.Lookup("CONSOLECOLOR", "&cF8F8F8")
-		    Terminal.SetM65Output = Console.Lookup("SHOWM65OUTPUT", True)
-		    Terminal.SetClearConsole = Console.Lookup("CLEARCONSOLE", False)
+		    Terminal.SetM65Output = Console.Lookup("SHOWM65OUTPUT", "True")
+		    Terminal.SetClearConsole = Console.Lookup("CLEARCONSOLE", "True")
 		    
 		    ConsoleRead.Close
 		  Else
@@ -119,21 +123,25 @@ Inherits Application
 		    Var FileRead As TextInputStream = TextInputStream.Open(TargetPref.Child("file"))
 		    Var FileData As String = FileRead.ReadAll
 		    
+		    // Encapsulate True/False in quotes
+		    FileData = FileData.ReplaceAll(" ", "")
+		    FileData = FileData.ReplaceAll(":True", ":""True""").ReplaceAll(":False", ":""False""").ReplaceAll(":TRUE", ":""True""").ReplaceAll(":FALSE", ":""False""")
+		    
 		    // Load as JSON
 		    Var File As New JSONItem
 		    File.Load(FileData)
 		    
 		    // Set File Load settings
-		    M65.SetReset = File.Lookup("RESET", True)
-		    M65.SetGo64 = File.Lookup("GO64", True)
-		    M65.SetLoad8 = File.Lookup("LOAD8", False)
-		    M65.Setload81 = File.Lookup("LOAD81", True)
-		    M65.SetloadAuto = File.Lookup("LOADAUTO", False)
-		    M65.SetGFXNTSC = File.Lookup("GFXNTSC", False)
-		    M65.SetGFXPAL = File.Lookup("GFXPAL", False)
-		    M65.SetGFXAuto = File.Lookup("GFXAUTO", True)
-		    M65.SetRun = File.Lookup("RUN", True)
-		    M65.SetShow = File.Lookup("SHOW", True)
+		    M65.SetReset = File.Lookup("RESET", "True")
+		    M65.SetGo64 = File.Lookup("GO64", "True")
+		    M65.SetLoad8 = File.Lookup("LOAD8", "False")
+		    M65.Setload81 = File.Lookup("LOAD81", "True")
+		    M65.SetloadAuto = File.Lookup("LOADAUTO", "False")
+		    M65.SetGFXNTSC = File.Lookup("GFXNTSC", "False")
+		    M65.SetGFXPAL = File.Lookup("GFXPAL", "False")
+		    M65.SetGFXAuto = File.Lookup("GFXAUTO", "True")
+		    M65.SetRun = File.Lookup("RUN", "True")
+		    M65.SetShow = File.Lookup("SHOW", "True")
 		    
 		    FileRead.Close
 		  Else

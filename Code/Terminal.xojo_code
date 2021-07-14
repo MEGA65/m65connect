@@ -4,7 +4,6 @@ Protected Class Terminal
 		Shared Sub Connect()
 		  // Set the serial device to the index of the set on in terminal portlist
 		  Try
-		    
 		    // Set serial connection to the defined port if available
 		    For i As Integer = 0 To MainWindow.SerialConnect.Device.Count -1
 		      #If TargetWindows Then
@@ -44,9 +43,16 @@ Protected Class Terminal
 		    //  Reset Mega65 on leaving SD Card Manager
 		    If ResetMega65 Then
 		      ResetMega65 = False
-		      M65.Send("Reset", "", "", False, False, "", False)
+		      // Not used anymore as mega65_ftp does sys58552 itself
+		      // M65.Send("Reset", "", "", False, False, "", False)
 		    End If
 		    
+		    // D81 file was mounted, head back to MEGA65
+		    If Go65 Then
+		      Go65 = False
+		      // Not used anymore as mega65_ftp does sys58552 itself
+		      // M65.Send("Go65", "", "", False, False, "", False)
+		    End If
 		    
 		  Catch error As IOException
 		    MainWindow.StatusText.Value = "The serial connection could not be established (" + error.ErrorNumber.tostring + ")"
@@ -343,6 +349,10 @@ Protected Class Terminal
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		Shared Go65 As Boolean = False
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		Shared KeyPressed As Boolean = False
 	#tag EndProperty
 
@@ -383,7 +393,7 @@ Protected Class Terminal
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
-		Shared SetFontType As Integer = 0
+		Shared SetFontType As Integer = 9
 	#tag EndProperty
 
 	#tag Property, Flags = &h0

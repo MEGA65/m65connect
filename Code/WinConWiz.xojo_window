@@ -154,7 +154,7 @@ Begin Window WinConWiz
       Top             =   64
       Transparent     =   False
       Underline       =   False
-      Value           =   "The Connection Wizard will help you to identify the port to which your MEGA65 is connected.\n\nIf you already know the correct port you can abort the Connection Wizard and set the correct port in menu Settings > Connection.\n\nIf the Connection Wizard will not find the MEGA65 head to menu Help > Manual > tab 'Get connected' to check hardware settings."
+      Value           =   "The Connection Wizard will help you to identify the port to which your MEGA65 or Nexys board is connected.\n\nIf you already know the correct port you can abort the Connection Wizard and set the correct port in menu Settings > Connection.\n\nIf the Connection Wizard will not find the MEGA65 head to menu Help > Manual > tab 'Get connected' to check hardware settings."
       Visible         =   True
       Width           =   436
    End
@@ -181,7 +181,7 @@ End
 		  #EndIf
 		  
 		  PortHeader.Value = "Welcome to M65Connect"
-		  PortText.Value = "The Connection Wizard will help you to identify the serial port to which your MEGA65 is connected."  +_
+		  PortText.Value = "The Connection Wizard will help you to identify the serial port to which your MEGA65 or Nexys board is connected."  +_
 		  LineFeed +_
 		  "If you already know the correct serial port you can abort the Connection Wizard and set the correct serial port in menu Settings > Connection."
 		  
@@ -221,7 +221,9 @@ End
 		  Select Case WizStep
 		  Case 1
 		    PortHeader.Value = "Step 1"
-		    PortText.Value = "Make sure the MEGA65 is turned off and connected with your PC." +_
+		    PortText.Value = "MEGA65: Make sure the MEGA65 is turned off and connected with your PC." +_
+		    LineFeed +_
+		    "Nexys board: Make sure the USB cable from Nexys board to PC is not connected." +_
 		    LineFeed +_
 		    "Press button Proceed."
 		    
@@ -232,9 +234,11 @@ End
 		    Me.Visible = False
 		    
 		    PortHeader.Value = "Step 2"
-		    PortText.Value = "Now turn on the MEGA65 and wait a few seconds."  +_
+		    PortText.Value = "MEGA65: Now turn on the MEGA65 and wait a few seconds."  +_
 		    LineFeed +_
-		    "If the text here wont change the MEGA65 was not found. See menu Help > Manual > Get connected for further details."
+		    "Nexys board: Plug the USB cable so the Nexys board is connected to the PC."  +_
+		    LineFeed +_
+		    "If the text here wont change the MEGA65 or the Nexys board was not found. See menu Help > Manual > Get connected for further details."
 		    
 		    WizStep = 3
 		    // -> DeviceListUpdate takes over here

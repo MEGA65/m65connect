@@ -123,6 +123,12 @@ Protected Class M65
 		    MainWindow.BevelPAL.Underline = False
 		  End If
 		  
+		  // Go to MEGA65
+		  // Not used atm, called by M65.Send("Go65", "", "", False, False, "", False)
+		  If Command = "Go65" Then
+		    M65Send = M65Send + " -T sys58552"
+		  End If
+		  
 		  // Take screenshots
 		  if Command = "PIC" Then
 		    WinPreview.M65Mode = True

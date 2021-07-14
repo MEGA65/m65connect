@@ -23,7 +23,7 @@ Begin Window WinSDCard
    Title           =   "SD Card Manager"
    Type            =   1
    Visible         =   True
-   Width           =   1024
+   Width           =   1124
    Begin Label LabelSource
       AllowAutoDeactivate=   True
       Bold            =   True
@@ -57,7 +57,7 @@ Begin Window WinSDCard
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   67
+      Width           =   167
    End
    Begin PushButton PushClose
       AllowAutoDeactivate=   True
@@ -73,7 +73,7 @@ Begin Window WinSDCard
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   924
+      Left            =   1024
       LockBottom      =   True
       LockedInPosition=   False
       LockLeft        =   False
@@ -135,13 +135,13 @@ Begin Window WinSDCard
       AllowRowDragging=   False
       AllowRowReordering=   False
       Bold            =   False
-      ColumnCount     =   3
+      ColumnCount     =   5
       ColumnWidths    =   ""
       DataField       =   ""
       DataSource      =   ""
       DefaultRowHeight=   -1
       DropIndicatorVisible=   False
-      Enabled         =   True
+      Enabled         =   False
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
@@ -155,12 +155,12 @@ Begin Window WinSDCard
       Height          =   551
       Index           =   -2147483648
       InitialParent   =   ""
-      InitialValue    =   "File	Extension	Size"
+      InitialValue    =   "File	Extension	Size	Mount	Info"
       Italic          =   False
       Left            =   627
       LockBottom      =   True
       LockedInPosition=   False
-      LockLeft        =   True
+      LockLeft        =   False
       LockRight       =   True
       LockTop         =   True
       RequiresSelection=   False
@@ -174,7 +174,7 @@ Begin Window WinSDCard
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   377
+      Width           =   477
       _ScrollOffset   =   0
       _ScrollWidth    =   -1
    End
@@ -210,10 +210,10 @@ Begin Window WinSDCard
       InitialValue    =   "File	Extension	Size	Modified"
       Italic          =   False
       Left            =   20
-      LockBottom      =   True
+      LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
-      LockRight       =   True
+      LockRight       =   False
       LockTop         =   True
       RequiresSelection=   False
       RowSelectionType=   1
@@ -268,7 +268,7 @@ Begin Window WinSDCard
       TopLeftColor    =   &cC4C5C400
       Transparent     =   True
       Visible         =   True
-      Width           =   1024
+      Width           =   1124
       Begin Label StatusLabel
          AllowAutoDeactivate=   True
          Bold            =   False
@@ -389,10 +389,10 @@ Begin Window WinSDCard
       InitialParent   =   ""
       Italic          =   False
       Left            =   575
-      LockBottom      =   True
+      LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
-      LockRight       =   True
+      LockRight       =   False
       LockTop         =   True
       MenuStyle       =   0
       Scope           =   0
@@ -433,10 +433,10 @@ Begin Window WinSDCard
       InitialParent   =   ""
       Italic          =   False
       Left            =   575
-      LockBottom      =   True
+      LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
-      LockRight       =   True
+      LockRight       =   False
       LockTop         =   True
       MenuStyle       =   0
       Scope           =   0
@@ -476,10 +476,10 @@ Begin Window WinSDCard
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   692
+      Left            =   696
       LockBottom      =   True
       LockedInPosition=   False
-      LockLeft        =   True
+      LockLeft        =   False
       LockRight       =   True
       LockTop         =   True
       MenuStyle       =   0
@@ -520,10 +520,10 @@ Begin Window WinSDCard
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   979
+      Left            =   1079
       LockBottom      =   True
       LockedInPosition=   False
-      LockLeft        =   True
+      LockLeft        =   False
       LockRight       =   True
       LockTop         =   True
       MenuStyle       =   0
@@ -660,7 +660,7 @@ Begin Window WinSDCard
       Text            =   ""
       TextAlignment   =   0
       TextColor       =   &c00000000
-      Tooltip         =   "Enter path you want to switch, press ENTER or TAB after"
+      Tooltip         =   "Current location in SD Card"
       Top             =   617
       Transparent     =   False
       Underline       =   False
@@ -713,7 +713,7 @@ End
 		  ListLocal.ColumnAlignmentAt(2) = ListBox.Alignments.Right
 		  ListRemote.ColumnAlignmentAt(2) = ListBox.Alignments.Right
 		  ListLocal.ColumnWidths = "200,100,80"
-		  ListRemote.ColumnWidths = "190,100"
+		  ListRemote.ColumnWidths = "150,100,80"
 		  
 		  
 		  // Add available drives to drive list
@@ -789,6 +789,8 @@ End
 		  
 		  // Set local path
 		  ActiveLocalDirectory = SpecialFolder.UserHome.Child("Documents")
+		  
+		  Terminal.Go65 = False
 		  
 		  // Reset variables
 		  ActiveRemoteDirectory = "/"
@@ -1030,6 +1032,26 @@ End
 		    
 		    WinSDCard.StatusText.Value = "Deleting " + FileName + "..."
 		    
+		  Case "rename"
+		    // Switch first to target DIR if not in root
+		    If ActiveRemoteDirectory = "/" Then
+		      ExecuteCommand = "-c " +  Chr(34) + "rename " + OldFilename + " " + TargetFilename + Chr(34) 
+		    Else
+		      ExecuteCommand = "-c " + Chr(34)  +"cd " + ActiveRemoteDirectory + Chr(34)  + " -c " +  Chr(34) + "rename " + OldFilename + " " + TargetFilename + Chr(34)
+		    End If
+		    
+		    WinSDCard.StatusText.Value = "Renaming file " + OldFilename + " to " + TargetFilename + "..."
+		    
+		  Case "mount"
+		    // Switch first to target DIR if not in root
+		    If ActiveRemoteDirectory = "/" Then
+		      ExecuteCommand = "-c " +  Chr(34) + "mount " + TargetFilename + Chr(34)  // +  " -c " + Chr(34) + "quit" + Chr(34)
+		    Else
+		      ExecuteCommand = "-c " + Chr(34)  +"cd " + ActiveRemoteDirectory + Chr(34)  + " -c " +  Chr(34) + "mount " + TargetFilename + Chr(34) // +  " -c " + Chr(34) + "quit" + Chr(34)
+		    End If
+		    
+		    WinSDCard.StatusText.Value = "Mounting file " + TargetFilename + "..."
+		    
 		  Case "clusters"
 		    Var FileParts() As String = ProcessList(0).split(".")
 		    Var FileName As String = FileParts(0) + "." + FileParts(1)
@@ -1057,7 +1079,7 @@ End
 		  // Add Baud
 		  FTPSend = FTPSend + Baud
 		  
-		  // Add command(s)
+		  // Prepare execute command
 		  FTPSend =  InitCommand + " " + FTPSend + " " + ExecuteCommand
 		  
 		  // For testing purposes
@@ -1182,26 +1204,100 @@ End
 		    // Show content of targeting remote directory
 		    SendFTP ("dir")
 		  Else 
+		    // File clicked
+		    Var Filename As String = ListRemote.CellValueAt(Index, 0) + "." + ListRemote.CellValueAt(Index, 1)
+		    
+		    // User wants to rename a remote file
+		    ListRemote.CellTypeAt(Index, 0) = ListBox.CellTypes.TextField
+		    ListRemote.EditCellAt(Index, 0)
+		    
+		    // Backup required on CellLostFocus
+		    OldFilename = ListRemote.CellValueAt(Index, 0)  + "." + ListRemote.CellValueAt(Index, 1) 
+		    TargetFilename = ""
+		  End If
+		  
+		  // Enable list access
+		  WinSDCard.ListRemote.Enabled = True
+		  
+		  
+		  
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Function CellClick(row as Integer, column as Integer, x as Integer, y as Integer) As Boolean
+		  If column = 3 and ListRemote.CellValueAt(row, column) = "Mount" Then
+		    // Mount D81 file
+		    TargetFilename =  ListRemote.CellValueAt(row, 0) + "." + ListRemote.CellValueAt(row, 1)
+		    WinSDCard.FTPBar.MaximumValue = 2800
+		    
+		    StartFTPBar()
+		    SendFTP ("mount")
+		    
+		  Elseif column = 4 and ListRemote.CellValueAt(row, column) = "Info" Then
 		    // Show file info
+		    ProcessList.RemoveAll() 
+		    ProcessList.Add(ListRemote.CellValueAt(row, 0) + "." + ListRemote.CellValueAt(row, 1) + "." + ListRemote.CellValueAt(row, 2).Trim )
+		    WinSDCard.FTPBar.MaximumValue = 2300
 		    
-		    // Gather selected files (should only be one)
-		    ProcessList = GetFileSelection()
-		    
-		    If ProcessList.Count = 1 Then
-		      // Set and start timer for progress bar
-		      WinSDCard.FTPBar.MaximumValue = 2300
-		      StartFTPBar()
-		      
-		      SendFTP ("clusters")
-		    ElseIf ProcessList.Count > 1 Then
-		      MsgBox ("More than one file selected")
-		    Else
-		      MsgBox ("No file selected")
-		    End If
+		    StartFTPBar()
+		    SendFTP ("clusters")
 		  End If
 		  
 		  
 		  
+		  
+		  
+		End Function
+	#tag EndEvent
+	#tag Event
+		Sub CellLostFocus(row as Integer, column as Integer)
+		  // If OldFilename is filled the user may rename it
+		  If OldFilename <> "" Then
+		    TargetFilename = ListRemote.CellValueAt(Row, Column).Trim.ReplaceAll(" ", "").Left(8).Uppercase + "." + ListRemote.CellValueAt(Row, Column+1)
+		    
+		    If TargetFilename <> OldFilename Then
+		      
+		      // Check if new filename does net yet exist
+		      Var Found As Boolean = False
+		      For i As Integer = 0 To WinSDCard.ListRemote.LastRowIndex
+		        // Ignore directories for check
+		        If WinSDCard.ListRemote.CellValueAt(i, 2) <> "DIR" Then
+		          // Check against all files in current directory except current file record
+		          If i <> Row And ListRemote.CellValueAt(i, 0).Uppercase + "." + ListRemote.CellValueAt(i, 1).Uppercase = TargetFilename Then 
+		            Found = True
+		            Exit
+		          End If
+		        End If
+		      Next
+		      
+		      If Found Then
+		        // Set old filename
+		        Var OldFileParts() As String = OldFilename.split(".")
+		        ListRemote.CellValueAt(Row, Column) = OldFileParts(0) 
+		        
+		        #If TargetWindows Then
+		          Var LineEnd As String = Chr(13)
+		        #Else
+		          Var LineEnd As String = Chr(10)
+		        #Endif
+		        
+		        MsgBox ("Filename already exists" + LineEnd + LineEnd + "Please choose another filename")
+		      Else
+		        WinSDCard.FTPBar.MaximumValue = 2000
+		        StartFTPBar()
+		        
+		        // Rename file
+		        SendFTP("rename")
+		      End If
+		      
+		    Else
+		      // Set original (old) filename
+		      Var Index As Integer = ListRemote.SelectedRowIndex
+		      Var OldFileParts() As String = OldFilename.split(".")
+		      ListRemote.CellValueAt(Index, 0) = OldFileParts(0) 
+		    End If
+		    
+		  End If
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -1312,7 +1408,7 @@ End
 	#tag EndEvent
 	#tag Event
 		Function CellClick(row as Integer, column as Integer, x as Integer, y as Integer) As Boolean
-		  // Backup required on CellLostFocus
+		  // Rename: Backup required on CellLostFocus
 		  // On second rename doubleclick does not fire, so must be done here
 		  OldFilename = ListLocal.CellValueAt(Row, 0)  + "." + ListLocal.CellValueAt(Row, 1)  
 		  
@@ -1341,6 +1437,15 @@ End
 		    WinSDCard.FTPBar.Value = 0
 		    WinSDCard.StatusText.Value = "Error"
 		    
+		    // Set back old filename in case of rename
+		    If ActiveCommand = "rename" Then
+		      Var Index As Integer = ListRemote.SelectedRowIndex
+		      Var OldFileParts() As String = OldFilename.split(".")
+		      ListRemote.CellValueAt(Index, 0) = OldFileParts(0) 
+		      OldFilename = ""
+		      TargetFilename = ""
+		    End If 
+		    
 		    // Show error message
 		    Var ErrorEnd  As Integer = ShellFTP.Result.IndexOf( ErrorStart, LineEnd )
 		    MsgBox (ShellFTP.Result.Middle(ErrorStart, ErrorEnd-ErrorStart) )
@@ -1361,7 +1466,6 @@ End
 		    
 		    // Enable Commnader
 		    EnableCmd()
-		    
 		    Exit
 		  End If
 		  
@@ -1372,7 +1476,9 @@ End
 		    Var Filename As String
 		    Var Size As String
 		    Var Extension As String
-		    Var Accept() As String = Array(".prg", ".d81", ".d64", ".bit", ".cor", ".rom", ".m65", ".sid", ".bin", ".fpk", ".tap", ".pzx", ".z80", ".sna", ".scr", ".trd", ".scl", ".pok", ".ay", ".pt3", ".sqt", ".stc", ".tfm", ".wav", ".ko", ".sys", ".cfg", ".txt", ".scr", ".gb", ".gbc", ".gbcolor")
+		    Var Mount As String
+		    Var Info As String
+		    Var Accept() As String = Array(".prg", ".d81", ".d64", ".bit", ".cor", ".rom", ".m65", ".sid", ".mod", ".bin", ".fpk", ".tap", ".pzx", ".z80", ".sna", ".scr", ".trd", ".scl", ".pok", ".ay", ".pt3", ".sqt", ".stc", ".tfm", ".wav", ".ko", ".sys", ".cfg", ".txt", ".scr", ".gb", ".gbc", ".gbcolor")
 		    
 		    Var FileAttribute() As String
 		    Var Fileparts() As String
@@ -1410,21 +1516,35 @@ End
 		            // File
 		            Fileparts = FileAttribute(1).Split(".")
 		            
-		            Filename = Fileparts(0) // Left(FileAttribute(1), FileAttribute(1).Length -4)
-		            Extension = Fileparts(1) // Trim(SDCardList(i)).Right(3)
-		            Size = Right("          " + FileAttribute(0) , 10)
+		            Filename = Fileparts(0)
+		            Extension = Fileparts(1)
+		            Size = FileAttribute(0)
+		            Mount = ""
+		            If Extension = "D81" Then
+		              Mount = "Mount"
+		            End If
+		            Info = "Info"
 		          Else
 		            // Directory
 		            Filename = FileAttribute(1)
 		            Extension = ""
 		            Size = "DIR"
+		            Mount = ""
+		            Info = ""
 		          End if
 		          
-		          ListRemote.AddRow(Filename, Extension, Size)
+		          ListRemote.AddRow(Filename, Extension, Size, Mount, Info)
 		        End if
-		        
 		      End if
-		      
+		    Next
+		    
+		    // Make info column bold
+		    For i As Integer = 0 To ListRemote.LastRowIndex
+		      ListRemote.CellAlignmentAt(i, 2) = ListBox.Alignments.Right
+		      ListRemote.CellAlignmentAt(i, 3) = ListBox.Alignments.Center
+		      ListRemote.CellItalic(i, 3) = True
+		      ListRemote.CellAlignmentAt(i, 4) = ListBox.Alignments.Center
+		      ListRemote.CellItalic(i, 4) = True
 		    Next
 		    
 		    // Sort by current set choice
@@ -1437,7 +1557,6 @@ End
 		    Else
 		      SDPath.Value = ActiveRemoteDirectory.Left(ActiveRemoteDirectory.Length -1)
 		    End If
-		    
 		    
 		    ActiveCommand = ""
 		    WinSDCard.StatusText.Value = "Done"
@@ -1462,9 +1581,21 @@ End
 		      
 		      // If not found add file to remote list
 		      If Not Found Then
-		        // Recover target filename
+		        // Split target filename
 		        Var TargetParts() As String = TargetFilename.split(".")
-		        ListRemote.AddRow( TargetParts(0), TargetParts(01), FileParts(2) )
+		        Var Mount As String = ""
+		        
+		        If TargetParts(1) = "D81" Then
+		          Mount = "Mount"
+		        End If 
+		        
+		        // Add copied file
+		        ListRemote.AddRow( TargetParts(0), TargetParts(01), FileParts(2), Mount, "Info" )
+		        
+		        ListRemote.CellAlignmentAt(ListRemote.LastAddedRowIndex, 3) = ListBox.Alignments.Center
+		        ListRemote.CellItalic(ListRemote.LastAddedRowIndex, 3) = True
+		        ListRemote.CellAlignmentAt(ListRemote.LastAddedRowIndex, 4) = ListBox.Alignments.Center
+		        ListRemote.CellItalic(ListRemote.LastAddedRowIndex, 4) = True
 		      End If
 		      
 		      // Unselect copied file
@@ -1548,7 +1679,37 @@ End
 		      WinSDCard.StatusText.Value = "Done"
 		    End If
 		    
+		  Case "rename"
+		    // Make sure the new filename is displayed in uppercase
+		    Var Index As Integer = ListRemote.SelectedRowIndex
+		    Var UpperFileParts() As String = TargetFilename.split(".")
+		    ListRemote.CellValueAt(Index, 0) = UpperFileParts(0) 
+		    
+		    OldFilename = ""
+		    TargetFilename = ""
+		    
+		    // Enable Commnader
+		    EnableCmd()
+		    
+		    ActiveCommand = ""
+		    WinSDCard.StatusText.Value = "Done"
+		    
+		  Case "mount"
+		    // Go to 64 mode after quit
+		    Terminal.Go65 = True
+		    
+		    TargetFilename = ""
+		    
+		    // Enable Commnader
+		    EnableCmd()
+		    
+		    ActiveCommand = ""
+		    WinSDCard.StatusText.Value = "Done"
+		    
 		  Case "clusters"
+		    Var FileParts() As String = ProcessList(0).split(".")
+		    Var FileName As String = FileParts(0) + "." + FileParts(1)
+		    
 		    Var InfoFileStart As Integer = ShellFTP.Result.IndexOf("Found FAT32")
 		    Var FileInfo As String = ShellFTP.Result.Middle(InfoFileStart, ShellFTP.Result.Length).Trim
 		    
@@ -1559,7 +1720,7 @@ End
 		    WinSDCard.StatusText.Value = "Done"
 		    
 		    // Show file info
-		    MsgBox("File information" + LineEnd + LineEnd + FileInfo)
+		    MsgBox("File information of " + FileName + LineEnd + LineEnd + FileInfo)
 		    
 		  Case "quit"
 		    '// Clear Commander window
@@ -1568,8 +1729,10 @@ End
 		    ActiveCommand = ""
 		    SdCardInfo = ""
 		    
-		    // Reactivate Terminal on quit and force reset of Mega65
-		    Terminal.ResetMega65 = True
+		    // Reactivate Terminal on quit and force reset of Mega65 if no d81 file mounted
+		    if  Terminal.Go65 = False Then
+		      Terminal.ResetMega65 = True
+		    End If
 		    Terminal.Connect()
 		    
 		    WinSDCard.Close
@@ -1609,10 +1772,9 @@ End
 		      Duration = 2800 * ProcessList.Count 
 		      
 		      If SumFileSize > 10000 Then
-		        Duration = Duration + (SumFileSize / 110)
+		        Duration = Duration + (SumFileSize / 80)
 		      End If
 		    End If
-		    
 		    
 		    // Set progressbar and start progress
 		    WinSDCard.FTPBar.MaximumValue = Duration

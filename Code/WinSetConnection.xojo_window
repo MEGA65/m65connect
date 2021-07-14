@@ -91,8 +91,8 @@ Begin Window WinSetConnection
    Begin PushButton PushFindPort
       AllowAutoDeactivate=   True
       Bold            =   False
-      Cancel          =   False
-      Caption         =   "Find MEGA65 Port"
+      Cancel          =   True
+      Caption         =   "Autodetect COM Port"
       Default         =   False
       Enabled         =   True
       FontName        =   "System"
@@ -113,12 +113,12 @@ Begin Window WinSetConnection
       TabIndex        =   3
       TabPanelIndex   =   0
       TabStop         =   True
-      Tooltip         =   "Reset to MEGA65 Settings"
+      Tooltip         =   "Autodetect the port of your MEGA65 or Nexys"
       Top             =   80
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   160
+      Width           =   190
    End
    Begin Label LabelTerminalPort
       AllowAutoDeactivate=   False
@@ -151,7 +151,7 @@ Begin Window WinSetConnection
       Top             =   20
       Transparent     =   False
       Underline       =   False
-      Value           =   "MEGA65 Port"
+      Value           =   "COM Port"
       Visible         =   True
       Width           =   101
    End

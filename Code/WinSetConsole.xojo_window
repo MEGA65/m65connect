@@ -506,6 +506,13 @@ End
 		  ShowM65Output.Value = Terminal.SetM65Output
 		  ClearConsole.Value = Terminal.SetClearConsole
 		  
+		  // xxxxxxxx
+		  if Terminal.SetM65Output then
+		    msgbox ("true")
+		  end if
+		  
+		  //msgbox (Terminal.SetM65Output.Value.ToString)
+		  
 		End Sub
 	#tag EndEvent
 
@@ -587,8 +594,8 @@ End
 		  ", ""FONTSIZE"": " + str(Terminal.SetFontSize) + _
 		  ", ""FONTCOLOR"": """ + str(Terminal.SetFontColor) + """" + _
 		  ", ""CONSOLECOLOR"": """ + str(Terminal.SetConsoleColor) + """" + _
-		  ", ""SHOWM65OUTPUT"": " + Terminal.SetM65Output.ToString + _
-		  ", ""CLEARCONSOLE"": " + Terminal.SetClearConsole.ToString + _
+		  ", ""SHOWM65OUTPUT"": """ + Terminal.SetM65Output.ToString + """" + _
+		  ", ""CLEARCONSOLE"": """ + Terminal.SetClearConsole.ToString + """" + _
 		  " }" 
 		  
 		  Var Output As TextOutputStream = TextOutputStream.Create(ConsolePref) 

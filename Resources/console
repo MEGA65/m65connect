@@ -3,6 +3,6 @@
   "FONTSIZE": 0,
   "FONTCOLOR": "&c454545",
   "CONSOLECOLOR": "&cF8F8F8",
-  "SHOWM65OUTPUT": True,
-  "CLEARCONSOLE": False
+  "SHOWM65OUTPUT": "True",
+  "CLEARCONSOLE": "False"
 }

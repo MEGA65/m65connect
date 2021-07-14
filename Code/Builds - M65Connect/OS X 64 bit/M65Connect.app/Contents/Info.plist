@@ -21,7 +21,7 @@
    <key>NSHumanReadableCopyright</key>
    <string>MEGA65</string>
    <key>CFBundleShortVersionString</key>
-   <string>1.5</string>
+   <string>1.6</string>
    <key>CFBundleIconFile</key>
    <string>App</string>
    <key>LSMinimumSystemVersion</key>

@@ -84,6 +84,7 @@ Begin Window MainWindow
       DataSetReady    =   False
       DataTerminalReady=   False
       DTR             =   False
+      Enabled         =   True
       Handle          =   0
       Index           =   -2147483648
       LockedInPosition=   False
@@ -122,6 +123,7 @@ Begin Window MainWindow
       Scope           =   0
       TabIndex        =   14
       TabPanelIndex   =   0
+      TabStop         =   "True"
       Tooltip         =   "Displays latest action status"
       Top             =   661
       TopLeftColor    =   &cC4C5C400
@@ -308,6 +310,7 @@ Begin Window MainWindow
       Arguments       =   ""
       Backend         =   ""
       Canonical       =   False
+      Enabled         =   True
       ExecuteMode     =   1
       ExitCode        =   0
       Index           =   -2147483648
@@ -323,6 +326,7 @@ Begin Window MainWindow
       Arguments       =   ""
       Backend         =   ""
       Canonical       =   False
+      Enabled         =   True
       ExecuteMode     =   1
       ExitCode        =   0
       Index           =   -2147483648
@@ -811,6 +815,7 @@ Begin Window MainWindow
       Arguments       =   ""
       Backend         =   ""
       Canonical       =   False
+      Enabled         =   True
       ExecuteMode     =   1
       ExitCode        =   0
       Index           =   -2147483648
@@ -2505,11 +2510,11 @@ End
 		            
 		            WinConWiz.PortHeader.Value = "Success"
 		            
-		            WinConWiz.PortText.Value = "The MEGA65 was found and you are now connected!" +_
+		            WinConWiz.PortText.Value = "The MEGA65/Nexys board was found and you are now connected!" +_
 		            LineFeed +_
-		            "From now on M65Connect will automatically recognise when the MEGA65 is turned on or off." +_
+		            "From now on M65Connect will automatically recognise when the MEGA65/Nexys board is turned on or off." +_
 		            LineFeed +_
-		            "Depending on OS and attached USB devices the port of the MEGA65 may change. " +_
+		            "Depending on OS and attached USB devices the port of the MEGA65/Nexys board may change. " +_
 		            "In such a case restart the Connection Wizard in menu Settings > Connection."
 		            
 		            Terminal.M65Connect = True
@@ -2517,7 +2522,7 @@ End
 		          End If 
 		          
 		        Else 
-		          WinConWiz.PortText.Value = "It seems you have turned off the MEGA65. Turn it on again."
+		          WinConWiz.PortText.Value = "It seems you have turned off or unplugged the MEGA65/Nexys board. Plug the USB cable and turn it on."
 		          
 		          Terminal.M65Connect = False
 		          Terminal.Disconnect()
@@ -3712,7 +3717,7 @@ End
 	#tag EndEvent
 	#tag Event
 		Function MouseDown(X As Integer, Y As Integer) As Boolean
-		  MainWindow.Console.Value = "SUPPORTED KEYS" + Chr(10) + Chr(13) + Chr(10) + Chr(13) +_
+		  MainWindow.Console.Value = "FUNCTION OF SPECIAL KEYS" + Chr(10) + Chr(13) + Chr(10) + Chr(13) +_
 		  "ALT : not occupied *" + Chr(10) + Chr(13) +_
 		  "Arrow Left : print arrow left" + Chr(10) + Chr(13) +_
 		  "Arrow Up : print arrow up" + Chr(10) + Chr(13) +_
@@ -3733,8 +3738,9 @@ End
 		  "F13 : delete char behind cursor" + Chr(10) + Chr(13) +_
 		  "F14 : not occupied" + Chr(10) + Chr(13) +_
 		  "HELP : not occupied" + Chr(10) + Chr(13)  +_
-		  "HOME : put cursor in the first position of the screen" + Chr(10) + Chr(13)  +_
+		  "HOME : puts cursor in the first position of the screen" + Chr(10) + Chr(13)  +_
 		  "MEGA : access to lower left char of keys, second number color *" + Chr(10) + Chr(13)  +_
+		  "SHIFT : access to lower right char of keys, special char on other keys" + Chr(10) + Chr(13)  +_
 		  "NOSCROLL : pause scrolling text" + Chr(10) + Chr(13)  +_
 		  "RESTORE : not occupied" + Chr(10) + Chr(13)  +_
 		  "RUNSTOP : Stop BASIC program or scrolling text" + Chr(10) + Chr(13)  +_
