@@ -53,6 +53,7 @@ Project Installation
 
 Change Log
 ----------
+- 14/07/2021: V1.6 : Latest m65/m65_ftp added, SD Card Manager: Rename files, mount D81 files, improved Nexys support
 - 25/04/2021: V1.5 : Latest mega65_ftp and m65 added, minor visual adjustments
 - 13/03/2021: V1.4 : SD Card Manager: further and shorter file extensions supported, current SD Card path added
 - 10/03/2021: V1.3 : SD Card Manager implemented to acces the internal SD Card, minor improvements
