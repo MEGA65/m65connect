@@ -21,6 +21,7 @@ FILE OPERATIONS
 - Create MCS file
 - Send supported file types by Drag&Drop
 - Access the internal SD Card by the SD Card Manager
+- Customize ROMs with the ROM Configurator
 
 
 COMMAND OPERATIONS
@@ -53,6 +54,8 @@ Project Installation
 
 Change Log
 ----------
+- 05/12/2021: V1.8 : ROM Configurator added, SD Card Manager fix, sub-windows centered, visual adjustment in SD Card Manager
+- 17/11/2021: V1.7 : BDF/RDF patch operation implemented, latest CLI tool added, support of latest functions of bit2core 
 - 14/07/2021: V1.6 : Latest m65/m65_ftp added, SD Card Manager: Rename files, mount D81 files, improved Nexys support
 - 25/04/2021: V1.5 : Latest mega65_ftp and m65 added, minor visual adjustments
 - 13/03/2021: V1.4 : SD Card Manager: further and shorter file extensions supported, current SD Card path added
