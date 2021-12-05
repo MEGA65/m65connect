@@ -7,7 +7,7 @@ Begin Window WinConWiz
    FullScreen      =   False
    HasBackgroundColor=   False
    HasCloseButton  =   False
-   HasFullScreenButton=   False
+   HasFullScreenButton=   True
    HasMaximizeButton=   False
    HasMinimizeButton=   False
    Height          =   320
@@ -25,20 +25,20 @@ Begin Window WinConWiz
    Visible         =   True
    Width           =   500
    Begin PushButton PushPortProceed
-      AllowAutoDeactivate=   True
+      AllowAutoDeactivate=   False
       Bold            =   False
       Cancel          =   False
       Caption         =   "Proceed"
       Default         =   False
       Enabled         =   True
-      FontName        =   "System"
+      FontName        =   ""
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   400
+      Left            =   390
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -46,7 +46,7 @@ Begin Window WinConWiz
       LockTop         =   True
       MacButtonStyle  =   0
       Scope           =   0
-      TabIndex        =   4
+      TabIndex        =   1
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
@@ -54,7 +54,7 @@ Begin Window WinConWiz
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   80
+      Width           =   90
    End
    Begin PushButton PushPortAbort
       AllowAutoDeactivate=   True
@@ -66,7 +66,7 @@ Begin Window WinConWiz
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -78,7 +78,7 @@ Begin Window WinConWiz
       LockTop         =   True
       MacButtonStyle  =   0
       Scope           =   0
-      TabIndex        =   3
+      TabIndex        =   2
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
@@ -192,6 +192,9 @@ End
 		  WizMode = True
 		  WizStep = 1
 		  
+		  // Set window position
+		  WinConWiz.Left = (MainWindow.Left + MainWindow.Width) - ((WinConWiz.Width + MainWindow.Width) /2)
+		  WinConWiz.Top = (MainWindow.Left + MainWindow.Height) - ((WinConWiz.Height + MainWindow.Height) /2)
 		End Sub
 	#tag EndEvent
 

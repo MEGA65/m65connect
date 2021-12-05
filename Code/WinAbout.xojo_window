@@ -6,7 +6,7 @@ Begin Window WinAbout
    DefaultLocation =   0
    FullScreen      =   False
    HasBackgroundColor=   False
-   HasCloseButton  =   False
+   HasCloseButton  =   True
    HasFullScreenButton=   False
    HasMaximizeButton=   False
    HasMinimizeButton=   False
@@ -34,7 +34,7 @@ Begin Window WinAbout
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -87,7 +87,7 @@ Begin Window WinAbout
       Top             =   20
       Transparent     =   False
       Underline       =   False
-      Value           =   "M65Connect - Version 1.6"
+      Value           =   "M65Connect - Version 1.8"
       Visible         =   True
       Width           =   460
    End
@@ -122,7 +122,7 @@ Begin Window WinAbout
       Top             =   180
       Transparent     =   False
       Underline       =   False
-      Value           =   "Anton Schneider-Michallek, Detlef Hastik, Gurce, Günther Reiter (Snoopy), Heinz, Martin Streit, n-o-d, Paul Gardner-Stephen, rdpeake and Udo\n\nfor providing, testing, improvements, suggestions, ideas, support and many more things!\n"
+      Value           =   "Anton Schneider-Michallek, bubbob42, Detlef Hastik, Gurce, Günther Reiter (Snoopy), Heinz, lydon, Martin Streit, n-o-d, Paul Gardner-Stephen, rdpeake and Udo\n\nfor providing, testing, improvements, suggestions, ideas, support and many more things!\n"
       Visible         =   True
       Width           =   436
    End
@@ -268,6 +268,10 @@ End
 		  #If TargetWindows Or TargetMacOS Then
 		    PushClose.Height = 22
 		  #EndIf
+		  
+		  // Set window position
+		  WinAbout.Left = (MainWindow.Left + MainWindow.Width) - ((WinAbout.Width + MainWindow.Width) /2)
+		  WinAbout.Top = (MainWindow.Left + MainWindow.Height) - ((WinAbout.Height + MainWindow.Height) /2)
 		End Sub
 	#tag EndEvent
 

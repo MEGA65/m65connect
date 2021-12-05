@@ -69,7 +69,7 @@ Begin Window WinSDCard
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -342,7 +342,7 @@ Begin Window WinSDCard
       Begin ProgressBar FTPBar
          AllowAutoDeactivate=   True
          Enabled         =   True
-         Height          =   28
+         Height          =   16
          Indeterminate   =   False
          Index           =   -2147483648
          InitialParent   =   "StatusRectangle"
@@ -356,12 +356,13 @@ Begin Window WinSDCard
          Scope           =   0
          TabIndex        =   2
          TabPanelIndex   =   0
+         TabStop         =   True
          Tooltip         =   ""
          Top             =   667
          Transparent     =   False
          Value           =   0.0
          Visible         =   True
-         Width           =   377
+         Width           =   477
       End
    End
    Begin BevelButton CmdCopy
@@ -596,7 +597,7 @@ Begin Window WinSDCard
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   32
+      Height          =   34
       Hint            =   ""
       Index           =   -2147483648
       InitialParent   =   ""
@@ -640,7 +641,7 @@ Begin Window WinSDCard
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   32
+      Height          =   34
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
@@ -689,6 +690,7 @@ End
 		    ManualPath.Height = 24
 		    SDPath.Height = 24
 		    PushClose.Height = 24
+		    FTPBar.Height = 18
 		  #EndIf
 		  
 		  #If TargetMacOS Then
@@ -700,7 +702,12 @@ End
 		    SDPath.Height = 25
 		    PushClose.Top = 619
 		    PushClose.Height = 24
+		    FTPBar.Height = 28
 		  #EndIf
+		  
+		  // Set window position
+		  WinSDCard.Left = (MainWindow.Left + MainWindow.Width) - ((WinSDCard.Width + MainWindow.Width) /2)
+		  WinSDCard.Top = MainWindow.Top
 		  
 		  // Empty values
 		  SdCardInfo = ""
@@ -709,9 +716,11 @@ End
 		  CmdCopy.Icon = cmdcopyright
 		  ListLocal.SetFocus
 		  
-		  // Set Listbox alignment andf size
+		  // Set Listbox alignment and width of columns
 		  ListLocal.ColumnAlignmentAt(2) = ListBox.Alignments.Right
 		  ListRemote.ColumnAlignmentAt(2) = ListBox.Alignments.Right
+		  ListRemote.ColumnAlignmentAt(3) = ListBox.Alignments.Center
+		  ListRemote.ColumnAlignmentAt(4) = ListBox.Alignments.Center
 		  ListLocal.ColumnWidths = "200,100,80"
 		  ListRemote.ColumnWidths = "150,100,80"
 		  
@@ -727,29 +736,40 @@ End
 		  #If TargetMacOS Then
 		    DriveList.AddSeparator
 		  #Else
-		    DriveList.AddRow("--------------------------------------")
-		    DriveList.RowTagAt(DriveList.LastAddedRowIndex) = "-"
+		    If M65.SetPathD81.Length > 0 Or M65.SetPathSID.Length > 0 Or M65.SetPathBIT.Length > 0 Or M65.SetPathROM.Length > 0 Then
+		      DriveList.AddRow("--------------------------------------")
+		      DriveList.RowTagAt(DriveList.LastAddedRowIndex) = "-"
+		    End If
 		  #Endif
 		  
 		  // Add specific paths
-		  DriveList.AddRow("Home")
-		  DriveList.RowTagAt(DriveList.LastAddedRowIndex) = "special"
+		  If SpecialFolder.UserHome <> Nil Then
+		    DriveList.AddRow("Home")
+		    DriveList.RowTagAt(DriveList.LastAddedRowIndex) = "special"
+		    
+		    If SpecialFolder.UserHome.Child("Documents") <> Nil Then
+		      DriveList.AddRow("Documents")
+		      DriveList.RowTagAt(DriveList.LastAddedRowIndex) = "special"
+		    End IF
+		    
+		    If SpecialFolder.UserHome.Child("Downloads") <> Nil Then
+		      DriveList.AddRow("Downloads")
+		      DriveList.RowTagAt(DriveList.LastAddedRowIndex) = "special"
+		    End If
+		    
+		    If SpecialFolder.UserHome.Child("Desktop") <> Nil Then
+		      DriveList.AddRow("Desktop")
+		      DriveList.RowTagAt(DriveList.LastAddedRowIndex) = "special"
+		    End If
+		  End If
 		  
-		  DriveList.AddRow("Documents")
-		  DriveList.RowTagAt(DriveList.LastAddedRowIndex) = "special"
-		  
-		  DriveList.AddRow("Downloads")
-		  DriveList.RowTagAt(DriveList.LastAddedRowIndex) = "special"
-		  
-		  DriveList.AddRow("Desktop")
-		  DriveList.RowTagAt(DriveList.LastAddedRowIndex) = "special"
-		  
-		  DriveList.AddRow("SD Card Essentials")
-		  DriveList.RowTagAt(DriveList.LastAddedRowIndex) = "special"
+		  If SpecialFolder.Resources.Child("SD Card Essentials") <> Nil Then
+		    DriveList.AddRow("SD Card Essentials")
+		    DriveList.RowTagAt(DriveList.LastAddedRowIndex) = "special"
+		  End If
 		  
 		  // Add separator if a path is set
 		  If M65.SetPathD81.Length > 0 Or M65.SetPathSID.Length > 0 Or M65.SetPathBIT.Length > 0 Or M65.SetPathROM.Length > 0 Then
-		    
 		    #If TargetMacOS Then
 		      DriveList.AddSeparator
 		    #Else
@@ -787,10 +807,12 @@ End
 		  
 		  DriveList.SelectedRowIndex = 0
 		  
-		  // Set local path
-		  ActiveLocalDirectory = SpecialFolder.UserHome.Child("Documents")
-		  
-		  Terminal.Go65 = False
+		  If SpecialFolder.UserHome <> Nil Then
+		    // Check if the user has a Documents folder, else userhome
+		    If SpecialFolder.UserHome.Child("Documents") <> Nil Then
+		      ActiveLocalDirectory = SpecialFolder.UserHome.Child("Documents")
+		    End If
+		  End If
 		  
 		  // Reset variables
 		  ActiveRemoteDirectory = "/"
@@ -810,9 +832,9 @@ End
 		  
 		  SendFTP ("dir")
 		  
-		  
-		  
-		  
+		  Exception err As NilObjectException
+		    MessageBox("Unable to find user's home directory")
+		    
 		End Sub
 	#tag EndEvent
 
@@ -884,6 +906,7 @@ End
 		  Var Accept() As String = Array("prg", "d81", "d64", "bit", "cor", "rom", "m65", "sid", "bin", "fpk", "tap", "pzx", "z80", "sna", "scr", "trd", "scl", "pok", "ay", "pt3", "sqt", "stc", "tfm", "wav", "ko", "sys", "cfg", "txt", "scr", "gb", "gbc", "gbcolor")
 		  Var File As FolderItem
 		  Var Size As String
+		  Var MaxSize As String = "          "
 		  Var FilePart() As String
 		  Var Filename As String
 		  Var Extension As String
@@ -1083,18 +1106,16 @@ End
 		  FTPSend =  InitCommand + " " + FTPSend + " " + ExecuteCommand
 		  
 		  // For testing purposes
-		  //msgbox (FTPSend)
 		  //MainWindow.Console.Value = MainWindow.Console.Value  + Chr(13) + FTPSend 
 		  
 		  // Execute FTP command
 		  WinSDCard.ShellFTP.Execute( FTPSend )
 		  
+		  //Exception error As RuntimeException
+		  //MessageBox("Error on processing SD Card."+LineEnd+"Application must be closed.")
+		  //quit
 		  
-		  Exception error As RuntimeException
-		    MessageBox("Error on processing SD Card."+LineEnd+"Application must be closed.")
-		    quit
-		    
-		    
+		  
 		End Sub
 	#tag EndMethod
 
@@ -1166,6 +1187,7 @@ End
 		  StartFTPBar()
 		  
 		  SendFTP("quit")
+		  
 		  
 		End Sub
 	#tag EndEvent
@@ -1300,6 +1322,31 @@ End
 		  End If
 		End Sub
 	#tag EndEvent
+	#tag Event
+		Function CellBackgroundPaint(g As Graphics, row As Integer, column As Integer) As Boolean
+		  If row >= Me.RowCount Then Return False
+		  
+		  // Color Mount
+		  If column = 3 Then
+		    If Me.CellValueAt(row, column) = "Mount" Then
+		      g.DrawingColor = &cFBD6D0
+		      g.Transparency = 50.0
+		      g.FillRectangle(10, 1, g.Width-20, g.Height-1)
+		    End If
+		  End If
+		  
+		  // Color Info
+		  If column = 4 Then
+		    If Me.CellValueAt(row, column) = "Info" Then
+		      g.DrawingColor = &cBCBCFB
+		      g.Transparency = 50.0
+		      g.FillRectangle(15, 1, g.Width-31, g.Height-1)
+		    End If
+		  End If
+		  
+		  Return True
+		End Function
+	#tag EndEvent
 #tag EndEvents
 #tag Events ListLocal
 	#tag Event
@@ -1418,8 +1465,8 @@ End
 #tag Events ShellFTP
 	#tag Event
 		Sub Completed()
-		  // Remove status
-		  WinSDCard.StatusText.Value = ""
+		  // For testing purposes
+		  // MainWindow.Console.Value = MainWindow.Console.Value + ShellFTP.Result
 		  
 		  #If TargetWindows Then
 		    Var LineEnd As String = Chr(13)
@@ -1429,7 +1476,7 @@ End
 		  
 		  // Check for returning error messages
 		  Var ErrorStart As Integer = ShellFTP.Result.IndexOf( "ERROR" ) 
-		  Var ErrorUnc As Integer = ShellFTP.Result.IndexOf( " UNC" ) // Windows specific UNC paths not supported
+		  Var ErrorUnc As Integer = ShellFTP.Result.IndexOf( " UNC " ) // Windows specific UNC paths not supported
 		  
 		  // Show error message but ignore known error on copy (which is not an error)
 		  If ErrorStart <> -1 And ShellFTP.Result.IndexOf("Short read") = -1 Then
@@ -1457,6 +1504,9 @@ End
 		  End If
 		  
 		  If ErrorUnc <> -1 Then
+		    //MainWindow.Console.Value = MainWindow.Console.Value  + Chr(13) + Chr(13) + "Error message: "  + Chr(13) + Chr(13)
+		    //MainWindow.Console.Value = MainWindow.Console.Value + ShellFTP.Result
+		    
 		    FTPBarTimer.RunMode = Timer.RunModes.Off
 		    WinSDCard.FTPBar.Value = 0
 		    WinSDCard.StatusText.Value = "Error"
@@ -1475,6 +1525,7 @@ End
 		    // Get and display current dir
 		    Var Filename As String
 		    Var Size As String
+		    Var MaxSize As String = "          "
 		    Var Extension As String
 		    Var Mount As String
 		    Var Info As String
@@ -1487,16 +1538,19 @@ End
 		    Var match As RegExMatch
 		    reg.SearchPattern = "^[a-zA-Z0-9]|\.\."
 		    
-		    
 		    // Save SD Card info if empty
 		    If SdCardInfo = "" Then
-		      Var InfoCardStart As Integer = ShellFTP.Result.IndexOf("SD Card is")
+		      
 		      #If TargetWindows Then
-		        Var InfoCardEnd As  Integer = ShellFTP.Result.IndexOf("0 M.E.G.A..65!")
+		        Var InfoCardStart As Integer = ShellFTP.Result.IndexOf("SD card is")
+		        Var InfoCardEnd As  Integer = ShellFTP.Result.IndexOf("       ")
 		      #Else
-		        Var InfoCardEnd As  Integer = ShellFTP.Result.IndexOf(Chr(10)+Chr(10))
+		        Var InfoCardStart As Integer = ShellFTP.Result.IndexOf("NOTE")
+		        Var InfoCardEnd As  Integer = ShellFTP.Result.IndexOf("       ")
+		        //Var InfoCardEnd As  Integer = ShellFTP.Result.IndexOf(Chr(10)+Chr(10))
 		      #EndIf
 		      SdCardInfo = ShellFTP.Result.Middle(InfoCardStart, InfoCardEnd-InfoCardStart).Trim
+		      //MainWindow.Console.value = ShellFTP.Result
 		    End If
 		    
 		    // Split directory list
@@ -1504,37 +1558,41 @@ End
 		    
 		    // Filter for valid files and directories
 		    For i As Integer = 0 To SDCardList.LastIndex
-		      Extension = SDCardList(i).Right (SDCardList(i).Length - SDCardList(i).IndexOf("."))
+		      Extension = SDCardList(i).Right (SDCardList(i).Length - SDCardList(i).IndexOf(".")).Uppercase
 		      
 		      If Accept.IndexOf(Extension) <> -1 Or Trim(SDCardList(i)).BeginsWith("<dir", ComparisonOptions.CaseInsensitive) Then
 		        FileAttribute = Trim(SDCardList(i)).Split(" ")
-		        // Fiilename must start with letter or number
-		        match = reg.Search( FileAttribute(1) )
 		        
-		        If match <> Nil Then
-		          If Accept.IndexOf(Extension) <> -1 Then
-		            // File
-		            Fileparts = FileAttribute(1).Split(".")
-		            
-		            Filename = Fileparts(0)
-		            Extension = Fileparts(1)
-		            Size = FileAttribute(0)
-		            Mount = ""
-		            If Extension = "D81" Then
-		              Mount = "Mount"
-		            End If
-		            Info = "Info"
-		          Else
-		            // Directory
-		            Filename = FileAttribute(1)
-		            Extension = ""
-		            Size = "DIR"
-		            Mount = ""
-		            Info = ""
-		          End if
+		        // Ignore invalid/incomplete file lines
+		        If FileAttribute.LastIndex > 0 Then
+		          // Fiilename must start with letter or number
+		          match = reg.Search( FileAttribute(1) )
 		          
-		          ListRemote.AddRow(Filename, Extension, Size, Mount, Info)
-		        End if
+		          If match <> Nil Then
+		            If Accept.IndexOf(Extension) <> -1 Then
+		              // File
+		              Fileparts = FileAttribute(1).Split(".")
+		              Filename = Fileparts(0)
+		              Extension = Fileparts(1)
+		              Size = MaxSize.Left( MaxSize.Length - FileAttribute(0).Length ) + FileAttribute(0)
+		              Mount = ""
+		              If Extension = "D81" Then
+		                Mount = "Mount"
+		              End If
+		              Info = "Info"
+		            Else
+		              // Directory
+		              Filename = FileAttribute(1)
+		              Extension = ""
+		              Size = "DIR"
+		              Mount = ""
+		              Info = ""
+		            End if
+		            
+		            ListRemote.AddRow(Filename, Extension, Size, Mount, Info)
+		          End if
+		        End If
+		        
 		      End if
 		    Next
 		    
@@ -1739,8 +1797,10 @@ End
 		  End Select
 		  
 		  Exception error As RuntimeException
-		    MessageBox("Error on accessing SD Card. Make sure your active Bitstream supports FTP." + LineEnd + "Application must be closed.")
-		    quit
+		    If error.ErrorNumber <> 0 Then
+		      MessageBox("Error on accessing SD Card. Make sure your active Bitstream supports FTP." + LineEnd + "Application must be closed.")
+		      quit
+		    End If
 		    
 		End Sub
 	#tag EndEvent

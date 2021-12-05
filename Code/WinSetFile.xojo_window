@@ -9,7 +9,7 @@ Begin Window WinSetFile
    HasCloseButton  =   True
    HasFullScreenButton=   False
    HasMaximizeButton=   False
-   HasMinimizeButton=   True
+   HasMinimizeButton=   False
    Height          =   380
    ImplicitInstance=   True
    MacProcID       =   0
@@ -19,7 +19,7 @@ Begin Window WinSetFile
    MenuBarVisible  =   False
    MinimumHeight   =   64
    MinimumWidth    =   64
-   Resizeable      =   True
+   Resizeable      =   False
    Title           =   "PRG File Send Settings"
    Type            =   1
    Visible         =   False
@@ -79,7 +79,7 @@ Begin Window WinSetFile
       LockTop         =   True
       Scope           =   0
       State           =   1
-      TabIndex        =   11
+      TabIndex        =   5
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
@@ -219,7 +219,7 @@ Begin Window WinSetFile
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -231,7 +231,7 @@ Begin Window WinSetFile
       LockTop         =   False
       MacButtonStyle  =   0
       Scope           =   0
-      TabIndex        =   14
+      TabIndex        =   8
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   "Save current settings"
@@ -263,7 +263,7 @@ Begin Window WinSetFile
       LockTop         =   True
       Scope           =   0
       State           =   1
-      TabIndex        =   13
+      TabIndex        =   6
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
@@ -284,7 +284,7 @@ Begin Window WinSetFile
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -296,7 +296,7 @@ Begin Window WinSetFile
       LockTop         =   False
       MacButtonStyle  =   0
       Scope           =   0
-      TabIndex        =   16
+      TabIndex        =   9
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
@@ -382,7 +382,7 @@ Begin Window WinSetFile
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   40
+      Height          =   42
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -393,7 +393,7 @@ Begin Window WinSetFile
       LockRight       =   False
       LockTop         =   True
       Scope           =   0
-      TabIndex        =   7
+      TabIndex        =   4
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
@@ -410,7 +410,7 @@ Begin Window WinSetFile
          FontName        =   "System"
          FontSize        =   0.0
          FontUnit        =   0
-         Height          =   20
+         Height          =   22
          Index           =   -2147483648
          InitialParent   =   "GroupBoxForceVideo"
          Italic          =   False
@@ -440,7 +440,7 @@ Begin Window WinSetFile
          FontName        =   "System"
          FontSize        =   0.0
          FontUnit        =   0
-         Height          =   20
+         Height          =   22
          Index           =   -2147483648
          InitialParent   =   "GroupBoxForceVideo"
          Italic          =   False
@@ -470,7 +470,7 @@ Begin Window WinSetFile
          FontName        =   "System"
          FontSize        =   0.0
          FontUnit        =   0
-         Height          =   20
+         Height          =   22
          Index           =   -2147483648
          InitialParent   =   "GroupBoxForceVideo"
          Italic          =   False
@@ -538,7 +538,7 @@ Begin Window WinSetFile
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -550,7 +550,7 @@ Begin Window WinSetFile
       LockTop         =   False
       MacButtonStyle  =   0
       Scope           =   0
-      TabIndex        =   17
+      TabIndex        =   7
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   "Load PRG with current settings"
@@ -583,6 +583,11 @@ End
 		    PushClose.Height = 22
 		  #EndIf
 		  
+		  #If TargetLinux Then
+		    LabelLoadWidth.Top = 90
+		    LabelForceVideo.Top = 170
+		  #EndIf
+		  
 		  // Set settings
 		  WinSetFile.SetReset.Value = M65.SetReset
 		  WinSetFile.SetGo64.Value = M65.SetGo64
@@ -595,6 +600,9 @@ End
 		  WinSetFile.SetRun.Value= M65.SetRun
 		  WinSetFile.SetShow.Value = M65.SetShow
 		  
+		  // Set window position
+		  WinSetFile.Left = (MainWindow.Left + MainWindow.Width) - ((WinSetFile.Width + MainWindow.Width) /2)
+		  WinSetFile.Top = MainWindow.Top + 40
 		End Sub
 	#tag EndEvent
 

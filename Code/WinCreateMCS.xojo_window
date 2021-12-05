@@ -8,8 +8,8 @@ Begin Window WinCreateMCS
    HasBackgroundColor=   False
    HasCloseButton  =   True
    HasFullScreenButton=   False
-   HasMaximizeButton=   True
-   HasMinimizeButton=   True
+   HasMaximizeButton=   False
+   HasMinimizeButton=   False
    Height          =   180
    ImplicitInstance=   True
    MacProcID       =   0
@@ -19,7 +19,7 @@ Begin Window WinCreateMCS
    MenuBarVisible  =   True
    MinimumHeight   =   64
    MinimumWidth    =   64
-   Resizeable      =   True
+   Resizeable      =   False
    Title           =   "Create MCS file"
    Type            =   1
    Visible         =   True
@@ -39,7 +39,7 @@ Begin Window WinCreateMCS
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   32
+      Height          =   34
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
@@ -118,7 +118,7 @@ Begin Window WinCreateMCS
       FontSize        =   0.0
       FontUnit        =   0
       HasBackgroundColor=   False
-      Height          =   32
+      Height          =   34
       Icon            =   2139172863
       IconAlignment   =   1
       IconDeltaX      =   0
@@ -156,7 +156,7 @@ Begin Window WinCreateMCS
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -188,7 +188,7 @@ Begin Window WinCreateMCS
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -223,6 +223,10 @@ End
 		    PushSaveAs.Height = 22
 		    PushClose.Height = 22
 		  #EndIf
+		  
+		  // Set window position
+		  WinCreateMCS.Left = (MainWindow.Left + MainWindow.Width) - ((WinCreateMCS.Width + MainWindow.Width) /2)
+		  WinCreateMCS.Top = MainWindow.Top + 40
 		End Sub
 	#tag EndEvent
 
@@ -348,7 +352,7 @@ End
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		Shared Sub Bit2McsFast(SourceFile as FolderItem, McsFile as FolderItem)
+		Shared Sub Bit2McsCli(SourceFile as FolderItem, McsFile as FolderItem)
 		  // Create with external command, source: https://github.com/MEGA65/mega65-tools/blob/master/src/tools/bit2mcs.c
 		  #If TargetWindows Then
 		    Var McsExecutable As New FolderItem( SpecialFolder.Resources.child("bit2mcs.exe") )
@@ -433,8 +437,8 @@ End
 		      // Create MCS file
 		      MainWindow.StatusText.Value = "Creating MCS file..."
 		      
-		      // Working but slow, not used atm: Bit2Mcs(SourceFile, McsFile)
-		      Bit2McsFast(SourceFile, McsFile)
+		      // Working but slow, not used atm : Bit2Mcs(SourceFile, McsFile)
+		      Bit2McsCli(SourceFile, McsFile)
 		      
 		      WinCreateMCS.Close
 		    End If

@@ -7,9 +7,9 @@ Begin Window WinPreview
    FullScreen      =   False
    HasBackgroundColor=   False
    HasCloseButton  =   True
-   HasFullScreenButton=   True
-   HasMaximizeButton=   True
-   HasMinimizeButton=   True
+   HasFullScreenButton=   False
+   HasMaximizeButton=   False
+   HasMinimizeButton=   False
    Height          =   580
    ImplicitInstance=   True
    MacProcID       =   0
@@ -19,7 +19,7 @@ Begin Window WinPreview
    MenuBarVisible  =   True
    MinimumHeight   =   580
    MinimumWidth    =   780
-   Resizeable      =   True
+   Resizeable      =   False
    Title           =   "Screenshot MEGA65"
    Type            =   1
    Visible         =   False
@@ -56,7 +56,7 @@ Begin Window WinPreview
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       InitialValue    =   ""
@@ -89,7 +89,7 @@ Begin Window WinPreview
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -121,11 +121,11 @@ Begin Window WinPreview
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   506
+      Left            =   503
       LockBottom      =   True
       LockedInPosition=   False
       LockLeft        =   False
@@ -141,7 +141,7 @@ Begin Window WinPreview
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   140
+      Width           =   145
    End
    Begin PushButton PushDelete
       AllowAutoDeactivate=   True
@@ -153,7 +153,7 @@ Begin Window WinPreview
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -185,7 +185,7 @@ Begin Window WinPreview
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -239,6 +239,9 @@ End
 		  // Set available image list
 		  RefreshImageList()
 		  
+		  // Set window position
+		  WinPreview.Left = (MainWindow.Left + MainWindow.Width) - ((WinPreview.Width + MainWindow.Width) /2)
+		  WinPreview.Top = MainWindow.Top + 40
 		End Sub
 	#tag EndEvent
 
@@ -438,7 +441,6 @@ End
 		  
 		  // Append chosen image
 		  Var Image As FolderItem = ImageFolder.Child(ImageList.SelectedRowValue)
-		  
 		  
 		  Var FileType As New FileType
 		  FileType.Name = "image/png"

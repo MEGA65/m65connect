@@ -65,9 +65,17 @@ Begin Menu MainMenuBar
       Begin MenuItem FileSendBasic
          SpecialMenu = 0
          Index = -2147483648
-         Text = "Send BASIC Program..."
+         Text = "Send BASIC Program"
          AutoEnabled = False
          AutoEnable = False
+         Visible = True
+      End
+      Begin MenuItem Separator0
+         SpecialMenu = 0
+         Index = -2147483648
+         Text = "-"
+         AutoEnabled = True
+         AutoEnable = True
          Visible = True
       End
       Begin MenuItem FileSDCard
@@ -81,9 +89,17 @@ Begin Menu MainMenuBar
          AutoEnable = True
          Visible = True
       End
-      Begin MenuItem Separator0
+      Begin MenuItem FileROMConfig
          SpecialMenu = 0
          Index = -2147483648
+         Text = "ROM Configurator"
+         AutoEnabled = True
+         AutoEnable = True
+         Visible = True
+      End
+      Begin MenuItem Separator1
+         SpecialMenu = 0
+         Index = 1
          Text = "-"
          AutoEnabled = True
          AutoEnable = True
@@ -102,8 +118,16 @@ Begin Menu MainMenuBar
       End
       Begin MenuItem Separator1
          SpecialMenu = 0
-         Index = -2147483648
+         Index = 0
          Text = "-"
+         AutoEnabled = True
+         AutoEnable = True
+         Visible = True
+      End
+      Begin MenuItem FileApplyROMPatchFile
+         SpecialMenu = 0
+         Index = -2147483648
+         Text = "Patch ROM File"
          AutoEnabled = True
          AutoEnable = True
          Visible = True
@@ -116,15 +140,7 @@ Begin Menu MainMenuBar
          AutoEnable = True
          Visible = True
       End
-      Begin MenuItem FileApplyROMPatchFile
-         SpecialMenu = 0
-         Index = -2147483648
-         Text = "Apply ROM Patch File"
-         AutoEnabled = True
-         AutoEnable = True
-         Visible = True
-      End
-      Begin MenuItem UntitledSeparator
+      Begin MenuItem Separator2
          SpecialMenu = 0
          Index = -2147483648
          Text = "-"
@@ -148,7 +164,7 @@ Begin Menu MainMenuBar
          AutoEnable = True
          Visible = True
       End
-      Begin MenuItem Separator2
+      Begin MenuItem Separator3
          SpecialMenu = 0
          Index = -2147483648
          Text = "-"
@@ -172,7 +188,7 @@ Begin Menu MainMenuBar
          AutoEnable = True
          Visible = True
       End
-      Begin MenuItem FileSeparator2
+      Begin MenuItem Separator4
          SpecialMenu = 0
          Index = -2147483648
          Text = "-"
@@ -382,7 +398,7 @@ Begin Menu MainMenuBar
       Begin MenuItem SettingsFilePath
          SpecialMenu = 0
          Index = -2147483648
-         Text = "File Path"
+         Text = "File Paths"
          ShortcutKey = "F"
          Shortcut = "Cmd+F"
          MenuModifier = True

@@ -8,9 +8,9 @@ Begin Window WinCreateCOR
    HasBackgroundColor=   False
    HasCloseButton  =   True
    HasFullScreenButton=   False
-   HasMaximizeButton=   True
-   HasMinimizeButton=   True
-   Height          =   340
+   HasMaximizeButton=   False
+   HasMinimizeButton=   False
+   Height          =   380
    ImplicitInstance=   True
    MacProcID       =   0
    MaximumHeight   =   32000
@@ -19,7 +19,7 @@ Begin Window WinCreateCOR
    MenuBarVisible  =   True
    MinimumHeight   =   64
    MinimumWidth    =   64
-   Resizeable      =   True
+   Resizeable      =   False
    Title           =   "Create COR file"
    Type            =   1
    Visible         =   True
@@ -39,7 +39,7 @@ Begin Window WinCreateCOR
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   32
+      Height          =   34
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
@@ -118,7 +118,7 @@ Begin Window WinCreateCOR
       FontSize        =   0.0
       FontUnit        =   0
       HasBackgroundColor=   False
-      Height          =   32
+      Height          =   34
       Icon            =   2139172863
       IconAlignment   =   1
       IconDeltaX      =   0
@@ -161,7 +161,7 @@ Begin Window WinCreateCOR
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   32
+      Height          =   34
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
@@ -175,13 +175,13 @@ Begin Window WinCreateCOR
       Password        =   False
       ReadOnly        =   False
       Scope           =   0
-      TabIndex        =   1
+      TabIndex        =   3
       TabPanelIndex   =   0
       TabStop         =   True
       TextAlignment   =   0
       TextColor       =   &c00000000
-      Tooltip         =   "Displayed name in the COR selection list (required)"
-      Top             =   132
+      Tooltip         =   "Displayed name in the COR selection list on MEGA65 (required)"
+      Top             =   176
       Transparent     =   False
       Underline       =   False
       ValidationMask  =   ""
@@ -217,7 +217,7 @@ Begin Window WinCreateCOR
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   98
+      Top             =   142
       Transparent     =   False
       Underline       =   False
       Value           =   "Display name"
@@ -252,7 +252,7 @@ Begin Window WinCreateCOR
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   179
+      Top             =   223
       Transparent     =   False
       Underline       =   False
       Value           =   "Display version"
@@ -269,7 +269,7 @@ Begin Window WinCreateCOR
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -281,11 +281,11 @@ Begin Window WinCreateCOR
       LockTop         =   True
       MacButtonStyle  =   0
       Scope           =   0
-      TabIndex        =   4
+      TabIndex        =   5
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   288
+      Top             =   322
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -306,7 +306,7 @@ Begin Window WinCreateCOR
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   32
+      Height          =   34
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
@@ -320,13 +320,13 @@ Begin Window WinCreateCOR
       Password        =   False
       ReadOnly        =   False
       Scope           =   0
-      TabIndex        =   3
+      TabIndex        =   4
       TabPanelIndex   =   0
       TabStop         =   True
       TextAlignment   =   0
       TextColor       =   &c00000000
-      Tooltip         =   "Displayed version in the COR selection list (optional)"
-      Top             =   212
+      Tooltip         =   "Displayed version in the COR selection list on MEGA65 (optional)"
+      Top             =   256
       Transparent     =   False
       Underline       =   False
       ValidationMask  =   ""
@@ -344,7 +344,7 @@ Begin Window WinCreateCOR
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -356,15 +356,82 @@ Begin Window WinCreateCOR
       LockTop         =   True
       MacButtonStyle  =   0
       Scope           =   0
-      TabIndex        =   5
+      TabIndex        =   6
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   288
+      Top             =   322
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   80
+   End
+   Begin Label LabelTargetBoard
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      DataField       =   ""
+      DataSource      =   ""
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   32
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   20
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      Multiline       =   False
+      Scope           =   0
+      Selectable      =   False
+      TabIndex        =   7
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Text            =   "Target board"
+      TextAlignment   =   0
+      TextColor       =   &c00000000
+      Tooltip         =   ""
+      Top             =   98
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   100
+   End
+   Begin PopupMenu PopupCorTarget
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      DataField       =   ""
+      DataSource      =   ""
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   34
+      Index           =   -2147483648
+      InitialParent   =   ""
+      InitialValue    =   "MEGA65 R1\nMEGA65 R2\nMEGA65 R3\nMEGA65 Phone\nNexys 4\nNexys 4 DDR\nNexys 4 DDR/Widget\nWukong A100T"
+      Italic          =   False
+      Left            =   116
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   True
+      LockTop         =   True
+      Scope           =   0
+      SelectedRowIndex=   -1
+      TabIndex        =   2
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Tooltip         =   "Select target board on which the COR file can be flashed"
+      Top             =   97
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   220
    End
 End
 #tag EndWindow
@@ -380,9 +447,130 @@ End
 		    TextVersion.Height = 26
 		    PushSaveAs.Height = 22
 		    PushClose.Height = 22
+		    PopupCorTarget.Height = 22
 		  #EndIf
+		  
+		  #If TargetWindows Then
+		    PopupCorTarget.Top = 104
+		  #EndIf
+		  
+		  #If TargetMacOS Then
+		    PopupCorTarget.Top = 103
+		  #EndIf
+		  
+		  // Set window position
+		  WinCreateCOR.Left = (MainWindow.Left + MainWindow.Width) - ((WinCreateCOR.Width + MainWindow.Width) /2)
+		  WinCreateCOR.Top = MainWindow.Top + 40
 		End Sub
 	#tag EndEvent
+
+
+	#tag Method, Flags = &h0
+		Shared Sub Bit2Cor()
+		  // Working but not used anymore as it's not suppporting the target board option
+		  Var SourceFile As New FolderItem(WinCreateCor.TextSourceFile.Value)
+		  
+		  If SourceFile <> Nil Then
+		    
+		    // Create COR file with header size (4096) + Bit file size
+		    Var CorStruct As New MemoryBlock(4096 + SourceFile.Length)
+		    For I As Integer = 0 To 4095
+		      CorStruct.Byte(I) = 0
+		    Next
+		    
+		    // Fill up header with 0
+		    For I As Integer = 0 To 4095
+		      CorStruct.Byte(I) = 0
+		    Next
+		    
+		    Var SourceStream As BinaryStream = BinaryStream.Open(SourceFile, False) 
+		    
+		    // Set Bitstream file after header block
+		    CorStruct.StringValue(4096, SourceStream.Length-1) = SourceStream.Read(SourceStream.Length)
+		    SourceStream.Close()
+		    
+		    // Insert Bitstream title
+		    var Title As String = "MEGA65BITSTREAM0"
+		    
+		    For I As Integer = 0 To Title.Length
+		      CorStruct.Byte(I) = Title.Middle(I, 1).Asc
+		    Next
+		    
+		    // Insert name for COR menu
+		    For I As Integer = 0 To WinCreateCor.TextName.Value.Length
+		      CorStruct.Byte(16+I) = WinCreateCor.TextName.Value.Middle(I, 1).Asc
+		    Next
+		    
+		    // Insert version for COR menu
+		    For I As Integer = 0 To WinCreateCor.TextVersion.Value.Length
+		      CorStruct.Byte(48+I) = WinCreateCor.TextVersion.Value.Middle(I, 1).Asc
+		    Next
+		    
+		    // Set COR file defintion
+		    Var CorType As New FileType
+		    CorType.Name = "binary/cor"
+		    CorType.Extensions = "cor;COR"
+		    
+		    // Display name as file name
+		    Var CorFileName As String = WinCreateCor.TextName.Value
+		    If CorFileName.Lowercase.Right(4) <> ".cor" Then
+		      CorFileName = WinCreateCor.TextName.Value + ".cor"
+		    End If
+		    
+		    Var CorFile As FolderItem
+		    Var CorStream As BinaryStream
+		    CorFile = FolderItem.ShowSaveFileDialog(CorType.Extensions, CorFileName)
+		    
+		    // Save COR file
+		    If CorFile <> Nil Then
+		      CorStream = BinaryStream.Create(CorFile, True)
+		      CorStream.Write(CorStruct)
+		      CorStream.Close
+		      
+		      MainWindow.StatusText.Value = CorFile.NativePath + " created"
+		    End If
+		    
+		    WinCreateCOR.Close()
+		  Else
+		    MessageBox ("Chosen file doesn't exist anymore")
+		  End
+		  
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Shared Sub Bit2CorCli(SourceFile as FolderItem, CorFile as FolderItem)
+		  // Create with external command, source: https://github.com/MEGA65/mega65-tools/releases/tag/CI-latest
+		  #If TargetWindows Then
+		    Var CorExecutable As New FolderItem( SpecialFolder.Resources.child("bit2core.exe") )
+		  #Elseif TargetMacOS Then
+		    // Mac
+		    Var CorExecutable As New FolderItem( SpecialFolder.Resources.child("bit2core.osx") )
+		  #Else
+		    // Linux
+		    Var CorExecutable As New FolderItem( SpecialFolder.Resources.child("bit2core") )
+		  #EndIf
+		  
+		  // Get target board
+		  Var board() As String
+		  board = Array("mega65r1", "mega65r2", "mega65r3", "megaphoner1", " nexys4", "nexys4ddr", "nexys4ddrwidget", "wukonga100t")
+		  
+		  // Save COR file
+		  If CorFile <> Nil Then
+		    Var CorCreate As String
+		    CorCreate = Chr(34) + CorExecutable.NativePath + Chr(34) + " " + board(WinCreateCOR.PopupCorTarget.SelectedRowIndex) + " " + Chr(34) + SourceFile.NativePath + Chr(34) + " " + Chr(34) + WinCreateCor.TextName.Value + Chr(34) + " " + Chr(34) + WinCreateCor.TextVersion.Value + Chr(34) + " " + Chr(34) + CorFile.NativePath + Chr(34)  
+		    
+		    // Process COR create
+		    MainWindow.ExecCommand = "COR"
+		    MainWindow.ExternalExec.Execute( CorCreate )
+		    
+		    MainWindow.StatusText.Value = "COR file created: " +  CorFile.NativePath
+		  End If
+		  
+		  
+		  
+		End Sub
+	#tag EndMethod
 
 
 #tag EndWindowCode
@@ -412,8 +600,41 @@ End
 		  If FilePath <> Nil Then
 		    TextSourceFile.Value = FilePath.NativePath
 		    
+		    // Try to evaluate target board
+		    // msgbox( FilePath.DisplayName )
+		    
+		    // Check for MEGA release
+		    if FilePath.DisplayName.IndexOf("mega65") <> -1 Then
+		      if FilePath.DisplayName.IndexOf("r1") <> -1 Then
+		        PopupCorTarget.SelectedRowIndex = 0
+		      ElseIf FilePath.DisplayName.IndexOf("r2") <> -1 Then
+		        PopupCorTarget.SelectedRowIndex = 1
+		      Elseif FilePath.DisplayName.IndexOf("r3") <> -1 Then
+		        PopupCorTarget.SelectedRowIndex = 2
+		      Elseif FilePath.DisplayName.IndexOf("phone") <> -1 Then
+		        PopupCorTarget.SelectedRowIndex = 3
+		      End If
+		    End If
+		    
+		    // Check for NEXYS release
+		    if FilePath.DisplayName.IndexOf("nexys") <> -1 Then
+		      if FilePath.DisplayName.IndexOf("widget") <> -1 Then
+		        PopupCorTarget.SelectedRowIndex = 6
+		      ElseIf FilePath.DisplayName.IndexOf("ddr") <> -1 Then
+		        PopupCorTarget.SelectedRowIndex = 5
+		      Elseif FilePath.DisplayName.IndexOf("4") <> -1 Then
+		        PopupCorTarget.SelectedRowIndex = 4
+		      End If
+		    End If
+		    
+		    // Check for Wukong board
+		    if FilePath.DisplayName.IndexOf("wuko") <> -1 Then
+		      PopupCorTarget.SelectedRowIndex = 7
+		    End If
+		    
+		    
 		    // Set SaveAs button
-		    If Trim(TextSourceFile.Value).Length > 0 And Trim(TextName.Value).Length > 0 Then
+		    If Trim(TextSourceFile.Value).Length > 0 And Trim(TextName.Value).Length > 0 And PopupCorTarget.SelectedRowIndex <> -1 Then
 		      PushSaveAs.Enabled = True
 		    Else
 		      PushSaveAs.Enabled = False
@@ -432,7 +653,7 @@ End
 	#tag Event
 		Sub KeyUp(Key As String)
 		  // Set SaveAs button
-		  If Trim(TextSourceFile.Value).Length > 0 And Trim(TextName.Value).Length > 0 Then
+		  If Trim(TextSourceFile.Value).Length > 0 And Trim(TextName.Value).Length > 0 And PopupCorTarget.SelectedRowIndex <> -1Then
 		    PushSaveAs.Enabled = True
 		  Else
 		    PushSaveAs.Enabled = False
@@ -445,67 +666,31 @@ End
 		Sub Action()
 		  Var SourceFile As New FolderItem(TextSourceFile.Value)
 		  
+		  // Proceed if BIT file still available
 		  If SourceFile <> Nil Then
-		    
-		    // Create COR file with header size (4096) + Bit file size
-		    Var CorStruct As New MemoryBlock(4096 + SourceFile.Length)
-		    For I As Integer = 0 To 4095
-		      CorStruct.Byte(I) = 0
-		    Next
-		    
-		    // Fill up header with 0
-		    For I As Integer = 0 To 4095
-		      CorStruct.Byte(I) = 0
-		    Next
-		    
-		    Var SourceStream As BinaryStream = BinaryStream.Open(SourceFile, False) 
-		    
-		    // Set Bitstream file after header block
-		    CorStruct.StringValue(4096, SourceStream.Length-1) = SourceStream.Read(SourceStream.Length)
-		    SourceStream.Close()
-		    
-		    // Insert Bitstream title
-		    var Title As String = "MEGA65BITSTREAM0"
-		    
-		    For I As Integer = 0 To Title.Length
-		      CorStruct.Byte(I) = Title.Middle(I, 1).Asc
-		    Next
-		    
-		    // Insert name for COR menu
-		    For I As Integer = 0 To TextName.Value.Length
-		      CorStruct.Byte(16+I) = TextName.Value.Middle(I, 1).Asc
-		    Next
-		    
-		    // Insert version for COR menu
-		    For I As Integer = 0 To TextVersion.Value.Length
-		      CorStruct.Byte(48+I) = TextVersion.Value.Middle(I, 1).Asc
-		    Next
 		    
 		    // Set COR file defintion
 		    Var CorType As New FileType
-		    CorType.Name = "binary/cor"
+		    CorType.Name = "text/cor"
 		    CorType.Extensions = "cor;COR"
 		    
-		    // Display name as file name
-		    Var CorFileName As String = TextName.Value
-		    If CorFileName.Lowercase.Right(4) <> ".cor" Then
-		      CorFileName = TextName.Value + ".cor"
-		    End If
+		    Var TargetFileName As String
+		    Var DialogCor As New SaveFileDialog
 		    
 		    Var CorFile As FolderItem
-		    Var CorStream As BinaryStream
-		    CorFile = FolderItem.ShowSaveFileDialog(CorType.Extensions, CorFileName)
+		    DialogCor.Filter = CorType
+		    DialogCor.SuggestedFileName = SourceFile.Name.Replace(".bit", ".cor")
+		    DialogCor.Title = "Convert " + SourceFile.Name + " to..."
+		    CorFile = DialogCor.ShowModal
 		    
-		    // Save COR file
+		    
 		    If CorFile <> Nil Then
-		      CorStream = BinaryStream.Create(CorFile, True)
-		      CorStream.Write(CorStruct)
-		      CorStream.Close
+		      // Create COR file
+		      MainWindow.StatusText.Value = "Creating COR file..."
 		      
-		      MainWindow.StatusText.Value = CorFile.NativePath + " created"
+		      Bit2CorCli(SourceFile, CorFile)
 		    End If
 		    
-		    WinCreateCOR.Close()
 		  Else
 		    MessageBox ("Chosen file doesn't exist anymore")
 		  End
@@ -517,6 +702,18 @@ End
 	#tag Event
 		Sub Action()
 		  WinCreateCOR.Close
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events PopupCorTarget
+	#tag Event
+		Sub Change()
+		  // Set SaveAs button
+		  If Trim(TextSourceFile.Value).Length > 0 And Trim(TextName.Value).Length > 0 And PopupCorTarget.SelectedRowIndex <> -1Then
+		    PushSaveAs.Enabled = True
+		  Else
+		    PushSaveAs.Enabled = False
+		  End If
 		End Sub
 	#tag EndEvent
 #tag EndEvents

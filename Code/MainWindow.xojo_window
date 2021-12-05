@@ -84,7 +84,6 @@ Begin Window MainWindow
       DataSetReady    =   False
       DataTerminalReady=   False
       DTR             =   False
-      Enabled         =   True
       Handle          =   0
       Index           =   -2147483648
       LockedInPosition=   False
@@ -123,7 +122,6 @@ Begin Window MainWindow
       Scope           =   0
       TabIndex        =   14
       TabPanelIndex   =   0
-      TabStop         =   "True"
       Tooltip         =   "Displays latest action status"
       Top             =   661
       TopLeftColor    =   &cC4C5C400
@@ -278,7 +276,7 @@ Begin Window MainWindow
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   28
+      Height          =   34
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
@@ -310,7 +308,6 @@ Begin Window MainWindow
       Arguments       =   ""
       Backend         =   ""
       Canonical       =   False
-      Enabled         =   True
       ExecuteMode     =   1
       ExitCode        =   0
       Index           =   -2147483648
@@ -326,7 +323,6 @@ Begin Window MainWindow
       Arguments       =   ""
       Backend         =   ""
       Canonical       =   False
-      Enabled         =   True
       ExecuteMode     =   1
       ExitCode        =   0
       Index           =   -2147483648
@@ -340,7 +336,7 @@ Begin Window MainWindow
    End
    BeginSegmentedButton SegmentedButton TerminalMode
       Enabled         =   True
-      Height          =   28
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Left            =   786
@@ -815,7 +811,6 @@ Begin Window MainWindow
       Arguments       =   ""
       Backend         =   ""
       Canonical       =   False
-      Enabled         =   True
       ExecuteMode     =   1
       ExitCode        =   0
       Index           =   -2147483648
@@ -1603,7 +1598,7 @@ Begin Window MainWindow
          TabIndex        =   0
          TabPanelIndex   =   0
          TabStop         =   False
-         Tooltip         =   "Display all supported keys (enlage window)"
+         Tooltip         =   "Display all supported clickable keys in the Console window"
          Top             =   480
          Transparent     =   True
          Visible         =   True
@@ -1724,6 +1719,21 @@ Begin Window MainWindow
       Value           =   False
       Visible         =   True
       Width           =   50
+   End
+   Begin Shell ExternalExecRDF
+      Arguments       =   ""
+      Backend         =   ""
+      Canonical       =   False
+      ExecuteMode     =   1
+      ExitCode        =   0
+      Index           =   -2147483648
+      IsRunning       =   False
+      LockedInPosition=   False
+      PID             =   0
+      Result          =   ""
+      Scope           =   0
+      TabPanelIndex   =   0
+      TimeOut         =   0
    End
 End
 #tag EndWindow
@@ -1969,6 +1979,13 @@ End
 	#tag EndMenuHandler
 
 	#tag MenuHandler
+		Function FileROMConfig() As Boolean Handles FileROMConfig.Action
+			WinROMConfig.ShowModal
+			
+		End Function
+	#tag EndMenuHandler
+
+	#tag MenuHandler
 		Function FileSaveConsoleSelection() As Boolean Handles FileSaveConsoleSelection.Action
 			// Save marked Console text
 			Var Now As DateTime = DateTime.Now
@@ -2176,6 +2193,7 @@ End
 		  Dialog = New OpenDialog
 		  Dialog.Title = "Select a ROM file"
 		  Dialog.Filter = FileType
+		  Dialog.ActionButtonCaption = "Send"
 		  
 		  Var DefaultPath As New FolderItem(M65.SetPathROM, FolderItem.PathModes.Native)
 		  
@@ -2203,6 +2221,7 @@ End
 		  Dialog = New OpenDialog
 		  Dialog.Title = "Select a Bitstream file"
 		  Dialog.Filter = FileType
+		  Dialog.ActionButtonCaption = "Send"
 		  
 		  Var DefaultPath As New FolderItem(M65.SetPathBIT, FolderItem.PathModes.Native)
 		  
@@ -2272,6 +2291,7 @@ End
 		  Dialog = New OpenDialog
 		  Dialog.Title = "Select a PRG file"
 		  Dialog.Filter = FileType
+		  Dialog.ActionButtonCaption = "Send"
 		  
 		  Var DefaultPath As New FolderItem(M65.SetPathPRG, FolderItem.PathModes.Native)
 		  
@@ -2325,6 +2345,7 @@ End
 		  Dialog = New OpenDialog
 		  Dialog.Title = "Select a SID file"
 		  Dialog.Filter = FileType
+		  Dialog.ActionButtonCaption = "Send"
 		  
 		  Var DefaultPath As New FolderItem(M65.SetPathSID, FolderItem.PathModes.Native)
 		  
@@ -2352,6 +2373,22 @@ End
 		End Sub
 	#tag EndMethod
 
+
+	#tag Property, Flags = &h0
+		Shared CreatePatch As String = "False"
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		Shared ExecBDF As String = "False"
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		Shared ExecCommand As String
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		Shared ExecRDF As String
+	#tag EndProperty
 
 	#tag Property, Flags = &h0
 		ShowWizard As Boolean = True
@@ -2995,13 +3032,70 @@ End
 #tag Events ExternalExec
 	#tag Event
 		Sub Completed()
-		  MainWindow.StatusText.Value = "Processing done"
+		  If ExecCommand = "COR" Then
+		    // Check for warning and error
+		    ExecCommand = ""
+		    If ExternalExec.Result.IndexOf("ERROR") <> -1 Then
+		      MainWindow.StatusText.Value = "Processing aborted"
+		      msgbox ("ERROR" + Chr(13)  +  "Provided bitstream is for a different MEGA65 target to the one you specified." + Chr(13) + "Check details in Console window." )
+		    Else
+		      WinCreateCOR.Close
+		    End If
+		  Elseif ExecCommand = "PATCHRDF" Then
+		    MainWindow.StatusText.Value = "Processing done"
+		    If ExternalExec.Result.IndexOf("ERROR") <> -1 Then
+		      WinApplyPatch.LabelPatched.Value = "Error on patching ROM"
+		    Else
+		      //WinApplyPatch.LabelPatched.Value = "Patched ROM file created: " + CreatePatch
+		      MainWindow.Console.Value = "Patched ROM file successfully created: " + CreatePatch
+		      WinApplyPatch.Close
+		    End If
+		    
+		    ExecCommand = ""
+		    CreatePatch = ""
+		    
+		    // Remove existing 911001.bin in romdiffDir folder
+		    Var romdiffDir As New FolderItem( SpecialFolder.Resources ) 
+		    If romdiffDir.Child("911001.bin").Exists OR romdiffDir.Child("911001.BIN").Exists Then
+		      romdiffDir.Child("911001.bin").Remove
+		    End If 
+		  Elseif ExecCommand = "PATCHBDF" Then
+		    MainWindow.StatusText.Value = "Processing done"
+		    If ExternalExec.Result.Length >0 Then
+		      WinApplyPatch.LabelPatched.Value = "Error on patching ROM"
+		    Else
+		      //WinApplyPatch.LabelPatched.Value = "ROM file created: " + CreatePatch
+		      MainWindow.Console.Value = "Patched ROM file successfully created: " + CreatePatch
+		      WinApplyPatch.Close
+		    End If
+		    
+		    ExecCommand = ""
+		    CreatePatch = ""
+		  Elseif ExecBDF.Length > 0 Then
+		    WinCreatePatch.LabelProcessBDF.Text = "Created: " + ExecBDF
+		    ExecBDF = ""
+		    
+		    If ExecRDF.Length = 0 Then
+		      WinCreatePatch.EnablePatching
+		      MainWindow.StatusText.Value = "Processing done"
+		    End If
+		  Elseif ExecRDF.Length > 0 Then
+		    WinCreatePatch.LabelProcessRDF.Text = "Created: " + ExecRDF
+		    ExecRDF = ""
+		    
+		    If ExecBDF.Length = 0 Then
+		      WinCreatePatch.EnablePatching
+		      MainWindow.StatusText.Value = "Processing done"
+		    End If
+		  Else 
+		    MainWindow.StatusText.Value = "Processing done"
+		  End If
+		  
 		End Sub
 	#tag EndEvent
 	#tag Event
 		Sub DataAvailable()
-		  Console.Value = ExternalExec.Result
-		  
+		   Console.Value = ExternalExec.Result
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -3799,6 +3893,44 @@ End
 		Sub Action()
 		  // Choose and send a PRG file
 		  MainWindow.SendPRG()
+		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events ExternalExecRDF
+	#tag Event
+		Sub Completed()
+		  If ExecRDF.Length > 0 And ExecRDF <> "Cancel" Then
+		    WinCreatePatch.LabelProcessRDF.Text = "Created: " + ExecRDF
+		    ExecRDF = ""
+		    
+		    If ExecBDF.Length = 0 Then
+		      WinCreatePatch.EnablePatching
+		      MainWindow.StatusText.Value = "Processing done"
+		    End If
+		  Else
+		    MainWindow.Console.Value = ExternalExecRDF.Result
+		  End If
+		  
+		  #If TargetLinux Then
+		    WinCreatePatch.LabelProgess.Visible = False
+		  #EndIf
+		  
+		  // Remove cancel error message
+		  If ExternalExecRDF.Result.IndexOf( "bash" ) <> -1 Or ExecRDF = "Cancel" Then
+		    MainWindow.ExecBDF = ""
+		    MainWindow.ExecRDF = ""
+		    MainWindow.Console.value = ""
+		  End If
+		  
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub DataAvailable()
+		  If MainWindow.ExecRDF.Length > 0 Then
+		    // Update RDF process
+		    WinCreatePatch.LabelProcessRDF.Text = ExternalExecRDF.Result.Right(80).Middle(ExternalExecRDF.Result.Right(80).IndexOf("$")).Trim
+		  End If
 		  
 		End Sub
 	#tag EndEvent

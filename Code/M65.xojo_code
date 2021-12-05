@@ -286,10 +286,9 @@ Protected Class M65
 		          // Use X3C in second order / http://xc3sprog.sourceforge.net/manpage.php
 		          Var XC3Path As FolderItem = SpecialFolder.Resources.Child("xc3sprog")
 		          
-		          // -v (additional infos) -L (ignore Libsub)
+		          // -v (additional infos) -L (ignore Libusb)
 		          M65Send = "cd " + Chr(34) + XC3Path.NativePath + Chr(34) + " && xc3sprog.exe -c ftdi -v "  + Chr(34) + File + Chr(34)
 		        End If
-		        
 		      #Else
 		        // Mac, Linux
 		        M65Send = M65Send + " -b " + Chr(34) + File + Chr(34)

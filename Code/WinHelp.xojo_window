@@ -8,7 +8,7 @@ Begin Window WinHelp
    HasBackgroundColor=   False
    HasCloseButton  =   True
    HasFullScreenButton=   False
-   HasMaximizeButton=   False
+   HasMaximizeButton=   True
    HasMinimizeButton=   True
    Height          =   600
    ImplicitInstance=   True
@@ -19,7 +19,7 @@ Begin Window WinHelp
    MenuBarVisible  =   True
    MinimumHeight   =   64
    MinimumWidth    =   64
-   Resizeable      =   False
+   Resizeable      =   True
    Title           =   "M65Connect Help"
    Type            =   3
    Visible         =   True
@@ -45,14 +45,14 @@ Begin Window WinHelp
       Scope           =   0
       SmallTabs       =   False
       TabDefinition   =   "Requirements\rGet connected\rGUI\rFunctions\rTerminal\rKeyboard\rSD Card Manager\rSettings"
-      TabIndex        =   1
+      TabIndex        =   2
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
       Top             =   20
       Transparent     =   False
       Underline       =   False
-      Value           =   6
+      Value           =   1
       Visible         =   True
       Width           =   760
       Begin TextArea ManualFunctions
@@ -81,10 +81,10 @@ Begin Window WinHelp
          Left            =   20
          LineHeight      =   0.0
          LineSpacing     =   1.0
-         LockBottom      =   False
+         LockBottom      =   True
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   False
+         LockRight       =   True
          LockTop         =   True
          MaximumCharactersAllowed=   0
          Multiline       =   True
@@ -101,7 +101,7 @@ Begin Window WinHelp
          Underline       =   False
          UnicodeMode     =   0
          ValidationMask  =   ""
-         Value           =   "\nM65Connect offers a versatile set of functions to interact with the MEGA65. You'll find here an overview with description of all current functions on chronological menu order.\n\n\nFILE FUNCTIONS\n\nSD Card Manager\n--------------------------------------------------\nThe SD Card Manager allows you to interact with the internal SC Card.\nSee detailed description on tab ""SD Card Manager""\n\n\nSend PRG file\n--------------------------------------------------\nChoose a PRG file from your PC you want to send to the MEGA65. You can set default some parameter how M65Connect should treat a PRG file in menu Settings > PRG File Send...\n\nAccess: Menu File > Send PRG File or quick access button PRG\n\n\nSend SID file\n--------------------------------------------------\nChoose a SID file from your PC you want to send to the MEGA65. The loaded SID file will be started automatically after transfer.\n\nAccess: Menu File > Send SID File or quick access button SID\n\n\nSend Bitstream file\n--------------------------------------------------\nA Bitstream files represents the emulated hardware of a computer. Choose a Bitstream file from your PC you want to send to the MEGA65. The loaded Bitstream file persists as long as you do not turn off the MEGA65 or override it by another Bitstream file.\n\nAccess: Menu File > Send Bitstream File or quick access button BIT\n\n\nSend Hickup file\n--------------------------------------------------\nA Hickup file is part of the internal system software for initialisation purposes.\nChoose a Hickup file from your PC you want to send to the MEGA65. The loaded Hickup file persists as long as you do not turn off the MEGA65 or override it by another Bitstream file.\n\nAccess: Menu File > Send Hickup File or quick access button HIC\n\n\nSend ROM file\n--------------------------------------------------\nA ROM file represent what you see and what you can do when turning on the MEGA65. \nChoose a ROM file from your PC you want to send to the MEGA65. The loaded ROM will be removed on resetting the MEGA65. \n\nAccess: Menu File > Send ROM File or quick access button ROM\n\n\nSend BASIC program\n--------------------------------------------------\nThis function allows you to send a raw BASIC program to the MEGA65. Use the quick access button BAS to choose and send a textfile with BASIC code right away \nThe menu option File > 'Send BASIC Program...' opens a window with a simple BASIC editor. You can load, create or modify BASIC code before sending it to the MEGA65. Any not supported char will be ignored. \n\nAccess: Menu File > Send BASIC program... (editor) or quick access button BAS (direct send)\n\n\nSD Card Manager\n--------------------------------------------------\nThe SD Card Manager allows you to interact with the internal SC Card.\nSee detailed description on tab ""SD Card Manager""\n\nAccess: Menu File > SD Card Manager or quick access button SD Card\n\n\nStart/Stop PRG Autoload\n--------------------------------------------------\nThis function allows you to send automatically new or changed PRG files to the MEGA65.\nIn order to enable it you need first to set a path from where the PRG files will be loaded. Set the path in menu Settings > File Path > Path PRG Autoload\nThe function will check every second for new or changed PRG files. To reduce harddisk access you can stop this function at any time and start it again while a new or changed file in between will be found and sent. All the options in menu Settings > 'PRG File Send' will be considered but the option 'Show this window before sending PRG' will be ignored.\n\nAccess: Menu File > Start/Stop PRG Autoload\n\n\nCreate ROM patch file\n--------------------------------------------------\nCreating ROM patches allows you to share changes of an existing ROM without violating any copyright. To create a patch you need the original ROM file you have used to make changes but also the modified ROM file. The difference between both leads to the patch file.\n\n1. Original ROM file: Choose the original/unchanged ROM file by clicking the folder button\n2. Changed ROM file: Choose the modified ROM file by clicking the folder button\n3. Press button 'Save patch file as...' and choose location and target filename for the patch file\n\nAccess: Menu File > Create ROM Patch File\n\n\nApply ROM patch file\n--------------------------------------------------\nA patch file can be applied (patched) to a ROM file. You therefore need a source ROM file that you want to patch and the patch file. The source ROM file wll not be modified rather used to apply the patch and then saved as a new ROM file.\n\n1. Source ROM file: Choose the ROM file used to patch by clicking the folder button\n2. ROM patch file: Choose the patch file you want to apply by clicking the folder button\n3. Press button 'Save patched ROM as..."" and choose location and target filename for the patched ROM file\n\nWindows: The User Control may pop up or appear in the Taskbar on patching. You need to give the permission to patch. You can avoid this by starting M65Connect with admin rights (right-click on M65Connect icon and start as admin).\n\nAccess: Menu File > Apply ROM Patch File\n\n\nCreate COR file\n--------------------------------------------------\nA COR file is a processed Bitstream file that you need if you want to flash a Bitstream from SD Card to MEGA65. \n\n1. Source File: Choose a Bitstream (.bit) file byl clicking the folder button\n2. Display name: Enter the name you want to see in the Flash menu of MEGA65 after flashiing the COR file\n3. Display version: Enter an optional version here (will be printed below Display name)\n4. Press button 'Save as...' and choose location and target filename of the COR file\n\nAccess: Menu File > Create COR File...\n\n\nCreate MCS file\n--------------------------------------------------\nAn MCS file is a processed Bitstream file that you need if you want to flash a Bitstream to MEGA65 from the Vivado tool. \n\n1. Source File: Choose a Bitstream (.bit) file by clicking the folder button\n2. Click button 'Save as...' and choose the location and target filename of the MCS file. \n\nAccess: Menu File > Create MCS File...\n\n\nSave Console text\n--------------------------------------------------\nThis function will save the content of the Console window and is available on existing text.\n\nAccess: Menu File > Save Console Text...\n\n\nSave Console selection\n--------------------------------------------------\nAs soon as you have selected text in the Console window this function turns accessible and saves the selected text area.\n\nAccess: Menu File > Save Console Selection...\n\nDrag&Drop\n--------------------------------------------------\nYou can also send a file to MEGA65 by the Drag&Drop function: Drag a file of known type into the M65Connect window and release the mouse button. Appected file types are:\n   - Program (PRG)\n   - Sound (SID)\n   - ROM (BIN)\n   - Bitstream (BIT)\n   - Hickup (M65)\n\n\nCOMMAND FUNCTIONS\n\nReset MEGA65\n--------------------------------------------------\nThis functions resets the MEGA65 and brings it back to the MEGA65 mode.\n\nAccess: Menu Command > Reset or quick access button Reset\n\n\nSwitch to 64 mode\n--------------------------------------------------\nThis function does the same as you type 'GO 64' in the MEGA65 mode.\n\nAccess: Menu Command > Go 64 or quick access button Go64\n\n\nSwitch graphic mode\n--------------------------------------------------\nYou can switch the graphic mode between NTSC and PAL. The current graphic mode will be underlined in the related quick access button. Be aware that most other functions will reset any graphic mode switch.\n\nAccess: Menu Command > Graphic Mode >  Set NTSC / > Set PAL or quick access buttons NTSC and PAL\n\n\nTake screenshot\n--------------------------------------------------\nYou can take a picture (PNG) of the MEGA65 current display state. Certain objects like sprites will not (yet) be considered on taking a screenshot.\n\nThe quick access button Screenshot will take a picture right away and then show it in the Screenshot window.\nThe menu Command > Screenshot... will open the Screenshot window without taking a screenshot. \n\nYou can take a picture from the Screenshot window by pressing the button Screenshot. Use the cursor keys to iterate through all taken screenshots or choose one from the pulldown menu. Delete the displayed one by pressing the button Delete. Screenshots will remain until you delete them. \n\n\nDis/Connect to MEGA65\n--------------------------------------------------\nOn start up M65Connect tries to automatically connect to MEGA65. On success this function will be shown as 'Disconnect from MEGA65' otherwise as 'Connecto to MEGA65'. Usually you don't need to care about this function. It makes sense while using other tools accessing the MEGA65 at the same time. A tool being connected to the MEGA65 will block any other tool on connecting to the MEGA65. This function allows you to free the connection for any other tools.\n\nAccess: Menu Command > Disconnect from MEGA65 / Connect to MEGA65\n\n\nList FTDI Devices\n--------------------------------------------------\nThis function is available even if you are not connected to the MEGA65. It checks the presence of the MEGA65 and shows the result in the Console window. The most important entry is 'Flags' showing you the status of both FTDI devices:\n   10 : Device is available but not used (not connected)\n   01 : Device is available and used (connected)\n\nM65Connect requires both devices depending on the used function. On start up it tries to connect to the second device in the list for terminal operations.\nAccess: Menu Command > List FTDI Devices...\n"
+         Value           =   "\nM65Connect offers a versatile set of functions to interact with the MEGA65. You'll find here an overview with description of all current functions on chronological menu order.\n\n\nFILE FUNCTIONS\n\nSend PRG file\n--------------------------------------------------\nChoose a PRG file from your PC you want to send to the MEGA65. You can set default some parameter how M65Connect should treat a PRG file in menu Settings > PRG File Send...\n\nAccess: Menu File > Send PRG File or quick access button PRG\n\n\nSend SID file\n--------------------------------------------------\nChoose a SID file from your PC you want to send to the MEGA65. The loaded SID file will be started automatically after transfer.\n\nAccess: Menu File > Send SID File or quick access button SID\n\n\nSend Bitstream file\n--------------------------------------------------\nA Bitstream files represents the emulated hardware of a computer. Choose a Bitstream file from your PC you want to send to the MEGA65. The loaded Bitstream file persists as long as you do not turn off the MEGA65 or override it by another Bitstream file.\n\nAccess: Menu File > Send Bitstream File or quick access button BIT\n\n\nSend Hickup file\n--------------------------------------------------\nA Hickup file is part of the internal system software for initialisation purposes.\nChoose a Hickup file from your PC you want to send to the MEGA65. The loaded Hickup file persists as long as you do not turn off the MEGA65 or override it by another Bitstream file.\n\nAccess: Menu File > Send Hickup File or quick access button HIC\n\n\nSend ROM file\n--------------------------------------------------\nA ROM file represent what you see and what you can do when turning on the MEGA65. \nChoose a ROM file from your PC you want to send to the MEGA65. The loaded ROM will be removed on resetting the MEGA65. \n\nAccess: Menu File > Send ROM File or quick access button ROM\n\n\nSend BASIC program\n--------------------------------------------------\nThis function allows you to send a raw BASIC program to the MEGA65. Use the quick access button BAS to choose and send a textfile with BASIC code right away \nThe menu option File > 'Send BASIC Program...' opens a window with a simple BASIC editor. You can load, create or modify BASIC code before sending it to the MEGA65. Any not supported char will be ignored. \n\nAccess: Menu File > Send BASIC program... (editor) or quick access button BAS (direct send)\n\n\nSD Card Manager\n--------------------------------------------------\nThe SD Card Manager allows you to interact with the internal SC Card.\nSee detailed description on tab ""SD Card Manager""\n\nAccess: Menu File > SD Card Manager or quick access button SD Card\n\n\nROM Configurator\n--------------------------------------------------\nCustomisation of ROM with version 920252 or later.\n\nLoad ROM Config: Load existing configuration from ROM or Config file (.rcg) \nPreview: Show configuration of loaded ROM or Config file in preview\nColor Settings: Set color of background, border and text\nSpeed: Set initial ROM speed on startup\nFont: Select prefered font type\nSet Default: Reset configuration to default settings\nApply to ROM: Apply current settings to a ROM file\nSave Config as: Save current settings to a Config file for later use\n\nAccess: Menu File > Rom Configurator\n\n\nStart/Stop PRG Autoload\n--------------------------------------------------\nThis function allows you to send automatically new or changed PRG files to the MEGA65.\nIn order to enable it you need first to set a path from where the PRG files will be loaded. Set the path in menu Settings > File Path > Path PRG Autoload\nThe function will check every second for new or changed PRG files. To reduce harddisk access you can stop this function at any time and start it again while a new or changed file in between will be found and sent. All the options in menu Settings > 'PRG File Send' will be considered but the option 'Show this window before sending PRG' will be ignored.\n\nAccess: Menu File > Start/Stop PRG Autoload\n\n\nPatch ROM file\n--------------------------------------------------\nA patch file can be applied (patched) to a ROM file. You therefore need a source ROM file that you want to patch and the patch file. The source ROM file wll not be modified rather used to apply the patch and then saved as a new ROM file. The patch file must be of type .bdf or .rdf\n\n1. Source ROM file: Choose the ROM file used to patch by clicking the folder button\n2. ROM patch file: Choose the patch file you want to apply by clicking the folder button\n3. Press button 'Save patched ROM as..."" and choose location and target filename for the patched ROM file\n\nWindows: The User Control may pop up or appear in the Taskbar on patching. You need to give the permission to patch. You can avoid this by starting M65Connect with admin rights (right-click on M65Connect icon and start as admin).\n\nAccess: Menu File > Patch ROM File\n\n\nCreate ROM Patch file\n--------------------------------------------------\nCreating ROM patches allows you to share changes of an existing ROM without violating any copyright. To create a patch file you need the original ROM file you have used to make changes but also the modified ROM file. The difference between both leads to the patch file.\n\n1. Original ROM file: Choose the original/unchanged ROM file by clicking the folder button\n2. Changed ROM file: Choose the modified ROM file by clicking the folder button\n3. Create BDF patch file: Active checkbox if you want to create a .bdf patch file *\n4. Create RDF patch file: Active checkbox if you want to create a .rdf patch file (this takes some minutes) *\n5. Press button 'Save patch file as...' and choose location and target filename for the patch file(s)\n\n* You can create a .bdf and a .rdf file at the same time.\n\nAccess: Menu File > Create ROM Patch File\n\n\nCreate COR file\n--------------------------------------------------\nA COR file is a processed Bitstream file that you need if you want to flash a Bitstream from SD Card to MEGA65. \n\n1. Source File: Choose a Bitstream (.bit) file byl clicking the folder button\n2. Target board: Select the target board on which the COR file can be used\n    (if you select first the source file M65Connect tries to evaluate the target board)\n3. Display name: Enter the name you want to see in the Flash menu of MEGA65 after flashiing the COR file\n4. Display version: Enter an optional version here (will be printed below Display name)\n5. Press button 'Save as...' and choose location and target filename of the COR file\n\nAccess: Menu File > Create COR File...\n\n\nCreate MCS file\n--------------------------------------------------\nAn MCS file is a processed Bitstream file that you need if you want to flash a Bitstream to MEGA65 from the Vivado tool. \n\n1. Source File: Choose a Bitstream (.bit) file by clicking the folder button\n2. Click button 'Save as...' and choose the location and target filename of the MCS file. \n\nAccess: Menu File > Create MCS File...\n\n\nSave Console text\n--------------------------------------------------\nThis function will save the content of the Console window and is available on existing text.\n\nAccess: Menu File > Save Console Text\n\n\nSave Console selection\n--------------------------------------------------\nAs soon as you have selected text in the Console window this function turns accessible and saves the selected text area.\n\nAccess: Menu File > Save Console Selection\n\n\nDrag&Drop\n--------------------------------------------------\nYou can also send a file to MEGA65 by the Drag&Drop function: Drag a file of known type into the M65Connect window and release the mouse button. Accepted file types are:\n   - Program (PRG)\n   - Sound (SID)\n   - ROM (BIN)\n   - Bitstream (BIT)\n   - Hickup (M65)\n\n\n\nCOMMAND FUNCTIONS\n\nReset MEGA65\n--------------------------------------------------\nThis functions resets the MEGA65 and brings it back to the MEGA65 mode.\n\nAccess: Menu Command > Reset or quick access button Reset\n\n\nSwitch to 64 mode\n--------------------------------------------------\nThis function does the same as you type 'GO 64' in the MEGA65 mode.\n\nAccess: Menu Command > Go 64 or quick access button Go64\n\n\nSwitch graphic mode\n--------------------------------------------------\nYou can switch the graphic mode between NTSC and PAL. The current graphic mode will be underlined in the related quick access button. Be aware that most other functions will reset any graphic mode switch.\n\nAccess: Menu Command > Graphic Mode >  Set NTSC / > Set PAL or quick access buttons NTSC and PAL\n\n\nTake screenshot\n--------------------------------------------------\nYou can take a picture (PNG) of the MEGA65 current display state. Certain objects like sprites will not (yet) be considered on taking a screenshot.\n\nThe quick access button Screenshot will take a picture right away and then show it in the Screenshot window.\nThe menu Command > Screenshot... will open the Screenshot window without taking a screenshot. \n\nYou can take a picture from the Screenshot window by pressing the button Screenshot. Use the cursor keys to iterate through all taken screenshots or choose one from the pulldown menu. Delete the displayed one by pressing the button Delete. Screenshots will remain until you delete them. \n\n\nDis/Connect to MEGA65\n--------------------------------------------------\nOn start up M65Connect tries to automatically connect to MEGA65. On success this function will be shown as 'Disconnect from MEGA65' otherwise as 'Connecto to MEGA65'. Usually you don't need to care about this function. It makes sense while using other tools accessing the MEGA65 at the same time. A tool being connected to the MEGA65 will block any other tool on connecting to the MEGA65. This function allows you to free the connection for any other tools.\n\nAccess: Menu Command > Disconnect from MEGA65 / Connect to MEGA65\n\n\nList FTDI Devices\n--------------------------------------------------\nThis function is available even if you are not connected to the MEGA65. It checks the presence of the MEGA65 and shows the result in the Console window. The most important entry is 'Flags' showing you the status of both FTDI devices:\n   10 : Device is available but not used (not connected)\n   01 : Device is available and used (connected)\n\nM65Connect requires both devices depending on the used function. On start up it tries to connect to the second device in the list for terminal operations.\nAccess: Menu Command > List FTDI Devices...\n"
          Visible         =   True
          Width           =   760
       End
@@ -131,10 +131,10 @@ Begin Window WinHelp
          Left            =   20
          LineHeight      =   0.0
          LineSpacing     =   1.0
-         LockBottom      =   False
+         LockBottom      =   True
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   False
+         LockRight       =   True
          LockTop         =   True
          MaximumCharactersAllowed=   0
          Multiline       =   True
@@ -181,16 +181,16 @@ Begin Window WinHelp
          Left            =   20
          LineHeight      =   0.0
          LineSpacing     =   1.0
-         LockBottom      =   False
+         LockBottom      =   True
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   False
+         LockRight       =   True
          LockTop         =   True
          MaximumCharactersAllowed=   0
          Multiline       =   True
          ReadOnly        =   False
          Scope           =   0
-         TabIndex        =   0
+         TabIndex        =   2
          TabPanelIndex   =   8
          TabStop         =   False
          TextAlignment   =   0
@@ -235,7 +235,7 @@ Begin Window WinHelp
          LockedInPosition=   False
          LockLeft        =   True
          LockRight       =   True
-         LockTop         =   False
+         LockTop         =   True
          MaximumCharactersAllowed=   0
          Multiline       =   True
          ReadOnly        =   True
@@ -251,7 +251,7 @@ Begin Window WinHelp
          Underline       =   False
          UnicodeMode     =   0
          ValidationMask  =   ""
-         Value           =   "\nBefore you can use M65Connect you need to cover some requirements:\n\n\nHARDWARE REQUIREMENTS\n\nThis version of M65Connect supports only access to the MEGA65 by JTAG devices. Therefore you need additional hardware :\n- TE0790-03 - XMOD FTDI JTAG adapter (Xilinx compatible)\n- USB cable Mini to connect the MEGA65 with your PC\n\n\nSOFTWARE REQUIREMENTS\n\nDepending on your OS you need some additional software or settings before you can work with M65Connect. We tried to make it as easy as possible in order to \n\nWindows\n--------------------\nFor sending Bitstream files x3C will be used by default. You don't need to install it as it's part of M65Connect. If you want to send Bitstream files much faster or program VHDL you need to download (account required) and install Vivado or Vivado Lab: https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/2019-1.html (account required)\n\nWith the first start M65Connect will try to locate Vivado. If not found x3C will then be used. You can install Vivado/Lab later on and search/set the path to it in Settings > File Path.\n\nAs Vivado comes with its own USB serial driver you need to instlall them manually if you are not using Vivado. The driver installation manual can be found here: M65Connect/readme_driver_installation.txt \n\nImportant note: If you have an existing Bitstream in Slot 1 it will be started instead the loaded Bitstream by x3C. But you can skip this by holding NO SCROLL while transferring the Bitstream, so that it stops in the Flash Menu on restart. Then you can just press RUN/STOP to boot normally the loaded Bitstream without trying to load from the Flash menu.\n\nMac\n--------------------\nYou need to have libsub installed. The easiest way is to install it by Homebrew (https://brew.sh):\n1. Open Terminal window\n2. Enter command: /bin/bash -c ""$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)""\n3. Install libsub with this command: brew install libusb-compat \n\nOn starting up M65Connect the first time you may be asked to give permission to the Document folder. This is required. to store Preference data.\n\nLinux\n--------------------\nYou need to be in the groups 'dialout' and 'plugdev':\n1. Start Linux and open a Terminal window\n2. Add your user to this group by typing: sudo usermod -a -G dialout,plugdev <username>\n    while <username> represents your Linux user name. You can use $USER for the active user.\n3. You NEED to restart Linux to take effect of these changes!\n"
+         Value           =   "\nBefore you can use M65Connect you need to cover some requirements:\n\n\nHARDWARE REQUIREMENTS\n\nThis version of M65Connect supports only access to the MEGA65 by JTAG devices. Therefore you need additional hardware :\n- TE0790-03 - XMOD FTDI JTAG adapter (Xilinx compatible)\n- USB cable Mini to connect the MEGA65 with your PC\n\n\nSOFTWARE REQUIREMENTS\n\nDepending on your OS you need some additional software or settings before you can work with M65Connect. We tried to make it as easy as possible in order to \n\nWindows\n--------------------\nFor sending Bitstream files x3C will be used by default. You don't need to install it as it's part of M65Connect. If you want to send Bitstream files much faster or program VHDL you need to download (account required) and install Vivado or Vivado Lab: https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/2019-1.html (account required)\n\nWith the first start M65Connect will try to locate Vivado. If not found x3C will then be used. You can install Vivado/Lab later on and search/set the path to it in Settings > File Path.\n\nAs Vivado comes with its own USB serial driver you need to instlall them manually if you are not using Vivado. The driver installation manual can be found here: M65Connect/readme_driver_installation.txt \n\nImportant note: If you have an existing Bitstream in Slot 1 it will be started instead the loaded Bitstream by x3C. But you can skip this by holding NO SCROLL while transferring the Bitstream, so that it stops in the Flash Menu on restart. Then you can just press RUN/STOP to boot normally the loaded Bitstream without trying to load from the Flash menu.\n\nMac\n--------------------\nYou need to have libsub installed. The easiest way is to install it by Homebrew (https://brew.sh):\n1. Open Terminal window\n2. Enter command: /bin/bash -c ""$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)""\n3. Install libusb with this command: brew install libusb-compat \n\nOn starting up M65Connect the first time you may be asked to give permission to the Document folder. This is required. to store Preference data.\n\nLinux\n--------------------\nYou need to be in the groups 'dialout' and 'plugdev':\n1. Start Linux and open a Terminal window\n2. Add your user to this group by typing: sudo usermod -a -G dialout,plugdev <username>\n    while <username> represents your Linux user name. You can use $USER for the active user.\n3. You NEED to restart Linux to take effect of these changes!\n"
          Visible         =   True
          Width           =   760
       End
@@ -281,10 +281,10 @@ Begin Window WinHelp
          Left            =   20
          LineHeight      =   0.0
          LineSpacing     =   1.0
-         LockBottom      =   False
+         LockBottom      =   True
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   False
+         LockRight       =   True
          LockTop         =   True
          MaximumCharactersAllowed=   0
          Multiline       =   True
@@ -331,10 +331,10 @@ Begin Window WinHelp
          Left            =   20
          LineHeight      =   0.0
          LineSpacing     =   1.0
-         LockBottom      =   False
+         LockBottom      =   True
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   False
+         LockRight       =   True
          LockTop         =   True
          MaximumCharactersAllowed=   0
          Multiline       =   True
@@ -381,10 +381,10 @@ Begin Window WinHelp
          Left            =   20
          LineHeight      =   0.0
          LineSpacing     =   1.0
-         LockBottom      =   False
+         LockBottom      =   True
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   False
+         LockRight       =   True
          LockTop         =   True
          MaximumCharactersAllowed=   0
          Multiline       =   True
@@ -431,10 +431,10 @@ Begin Window WinHelp
          Left            =   20
          LineHeight      =   0.0
          LineSpacing     =   1.0
-         LockBottom      =   False
+         LockBottom      =   True
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   False
+         LockRight       =   True
          LockTop         =   True
          MaximumCharactersAllowed=   0
          Multiline       =   True
@@ -466,7 +466,7 @@ Begin Window WinHelp
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -478,7 +478,7 @@ Begin Window WinHelp
       LockTop         =   False
       MacButtonStyle  =   0
       Scope           =   0
-      TabIndex        =   3
+      TabIndex        =   1
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
@@ -500,6 +500,10 @@ End
 		  #EndIf
 		  
 		  TabManual.SetFocus
+		  
+		  // Set window position
+		  WinHelp.Left = (MainWindow.Left + MainWindow.Width) - ((WinHelp.Width + MainWindow.Width) /2)
+		  WinHelp.Top = MainWindow.Top + 30
 		End Sub
 	#tag EndEvent
 

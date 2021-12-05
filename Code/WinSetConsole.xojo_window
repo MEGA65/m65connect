@@ -114,7 +114,7 @@ Begin Window WinSetConsole
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       InitialValue    =   "Default\n28\n26\n24\n22\n20\n18\n16\n14\n12\n10\n8\n"
@@ -147,7 +147,7 @@ Begin Window WinSetConsole
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -179,7 +179,7 @@ Begin Window WinSetConsole
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -211,7 +211,7 @@ Begin Window WinSetConsole
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -331,7 +331,7 @@ Begin Window WinSetConsole
       TextAlignment   =   0
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   126
+      Top             =   122
       Transparent     =   False
       Underline       =   False
       Value           =   "Console Preview"
@@ -348,11 +348,11 @@ Begin Window WinSetConsole
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   320
+      Left            =   310
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -368,7 +368,7 @@ Begin Window WinSetConsole
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   100
+      Width           =   110
    End
    Begin CheckBox ShowM65Output
       AllowAutoDeactivate=   True
@@ -404,7 +404,7 @@ Begin Window WinSetConsole
       Width           =   400
    End
    Begin PushButton PushConsoleColor
-      AllowAutoDeactivate=   True
+      AllowAutoDeactivate=   False
       Bold            =   False
       Cancel          =   False
       Caption         =   "Background Color"
@@ -413,11 +413,11 @@ Begin Window WinSetConsole
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   270
+      Left            =   260
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -429,11 +429,11 @@ Begin Window WinSetConsole
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   "Change the background color of the Console"
-      Top             =   126
+      Top             =   121
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   150
+      Width           =   160
    End
    Begin CheckBox ClearConsole
       AllowAutoDeactivate=   True
@@ -486,6 +486,9 @@ End
 		    PushReset.Height = 22
 		    PushSave.Height = 22
 		    PushClose.Height = 22
+		    ConsolePreviewLabel.Top = 126
+		    PushFontColor.Top = 63
+		    PushConsoleColor.Top = 125
 		  #EndIf
 		  
 		  // Fillup all available fonts
@@ -506,13 +509,9 @@ End
 		  ShowM65Output.Value = Terminal.SetM65Output
 		  ClearConsole.Value = Terminal.SetClearConsole
 		  
-		  // xxxxxxxx
-		  if Terminal.SetM65Output then
-		    msgbox ("true")
-		  end if
-		  
-		  //msgbox (Terminal.SetM65Output.Value.ToString)
-		  
+		  // Set window position
+		  WinSetConsole.Left = (MainWindow.Left + MainWindow.Width) - ((WinSetConsole.Width + MainWindow.Width) /2)
+		  WinSetConsole.Top = MainWindow.Top + 40
 		End Sub
 	#tag EndEvent
 

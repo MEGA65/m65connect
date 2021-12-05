@@ -34,7 +34,7 @@ Begin Window WinSetConnection
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -57,7 +57,7 @@ Begin Window WinSetConnection
       Width           =   80
    End
    Begin PushButton PushClose
-      AllowAutoDeactivate=   True
+      AllowAutoDeactivate=   False
       Bold            =   False
       Cancel          =   False
       Caption         =   "Close"
@@ -66,7 +66,7 @@ Begin Window WinSetConnection
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -98,7 +98,7 @@ Begin Window WinSetConnection
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -205,6 +205,10 @@ End
 		  Terminal.RefreshPortList()
 		  
 		  WinSetConnection.PushSave.Enabled = False
+		  
+		  // Set window position
+		  WinSetConnection.Left = (MainWindow.Left + MainWindow.Width) - ((WinSetConnection.Width + MainWindow.Width) /2)
+		  WinSetConnection.Top = MainWindow.Top + 40
 		End Sub
 	#tag EndEvent
 

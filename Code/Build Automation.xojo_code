@@ -45,6 +45,20 @@
 					Subdirectory = 
 					FolderItem = Li4vLi4vU0QlMjBDYXJkJTIwRXNzZW50aWFscy8=
 				End
+				Begin CopyFilesBuildStep Bit2CorLinux
+					AppliesTo = 0
+					Architecture = 0
+					Destination = 1
+					Subdirectory = 
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTGludXgvYml0MmNvci9iaXQyY29yZQ==
+				End
+				Begin CopyFilesBuildStep ROMDiffLinux
+					AppliesTo = 0
+					Architecture = 0
+					Destination = 1
+					Subdirectory = 
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTGludXgvcm9tZGlmZi9yb21kaWZm
+				End
 			End
 			Begin BuildStepList Mac OS X
 				Begin BuildProjectStep Build
@@ -92,6 +106,21 @@
 					Destination = 1
 					Subdirectory = 
 					FolderItem = Li4vLi4vU0QlMjBDYXJkJTIwRXNzZW50aWFscy8=
+				End
+				Begin CopyFilesBuildStep Bit2CorMac
+					AppliesTo = 0
+					Architecture = 0
+					Destination = 1
+					Subdirectory = 
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTWFjL2JpdDJjb3IvYml0MmNvcmUub3N4
+				End
+				Begin CopyFilesBuildStep ROMDiffMac
+					AppliesTo = 0
+					Architecture = 0
+					Destination = 1
+					Subdirectory = 
+					FolderItem = Li4vLi4vUmVzb3VyY2VzL01hYy9yb21kaWZmL3JvbWRpZmYub3N4
+					FolderItem = Li4vLi4vUmVzb3VyY2VzL01hYy9yb21kaWZmL3JvbWRpZmZwYXRjaC5vc3g=
 				End
 			End
 			Begin BuildStepList Windows
@@ -152,6 +181,20 @@
 					Destination = 1
 					Subdirectory = 
 					FolderItem = Li4vLi4vU0QlMjBDYXJkJTIwRXNzZW50aWFscy8=
+				End
+				Begin CopyFilesBuildStep Bit2CorWin
+					AppliesTo = 0
+					Architecture = 0
+					Destination = 1
+					Subdirectory = 
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy9iaXQyY29yL2JpdDJjb3JlLmV4ZQ==
+				End
+				Begin CopyFilesBuildStep ROMDiffWin
+					AppliesTo = 0
+					Architecture = 0
+					Destination = 1
+					Subdirectory = 
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy9yb21kaWZmL3JvbWRpZmYuZXhl
 				End
 			End
 #tag EndBuildAutomation

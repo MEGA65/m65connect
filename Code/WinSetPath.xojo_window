@@ -39,7 +39,7 @@ Begin Window WinSetPath
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   32
+      Height          =   34
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
@@ -112,7 +112,7 @@ Begin Window WinSetPath
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -124,7 +124,7 @@ Begin Window WinSetPath
       LockTop         =   False
       MacButtonStyle  =   0
       Scope           =   0
-      TabIndex        =   17
+      TabIndex        =   15
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
@@ -144,7 +144,7 @@ Begin Window WinSetPath
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -156,7 +156,7 @@ Begin Window WinSetPath
       LockTop         =   False
       MacButtonStyle  =   0
       Scope           =   0
-      TabIndex        =   18
+      TabIndex        =   16
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
@@ -165,50 +165,6 @@ Begin Window WinSetPath
       Underline       =   False
       Visible         =   True
       Width           =   80
-   End
-   Begin BevelButton PushFolderPRGAdd
-      AllowAutoDeactivate=   True
-      AllowFocus      =   True
-      BackgroundColor =   &c00000000
-      BevelStyle      =   0
-      Bold            =   False
-      ButtonStyle     =   0
-      Caption         =   ""
-      CaptionAlignment=   3
-      CaptionDelta    =   0
-      CaptionPosition =   1
-      Enabled         =   True
-      FontName        =   "System"
-      FontSize        =   0.0
-      FontUnit        =   0
-      HasBackgroundColor=   False
-      Height          =   32
-      Icon            =   2139172863
-      IconAlignment   =   1
-      IconDeltaX      =   0
-      IconDeltaY      =   0
-      Index           =   -2147483648
-      InitialParent   =   ""
-      Italic          =   False
-      Left            =   347
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      MenuStyle       =   0
-      Scope           =   0
-      TabIndex        =   3
-      TabPanelIndex   =   0
-      TabStop         =   True
-      TextColor       =   &c00000000
-      Tooltip         =   "Set an optional default path for PRG files"
-      Top             =   130
-      Transparent     =   False
-      Underline       =   False
-      Value           =   False
-      Visible         =   True
-      Width           =   50
    End
    Begin TextField PathSID
       AllowAutoDeactivate=   True
@@ -225,7 +181,7 @@ Begin Window WinSetPath
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   32
+      Height          =   34
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
@@ -304,7 +260,7 @@ Begin Window WinSetPath
       FontSize        =   0.0
       FontUnit        =   0
       HasBackgroundColor=   False
-      Height          =   32
+      Height          =   34
       Icon            =   2139172863
       IconAlignment   =   1
       IconDeltaX      =   0
@@ -348,7 +304,7 @@ Begin Window WinSetPath
       FontSize        =   0.0
       FontUnit        =   0
       HasBackgroundColor=   False
-      Height          =   32
+      Height          =   34
       Icon            =   1904519167
       IconAlignment   =   1
       IconDeltaX      =   0
@@ -392,7 +348,7 @@ Begin Window WinSetPath
       FontSize        =   0.0
       FontUnit        =   0
       HasBackgroundColor=   False
-      Height          =   32
+      Height          =   34
       Icon            =   1904519167
       IconAlignment   =   1
       IconDeltaX      =   0
@@ -435,7 +391,7 @@ Begin Window WinSetPath
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   32
+      Height          =   34
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
@@ -479,7 +435,7 @@ Begin Window WinSetPath
       FontSize        =   0.0
       FontUnit        =   0
       HasBackgroundColor=   False
-      Height          =   32
+      Height          =   34
       Icon            =   2139172863
       IconAlignment   =   1
       IconDeltaX      =   0
@@ -499,7 +455,7 @@ Begin Window WinSetPath
       TabPanelIndex   =   0
       TabStop         =   True
       TextColor       =   &c00000000
-      Tooltip         =   "Set an optional default path for SID files"
+      Tooltip         =   "Set an optional default path for PRG Autoload files"
       Top             =   433
       Transparent     =   False
       Underline       =   False
@@ -558,7 +514,7 @@ Begin Window WinSetPath
       FontSize        =   0.0
       FontUnit        =   0
       HasBackgroundColor=   False
-      Height          =   32
+      Height          =   34
       Icon            =   1904519167
       IconAlignment   =   1
       IconDeltaX      =   0
@@ -574,11 +530,11 @@ Begin Window WinSetPath
       LockTop         =   True
       MenuStyle       =   0
       Scope           =   0
-      TabIndex        =   14
+      TabIndex        =   12
       TabPanelIndex   =   0
       TabStop         =   True
       TextColor       =   &c00000000
-      Tooltip         =   "Remove default path for SID files"
+      Tooltip         =   "Remove default path for PRG Autoload files"
       Top             =   433
       Transparent     =   False
       Underline       =   False
@@ -630,7 +586,7 @@ Begin Window WinSetPath
          FontSize        =   0.0
          FontUnit        =   0
          HasBackgroundColor=   False
-         Height          =   32
+         Height          =   34
          Icon            =   861970431
          IconAlignment   =   1
          IconDeltaX      =   0
@@ -646,7 +602,7 @@ Begin Window WinSetPath
          LockTop         =   True
          MenuStyle       =   0
          Scope           =   0
-         TabIndex        =   16
+         TabIndex        =   14
          TabPanelIndex   =   0
          TabStop         =   True
          TextColor       =   &c00000000
@@ -674,7 +630,7 @@ Begin Window WinSetPath
          FontSize        =   0.0
          FontUnit        =   0
          HasBackgroundColor=   False
-         Height          =   32
+         Height          =   34
          Icon            =   2139172863
          IconAlignment   =   1
          IconDeltaX      =   0
@@ -690,7 +646,7 @@ Begin Window WinSetPath
          LockTop         =   True
          MenuStyle       =   0
          Scope           =   0
-         TabIndex        =   15
+         TabIndex        =   13
          TabPanelIndex   =   0
          TabStop         =   True
          TextColor       =   &c00000000
@@ -752,7 +708,7 @@ Begin Window WinSetPath
          FontUnit        =   0
          Format          =   ""
          HasBorder       =   True
-         Height          =   32
+         Height          =   34
          Hint            =   ""
          Index           =   -2147483648
          InitialParent   =   "GroupVivadoPath"
@@ -767,7 +723,7 @@ Begin Window WinSetPath
          Password        =   False
          ReadOnly        =   False
          Scope           =   0
-         TabIndex        =   17
+         TabIndex        =   0
          TabPanelIndex   =   0
          TabStop         =   False
          TextAlignment   =   0
@@ -797,7 +753,7 @@ Begin Window WinSetPath
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   32
+      Height          =   34
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
@@ -841,7 +797,7 @@ Begin Window WinSetPath
       FontSize        =   0.0
       FontUnit        =   0
       HasBackgroundColor=   False
-      Height          =   32
+      Height          =   34
       Icon            =   2139172863
       IconAlignment   =   1
       IconDeltaX      =   0
@@ -920,7 +876,7 @@ Begin Window WinSetPath
       FontSize        =   0.0
       FontUnit        =   0
       HasBackgroundColor=   False
-      Height          =   32
+      Height          =   34
       Icon            =   1904519167
       IconAlignment   =   1
       IconDeltaX      =   0
@@ -963,7 +919,7 @@ Begin Window WinSetPath
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   32
+      Height          =   34
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
@@ -1007,7 +963,7 @@ Begin Window WinSetPath
       FontSize        =   0.0
       FontUnit        =   0
       HasBackgroundColor=   False
-      Height          =   32
+      Height          =   34
       Icon            =   2139172863
       IconAlignment   =   1
       IconDeltaX      =   0
@@ -1051,7 +1007,7 @@ Begin Window WinSetPath
       FontSize        =   0.0
       FontUnit        =   0
       HasBackgroundColor=   False
-      Height          =   32
+      Height          =   34
       Icon            =   1904519167
       IconAlignment   =   1
       IconDeltaX      =   0
@@ -1164,7 +1120,7 @@ Begin Window WinSetPath
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   32
+      Height          =   34
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
@@ -1178,7 +1134,7 @@ Begin Window WinSetPath
       Password        =   False
       ReadOnly        =   False
       Scope           =   0
-      TabIndex        =   30
+      TabIndex        =   0
       TabPanelIndex   =   0
       TabStop         =   False
       Text            =   ""
@@ -1208,7 +1164,7 @@ Begin Window WinSetPath
       FontSize        =   0.0
       FontUnit        =   0
       HasBackgroundColor=   False
-      Height          =   32
+      Height          =   34
       Icon            =   2139172863
       IconAlignment   =   1
       IconDeltaX      =   0
@@ -1224,11 +1180,11 @@ Begin Window WinSetPath
       LockTop         =   True
       MenuStyle       =   0
       Scope           =   0
-      TabIndex        =   31
+      TabIndex        =   1
       TabPanelIndex   =   0
       TabStop         =   True
       TextColor       =   &c00000000
-      Tooltip         =   "Set an optional default path for PRG files"
+      Tooltip         =   "Set an optional default path for D81 files"
       Top             =   53
       Transparent     =   False
       Underline       =   False
@@ -1252,7 +1208,7 @@ Begin Window WinSetPath
       FontSize        =   0.0
       FontUnit        =   0
       HasBackgroundColor=   False
-      Height          =   32
+      Height          =   34
       Icon            =   1904519167
       IconAlignment   =   1
       IconDeltaX      =   0
@@ -1268,12 +1224,56 @@ Begin Window WinSetPath
       LockTop         =   True
       MenuStyle       =   0
       Scope           =   0
-      TabIndex        =   32
+      TabIndex        =   2
       TabPanelIndex   =   0
       TabStop         =   True
       TextColor       =   &c00000000
-      Tooltip         =   "Remove default path for PRG files"
+      Tooltip         =   "Remove default path for D81 files"
       Top             =   53
+      Transparent     =   False
+      Underline       =   False
+      Value           =   False
+      Visible         =   True
+      Width           =   50
+   End
+   Begin BevelButton PushFolderPRGAdd
+      AllowAutoDeactivate=   True
+      AllowFocus      =   True
+      BackgroundColor =   &c00000000
+      BevelStyle      =   0
+      Bold            =   False
+      ButtonStyle     =   0
+      Caption         =   ""
+      CaptionAlignment=   3
+      CaptionDelta    =   0
+      CaptionPosition =   1
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      HasBackgroundColor=   False
+      Height          =   34
+      Icon            =   2139172863
+      IconAlignment   =   1
+      IconDeltaX      =   0
+      IconDeltaY      =   0
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   347
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      MenuStyle       =   0
+      Scope           =   0
+      TabIndex        =   3
+      TabPanelIndex   =   0
+      TabStop         =   True
+      TextColor       =   &c00000000
+      Tooltip         =   "Set an optional default path for PRG files"
+      Top             =   130
       Transparent     =   False
       Underline       =   False
       Value           =   False
@@ -1345,6 +1345,9 @@ End
 		    WinSetPath.GroupVivadoPath.Visible = False
 		  #EndIf
 		  
+		  // Set window position
+		  WinSetPath.Left = (MainWindow.Left + MainWindow.Width) - ((WinSetPath.Width + MainWindow.Width) /2)
+		  WinSetPath.Top = MainWindow.Top + 40
 		End Sub
 	#tag EndEvent
 
@@ -1393,17 +1396,6 @@ End
 		Sub Action()
 		  // Close window
 		  WinSetPath.Close
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events PushFolderPRGAdd
-	#tag Event
-		Sub Action()
-		  Var Path As FolderItem
-		  Path = Folderitem.ShowSelectFolderDialog
-		  If Path <> Nil Then
-		    PathPRG.Value = Path.NativePath
-		  End If
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -1544,6 +1536,17 @@ End
 	#tag Event
 		Sub Action()
 		  WinSetPath.PathD81.Value = ""
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events PushFolderPRGAdd
+	#tag Event
+		Sub Action()
+		  Var Path As FolderItem
+		  Path = Folderitem.ShowSelectFolderDialog
+		  If Path <> Nil Then
+		    PathPRG.Value = Path.NativePath
+		  End If
 		End Sub
 	#tag EndEvent
 #tag EndEvents

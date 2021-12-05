@@ -8,9 +8,9 @@ Begin Window WinCreatePatch
    HasBackgroundColor=   False
    HasCloseButton  =   True
    HasFullScreenButton=   False
-   HasMaximizeButton=   True
-   HasMinimizeButton=   True
-   Height          =   250
+   HasMaximizeButton=   False
+   HasMinimizeButton=   False
+   Height          =   320
    ImplicitInstance=   True
    MacProcID       =   0
    MaximumHeight   =   32000
@@ -19,11 +19,11 @@ Begin Window WinCreatePatch
    MenuBarVisible  =   True
    MinimumHeight   =   64
    MinimumWidth    =   64
-   Resizeable      =   True
+   Resizeable      =   False
    Title           =   "Create ROM Patch File"
    Type            =   1
    Visible         =   True
-   Width           =   550
+   Width           =   700
    Begin TextField OriginalFile
       AllowAutoDeactivate=   True
       AllowFocusRing  =   True
@@ -39,7 +39,7 @@ Begin Window WinCreatePatch
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   32
+      Height          =   34
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
@@ -47,7 +47,7 @@ Begin Window WinCreatePatch
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
-      LockRight       =   False
+      LockRight       =   True
       LockTop         =   True
       MaximumCharactersAllowed=   0
       Password        =   False
@@ -65,7 +65,7 @@ Begin Window WinCreatePatch
       ValidationMask  =   ""
       Value           =   ""
       Visible         =   True
-      Width           =   448
+      Width           =   598
    End
    Begin Label LabelOriginal
       AllowAutoDeactivate=   True
@@ -118,7 +118,7 @@ Begin Window WinCreatePatch
       FontSize        =   0.0
       FontUnit        =   0
       HasBackgroundColor=   False
-      Height          =   32
+      Height          =   34
       Icon            =   2139172863
       IconAlignment   =   1
       IconDeltaX      =   0
@@ -126,7 +126,7 @@ Begin Window WinCreatePatch
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   480
+      Left            =   630
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   False
@@ -156,11 +156,11 @@ Begin Window WinCreatePatch
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   278
+      Left            =   428
       LockBottom      =   True
       LockedInPosition=   False
       LockLeft        =   False
@@ -172,7 +172,7 @@ Begin Window WinCreatePatch
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   198
+      Top             =   270
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -188,11 +188,11 @@ Begin Window WinCreatePatch
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   32
+      Height          =   34
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   450
+      Left            =   600
       LockBottom      =   True
       LockedInPosition=   False
       LockLeft        =   False
@@ -204,7 +204,7 @@ Begin Window WinCreatePatch
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   198
+      Top             =   270
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -225,7 +225,7 @@ Begin Window WinCreatePatch
       FontUnit        =   0
       Format          =   ""
       HasBorder       =   True
-      Height          =   32
+      Height          =   34
       Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
@@ -233,7 +233,7 @@ Begin Window WinCreatePatch
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
-      LockRight       =   False
+      LockRight       =   True
       LockTop         =   True
       MaximumCharactersAllowed=   0
       Password        =   False
@@ -251,7 +251,7 @@ Begin Window WinCreatePatch
       ValidationMask  =   ""
       Value           =   ""
       Visible         =   True
-      Width           =   448
+      Width           =   598
    End
    Begin Label LabelChanged
       AllowAutoDeactivate=   True
@@ -304,7 +304,7 @@ Begin Window WinCreatePatch
       FontSize        =   0.0
       FontUnit        =   0
       HasBackgroundColor=   False
-      Height          =   32
+      Height          =   34
       Icon            =   2139172863
       IconAlignment   =   1
       IconDeltaX      =   0
@@ -312,7 +312,7 @@ Begin Window WinCreatePatch
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   480
+      Left            =   630
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   False
@@ -332,6 +332,209 @@ Begin Window WinCreatePatch
       Visible         =   True
       Width           =   50
    End
+   Begin CheckBox CreateRDF
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      Caption         =   " Create RDF patch file"
+      DataField       =   ""
+      DataSource      =   ""
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   32
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   20
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      Scope           =   0
+      TabIndex        =   12
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Tooltip         =   "Creating RDF patch file will last several minutes"
+      Top             =   213
+      Transparent     =   False
+      Underline       =   False
+      Value           =   False
+      Visible         =   True
+      VisualState     =   0
+      Width           =   176
+   End
+   Begin CheckBox CreateBDF
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      Caption         =   " Create BDF patch file"
+      DataField       =   ""
+      DataSource      =   ""
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   32
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   20
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      Scope           =   0
+      State           =   1
+      TabIndex        =   13
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Tooltip         =   ""
+      Top             =   178
+      Transparent     =   False
+      Underline       =   False
+      Value           =   True
+      Visible         =   True
+      Width           =   176
+   End
+   Begin Label LabelProcessBDF
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      DataField       =   ""
+      DataSource      =   ""
+      Enabled         =   False
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   32
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   208
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   True
+      LockTop         =   True
+      Multiline       =   False
+      Scope           =   0
+      Selectable      =   False
+      TabIndex        =   14
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Text            =   ""
+      TextAlignment   =   3
+      TextColor       =   &c00000000
+      Tooltip         =   ""
+      Top             =   178
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   472
+   End
+   Begin Label LabelProcessRDF
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      DataField       =   ""
+      DataSource      =   ""
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   32
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   208
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   True
+      LockTop         =   True
+      Multiline       =   False
+      Scope           =   0
+      Selectable      =   False
+      TabIndex        =   15
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Text            =   ""
+      TextAlignment   =   3
+      TextColor       =   &c00000000
+      Tooltip         =   ""
+      Top             =   213
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   True
+      Width           =   472
+   End
+   Begin PushButton PushCancel
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      Cancel          =   False
+      Caption         =   "Cancel"
+      Default         =   False
+      Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   34
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   587
+      LockBottom      =   True
+      LockedInPosition=   False
+      LockLeft        =   False
+      LockRight       =   True
+      LockTop         =   False
+      MacButtonStyle  =   0
+      Scope           =   0
+      TabIndex        =   16
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Tooltip         =   ""
+      Top             =   270
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   False
+      Width           =   100
+   End
+   Begin Label LabelProgess
+      AllowAutoDeactivate=   True
+      Bold            =   False
+      DataField       =   ""
+      DataSource      =   ""
+      Enabled         =   False
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      Height          =   42
+      Index           =   -2147483648
+      InitialParent   =   ""
+      Italic          =   False
+      Left            =   166
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   True
+      LockTop         =   True
+      Multiline       =   True
+      Scope           =   0
+      Selectable      =   False
+      TabIndex        =   18
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Text            =   "RDF patch file creation is still running even if the progress text is not updated, just wait until finish."
+      TextAlignment   =   0
+      TextColor       =   &c3134CD00
+      Tooltip         =   ""
+      Top             =   270
+      Transparent     =   False
+      Underline       =   False
+      Visible         =   False
+      Width           =   369
+   End
 End
 #tag EndWindow
 
@@ -347,13 +550,23 @@ End
 		    PushSaveAs.Height = 22
 		    PushClose.Height = 22
 		  #EndIf
+		  
+		  // Init mask
+		  EnablePatching
+		  WinCreatePatch.LabelProcessBDF.Text = ""
+		  WinCreatePatch.LabelProcessRDF.Text = ""
+		  
+		  // Set window position
+		  WinCreatePatch.Left = (MainWindow.Left + MainWindow.Width) - ((WinCreatePatch.Width + MainWindow.Width) /2)
+		  WinCreatePatch.Top = MainWindow.Top + 40
 		End Sub
 	#tag EndEvent
 
 
 	#tag Method, Flags = &h0
-		Shared Sub CreatePatch(OriginalFile as String, ChangedFile as String, PatchFile as String)
+		Shared Sub CreatePatchBDF(OriginalFile as String, ChangedFile as String, PatchFile as String)
 		  // BSDiff and BSPatch for Mac are taken from https://github.com/aburgh/bsdiff
+		  // On Linux you can install it by apt get install
 		  
 		  #If TargetWindows Then
 		    Var PatchExecutable As New FolderItem( SpecialFolder.Resources.child("bsdiff.exe") )
@@ -362,17 +575,97 @@ End
 		    Var PatchExecutable As New FolderItem( SpecialFolder.Resources.child("bsdiff") )
 		  #EndIf
 		  
+		  // Make sure extension bdf is set for patch file
+		  Var filename As String = PatchFile
+		  If  PatchFile.Right(4).Lowercase <> ".bdf" Then
+		    If PatchFile.Right(4).IndexOf(".") <> -1 Then
+		      filename = PatchFile.Left(PatchFile.Length-4) + ".bdf"
+		    Else 
+		      filename = PatchFile + ".bdf"
+		    End If
+		  End If
+		  
 		  Var PatchCreate As String
-		  PatchCreate = Chr(34) + PatchExecutable.NativePath + Chr(34) + " " + Chr(34) + OriginalFile + Chr(34) + " " + Chr(34) + ChangedFile + Chr(34)  + " " + Chr(34) + PatchFile + Chr(34)  
+		  PatchCreate = Chr(34) + PatchExecutable.NativePath + Chr(34) + " " + Chr(34) + OriginalFile + Chr(34) + " " + Chr(34) + ChangedFile + Chr(34)  + " " + Chr(34) + filename + Chr(34)  
+		  
+		  // Store filename for later use
+		  MainWindow.ExecBDF = filename
 		  
 		  // Process creating patch file
 		  MainWindow.ExternalExec.Execute( PatchCreate )
 		End Sub
 	#tag EndMethod
 
+	#tag Method, Flags = &h0
+		Shared Sub CreatePatchRDF(OriginalFile as String, ChangedFile as String, PatchFile as String)
+		  // Create RDF patch file
+		  #If TargetWindows Then
+		    Var PatchExecutable As New FolderItem( SpecialFolder.Resources.child("romdiff.exe") )
+		  #ElseIf TargetMacOS Then
+		    // Mac
+		    Var PatchExecutable As New FolderItem( SpecialFolder.Resources.child("romdiff.osx") )
+		  #Else
+		    // Linux
+		    Var PatchExecutable As New FolderItem( SpecialFolder.Resources.child("romdiff") )
+		    // Show progress freeze message
+		    WinCreatePatch.LabelProgess.Visible = True
+		  #EndIf
+		  
+		  // Make sure extension bdf is set for patch file
+		  Var filename As String = PatchFile
+		  If  PatchFile.Right(4).Lowercase <> ".rdf" Then
+		    If PatchFile.Right(4).IndexOf(".") <> -1 Then
+		      filename = PatchFile.Left(PatchFile.Length-4) + ".rdf"
+		    Else 
+		      filename = PatchFile + ".rdf"
+		    End If
+		  End If
+		  
+		  Var PatchCreate As String
+		  PatchCreate = Chr(34) + PatchExecutable.NativePath + Chr(34) + " " + Chr(34) + OriginalFile + Chr(34) + " " + Chr(34) + ChangedFile + Chr(34)  + " " + Chr(34) + filename + Chr(34)  
+		  
+		  // Store filename for later use
+		  MainWindow.ExecRDF = filename
+		  
+		  // Process creating patch file
+		  MainWindow.ExternalExecRDF.Execute( PatchCreate )
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Shared Sub DisablePatching()
+		  // Set buttons for patch processing
+		  WinCreatePatch.BevelAddOriginal.Enabled = False
+		  WinCreatePatch.BevelAddChanged.Enabled = False
+		  WinCreatePatch.CreateBDF.Enabled = False
+		  WinCreatePatch.CreateRDF.Enabled = False
+		  WinCreatePatch.PushSaveAs.Visible = False
+		  WinCreatePatch.PushClose.Visible = False
+		  WinCreatePatch.PushCancel.Visible = True
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Shared Sub EnablePatching()
+		  // Set buttons for patch processing
+		  WinCreatePatch.BevelAddOriginal.Enabled = True
+		  WinCreatePatch.BevelAddChanged.Enabled = True
+		  WinCreatePatch.CreateBDF.Enabled = True
+		  WinCreatePatch.CreateRDF.Enabled = True
+		  WinCreatePatch.PushCancel.Visible = False
+		  WinCreatePatch.PushSaveAs.Visible = True
+		  WinCreatePatch.PushClose.Visible = True
+		  WinCreatePatch.PushSaveAs.Enabled = False
+		End Sub
+	#tag EndMethod
+
 
 	#tag Property, Flags = &h0
-		Shared OriginalFileName As String
+		Shared ChangedFilename As String
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		Shared OriginalFilename As String
 	#tag EndProperty
 
 
@@ -381,6 +674,9 @@ End
 #tag Events BevelAddOriginal
 	#tag Event
 		Sub Action()
+		  LabelProcessBDF.Value = ""
+		  LabelProcessRDF.Value = ""
+		  
 		  // Choose a ROM file
 		  Var FileType As New FileType
 		  FileType.Name = "binary/bin"
@@ -395,7 +691,7 @@ End
 		    OriginalFilename = FilePath.Name
 		    
 		    // Set SaveAs button
-		    If Trim(ChangedFile.Value).Length > 0 Then
+		    If Trim(ChangedFile.Value).Length > 0 And (CreateRDF.Value Or CreateBDF.Value) Then
 		      
 		      // Both ROM files must differ
 		      If OriginalFile.Value = ChangedFile.Value Then 
@@ -417,25 +713,65 @@ End
 		  // Set patch file defintion
 		  Var FileType As New FileType
 		  FileType.Name = "binary/bin"
-		  FileType.Extensions = "bin;BIN"
 		  
 		  Var PatchFile As New FolderItem
-		  Var PatchFileName As String
 		  Var DialogPatch As New SaveFileDialog
 		  
+		  MainWindow.ExecBDF = ""
+		  MainWindow.ExecRDF = ""
+		  WinCreatePatch.LabelProcessBDF.Text = ""
+		  WinCreatePatch.LabelProcessRDF.Text = ""
+		  
 		  DialogPatch.Filter = FileType
-		  DialogPatch.SuggestedFileName = OriginalFilename.Replace(".bin", "_patch.bin")
 		  DialogPatch.Title = "Save ROM patch file as..."
+		  
+		  Var OriginalName As String = OriginalFilename.Left(OriginalFilename.IndexOf("."))
+		  Var ChangedName As String = ChangedFileName.Left(ChangedFilename.IndexOf("."))
+		  
+		  // Set extension to BDF if only this set
+		  if CreateBDF.Value And Not CreateRDF.Value Then
+		    FileType.Extensions = "bdf;BDF"
+		    //DialogPatch.SuggestedFileName = OriginalFilename.Replace(".bin", "_patch.bdf")
+		    DialogPatch.SuggestedFileName = "patch_" + OriginalName + "_to_" + ChangedName + ".bdf"
+		    MainWindow.StatusText.Value = "Creating ROM patch file..."
+		  End if
+		  
+		  // Set extension to RDF if only this set
+		  if CreateRDF.Value And Not CreateBDF.Value Then
+		    FileType.Extensions = "rdf;RDF"
+		    // DialogPatch.SuggestedFileName = OriginalFilename.Replace(".bin", "_patch.rdf")
+		    DialogPatch.SuggestedFileName = "patch_" + OriginalName + "_to_" + ChangedName + ".rdf"
+		    MainWindow.StatusText.Value = "Creating ROM patch file..."
+		  End if
+		  
+		  // Set extension to BDF and RDF for both patch files
+		  if CreateBDF.Value And CreateRDF.Value Then
+		    FileType.Extensions = "rdf;RDF;bdf;BDF"
+		    // DialogPatch.SuggestedFileName = OriginalFilename.Replace(".bin", "_patch")
+		    DialogPatch.SuggestedFileName = "patch_" + OriginalName + "_to_" + ChangedName
+		    
+		    // Set plural
+		    DialogPatch.Title = "Save ROM patch files (.bdf, .rdf) as..."
+		    MainWindow.StatusText.Value = "Creating ROM patch files..."
+		  End if
+		  
 		  PatchFile = DialogPatch.ShowModal
 		  
 		  If PatchFile <> Nil Then
-		    // Create patch file
-		    MainWindow.StatusText.Value = "Creating ROM patch file..."
+		    DisablePatching
 		    
-		    // Process diff and create pach file
-		    CreatePatch( OriginalFile.Value, ChangedFile.Value, PatchFile.NativePath )
+		    // Create patch file(s)
+		    if CreateBDF.Value Then
+		      // Process diff and create patch BDF file
+		      CreatePatchBDF( OriginalFile.Value, ChangedFile.Value, PatchFile.NativePath )
+		    End if
 		    
-		    WinCreatePatch.Close
+		    if CreateRDF.Value Then
+		      // Process diff and create patch RDF file
+		      CreatePatchRDF( OriginalFile.Value, ChangedFile.Value, PatchFile.NativePath )
+		    End If
+		    
+		    // WinCreatePatch.Close
 		  End If
 		  
 		  
@@ -452,6 +788,9 @@ End
 #tag Events BevelAddChanged
 	#tag Event
 		Sub Action()
+		  LabelProcessBDF.Value = ""
+		  LabelProcessRDF.Value = ""
+		  
 		  // Choose a ROM file
 		  Var FileType As New FileType
 		  FileType.Name = "binary/bin"
@@ -462,8 +801,11 @@ End
 		  If FilePath <> Nil Then
 		    ChangedFile.Value = FilePath.NativePath
 		    
+		    // Backup filename for later use
+		    ChangedFileName = FilePath.Name
+		    
 		    // Set SaveAs button
-		    If Trim(OriginalFile.Value).Length > 0 Then
+		    If Trim(OriginalFile.Value).Length > 0 And (CreateRDF.Value Or CreateBDF.Value) Then
 		      // Both ROM files must differ
 		      If ChangedFile.Value = OriginalFile.Value Then 
 		        PushSaveAs.Enabled = False
@@ -475,6 +817,72 @@ End
 		      PushSaveAs.Enabled = False
 		    End If
 		  End
+		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events CreateRDF
+	#tag Event
+		Sub Action()
+		  LabelProcessBDF.Value = ""
+		  LabelProcessRDF.Value = ""
+		  
+		  If Trim(OriginalFile.Value).Length > 0 And Trim(ChangedFile.Value).Length > 0 And (CreateRDF.Value Or CreateBDF.Value) Then
+		    // Both ROM files must differ
+		    If ChangedFile.Value = OriginalFile.Value Then 
+		      PushSaveAs.Enabled = False
+		      Msgbox ("The changed ROM file is the same as the original ROM file")
+		    Else 
+		      PushSaveAs.Enabled = True
+		    End If
+		  Else
+		    PushSaveAs.Enabled = False
+		  End If
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events CreateBDF
+	#tag Event
+		Sub Action()
+		  LabelProcessBDF.Value = ""
+		  LabelProcessRDF.Value = ""
+		  
+		  If Trim(OriginalFile.Value).Length > 0 And Trim(ChangedFile.Value).Length > 0 And (CreateRDF.Value Or CreateBDF.Value) Then
+		    // Both ROM files must differ
+		    If ChangedFile.Value = OriginalFile.Value Then 
+		      PushSaveAs.Enabled = False
+		      Msgbox ("The changed ROM file is the same as the original ROM file")
+		    Else 
+		      PushSaveAs.Enabled = True
+		    End If
+		  Else
+		    PushSaveAs.Enabled = False
+		  End If
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events PushCancel
+	#tag Event
+		Sub Action()
+		  // Abort creating patch file
+		  MainWindow.ExecRDF = "Cancel"
+		  
+		  #If TargetWindows Then
+		    MainWindow.ExternalExecRDF.Execute ( "taskkill /f /im romdiff.exe /T" )
+		  #Else
+		    // Mac/Linux
+		    MainWindow.ExternalExecRDF.Execute( ChrB(3) )
+		  #EndIf
+		  
+		  #If TargetLinux Then
+		    WinCreatePatch.LabelProgess.Visible = False
+		  #EndIf
+		  
+		  WinCreatePatch.LabelProcessRDF.Text = "Processing aborted"
+		  MainWindow.StatusText.Value = "Processing aborted"
+		  
+		  // Set buttons for patch processing
+		  EnablePatching
 		  
 		End Sub
 	#tag EndEvent
