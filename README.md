@@ -56,7 +56,7 @@ Project Installation
 Change Log
 ----------
 - 18/07/2022: V2.0 : D81 image support added
-- 28/05/2022: V1.9 : Minor changes, support of changes of mega65_ftp
+- 28/05/2022: V1.9 : Minor changes, support of changed mega65_ftp
 - 05/12/2021: V1.8 : ROM Configurator added, SD Card Manager fix, sub-windows centered, visual adjustment in SD Card Manager
 - 17/11/2021: V1.7 : BDF/RDF patch operation implemented, latest CLI tool added, support of latest functions of bit2core 
 - 14/07/2021: V1.6 : Latest m65/m65_ftp added, SD Card Manager: Rename files, mount D81 files, improved Nexys support
