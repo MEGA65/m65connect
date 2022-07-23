@@ -353,7 +353,7 @@ Begin Window MainWindow
       TabPanelIndex   =   0
       TabStop         =   True
       Tooltip         =   ""
-      Top             =   566
+      Top             =   567
       Transparent     =   False
       Visible         =   True
       Width           =   187
@@ -369,7 +369,7 @@ Begin Window MainWindow
       CaptionAlignment=   3
       CaptionDelta    =   0
       CaptionPosition =   1
-      Enabled         =   False
+      Enabled         =   True
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
@@ -1766,7 +1766,7 @@ End
 	#tag Event
 		Sub DropObject(obj As DragItem, action As Integer)
 		  // Send file to Mega65 on active connection
-		  If Terminal.M65Connect Then 
+		  If Terminal.SerialConnect Then 
 		    
 		    // Accept all file types defined by M65FileTypeGroup
 		    If obj.FolderItem.Type.Length > 0 Then
@@ -1929,6 +1929,16 @@ End
 	#tag MenuHandler
 		Function FileApplyROMPatchFile() As Boolean Handles FileApplyROMPatchFile.Action
 			WinApplyPatch.ShowModal()
+		End Function
+	#tag EndMenuHandler
+
+	#tag MenuHandler
+		Function FileCreateBITfromCOR() As Boolean Handles FileCreateBITfromCOR.Action
+			//WinCreateBITfromCOR.TextSourceFile.Value = ""
+			//WinCreateBITfromCOR.TextName.Value =""
+			//WinCreateBITfromCOR.TextVersion.Value = ""
+			
+			WinCreateBITfromCOR.ShowModal()
 		End Function
 	#tag EndMenuHandler
 
@@ -2467,7 +2477,7 @@ End
 		  
 		  // Reset items on connection error
 		  If ConnectError Then
-		    Terminal.M65Connect = False
+		    Terminal.SerialConnect = False
 		    Terminal.SetM65Options()
 		    
 		    // MessageBox (ErrorMessage)
@@ -2516,7 +2526,7 @@ End
 		          If DeviceFound = 0 Then
 		            WinConWiz.PortText.Value = "MEGA65 was not recognised. Turn it off and on again."
 		            
-		            Terminal.M65Connect = False
+		            M65.MEGA65Present = False
 		            Terminal.Disconnect()
 		          Else
 		            If NewList.Count = 1 Then
@@ -2554,14 +2564,19 @@ End
 		            "Depending on OS and attached USB devices the port of the MEGA65/Nexys board may change. " +_
 		            "In such a case restart the Connection Wizard in menu Settings > Connection."
 		            
-		            Terminal.M65Connect = True
+		            M65.MEGA65Present = True
 		            Terminal.Connect()
 		          End If 
+		          
+		          // Set correct remote window in SD Card Manager if opened
+		          'If WinSDCard.Visible Then
+		          'WinSDCard.SetRemoteWindow
+		          'End If 
 		          
 		        Else 
 		          WinConWiz.PortText.Value = "It seems you have turned off or unplugged the MEGA65/Nexys board. Plug the USB cable and turn it on."
 		          
-		          Terminal.M65Connect = False
+		          M65.MEGA65Present = False
 		          Terminal.Disconnect()
 		        End If
 		        
@@ -2578,11 +2593,25 @@ End
 		      
 		      // Check if MEGA65 was removed
 		      If Terminal.PortList.IndexOf( Terminal.SetTerminalPort ) = -1 Then
-		        Terminal.M65Connect = False
+		        M65.MEGA65Present = False
 		        Terminal.Disconnect()
 		        
 		        // Close possibliy opened SD Card Commander
-		        WinSDCard.Close()
+		        //WinSDCard.Close()
+		        
+		        // If SD Card Manager is opened then read SC Card directory
+		        For i As Integer = 0 To WindowCount - 1 
+		          If Window(i).Title = "SD Card Manager" Then
+		            // Show SD Card view if no image is opened
+		            If WinSDCard.ActiveImageType.Length = 0 Then
+		              WinSDCard.CmdCopy.Enabled = False
+		              WinSDCard.GroupSDCard.Visible = False
+		              WinSDCard.GroupInfo.Visible = True
+		            End If
+		            
+		            Exit
+		          End If
+		        Next i
 		        
 		        
 		        // Set M65 options
@@ -2590,15 +2619,39 @@ End
 		      Else
 		        // If user disabled connection do not reactivate it on turning on MEGA65
 		        If Terminal.ManualDisconnect = False Then
-		          Terminal.M65Connect = True
-		          Terminal.Connect()
+		          M65.MEGA65Present = True
+		          Terminal.Connect() 
 		          
 		          // Set M65 options
 		          Terminal.SetM65Options()
+		          
+		          // If SD Card Manager is opened then read SC Card directory
+		          For i As Integer = 0 To WindowCount - 1 
+		            If Window(i).Title = "SD Card Manager" Then
+		              // Show SD Card view if no image is opened
+		              If WinSDCard.ActiveImageType.Length = 0 Then
+		                WinSDCard.GroupInfo.Visible = False
+		                WinSDCard.GroupSDCard.Visible = True
+		                WinSDCard.CmdCopy.Enabled = True
+		              End If
+		              
+		              // Wait for startup of MEGA65
+		              app.SleepCurrentThread(1500)
+		              
+		              // Set and start timer for progress bar
+		              WinSDCard.FTPBar.MaximumValue = 3200
+		              WinSDCard.StartFTPBar()
+		              
+		              WinSDCard.SendFTP ("dir")
+		              
+		              Exit
+		            End If
+		          Next i
 		        Else
 		          // Activate connecting to MEGA65
 		          CommandManualDisCon.AutoEnabled = True
 		        End If
+		        
 		      End If
 		      
 		    End If
@@ -3039,8 +3092,12 @@ End
 		      MainWindow.StatusText.Value = "Processing aborted"
 		      msgbox ("ERROR" + Chr(13)  +  "Provided bitstream is for a different MEGA65 target to the one you specified." + Chr(13) + "Check details in Console window." )
 		    Else
+		      MainWindow.StatusText.Value = "COR file created"
 		      WinCreateCOR.Close
 		    End If
+		  Elseif ExecCommand = "MCS" Then
+		    MainWindow.StatusText.Value = "MCS file created"
+		    ExecCommand = ""
 		  Elseif ExecCommand = "PATCHRDF" Then
 		    MainWindow.StatusText.Value = "Processing done"
 		    If ExternalExec.Result.IndexOf("ERROR") <> -1 Then
@@ -3095,7 +3152,7 @@ End
 	#tag EndEvent
 	#tag Event
 		Sub DataAvailable()
-		   Console.Value = ExternalExec.Result
+		  Console.Value = ExternalExec.Result
 		End Sub
 	#tag EndEvent
 #tag EndEvents

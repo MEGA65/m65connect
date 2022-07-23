@@ -258,7 +258,6 @@ Protected Class D2XX
 		  Return Status
 		  
 		  Exception err As FunctionNotFoundException
-		    msgbox("drin3")
 		    MsgBox(err.Message + " Error No.: " + Str(err.ErrorNumber))
 		    
 		    

@@ -575,23 +575,42 @@ End
 		  
 		  
 		  // TextColorList: Color wise sorted
+		  'TextColorList.RemoveAll() 
+		  'TextColorList.Add(&c000000) // Black
+		  'TextColorList.Add(&c505050) // Dark Grey
+		  'TextColorList.Add(&c808080) // Medium Grey
+		  'TextColorList.Add(&cB0B0B0) // Light Grey
+		  'TextColorList.Add(&cFFFFFF) // White
+		  'TextColorList.Add(&cF0F000) // Yellow
+		  'TextColorList.Add(&cF06000) // Orange
+		  'TextColorList.Add(&cA04000) // Brown
+		  'TextColorList.Add(&cF07070) // Pink
+		  'TextColorList.Add(&cF00000) // Red
+		  'TextColorList.Add(&cF000F0) // Purple
+		  'TextColorList.Add(&c0000F0) // Blue
+		  'TextColorList.Add(&c9090F0) // Light Blue
+		  'TextColorList.Add(&c00F0F0) // Cyan
+		  'TextColorList.Add(&c90F090) // Light Green
+		  'TextColorList.Add(&c00F000) // Green 
+		  
 		  TextColorList.RemoveAll() 
 		  TextColorList.Add(&c000000) // Black
-		  TextColorList.Add(&c505050) // Dark Grey
-		  TextColorList.Add(&c808080) // Medium Grey
-		  TextColorList.Add(&cB0B0B0) // Light Grey
+		  TextColorList.Add(&c333333) // Dark Grey
+		  TextColorList.Add(&c777777) // Medium Grey
+		  TextColorList.Add(&cBBBBBB) // Light Grey
 		  TextColorList.Add(&cFFFFFF) // White
-		  TextColorList.Add(&cF0F000) // Yellow
-		  TextColorList.Add(&cF06000) // Orange
-		  TextColorList.Add(&cA04000) // Brown
-		  TextColorList.Add(&cF07070) // Pink
-		  TextColorList.Add(&cF00000) // Red
-		  TextColorList.Add(&cF000F0) // Purple
-		  TextColorList.Add(&c0000F0) // Blue
-		  TextColorList.Add(&c9090F0) // Light Blue
-		  TextColorList.Add(&c00F0F0) // Cyan
-		  TextColorList.Add(&c90F090) // Light Green
-		  TextColorList.Add(&c00F000) // Green 
+		  TextColorList.Add(&cEEEE77) // Yellow
+		  TextColorList.Add(&cDD8855) // Orange
+		  TextColorList.Add(&c664400) // Brown
+		  TextColorList.Add(&cFF7777) // Pink
+		  TextColorList.Add(&c880000) // Red
+		  TextColorList.Add(&cCC44CC) // Purple
+		  TextColorList.Add(&c0000AA) // Blue
+		  TextColorList.Add(&c0088FF) // Light Blue
+		  TextColorList.Add(&cAAFFEE) // Cyan
+		  TextColorList.Add(&cAAFF66) // Light Green
+		  TextColorList.Add(&c00CC55) // Green 
+		  
 		  
 		  // Assign color tags to list for later identification
 		  For i As Integer = 0 To TextColorList.LastIndex
@@ -600,41 +619,73 @@ End
 		  
 		  ListColorText.MouseCursor = System.Cursors.FingerPointer
 		  
-		  
 		  // AreaColorList: Color wise sorted
 		  AreaColorList.RemoveAll() 
 		  AreaColorList.Add(&c000000) // 0 Black
-		  AreaColorList.Add(&c505050) // 11 Dark Grey
-		  AreaColorList.Add(&c808080) // 12 Medium Grey
-		  AreaColorList.Add(&cB0B0B0) // 15 Light Grey
+		  AreaColorList.Add(&c333333) // 11 Dark Grey
+		  AreaColorList.Add(&c777777) // 12 Medium Grey
+		  AreaColorList.Add(&cBBBBBB) // 15 Light Grey
 		  AreaColorList.Add(&cFFFFFF) // 1 White
-		  AreaColorList.Add(&cF0F000) // 7 Yellow
-		  AreaColorList.Add(&cE0E000) // 19 Lemon Tart
-		  AreaColorList.Add(&cF0B000) // 18 Carrot
-		  AreaColorList.Add( &cF06000) // 8 Orange
-		  AreaColorList.Add(&cF05000) // 17 Rambutan
-		  AreaColorList.Add(&cF00000)  // 2 Red
-		  AreaColorList.Add(&cE00000) // 16 Guru Meditation
-		  AreaColorList.Add(&cA04000) // 9 Brown
-		  AreaColorList.Add(&cF07070) // 10 Pink
-		  AreaColorList.Add(&cF03060) // 31 Hot Tamales
-		  AreaColorList.Add(&cF000B0) // 30 Bubblegum
-		  AreaColorList.Add(&cF000F0) // 4 Purple
-		  AreaColorList.Add(&cC000F0) // 29 Sour Grape
-		  AreaColorList.Add(&c7000F0) // 28 Plum Sauce
-		  AreaColorList.Add(&c9090F0)  // 14 Light Blue
-		  AreaColorList.Add(&c0000E0) // 27 Screen of Death
-		  AreaColorList.Add(&c0000F0) // 6 Blue
-		  AreaColorList.Add(&c0030F0) // 26 Smurf Blue
-		  AreaColorList.Add(&c0090F0) // 25 Sea Sky
-		  AreaColorList.Add(&c00D0D0) // 24 The Other Cyan
-		  AreaColorList.Add(&c00F0F0) // 3 Cyan
-		  AreaColorList.Add(&c00F090) // 23 Slimer Green
-		  AreaColorList.Add(&c60E060) // 21 Seasick Green
-		  AreaColorList.Add(&c90F090) // 13 Light Green 
-		  AreaColorList.Add(&c70F000) // 20 Pandan
-		  AreaColorList.Add( &c00F000) // 5 Green
-		  AreaColorList.Add(&c00E030) // 22 Soylent Green
+		  AreaColorList.Add(&cEEEE77) // 7 Yellow
+		  AreaColorList.Add(&cEEEE00) // 19 Lemon Tart
+		  AreaColorList.Add(&cFFBB00) // 18 Carrot
+		  AreaColorList.Add( &cDD8855) // 8 Orange
+		  AreaColorList.Add(&cFF5500) // 17 Rambutan
+		  AreaColorList.Add(&c880000)  // 2 Red
+		  AreaColorList.Add(&cEE0000) // 16 Guru Meditation
+		  AreaColorList.Add(&c664400) // 9 Brown
+		  AreaColorList.Add(&cFF7777) // 10 Pink
+		  AreaColorList.Add(&cFF3366) // 31 Hot Tamales
+		  AreaColorList.Add(&cFF00BB) // 30 Bubblegum
+		  AreaColorList.Add(&cCC44CC) // 4 Purple
+		  AreaColorList.Add(&cCC00FF) // 29 Sour Grape
+		  AreaColorList.Add(&c7700FF) // 28 Plum Sauce
+		  AreaColorList.Add(&c0088FF)  // 14 Light Blue
+		  AreaColorList.Add(&c0000EE) // 27 Screen of Death
+		  AreaColorList.Add(&c0000AA) // 6 Blue
+		  AreaColorList.Add(&c0033FF) // 26 Smurf Blue
+		  AreaColorList.Add(&c0099FF) // 25 Sea Sky
+		  AreaColorList.Add(&c00DDDD) // 24 The Other Cyan
+		  AreaColorList.Add(&cAAFFEE) // 3 Cyan
+		  AreaColorList.Add(&c00FF99) // 23 Slimer Green
+		  AreaColorList.Add(&c66EE66) // 21 Seasick Green
+		  AreaColorList.Add(&cAAFF66) // 13 Light Green 
+		  AreaColorList.Add(&c77FF00) // 20 Pandan
+		  AreaColorList.Add(&c00CC55) // 5 Green
+		  AreaColorList.Add(&c00EE33) // 22 Soylent Green
+		  
+		  'AreaColorList.Add(&c000000) // 0 Black
+		  'AreaColorList.Add(&c505050) // 11 Dark Grey
+		  'AreaColorList.Add(&c808080) // 12 Medium Grey
+		  'AreaColorList.Add(&cB0B0B0) // 15 Light Grey
+		  'AreaColorList.Add(&cFFFFFF) // 1 White
+		  'AreaColorList.Add(&cF0F000) // 7 Yellow
+		  'AreaColorList.Add(&cE0E000) // 19 Lemon Tart
+		  'AreaColorList.Add(&cF0B000) // 18 Carrot
+		  'AreaColorList.Add( &cF06000) // 8 Orange
+		  'AreaColorList.Add(&cF05000) // 17 Rambutan
+		  'AreaColorList.Add(&cF00000)  // 2 Red
+		  'AreaColorList.Add(&cE00000) // 16 Guru Meditation
+		  'AreaColorList.Add(&cA04000) // 9 Brown
+		  'AreaColorList.Add(&cF07070) // 10 Pink
+		  'AreaColorList.Add(&cF03060) // 31 Hot Tamales
+		  'AreaColorList.Add(&cF000B0) // 30 Bubblegum
+		  'AreaColorList.Add(&cF000F0) // 4 Purple
+		  'AreaColorList.Add(&cC000F0) // 29 Sour Grape
+		  'AreaColorList.Add(&c7000F0) // 28 Plum Sauce
+		  'AreaColorList.Add(&c9090F0)  // 14 Light Blue
+		  'AreaColorList.Add(&c0000E0) // 27 Screen of Death
+		  'AreaColorList.Add(&c0000F0) // 6 Blue
+		  'AreaColorList.Add(&c0030F0) // 26 Smurf Blue
+		  'AreaColorList.Add(&c0090F0) // 25 Sea Sky
+		  'AreaColorList.Add(&c00D0D0) // 24 The Other Cyan
+		  'AreaColorList.Add(&c00F0F0) // 3 Cyan
+		  'AreaColorList.Add(&c00F090) // 23 Slimer Green
+		  'AreaColorList.Add(&c60E060) // 21 Seasick Green
+		  'AreaColorList.Add(&c90F090) // 13 Light Green 
+		  'AreaColorList.Add(&c70F000) // 20 Pandan
+		  'AreaColorList.Add( &c00F000) // 5 Green
+		  'AreaColorList.Add(&c00E030) // 22 Soylent Green
 		  
 		  // Assign color tags to list for later identification
 		  For i As Integer = 0 To AreaColorList.LastIndex

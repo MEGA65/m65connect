@@ -5,6 +5,7 @@
 				Begin CopyFilesBuildStep ftd2xxLinux
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 3
 					Subdirectory = M65Connect Libs
 					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTGludXgvRDJYWC9saWJmdGQyeHguc28uMS40Ljg=
@@ -12,6 +13,7 @@
 				Begin CopyFilesBuildStep M65Linux
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
 					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTGludXgvbTY1L202NQ==
@@ -19,6 +21,7 @@
 				Begin CopyFilesBuildStep Bit2McsLinux
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
 					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTGludXgvbTY1L2JpdDJtY3M=
@@ -26,6 +29,7 @@
 				Begin CopyFilesBuildStep BSDiffPatchLinux
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
 					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTGludXgvYnNkaWZmL2JzZGlmZg==
@@ -34,20 +38,23 @@
 				Begin CopyFilesBuildStep FTPLinux
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
-					FolderItem = Li4vLi4vUmVzb3VyY2VzL0xpbnV4L202NWZ0cC9tZWdhNjVfZnRw
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTGludXgvbTY1ZnRwL21lZ2E2NV9mdHA=
 				End
 				Begin CopyFilesBuildStep SDCardLinux
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
-					FolderItem = Li4vLi4vU0QlMjBDYXJkJTIwRXNzZW50aWFscy8=
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL1NEJTIwQ2FyZCUyMEVzc2VudGlhbHMv
 				End
 				Begin CopyFilesBuildStep Bit2CorLinux
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
 					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTGludXgvYml0MmNvci9iaXQyY29yZQ==
@@ -55,6 +62,7 @@
 				Begin CopyFilesBuildStep ROMDiffLinux
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
 					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTGludXgvcm9tZGlmZi9yb21kaWZm
@@ -66,6 +74,7 @@
 				Begin CopyFilesBuildStep ftd2xxMac
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
 					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTWFjL0QyWFgvbGliZnRkMnh4LjEuNC4xNi5keWxpYg==
@@ -73,6 +82,7 @@
 				Begin CopyFilesBuildStep M65Mac
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
 					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTWFjL202NS9saWJwbmcxNi4xNi5keWxpYg==
@@ -81,6 +91,7 @@
 				Begin CopyFilesBuildStep Bit2McsMac
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
 					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTWFjL202NS9iaXQybWNz
@@ -88,6 +99,7 @@
 				Begin CopyFilesBuildStep BSDiffPatchMac
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
 					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTWFjL2JzZGlmZi9ic2RpZmY=
@@ -96,20 +108,23 @@
 				Begin CopyFilesBuildStep FTPMac
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
-					FolderItem = Li4vLi4vUmVzb3VyY2VzL01hYy9tNjVmdHAvbWVnYTY1X2Z0cC5vc3g=
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTWFjL202NWZ0cC9tZWdhNjVfZnRwLm9zeA==
 				End
 				Begin CopyFilesBuildStep SDCardMac
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
-					FolderItem = Li4vLi4vU0QlMjBDYXJkJTIwRXNzZW50aWFscy8=
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL1NEJTIwQ2FyZCUyMEVzc2VudGlhbHMv
 				End
 				Begin CopyFilesBuildStep Bit2CorMac
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
 					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTWFjL2JpdDJjb3IvYml0MmNvcmUub3N4
@@ -117,10 +132,14 @@
 				Begin CopyFilesBuildStep ROMDiffMac
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
-					FolderItem = Li4vLi4vUmVzb3VyY2VzL01hYy9yb21kaWZmL3JvbWRpZmYub3N4
-					FolderItem = Li4vLi4vUmVzb3VyY2VzL01hYy9yb21kaWZmL3JvbWRpZmZwYXRjaC5vc3g=
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTWFjL3JvbWRpZmYvcm9tZGlmZi5vc3g=
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvTWFjL3JvbWRpZmYvcm9tZGlmZnBhdGNoLm9zeA==
+				End
+				Begin SignProjectStep Sign
+				  DeveloperID=
 				End
 			End
 			Begin BuildStepList Windows
@@ -129,6 +148,7 @@
 				Begin CopyFilesBuildStep M65Win
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
 					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy9tNjUvbGlidXNiLTEuMC5kbGw=
@@ -138,6 +158,7 @@
 				Begin CopyFilesBuildStep ftd2xxWin
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 0
 					Subdirectory = 
 					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy9EMlhYL2Z0ZDJ4eC5kbGw=
@@ -146,6 +167,7 @@
 				Begin CopyFilesBuildStep xc3sprog
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
 					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy94YzNzcHJvZy8=
@@ -153,6 +175,7 @@
 				Begin CopyFilesBuildStep Bit2McsWin
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
 					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy9tNjUvYml0Mm1jcy5leGU=
@@ -160,6 +183,7 @@
 				Begin CopyFilesBuildStep BSDiffPatchWin
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
 					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy9ic2RpZmYvYnNkaWZmLmV4ZQ==
@@ -171,20 +195,23 @@
 				Begin CopyFilesBuildStep FTPWin
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
-					FolderItem = Li4vLi4vUmVzb3VyY2VzL1dpbmRvd3MvbTY1ZnRwL21lZ2E2NV9mdHAuZXhl
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy9tNjVmdHAvbWVnYTY1X2Z0cC5leGU=
 				End
 				Begin CopyFilesBuildStep SDCardWin
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
-					FolderItem = Li4vLi4vU0QlMjBDYXJkJTIwRXNzZW50aWFscy8=
+					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL1NEJTIwQ2FyZCUyMEVzc2VudGlhbHMv
 				End
 				Begin CopyFilesBuildStep Bit2CorWin
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
 					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy9iaXQyY29yL2JpdDJjb3JlLmV4ZQ==
@@ -192,6 +219,7 @@
 				Begin CopyFilesBuildStep ROMDiffWin
 					AppliesTo = 0
 					Architecture = 0
+					Target = 0
 					Destination = 1
 					Subdirectory = 
 					FolderItem = Li4vLi4vLi4vLi4vTWVnYTY1UmVzb3VyY2VzL01lZ2E2NUNvbm5lY3QvV2luZG93cy9yb21kaWZmL3JvbWRpZmYuZXhl

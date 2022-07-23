@@ -6,9 +6,9 @@ Begin Window WinROMConfig
    DefaultLocation =   0
    FullScreen      =   False
    HasBackgroundColor=   False
-   HasCloseButton  =   True
+   HasCloseButton  =   False
    HasFullScreenButton=   False
-   HasMaximizeButton=   True
+   HasMaximizeButton=   False
    HasMinimizeButton=   False
    Height          =   520
    ImplicitInstance=   True
@@ -999,6 +999,7 @@ Begin Window WinROMConfig
       AllowFocusRing  =   True
       AllowTabs       =   False
       Backdrop        =   271544319
+      DoubleBuffer    =   False
       Enabled         =   True
       Height          =   100
       Index           =   -2147483648
@@ -1042,7 +1043,32 @@ End
 		    
 		    PreviewSpeed.Top = 146
 		    PreviewFont.Top = 215
-		    
+		  #EndIf
+		  
+		  // Set OS specific font that fits in Preview screen
+		  Var Fonttype As String 
+		  
+		  // Seems not to be considered
+		  #If TargetWindows Then
+		    Fonttype = "Microsoft Sans Serif"
+		    Line1.FontSize = 12
+		    Line2.FontSize = 12
+		    Line3.FontSize = 12
+		    Line4.FontSize = 12
+		    Line5.FontSize = 12
+		    Line6.FontSize = 12
+		    Line7.FontSize = 12
+		    Line8.FontSize = 12
+		    Line9.FontSize = 12
+		    Line10.FontSize = 12
+		    LineKEY1.FontSize = 12
+		    LineKEY2.FontSize = 12
+		    LineREM.FontSize = 12
+		    LineSYS.FontSize = 12
+		  #EndIf
+		  
+		  #If TargetMacOS Then
+		    Fonttype = "Abadi MT Condensed Light"
 		    Line1.FontSize = 26
 		    Line2.FontSize = 26
 		    Line3.FontSize = 26
@@ -1057,18 +1083,6 @@ End
 		    LineKEY2.FontSize = 26
 		    LineREM.FontSize = 26
 		    LineSYS.FontSize = 26
-		  #EndIf
-		  
-		  // Set OS specific font that fits in Preview screen
-		  Var Fonttype As String 
-		  
-		  // Seems not to be considered
-		  #If TargetWindows Then
-		    Fonttype = "Microsoft Sans Serif"
-		  #EndIf
-		  
-		  #If TargetMacOS Then
-		    Fonttype = "Abadi MT Condensed Light"
 		  #EndIf
 		  
 		  #If TargetLinux Then
@@ -1129,55 +1143,56 @@ End
 		  TextColorList.RemoveAll() 
 		  TextColorList.Add(&c000000) // Black
 		  TextColorList.Add(&cFFFFFF) // White
-		  TextColorList.Add(&cF00000)  // Red
-		  TextColorList.Add(&c00F0F0) // Cyan
-		  TextColorList.Add(&cF000F0) // Purple
-		  TextColorList.Add(&c00F000) // Green 
-		  TextColorList.Add(&c0000F0) // Blue
-		  TextColorList.Add(&cF0F000) // Yellow
-		  TextColorList.Add(&cF06000) // Orange
-		  TextColorList.Add(&cA04000) // Brown
-		  TextColorList.Add(&cF07070)  // Pink
-		  TextColorList.Add(&c505050) // Dark Grey
-		  TextColorList.Add(&c808080) // Medium Grey
-		  TextColorList.Add(&c90F090) // Light Green
-		  TextColorList.Add(&c9090F0)  // Light Blue
-		  TextColorList.Add(&cB0B0B0) // Light Grey
+		  TextColorList.Add(&c880000) // Red
+		  TextColorList.Add(&cAAFFEE) // Cyan
+		  TextColorList.Add(&cCC44CC) // Purple
+		  TextColorList.Add(&c00CC55) // Green 
+		  TextColorList.Add(&c0000AA) // Blue
+		  TextColorList.Add(&cEEEE77) // Yellow
+		  TextColorList.Add(&cDD8855) // Orange
+		  TextColorList.Add(&c664400) // Brown
+		  TextColorList.Add(&cFF7777) // Pink
+		  TextColorList.Add(&c333333) // Dark Grey
+		  TextColorList.Add(&c777777) // Medium Grey
+		  TextColorList.Add(&cAAFF66) // Light Green
+		  TextColorList.Add(&c0088FF) // Light Blue
+		  TextColorList.Add(&cBBBBBB) // Light Grey
 		  
 		  // Original mapped area color list
 		  AreaColorList.RemoveAll() 
 		  AreaColorList.Add(&c000000) // 0 Black
 		  AreaColorList.Add(&cFFFFFF) // 1 White
-		  AreaColorList.Add(&cF00000)  // 2 Red
-		  AreaColorList.Add(&c00F0F0) // 3 Cyan
-		  AreaColorList.Add(&cF000F0) // 4 Purple
-		  AreaColorList.Add( &c00F000) // 5 Green 
-		  AreaColorList.Add(&c0000F0) // 6 Blue
-		  AreaColorList.Add(&cF0F000) // 7 Yellow
-		  AreaColorList.Add( &cF06000) // 8 Orange
-		  AreaColorList.Add(&cA04000) // 9 Brown
-		  AreaColorList.Add(&cF07070) // 10 Pink
-		  AreaColorList.Add(&c505050) // 11 Dark Grey
-		  AreaColorList.Add(&c808080) // 12 Medium Grey
-		  AreaColorList.Add(&c90F090) // 13 Light Green 
-		  AreaColorList.Add(&c9090F0)  // 14 Light Blue
-		  AreaColorList.Add(&cB0B0B0) // 15 Light Grey
-		  AreaColorList.Add(&cE00000) // 16 Guru Meditation
-		  AreaColorList.Add(&cF05000) // 17 Rambutan
-		  AreaColorList.Add(&cF0B000) // 18 Carrot
-		  AreaColorList.Add(&cE0E000) // 19 Lemon Tart
-		  AreaColorList.Add(&c70F000) // 20 Pandan
-		  AreaColorList.Add(&c60E060) // 21 Seasick Green
-		  AreaColorList.Add(&c00E030) // 22 Soylent Green
-		  AreaColorList.Add(&c00F090) // 23 Slimer Green
-		  AreaColorList.Add(&c00D0D0) // 24 The Other Cyan
-		  AreaColorList.Add(&c0090F0) // 25 Sea Sky
-		  AreaColorList.Add(&c0030F0) // 26 Smurf Blue
-		  AreaColorList.Add(&c0000E0) // 27 Screen of Death
-		  AreaColorList.Add(&c7000F0) // 28 Plum Sauce
-		  AreaColorList.Add(&cC000F0) // 29 Sour Grape
-		  AreaColorList.Add(&cF000B0) // 30 Bubblegum
-		  AreaColorList.Add(&cF03060) // 31 Hot Tamales
+		  AreaColorList.Add(&c880000)  // 2 Red
+		  AreaColorList.Add(&cAAFFEE) // 3 Cyan
+		  AreaColorList.Add(&cCC44CC) // 4 Purple
+		  AreaColorList.Add(&c00CC55) // 5 Green
+		  AreaColorList.Add(&c0000AA) // 6 Blue
+		  AreaColorList.Add(&cEEEE77) // 7 Yellow
+		  AreaColorList.Add( &cDD8855) // 8 Orange
+		  AreaColorList.Add(&c664400) // 9 Brown
+		  AreaColorList.Add(&cFF7777) // 10 Pink
+		  AreaColorList.Add(&c333333) // 11 Dark Grey
+		  AreaColorList.Add(&c777777) // 12 Medium Grey
+		  AreaColorList.Add(&cAAFF66) // 13 Light Green 
+		  AreaColorList.Add(&c0088FF)  // 14 Light Blue
+		  AreaColorList.Add(&cBBBBBB) // 15 Light Grey
+		  AreaColorList.Add(&cEE0000) // 16 Guru Meditation
+		  AreaColorList.Add(&cFF5500) // 17 Rambutan
+		  AreaColorList.Add(&cFFBB00) // 18 Carrot
+		  AreaColorList.Add(&cEEEE00) // 19 Lemon Tart
+		  AreaColorList.Add(&c77FF00) // 20 Pandan
+		  AreaColorList.Add(&c66EE66) // 21 Seasick Green
+		  AreaColorList.Add(&c00EE33) // 22 Soylent Green
+		  AreaColorList.Add(&c00FF99) // 23 Slimer Green
+		  AreaColorList.Add(&c00DDDD) // 24 The Other Cyan
+		  AreaColorList.Add(&c0099FF) // 25 Sea Sky
+		  AreaColorList.Add(&c0033FF) // 26 Smurf Blue
+		  AreaColorList.Add(&c0000EE) // 27 Screen of Death
+		  AreaColorList.Add(&c7700FF) // 28 Plum Sauce
+		  AreaColorList.Add(&cCC00FF) // 29 Sour Grape
+		  AreaColorList.Add(&cFF00BB) // 30 Bubblegum
+		  AreaColorList.Add(&cFF3366) // 31 Hot Tamales
+		  
 		  
 		  // Init preview
 		  SetDefault()
@@ -1754,7 +1769,7 @@ End
 		  // Choose ROM or ROM Config file
 		  Var FileType As New FileType
 		  FileType.Name = "binary/bin"
-		  FileType.Extensions = "bin;BIN"
+		  FileType.Extensions = "bin;BIN;rom;ROM"
 		  
 		  Var Dialog As OpenDialog
 		  Dialog = New OpenDialog
@@ -1776,7 +1791,7 @@ End
 		  If FilePath <> Nil Then
 		    PathROMConfig.Value = FilePath.NativePath
 		    
-		    If PathROMConfig.Value.IndexOf(".bin") <> -1 Then
+		    If PathROMConfig.Value.IndexOf(".bin") <> -1  Or PathROMConfig.Value.IndexOf(".rom") <> -1 Then
 		      // Suggested filename
 		    End If
 		    
@@ -1830,7 +1845,7 @@ End
 		  // Choose ROM or ROM Config file
 		  Var FileType As New FileType
 		  FileType.Name = "binary/bin"
-		  FileType.Extensions = "bin;BIN;rcg;RCG"
+		  FileType.Extensions = "bin;BIN;rom;ROM;rcg;RCG"
 		  
 		  Var Dialog As OpenDialog
 		  Dialog = New OpenDialog
@@ -1854,12 +1869,12 @@ End
 		      // Read and set Config
 		      SetConfigSetting()
 		      PushROMPreview.Enabled = True
-		    ElseIf FilePath.DisplayName.IndexOf(".bin") <> -1 Then
-		      // Read and set ROM setting if ROM is valid
+		    ElseIf FilePath.DisplayName.IndexOf(".bin") <> -1 Or FilePath.DisplayName.IndexOf(".rom") <> -1 Then
+		      // Read and set BIN setting if BIN is valid
 		      If CheckValidRom(FilePath) Then
 		        PathROMConfig.Value = FilePath.NativePath
 		        
-		        // Read and set ROM config
+		        // Read and set BIN config
 		        SetRomSetting()
 		        PushROMPreview.Enabled = True
 		      End If
@@ -1880,7 +1895,7 @@ End
 		    If FilePath.DisplayName.IndexOf(".rcg") <> -1 Then
 		      // Load and set Config settings
 		      SetConfigSetting()
-		    ElseIf FilePath.DisplayName.IndexOf(".bin") <> -1 Then
+		    ElseIf FilePath.DisplayName.IndexOf(".bin") <> -1  Or FilePath.DisplayName.IndexOf(".rom") <> -1 Then
 		      // Load and set ROM settings
 		      SetRomSetting()
 		    Else 

@@ -38,13 +38,12 @@ Protected Class Terminal
 		    MainWindow.SerialConnect.Connect()
 		    MainWindow.SerialConnect.Flush
 		    
-		    Terminal.M65Connect = True
+		    Terminal.SerialConnect = True
 		    
-		    //  Reset Mega65 on leaving SD Card Manager
-		    If ResetMega65 Then
+		    //  Reset Mega65 on leaving SD Card Manager with timeout
+		    If ResetMega65 And Not Go65 Then
 		      ResetMega65 = False
-		      // Not used anymore as mega65_ftp does sys58552 itself
-		      // M65.Send("Reset", "", "", False, False, "", False)
+		      M65.Send("Reset", "", "", False, False, "", False)
 		    End If
 		    
 		    // D81 file was mounted, head back to MEGA65
@@ -56,7 +55,7 @@ Protected Class Terminal
 		    
 		  Catch error As IOException
 		    MainWindow.StatusText.Value = "The serial connection could not be established (" + error.ErrorNumber.tostring + ")"
-		    Terminal.M65Connect = False
+		    Terminal.SerialConnect = False
 		  End Try
 		  
 		End Sub
@@ -64,8 +63,6 @@ Protected Class Terminal
 
 	#tag Method, Flags = &h0
 		Shared Sub DisableM65Options()
-		  FileSDCard.AutoEnabled = False
-		  FileSendPRG.AutoEnabled = False
 		  FileSendSID.AutoEnabled = False
 		  FileSendBitstream.AutoEnabled = False
 		  FileSendHickup.AutoEnabled = False
@@ -77,7 +74,7 @@ Protected Class Terminal
 		  CommandScreenshot.AutoEnabled = False
 		  CommandNTSC.AutoEnabled = False
 		  CommandPAL.AutoEnabled = False
-		  CommandManualDisCon.Value = "Connect to MEGA65"
+		  CommandManualDisCon.Value = "Enable Terminal"
 		  
 		  MainWindow.BevelPRG.Enabled = False
 		  MainWindow.BevelSID.Enabled = False
@@ -85,12 +82,17 @@ Protected Class Terminal
 		  MainWindow.BevelHIC.Enabled = False
 		  MainWindow.BevelROM.Enabled = False
 		  MainWindow.BevelBAS.Enabled = False
-		  MainWindow.BevelSDCard.Enabled = False
 		  MainWindow.BevelNTSC.Enabled = False
 		  MainWindow.BevelPAL.Enabled = False
 		  MainWindow.BevelReset.Enabled = False
 		  MainWindow.BevelGo64.Enabled = False
 		  MainWindow.BevelScreenshot.Enabled = False
+		  
+		  // Keep SD Card Manager enabled on turning off MEGA65
+		  If M65.MEGA65Present Then
+		    MainWindow.BevelSDCard.Enabled = False
+		  End If
+		  
 		  MainWindow.CommandText.Enabled = False
 		  MainWindow.TerminalMode.Enabled = False
 		  
@@ -102,7 +104,7 @@ Protected Class Terminal
 	#tag Method, Flags = &h0
 		Shared Sub Disconnect()
 		  MainWindow.SerialConnect.Close()
-		  Terminal.M65Connect = False
+		  Terminal.SerialConnect = False
 		End Sub
 	#tag EndMethod
 
@@ -135,7 +137,7 @@ Protected Class Terminal
 		  CommandNTSC.AutoEnabled = True
 		  CommandPAL.AutoEnabled = True
 		  CommandManualDisCon.AutoEnabled = True
-		  CommandManualDisCon.Value = "Disconnect from MEGA65"
+		  CommandManualDisCon.Value = "Disable Terminal"
 		  
 		  MainWindow.BevelPRG.Enabled = True
 		  MainWindow.BevelSID.Enabled = True
@@ -143,12 +145,12 @@ Protected Class Terminal
 		  MainWindow.BevelHIC.Enabled = True
 		  MainWindow.BevelROM.Enabled = True
 		  MainWindow.BevelBAS.Enabled = True
-		  MainWindow.BevelSDCard.Enabled = True
 		  MainWindow.BevelNTSC.Enabled = True
 		  MainWindow.BevelPAL.Enabled = True
 		  MainWindow.BevelReset.Enabled = True
 		  MainWindow.BevelGo64.Enabled = True
 		  MainWindow.BevelScreenshot.Enabled = True
+		  MainWindow.BevelSDCard.Enabled = True
 		  MainWindow.CommandText.Enabled = True
 		  MainWindow.TerminalMode.Enabled = True
 		  
@@ -160,12 +162,12 @@ Protected Class Terminal
 
 	#tag Method, Flags = &h0
 		Shared Sub ManualDisConnect()
-		  If CommandManualDisCon.Value = "Connect to MEGA65" Then
+		  If CommandManualDisCon.Value = "Enable Terminal" Then
 		    // Connect
 		    Terminal.ManualDisconnect = False
 		    Terminal.Connect()
 		    Terminal.EnableM65Options()
-		    MainWindow.StatusText.Value = "Connected to MEGA65"
+		    MainWindow.StatusText.Value = "Terminal mode enabled"
 		  Else
 		    // Make sure PRG Autoload is turned off
 		    MainWindow.PRGListener.RunMode = Timer.RunModes.Off
@@ -175,7 +177,7 @@ Protected Class Terminal
 		    Terminal.ManualDisconnect = True
 		    Terminal.Disconnect()
 		    Terminal.DisableM65Options()
-		    MainWindow.StatusText.Value = "Disconnected from MEGA65"
+		    MainWindow.StatusText.Value = "Terminal mode disabled"
 		  End If
 		  
 		End Sub
@@ -357,10 +359,6 @@ Protected Class Terminal
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
-		Shared M65Connect As Boolean = False
-	#tag EndProperty
-
-	#tag Property, Flags = &h0
 		Shared ManualDisconnect As Boolean = False
 	#tag EndProperty
 
@@ -374,6 +372,10 @@ Protected Class Terminal
 
 	#tag Property, Flags = &h0
 		Shared ResetMega65 As Boolean = False
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		Shared SerialConnect As Boolean = False
 	#tag EndProperty
 
 	#tag Property, Flags = &h0

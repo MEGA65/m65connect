@@ -100,7 +100,7 @@ Begin Window WinCreateMCS
       Underline       =   False
       Value           =   "Source file"
       Visible         =   True
-      Width           =   510
+      Width           =   448
    End
    Begin BevelButton BevelAddSourceFile
       AllowAutoDeactivate=   True
@@ -146,7 +146,7 @@ Begin Window WinCreateMCS
       Visible         =   True
       Width           =   50
    End
-   Begin PushButton PushSaveAs
+   Begin PushButton PushSaveMCS
       AllowAutoDeactivate=   True
       Bold            =   False
       Cancel          =   False
@@ -220,7 +220,7 @@ End
 		  #If TargetWindows Or TargetMacOS Then
 		    TextSourceFile.Height = 26
 		    BevelAddSourceFile.Height = 26
-		    PushSaveAs.Height = 22
+		    PushSaveMCS.Height = 22
 		    PushClose.Height = 22
 		  #EndIf
 		  
@@ -392,17 +392,17 @@ End
 		    Dialog.InitialFolder = DefaultPath
 		  End If
 		  
-		  Var FilePath As FolderItem
-		  FilePath = Dialog.ShowModal
+		  Var FilePathMCS As FolderItem
+		  FilePathMCS = Dialog.ShowModal
 		  
-		  If FilePath <> Nil Then
-		    TextSourceFile.Value = FilePath.NativePath
+		  If FilePathMCS <> Nil Then
+		    TextSourceFile.Value = FilePathMCS.NativePath
 		    
 		    // Set SaveAs button
 		    If Trim(TextSourceFile.Value).Length > 0 Then
-		      PushSaveAs.Enabled = True
+		      PushSaveMCS.Enabled = True
 		    Else
-		      PushSaveAs.Enabled = False
+		      PushSaveMCS.Enabled = False
 		    End If
 		  End If
 		  
@@ -411,7 +411,7 @@ End
 		End Sub
 	#tag EndEvent
 #tag EndEvents
-#tag Events PushSaveAs
+#tag Events PushSaveMCS
 	#tag Event
 		Sub Action()
 		  Var SourceFile As New FolderItem(TextSourceFile.Value)
@@ -420,26 +420,28 @@ End
 		  If SourceFile <> Nil Then
 		    
 		    // Set MCS file defintion
-		    Var McsType As New FileType
-		    McsType.Name = "text/mcs"
-		    McsType.Extensions = "mcs;MCS"
+		    Var MCSType As New FileType
+		    MCSType.Name = "text/mcs"
+		    MCSType.Extensions = "mcs;MCS"
 		    
 		    Var TargetFileName As String
 		    Var DialogMcs As New SaveFileDialog
 		    
-		    Var McsFile As FolderItem
-		    DialogMcs.Filter = McsType
-		    DialogMcs.SuggestedFileName = SourceFile.Name.Replace(".bit", ".mcs")
-		    DialogMcs.Title = "Convert " + SourceFile.Name + " to..."
-		    McsFile = DialogMcs.ShowModal
+		    Var MCSFile As FolderItem
+		    DialogMCS.Filter = MCSType
+		    DialogMCS.SuggestedFileName = SourceFile.Name.Replace(".bit", ".mcs")
+		    DialogMCS.Title = "Save converted " + SourceFile.Name + " as..."
+		    MCSFile = DialogMCS.ShowModal
 		    
-		    If McsFile <> Nil Then
+		    If MCSFile <> Nil Then
 		      // Create MCS file
 		      MainWindow.StatusText.Value = "Creating MCS file..."
 		      
 		      // Working but slow, not used atm : Bit2Mcs(SourceFile, McsFile)
-		      Bit2McsCli(SourceFile, McsFile)
 		      
+		      // Process COR create
+		      MainWindow.ExecCommand = "MCS"
+		      Bit2McsCli(SourceFile, MCSFile)
 		      WinCreateMCS.Close
 		    End If
 		    

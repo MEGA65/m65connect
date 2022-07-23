@@ -20,6 +20,7 @@ Inherits Application
 		  Var PathSource As FolderItem = SpecialFolder.Resources.Child("path")
 		  Var AppRoot As FolderItem = SpecialFolder.Resources.Parent()
 		  Var StartFolder As FolderItem = SpecialFolder.Documents
+		  Var LogFolder As FolderItem = SpecialFolder.Resource("Logs")
 		  
 		  // Create folder MEGA65 in Documents
 		  If Not StartFolder.Child("MEGA65").Exists Then
@@ -34,6 +35,11 @@ Inherits Application
 		  // Create folder Preferences in M65Connect
 		  If Not StartFolder.Child("MEGA65").Child("M65Connect").Child("Preferences").Exists Then
 		    StartFolder.Child("MEGA65").Child("M65Connect").Child("Preferences").CreateFolder
+		  End If
+		  
+		  // Create log folder
+		  If Not LogFolder.Exists Then
+		    LogFolder.CreateFolder
 		  End If
 		  
 		  // Copy preference files

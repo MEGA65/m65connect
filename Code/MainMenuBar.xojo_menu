@@ -164,6 +164,14 @@ Begin Menu MainMenuBar
          AutoEnable = True
          Visible = True
       End
+      Begin MenuItem FileCreateBITfromCOR
+         SpecialMenu = 0
+         Index = -2147483648
+         Text = "Create BIT from COR"
+         AutoEnabled = True
+         AutoEnable = True
+         Visible = True
+      End
       Begin MenuItem Separator3
          SpecialMenu = 0
          Index = -2147483648

@@ -100,7 +100,7 @@ Begin Window WinCreateCOR
       Underline       =   False
       Value           =   "Source file"
       Visible         =   True
-      Width           =   510
+      Width           =   448
    End
    Begin BevelButton BevelAddSourceFile
       AllowAutoDeactivate=   True

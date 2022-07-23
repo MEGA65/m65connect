@@ -85,7 +85,7 @@ Protected Class M65
 		  Terminal.DisableM65Options()
 		  
 		  // Close serial connection for M65 send
-		  If Terminal.M65Connect Then
+		  If Terminal.SerialConnect Then
 		    Terminal.Disconnect()
 		  End If
 		  
@@ -290,8 +290,8 @@ Protected Class M65
 		          M65Send = "cd " + Chr(34) + XC3Path.NativePath + Chr(34) + " && xc3sprog.exe -c ftdi -v "  + Chr(34) + File + Chr(34)
 		        End If
 		      #Else
-		        // Mac, Linux
-		        M65Send = M65Send + " -b " + Chr(34) + File + Chr(34)
+		        // Mac, Linux (before: -b, but -q supports third party Cores)
+		        M65Send = M65Send + " -q " + Chr(34) + File + Chr(34)
 		      #EndIf
 		      
 		      MainWindow.BevelNTSC.Underline = False
@@ -301,7 +301,8 @@ Protected Class M65
 		  End If
 		  
 		  MainWindow.StatusText.Value = "Processing..."
-		  //MainWindow.Console.Value = MainWindow.Console.Value + M65Send
+		  //msgbox (M65Send)
+		  // MainWindow.Console.Value = MainWindow.Console.Value + M65Send
 		  
 		  // Execute M65 command
 		  MainWindow.ShellExec.Execute( M65Send )
@@ -356,6 +357,10 @@ Protected Class M65
 
 	#tag Property, Flags = &h0
 		Shared FilePath As String
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		Shared MEGA65Present As Boolean = False
 	#tag EndProperty
 
 	#tag Property, Flags = &h0

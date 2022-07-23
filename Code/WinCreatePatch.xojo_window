@@ -146,7 +146,7 @@ Begin Window WinCreatePatch
       Visible         =   True
       Width           =   50
    End
-   Begin PushButton PushSaveAs
+   Begin PushButton PushSavePatch
       AllowAutoDeactivate=   True
       Bold            =   False
       Cancel          =   False
@@ -547,7 +547,7 @@ End
 		    BevelAddOriginal.Height = 26
 		    ChangedFile.Height = 26
 		    BevelAddChanged.Height = 26
-		    PushSaveAs.Height = 22
+		    PushSavePatch.Height = 22
 		    PushClose.Height = 22
 		  #EndIf
 		  
@@ -559,6 +559,7 @@ End
 		  // Set window position
 		  WinCreatePatch.Left = (MainWindow.Left + MainWindow.Width) - ((WinCreatePatch.Width + MainWindow.Width) /2)
 		  WinCreatePatch.Top = MainWindow.Top + 40
+		  
 		End Sub
 	#tag EndEvent
 
@@ -639,7 +640,7 @@ End
 		  WinCreatePatch.BevelAddChanged.Enabled = False
 		  WinCreatePatch.CreateBDF.Enabled = False
 		  WinCreatePatch.CreateRDF.Enabled = False
-		  WinCreatePatch.PushSaveAs.Visible = False
+		  WinCreatePatch.PushSavePatch.Visible = False
 		  WinCreatePatch.PushClose.Visible = False
 		  WinCreatePatch.PushCancel.Visible = True
 		End Sub
@@ -653,9 +654,9 @@ End
 		  WinCreatePatch.CreateBDF.Enabled = True
 		  WinCreatePatch.CreateRDF.Enabled = True
 		  WinCreatePatch.PushCancel.Visible = False
-		  WinCreatePatch.PushSaveAs.Visible = True
+		  WinCreatePatch.PushSavePatch.Visible = True
 		  WinCreatePatch.PushClose.Visible = True
-		  WinCreatePatch.PushSaveAs.Enabled = False
+		  WinCreatePatch.PushSavePatch.Enabled = False
 		End Sub
 	#tag EndMethod
 
@@ -695,19 +696,19 @@ End
 		      
 		      // Both ROM files must differ
 		      If OriginalFile.Value = ChangedFile.Value Then 
-		        PushSaveAs.Enabled = False
+		        PushSavePatch.Enabled = False
 		        Msgbox ("The original ROM file is the same as the changed ROM file")
 		      Else 
-		        PushSaveAs.Enabled = True
+		        PushSavePatch.Enabled = True
 		      End If
 		    Else
-		      PushSaveAs.Enabled = False
+		      PushSavePatch.Enabled = False
 		    End If
 		  End
 		End Sub
 	#tag EndEvent
 #tag EndEvents
-#tag Events PushSaveAs
+#tag Events PushSavePatch
 	#tag Event
 		Sub Action()
 		  // Set patch file defintion
@@ -808,13 +809,13 @@ End
 		    If Trim(OriginalFile.Value).Length > 0 And (CreateRDF.Value Or CreateBDF.Value) Then
 		      // Both ROM files must differ
 		      If ChangedFile.Value = OriginalFile.Value Then 
-		        PushSaveAs.Enabled = False
+		        PushSavePatch.Enabled = False
 		        Msgbox ("The changed ROM file is the same as the original ROM file")
 		      Else 
-		        PushSaveAs.Enabled = True
+		        PushSavePatch.Enabled = True
 		      End If
 		    Else
-		      PushSaveAs.Enabled = False
+		      PushSavePatch.Enabled = False
 		    End If
 		  End
 		  
@@ -830,13 +831,13 @@ End
 		  If Trim(OriginalFile.Value).Length > 0 And Trim(ChangedFile.Value).Length > 0 And (CreateRDF.Value Or CreateBDF.Value) Then
 		    // Both ROM files must differ
 		    If ChangedFile.Value = OriginalFile.Value Then 
-		      PushSaveAs.Enabled = False
+		      PushSavePatch.Enabled = False
 		      Msgbox ("The changed ROM file is the same as the original ROM file")
 		    Else 
-		      PushSaveAs.Enabled = True
+		      PushSavePatch.Enabled = True
 		    End If
 		  Else
-		    PushSaveAs.Enabled = False
+		    PushSavePatch.Enabled = False
 		  End If
 		End Sub
 	#tag EndEvent
@@ -850,13 +851,13 @@ End
 		  If Trim(OriginalFile.Value).Length > 0 And Trim(ChangedFile.Value).Length > 0 And (CreateRDF.Value Or CreateBDF.Value) Then
 		    // Both ROM files must differ
 		    If ChangedFile.Value = OriginalFile.Value Then 
-		      PushSaveAs.Enabled = False
+		      PushSavePatch.Enabled = False
 		      Msgbox ("The changed ROM file is the same as the original ROM file")
 		    Else 
-		      PushSaveAs.Enabled = True
+		      PushSavePatch.Enabled = True
 		    End If
 		  Else
-		    PushSaveAs.Enabled = False
+		    PushSavePatch.Enabled = False
 		  End If
 		End Sub
 	#tag EndEvent
