@@ -268,17 +268,21 @@ Protected Class Terminal
 		  Var numDevs As UInt64
 		  
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64.dll"
 		    Var EndOfLine As String = EndOfLine.Windows
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    //Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    // ARM
+		    // Const D2XXLib = "../Resources/libftd2xx_arm.1.4.24.dylib" 
+		    // Intel
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib" 
 		    Var EndOfLine As String = EndOfLine.macOS
 		  #EndIf
 		  
 		  #If TargetLinux Then
-		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.8"
+		    Const D2XXLib = "M65Connect Libs/llibftd2xx.so.1.4.27"
 		    Var EndOfLine As String = EndOfLine.UNIX
 		  #EndIf
 		  
@@ -286,7 +290,7 @@ Protected Class Terminal
 		  'If System.IsFunctionAvailable("FT_CreateDeviceInfoList", D2XXLib) Then
 		  'msgbox ("Function found")
 		  'else
-		  'msgbox ("Function not found")
+		  'msgbox ("Function NOT found")
 		  'end if
 		  
 		  Soft Declare Function CreateDeviceInfoList Lib D2XXLib Alias "FT_CreateDeviceInfoList" (ByRef NumDevs As UInt64) As UInt32

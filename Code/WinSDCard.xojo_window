@@ -1232,18 +1232,10 @@ End
 		  ListLocal.ColumnWidths = "200,100,80, 150"
 		  ListRemote.ColumnWidths = "150,100,80"
 		  
-		  
-		  
 		  // Add available drives to drive list
 		  DriveList.RemoveAllRows
 		  For i As Integer = 0 To FolderItem.LastDriveIndex
-		    
 		    DriveList.AddRow(FolderItem.DriveAt(i).Name)
-		    
-		    If FolderItem.DriveAt(i).Name <> "home" And FolderItem.DriveAt(i).ChildAt(0) = Nil Then
-		      msgbox ( FolderItem.DriveAt(i).Name )
-		    End If
-		    
 		    DriveList.RowTagAt(i) = "drive"
 		  Next
 		  
@@ -1609,9 +1601,15 @@ End
 		  
 		  Select Case Command
 		  Case "dir"
+		    // If SD card info is not yet read then do it on log level 5
+		    Var LogLevel As String = ""
+		    If SdCardInfo = "" Then
+		      LogLevel = "-0 5 "
+		    End If
+		    
 		    WinSDCard.StatusText.Value = "Reading directory..."
 		    WinSDCard.ListRemote.RemoveAllRows
-		    ExecuteCommand = "-c " + Chr(34) +  "dir " + ActiveRemoteDirectory +  Chr(34) 
+		    ExecuteCommand = LogLevel + "-c " + Chr(34) +  "dir " + ActiveRemoteDirectory +  Chr(34) 
 		    
 		  Case "copy"
 		    // Shorten filename if longer than 8 bytes
@@ -2065,41 +2063,45 @@ End
 		    Var Fileparts() As String
 		    Var SDCardList() As String
 		    
-		    //Var reg As New RegEx
-		    //Var match As RegExMatch
-		    // Filename rules: can start with a number, can contain spaces, can contain special chars but not: comma, colon, equal and dollar sign as first character
-		    //reg.SearchPattern = "^[a-zA-Z0-9 +-*%&()?!$]|\.\."
-		    
 		    // Save SD Card info if not yet set
-		    Var InfoCardStart As Integer = 0
-		    Var InfoCardEnd As Integer = 0
 		    Var DirList() As String 
 		    Var DirEntry() As String
 		    Var FileEntry() As String
 		    Var EntryName As String
-		    
-		    // Get start/end for SD Card info block
-		    #If TargetWindows Then
-		      InfoCardStart = ShellFTP.Result.IndexOf("SD card is")
-		      InfoCardEnd= ShellFTP.Result.IndexOf("       ")
-		    #Else
-		      InfoCardStart= ShellFTP.Result.IndexOf("NOTE: ") +6
-		      InfoCardEnd = ShellFTP.Result.IndexOf("       ")
-		    #EndIf
+		    Var InfoLine As String
 		    
 		    // Fill up SD Card info if not already set
 		    If SdCardInfo = "" Then
-		      SdCardInfo = ShellFTP.Result.Middle(InfoCardStart, InfoCardEnd-InfoCardStart).Trim
+		      Var re As New RegEx
+		      Var match As RegExMatch
+		      
+		      // Find entry starting with INFO or NOTE till end of line
+		      re.SearchPattern = "(?<=INFO|NOTE)(.*)(?=\n|\r)"
+		      match = re.Search( ShellFTP.Result )
+		      
+		      Do
+		        If match <> Nil Then
+		          // Uppercase first letter of each found line
+		          InfoLine =  Trim( match.SubExpressionString(0) ) 
+		          InfoLine = InfoLine.Left(1).Uppercase + InfoLine.Middle(1)
+		          SdCardInfo = SDcardInfo + InfoLine + EndOfLine
+		        End If
+		        
+		        match = re.Search
+		      Loop Until match Is Nil
 		    End If
 		    
-		    DirList = ShellFTP.ReadAll().Middle(InfoCardEnd).Split(EndOfLine)
+		    // Get all directory entries
+		    DirList = ShellFTP.ReadAll().Split(EndOfLine)
 		    
-		    // Display any entries (count > 5)
-		    If DirList.Count >= 5 Then
-		      
-		      For i As Integer = 0 To DirList.LastIndex -2
+		    Var EntryCount As Integer = 0
+		    For i As Integer = 0 To DirList.LastIndex -2
+		      // Go through valid dir entries (containing "|")
+		      If DirList(i).IndexOf( "|" ) <> -1 Then
 		        DirEntry = DirList(i).Split("|")
 		        Size = DirEntry(0).Trim
+		        
+		        EntryCount = EntryCount +1
 		        
 		        If Size = "<DIR>" Then
 		          // Directory
@@ -2138,12 +2140,16 @@ End
 		          End If
 		          
 		        End If
-		        
-		      Next i
-		    Else 
+		      End If
+		      
+		    Next i
+		    
+		    // Todo: nur wenn nicht Hauptverzeichnis
+		    If EntryCount = 0 Then
 		      // No entries found
 		      ListRemote.AddRow("..", "", "DIR", "", "")
-		    End If 
+		    End If
+		    
 		    
 		    // Align entries and make commands italic
 		    For i As Integer = 0 To ListRemote.LastRowIndex
@@ -2730,7 +2736,7 @@ End
 		  
 		  // Check for timeout
 		  TimeOutCurrent = TimeOutCurrent + 100
-		  If TimeOutCurrent >= WinSDCard.FTPBar.MaximumValue  + 5000 Then
+		  If TimeOutCurrent >= WinSDCard.FTPBar.MaximumValue  + 20000 Then
 		    // Timeout reached
 		    FTPBarTimer.RunMode = Timer.RunModes.Off
 		    

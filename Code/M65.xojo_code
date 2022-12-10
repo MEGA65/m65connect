@@ -301,7 +301,7 @@ Protected Class M65
 		  End If
 		  
 		  MainWindow.StatusText.Value = "Processing..."
-		  //msgbox (M65Send)
+		  // msgbox (M65Send)
 		  // MainWindow.Console.Value = MainWindow.Console.Value + M65Send
 		  
 		  // Execute M65 command

@@ -6,43 +6,43 @@
 	<dict>
 		<key>Resources/A_lowercase.png</key>
 		<data>
-		DkFuYz6KrhrhbkwAnxNMj+9HIw0=
+		+KMKAf644/JshMH7Jsdv4TnPSwg=
 		</data>
 		<key>Resources/A_uppercase.png</key>
 		<data>
-		66VHdkNEtuF7zEFKQ/kz3WhzX6U=
+		ivKMm6JIjgjLXAW1zVqHLa8aMSs=
 		</data>
 		<key>Resources/App.icns</key>
 		<data>
-		Z6RE23ZTS404gVqRkJ2rrqjmkWg=
+		ZIgtG4GtZR7lTnmk7uu9Yybahb8=
 		</data>
 		<key>Resources/B_lowercase.png</key>
 		<data>
-		toVBYVIaI1xht/zgFjfajP3p/3g=
+		zh1nB3wDYwlVcSY9uqOX+kSh4yk=
 		</data>
 		<key>Resources/B_uppercase.png</key>
 		<data>
-		nN+dKI79EoJJ8FXrwY2VCMKHTv4=
+		yt5WsblHDh3TN7LFZiPO2NcxA+g=
 		</data>
 		<key>Resources/C_lowercase.png</key>
 		<data>
-		OcvEprvyc3JUM90ikshpRFvP9hs=
+		PYaC8h/ALmdMj7LeAq0GICl3mdM=
 		</data>
 		<key>Resources/C_uppercase.png</key>
 		<data>
-		OWhXIq8OWbjxhtCtHZqUWc3la1s=
+		fniZsehgc2SQRLauMynhj0gNOfo=
 		</data>
 		<key>Resources/KeyHover.png</key>
 		<data>
-		AecDxgHJM4ErxvIngosqKuBECPk=
+		tvVun3KyGw65gtYikGsbIV2OKg8=
 		</data>
 		<key>Resources/KeyHoverStretch.png</key>
 		<data>
-		atV6n5b9JuDF1yZH+cbaUNtAIOo=
+		0o6MiYcmsf4BL4i88IR8giT6fdU=
 		</data>
 		<key>Resources/MegaKeyboard.png</key>
 		<data>
-		hurt4a92uIxfRghZWrjMzw/lVCs=
+		q+JqnGI79JI1tDcgI/o+VHkVMQM=
 		</data>
 		<key>Resources/SD Card Essentials/AUDIOMIX.M65</key>
 		<data>
@@ -102,11 +102,11 @@
 		</data>
 		<key>Resources/add.png</key>
 		<data>
-		4XRuR6CjigaeNg5Mb70zhuf8+MI=
+		aXRigGKqzjYoLdL8L5/q2W7rNgc=
 		</data>
 		<key>Resources/add@2x.png</key>
 		<data>
-		jml771b9Y/6mo+1mkz/cpT/7kHE=
+		sbgIUQ4ZddPWmMvWGzZmt9AQtBQ=
 		</data>
 		<key>Resources/bit2core.osx</key>
 		<data>
@@ -126,35 +126,35 @@
 		</data>
 		<key>Resources/close.png</key>
 		<data>
-		oPR3pKBm6niTePn7tqqeWJk9T5E=
+		E34wuAVdXBgxrnuNh1PNBvSc5cA=
 		</data>
 		<key>Resources/close@2x.png</key>
 		<data>
-		3MOPSyOEs3D6PxBDAR7YzwZM8Ow=
+		0xEQobdssp4we1qRFfd0WtVgDcY=
 		</data>
 		<key>Resources/cmdcopyleft.png</key>
 		<data>
-		hoFxpVEP2P4I5uF2E6oxaxbv980=
+		WRpXuWlFXdbbM53Y/F0RaJSgBs4=
 		</data>
 		<key>Resources/cmdcopyleft@2x.png</key>
 		<data>
-		hcpQb4r++PKqjzQ91tYEaDjdS0Q=
+		VdBOFRaLWJ+p7Q05Tbir6WmDUqk=
 		</data>
 		<key>Resources/cmdcopyright.png</key>
 		<data>
-		tCaPRuUdQ8MLUbjT+0KxGo9fT8g=
+		ltGuV8EDknw/DUABDCTXBJOcej4=
 		</data>
 		<key>Resources/cmdcopyright@2x.png</key>
 		<data>
-		h3SaSqQxNA/697qWcHTrWuGZDiw=
+		/8wrsXJ7lqLbJ4JgfMnORWKy4cM=
 		</data>
 		<key>Resources/cmddelete.png</key>
 		<data>
-		CgDoxfRjmQuDqKATIElw7DpxU2c=
+		f+/Qle+A7kyVhlFF9rCpgp9Wd4Q=
 		</data>
 		<key>Resources/cmddelete@2x.png</key>
 		<data>
-		95cR5wpeqCNOXPJM1ANhBre6X0c=
+		NfTHYW/78+pAzdh91YV7WVplthU=
 		</data>
 		<key>Resources/connection</key>
 		<data>
@@ -174,59 +174,63 @@
 		</data>
 		<key>Resources/folderadd.png</key>
 		<data>
-		AMJuZUjvM7RtoOTJTLNBINJLIMQ=
+		h2DUX84rlTYatSghknSNgHrsw4A=
 		</data>
 		<key>Resources/folderadd@2x.png</key>
 		<data>
-		XAVauLK8zE3Tu1LxkuBvNVsxb2c=
+		rPLj9pGTg5a+3tbH3ObH107/vPo=
 		</data>
 		<key>Resources/folderdel.png</key>
 		<data>
-		ghu4tV84pgv8+D32G94PlBLloFM=
+		aHUKaxsDZ+tuKvGFQ7wQfOq/wQ0=
 		</data>
 		<key>Resources/folderdel@2x.png</key>
 		<data>
-		8PDPHtvC5e7iMkzF21bnZyVYaZo=
+		J9ID4utAej6j41WQeyLAVV6OsME=
 		</data>
 		<key>Resources/folderfind.png</key>
 		<data>
-		DVAnVwUJdl3HiDAqP5Xf7MSIRyE=
+		ST4gXbXKLKWdCfn1WCQADXcjjPA=
 		</data>
 		<key>Resources/folderfind@2x.png</key>
 		<data>
-		lbI/0JEC2ki8D+KL9ZVI7K+EH+U=
+		bFKoEzmQcfzXJj0yiBzXtxAlvAE=
 		</data>
 		<key>Resources/info.png</key>
 		<data>
-		qbdaXO8uOOTfyQLMDA5IqgIxR/U=
+		JUd2mN10Lb5jFCp4fCCqEXkxcQg=
 		</data>
 		<key>Resources/info@2x.png</key>
 		<data>
-		VlQP6m/q7nfjtBaJKixklIA/+0c=
+		Ua3CN+2QLcNebMuH2WrufAY3PJk=
 		</data>
 		<key>Resources/libftd2xx.1.4.16.dylib</key>
 		<data>
 		98dxgtPdixvEOtDoYhFfQdIwXd0=
 		</data>
-		<key>Resources/libpng16.16.dylib</key>
+		<key>Resources/libftd2xx_arm.1.4.24.dylib</key>
 		<data>
-		xkFLB+GwhMMy2PZVOSw4rnC9Zds=
+		LF6zDrrjtCmp4qE06sYr9IQj/SA=
+		</data>
+		<key>Resources/libftd2xx_x86.1.4.24.dylib</key>
+		<data>
+		LF6zDrrjtCmp4qE06sYr9IQj/SA=
 		</data>
 		<key>Resources/m65.osx</key>
 		<data>
-		6T45n3M8hcfcUdhzDP9XyvzxHJg=
+		06UVlveoLtQyHQxjfJdap+HVQEc=
 		</data>
 		<key>Resources/m65connect65.png</key>
 		<data>
-		hOl8aVbdDsBHlEsRc02+zaRg2J8=
+		SwAn1C9pH9moRwxTCdaLGmZDmbk=
 		</data>
 		<key>Resources/mega65_ftp.osx</key>
 		<data>
-		47K4IJ/3zPdxtSzEwyJbHmjjWpI=
+		Pw3yk59bdJnYdTyuGqPfzhqS1Sg=
 		</data>
 		<key>Resources/mega65stripes.png</key>
 		<data>
-		M3R3wolgr+PbbFJQ21Iws+1s8Yg=
+		5FuPtDDK9R+bsTG8HbfK2/dCsIY=
 		</data>
 		<key>Resources/path</key>
 		<data>
@@ -242,15 +246,15 @@
 		</data>
 		<key>Resources/slash.png</key>
 		<data>
-		J5i7bTDX3akSeuC4WKmQ0UO/Atk=
+		lXWHriJqd/09hYMfxikoUieBxJA=
 		</data>
 		<key>Resources/slash@2x.png</key>
 		<data>
-		KLWNTsQZSQrzoq0sk8P82WYDygI=
+		fmm8+Gom8nmJ/4c+AJgdo22VzpA=
 		</data>
 		<key>Resources/trashconsole.png</key>
 		<data>
-		yZPi688rIYHy4P47igEDSnZXvS0=
+		w0mdk1YHncwBNZCOAUL1RaFwx4k=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -259,155 +263,182 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			/XBrRD0j4diWRSyo7WG7woXDpXU=
+			K8BhLshf9ymeMlG11ZOkRyN291w=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"98b7fc9b1fa3b47e6b681b01e01d1a0494132cb2" or cdhash H"fd706b443d23e1d896452ca8ed61bbc285c3a575" or cdhash H"a757f708f2a439f9d26786f7aa20a7c447bf6e81" or cdhash H"f188131a1c0fa8fdb67dc714bdef4102d58d7878"</string>
+			<string>cdhash H"89f5130f5354d6dca55a5ca38038be325ae22f52" or cdhash H"2bc0612ec85ff7299e3251b5d593a4472376f75c" or cdhash H"8df6b88f6ea052e912e18e6f6701924c0e7748f6" or cdhash H"ec5b07e9e7d1644ff1d2d0f668ff22eea38fa751"</string>
+		</dict>
+		<key>Frameworks/Crypto.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			qZDhu9y+O3oXJMSe7PVFK7ddzrA=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"22fcfedce250883b9e3746c96f26ba93e156a032" or cdhash H"a990e1bbdcbe3b7a1724c49eecf5452bb75dceb0" or cdhash H"5342350990d9d677fe1b708af2ff91bf743092c6" or cdhash H"1b4bb84390eac604f8cf383c325cbdd89b8e2c4f"</string>
 		</dict>
 		<key>Frameworks/GUIKitCocoa.dylib</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			lx5fa06OoY73KIEJYttECOtr7oA=
+			F7qVyQvA1mctHcTknnLI385n5cU=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"3b4f40e92baaac1632d0953d027108dcb95d026a" or cdhash H"971e5f6b4e8ea18ef728810962db4408eb6bee80" or cdhash H"117318f92392879439f2616c5f13e2e169879276" or cdhash H"28a97aac384001cea286880a20c629bfae8475a4"</string>
+			<string>cdhash H"830c372dc71bf6d0e358b76e809a55d745a1a135" or cdhash H"17ba95c90bc0d6672d1dc4e49e72c8dfce67e5c5" or cdhash H"f1d1c39304e94cb2a97d2547a608764bd5bb4622" or cdhash H"e9300dae1bd735e89a11476d27eedc7115847875"</string>
+		</dict>
+		<key>Frameworks/InternetEncodings.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			T+yfpUUXEztfuyuFpS2/6yI+sb8=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"7435f2b5a6505cd1498860be0962c6f737ab2e1c" or cdhash H"4fec9fa54517133b5fbb2b85a52dbfeb223eb1bf" or cdhash H"5aeb34d86a13157a5efa0edec10b76590b5fb1a7" or cdhash H"6e27f3ef9a69cf258489f419201ddcdbcdf9de47"</string>
 		</dict>
 		<key>Frameworks/RegEx.dylib</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			qWQ2ZZQinGJtf9v5ygQKvF01aRY=
+			ebpLuVNmeKMjtFdYnGmbP5QAHGU=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"cb14d9891b21c8f54da2e0e84a00ce0e495f91af" or cdhash H"a964366594229c626d7fdbf9ca040abc5d356916" or cdhash H"77585ce816713d4b9c661c5ac2234add999c2633" or cdhash H"e123ddcebaf985000dc045984f1da4586e8fa9cd"</string>
+			<string>cdhash H"4d11f8a4bae9804bc6abdc5449a470b791934765" or cdhash H"79ba4bb9536678a323b457589c699b3f94001c65" or cdhash H"c5a52b9a5237a1d572f7ba465d04676e5bd289dd" or cdhash H"ec16b606392d642039c0651bb91f3c5feeeabb3b"</string>
 		</dict>
 		<key>Frameworks/Shell.dylib</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			PWB4gC3+J8HC/YGYubAXMlaNUKQ=
+			4vIJ+34xi8PMESSmuxH+VNC04MA=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"0a21ea742a6f24fc5d3ecad66b34708729eec438" or cdhash H"3d6078802dfe27c1c2fd8198b9b01732568d50a4" or cdhash H"1d301639725e04a3b19db7eac82883f150cd6ff0" or cdhash H"dfd278014952163f92dcf543e5faafaa898260a6"</string>
+			<string>cdhash H"52bd891b1252a86a89be2d9ba57e55321349c73f" or cdhash H"e2f209fb7e318bc3cc1124a6bb11fe54d0b4e0c0" or cdhash H"402b12809150833d4dd77d97360c4b61628fbd57" or cdhash H"458f9ee3c8107d5c512437aa114e0d00299f4bf2"</string>
 		</dict>
 		<key>Frameworks/XojoFramework.framework</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			UbM5cTFwI/Scrc1ml32YuHZicxA=
+			VJ3NrkOZk73/ORUwIA/Vva4YSng=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"d243b39f7805500cf99500652f847ee77b68ce6d" or cdhash H"51b33971317023f49cadcd66977d98b876627310" or cdhash H"8865d2d6c830fb3e7eee29aa866422a240e9e73b" or cdhash H"540f614c88ff52e0c6a417e31d0bc66be4e95dec"</string>
+			<string>cdhash H"4f648c41ac2288bdef722952ea5e1429aa4fc731" or cdhash H"549dcdae439993bdff391530200fd5bdae184a78" or cdhash H"58c7acd7a079f0e4deeaa3375b96d49286f3f178" or cdhash H"f6ec4fc9155148cfd4886117b4c2f0bf611332ba"</string>
+		</dict>
+		<key>Frameworks/libGzip.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			FkqWpQ62HBCyq/giiQ0U/WCv8rM=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"0c7b737dd8e3e5297f39c8ce7f6cb336515a33da" or cdhash H"164a96a50eb61c10b2abf822890d14fd60aff2b3" or cdhash H"e806f3a6784384c0abaa839d33ac8baa516e67aa" or cdhash H"3a8e26ab7e11b39ca4d46e77f4aa27cd6fe8826b"</string>
 		</dict>
 		<key>Resources/A_lowercase.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DkFuYz6KrhrhbkwAnxNMj+9HIw0=
+			+KMKAf644/JshMH7Jsdv4TnPSwg=
 			</data>
 			<key>hash2</key>
 			<data>
-			lRSs503TFglUO3I637393WZM1eUsTx/lznDitlAVjQQ=
+			vNr1Bnd2iQcJMsIUX8h2s9KET3+kkkQiLvhCdkzG7Og=
 			</data>
 		</dict>
 		<key>Resources/A_uppercase.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			66VHdkNEtuF7zEFKQ/kz3WhzX6U=
+			ivKMm6JIjgjLXAW1zVqHLa8aMSs=
 			</data>
 			<key>hash2</key>
 			<data>
-			PdN7czFY8HQQzRg1pwCx4fxdKSuXcXAI+s61eCZM+Ws=
+			y26v6xB+sMYmZa2DAonlJ/xMN6s9z0PCO5KNeZhrlE8=
 			</data>
 		</dict>
 		<key>Resources/App.icns</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Z6RE23ZTS404gVqRkJ2rrqjmkWg=
+			ZIgtG4GtZR7lTnmk7uu9Yybahb8=
 			</data>
 			<key>hash2</key>
 			<data>
-			yhOUg0kDMGBQeAUWsOlHE3+xic90Tv0Bz2JXD0xEEMA=
+			PJg9nu7UmYoWpeZE/cLgB9eXuDf6hkkKtmVvDlbYn8Q=
 			</data>
 		</dict>
 		<key>Resources/B_lowercase.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			toVBYVIaI1xht/zgFjfajP3p/3g=
+			zh1nB3wDYwlVcSY9uqOX+kSh4yk=
 			</data>
 			<key>hash2</key>
 			<data>
-			KDkRf1tZ3QhNGOyitxWolmxKJvBnlSVfQ7ftjDDokek=
+			pOJQ8XDVMRftBJhoi3z08cosWHzseMOtfYjAqzvNMBo=
 			</data>
 		</dict>
 		<key>Resources/B_uppercase.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nN+dKI79EoJJ8FXrwY2VCMKHTv4=
+			yt5WsblHDh3TN7LFZiPO2NcxA+g=
 			</data>
 			<key>hash2</key>
 			<data>
-			oEUD09E7tdzzz4SJ8jY7WVEuxfF4YQNhz43ea1ac1Mo=
+			1HdVmNY1Dw5cRyxy3HSpp3dW7I/bDe1BFHbK0IUSjHw=
 			</data>
 		</dict>
 		<key>Resources/C_lowercase.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OcvEprvyc3JUM90ikshpRFvP9hs=
+			PYaC8h/ALmdMj7LeAq0GICl3mdM=
 			</data>
 			<key>hash2</key>
 			<data>
-			53XuM8BilUIdjJcVo9ETEfYnsOLY3WqWHsleSyiZy0A=
+			RAOdUZGc4s0gQYhDYvp9zxYOhEA3uOLy3YP/I9Mj97U=
 			</data>
 		</dict>
 		<key>Resources/C_uppercase.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OWhXIq8OWbjxhtCtHZqUWc3la1s=
+			fniZsehgc2SQRLauMynhj0gNOfo=
 			</data>
 			<key>hash2</key>
 			<data>
-			qFsPmgp93xTzZ/u+nYfz0sLfSSzwz1hNiuaVxQrK8Uc=
+			Euc6cJALpqk7RUzwaS/zR+wcB7TnP4ZA0bf4l10g/Fg=
 			</data>
 		</dict>
 		<key>Resources/KeyHover.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AecDxgHJM4ErxvIngosqKuBECPk=
+			tvVun3KyGw65gtYikGsbIV2OKg8=
 			</data>
 			<key>hash2</key>
 			<data>
-			5iZg0J4pwe6XDrW0El9KZfnRTFBczsHECz2D4xA9m2g=
+			Sb1ag1OLaotZX943lPicbmgcb613epeo/8P3RiQVZMw=
 			</data>
 		</dict>
 		<key>Resources/KeyHoverStretch.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			atV6n5b9JuDF1yZH+cbaUNtAIOo=
+			0o6MiYcmsf4BL4i88IR8giT6fdU=
 			</data>
 			<key>hash2</key>
 			<data>
-			j1T1hgguddJCH6kwI38JHEwj4OO5XBofNi4CdW1yXKc=
+			sE7dVHe8IhDqcJKA1+k2hwax4f+bKfNR7EA2K0tnG/8=
 			</data>
 		</dict>
 		<key>Resources/MegaKeyboard.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hurt4a92uIxfRghZWrjMzw/lVCs=
+			q+JqnGI79JI1tDcgI/o+VHkVMQM=
 			</data>
 			<key>hash2</key>
 			<data>
-			07rQUAklmLfABrY/zjSUIz/tnvKKTrYiHT58QBe4Ndw=
+			O2JNLAzFvh7nRRqArWJlLkVWCCpBO8U675285OlVJUk=
 			</data>
 		</dict>
 		<key>Resources/SD Card Essentials/AUDIOMIX.M65</key>
@@ -568,22 +599,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4XRuR6CjigaeNg5Mb70zhuf8+MI=
+			aXRigGKqzjYoLdL8L5/q2W7rNgc=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ui/QYw9OIJ4PjAU8y3ifomvHP/QZHmfEzfxGCD//Nb8=
+			QYCOFCmvqJsFb+qL5+AmQSJ2yN3aCbJkxyF4g/507Ds=
 			</data>
 		</dict>
 		<key>Resources/add@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jml771b9Y/6mo+1mkz/cpT/7kHE=
+			sbgIUQ4ZddPWmMvWGzZmt9AQtBQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			3x9p1g1kpLnOLBGevBCYr6BB36TfPVFDYLSXh2ELfK8=
+			n14qoPuuYfNeuU2GNB9QBZrO0QIicxzKhTaDO77GCpA=
 			</data>
 		</dict>
 		<key>Resources/bit2core.osx</key>
@@ -634,88 +665,88 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oPR3pKBm6niTePn7tqqeWJk9T5E=
+			E34wuAVdXBgxrnuNh1PNBvSc5cA=
 			</data>
 			<key>hash2</key>
 			<data>
-			vB5MIWPD03f0mZQ7W5q6I/E3HpcLWGJ1S90FHnye3O8=
+			S+wRInMRvSf9RF2cmIfmzXZCW4hv1h3pqmNcyIDxXw8=
 			</data>
 		</dict>
 		<key>Resources/close@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3MOPSyOEs3D6PxBDAR7YzwZM8Ow=
+			0xEQobdssp4we1qRFfd0WtVgDcY=
 			</data>
 			<key>hash2</key>
 			<data>
-			CJrTKubR0q3f58QltMxbifQqjhi3shMo65gdqiuzHtg=
+			3gARwrNlzZPnA0Wn92VbtOSkuviidOTtSKAH+q1EfrY=
 			</data>
 		</dict>
 		<key>Resources/cmdcopyleft.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hoFxpVEP2P4I5uF2E6oxaxbv980=
+			WRpXuWlFXdbbM53Y/F0RaJSgBs4=
 			</data>
 			<key>hash2</key>
 			<data>
-			sarPyNiuZzUc0GGOPsl/6/W6BwG1OouvM/4WxfihPjI=
+			ORIBvKNiPv1Hsw5DV7n0bMeQByV67kIEIqQCrhGFe4s=
 			</data>
 		</dict>
 		<key>Resources/cmdcopyleft@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hcpQb4r++PKqjzQ91tYEaDjdS0Q=
+			VdBOFRaLWJ+p7Q05Tbir6WmDUqk=
 			</data>
 			<key>hash2</key>
 			<data>
-			bp9fldz6KEHJn6n+OKG7Wde6yMp/1z4evFmf4fpgNc8=
+			nH6/w4ZQfMQN2Ruak7Y0H/+wXTJlRfZvqkpTu0p5Gjs=
 			</data>
 		</dict>
 		<key>Resources/cmdcopyright.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			tCaPRuUdQ8MLUbjT+0KxGo9fT8g=
+			ltGuV8EDknw/DUABDCTXBJOcej4=
 			</data>
 			<key>hash2</key>
 			<data>
-			ajobTZIynIVC3gBufh7oAlueapscH40g4y8MhfcwmcI=
+			8P75XJJ4lFjytFUmPfBrBn31sAJvDomwgBx6Q1leH1Q=
 			</data>
 		</dict>
 		<key>Resources/cmdcopyright@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			h3SaSqQxNA/697qWcHTrWuGZDiw=
+			/8wrsXJ7lqLbJ4JgfMnORWKy4cM=
 			</data>
 			<key>hash2</key>
 			<data>
-			ctPY//22G5GD+AN9/ZR5/0XrXNjfMVZxtUvBzbtUAqY=
+			8d14yfoXy+8lTa10hOOcbZb6Lw730ay8+jhGx3cqWz4=
 			</data>
 		</dict>
 		<key>Resources/cmddelete.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CgDoxfRjmQuDqKATIElw7DpxU2c=
+			f+/Qle+A7kyVhlFF9rCpgp9Wd4Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			iGQlWm1bp9V4nJ2vyCGBTf4Pnlgdu/sukiw1xePINJo=
+			z8iDBRUtatjOOYoc3egvx0hWFZ4YUFf2LPNpfAWhN3E=
 			</data>
 		</dict>
 		<key>Resources/cmddelete@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			95cR5wpeqCNOXPJM1ANhBre6X0c=
+			NfTHYW/78+pAzdh91YV7WVplthU=
 			</data>
 			<key>hash2</key>
 			<data>
-			l6Kjofb+B6xhdJPeYn+VvobFxsigdIQ1m+vEVJh4NYA=
+			y5L68kNyfgNbFFlZ/+6YdL0RuQq+vSPVj7pR3Beo6B0=
 			</data>
 		</dict>
 		<key>Resources/connection</key>
@@ -766,88 +797,88 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AMJuZUjvM7RtoOTJTLNBINJLIMQ=
+			h2DUX84rlTYatSghknSNgHrsw4A=
 			</data>
 			<key>hash2</key>
 			<data>
-			IgLL3jqLT6E/BjQmXyCRZJdFq3ONMYJSv46rntsMyjo=
+			fgAW+/rcg8Wiuc/FWG/3DP6QOGalZ2TgrlrkIwqUjtw=
 			</data>
 		</dict>
 		<key>Resources/folderadd@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XAVauLK8zE3Tu1LxkuBvNVsxb2c=
+			rPLj9pGTg5a+3tbH3ObH107/vPo=
 			</data>
 			<key>hash2</key>
 			<data>
-			Hq1OIlVeMjJ+WBC7Z7LuVL4bckCXxAYHSXgAXbNk5h4=
+			H6pdyB+uQ0abDM+dO1j2uss8rfVku8g1xDEVWmJIkCQ=
 			</data>
 		</dict>
 		<key>Resources/folderdel.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ghu4tV84pgv8+D32G94PlBLloFM=
+			aHUKaxsDZ+tuKvGFQ7wQfOq/wQ0=
 			</data>
 			<key>hash2</key>
 			<data>
-			7QUkvepEMawEo1kYiqAkzg0t+859bFnqXHR2igLP7qI=
+			n1BfB+06n6QcRVUSHJtiHwUjTiDjT3cZi91PXtAYJbo=
 			</data>
 		</dict>
 		<key>Resources/folderdel@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8PDPHtvC5e7iMkzF21bnZyVYaZo=
+			J9ID4utAej6j41WQeyLAVV6OsME=
 			</data>
 			<key>hash2</key>
 			<data>
-			dHcKbEUimVWD0hSr218RKiATSgNm3V+2VbuQcqLecms=
+			OG0CGN9GLcYmNsFStasOw6II8l3WU8Zi5BqP//63/1U=
 			</data>
 		</dict>
 		<key>Resources/folderfind.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DVAnVwUJdl3HiDAqP5Xf7MSIRyE=
+			ST4gXbXKLKWdCfn1WCQADXcjjPA=
 			</data>
 			<key>hash2</key>
 			<data>
-			99D9fMMUNGj7X3+nbPYqlwpfYkamwxH3UpK3faSN6ho=
+			XGrTv4JTs7ZieKDB6xU6BGsUvpvhghUWDQhLhRdmiWE=
 			</data>
 		</dict>
 		<key>Resources/folderfind@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lbI/0JEC2ki8D+KL9ZVI7K+EH+U=
+			bFKoEzmQcfzXJj0yiBzXtxAlvAE=
 			</data>
 			<key>hash2</key>
 			<data>
-			bg3pVkBNXy1KALdqyX2GHlcYmQsDOcybJfI8vnh63nc=
+			mgdsA3D0O27G++YsIG3Mfhd825nP5WqGipRIg217TKY=
 			</data>
 		</dict>
 		<key>Resources/info.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qbdaXO8uOOTfyQLMDA5IqgIxR/U=
+			JUd2mN10Lb5jFCp4fCCqEXkxcQg=
 			</data>
 			<key>hash2</key>
 			<data>
-			Gm4AqK94DsAqMYZb/x1C6ZQNqa7NNNlsAgj6ttl3V/A=
+			bt8dhMN17msSJhlV/sCBifngjNBI5KTGguAGxiMEpBo=
 			</data>
 		</dict>
 		<key>Resources/info@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VlQP6m/q7nfjtBaJKixklIA/+0c=
+			Ua3CN+2QLcNebMuH2WrufAY3PJk=
 			</data>
 			<key>hash2</key>
 			<data>
-			oxkoP+g7qH6zhAw4XkLsHJnbP/gd1SISPKFa3e80jFo=
+			TbpqEq+lPxhp8OKEU4kmIEAOtS5pH9eJr7r4RxonCHk=
 			</data>
 		</dict>
 		<key>Resources/libftd2xx.1.4.16.dylib</key>
@@ -861,59 +892,70 @@
 			4lEK9ptnu/sAiocNtsj40KTKtE8j9l/xLejyaoBnaSA=
 			</data>
 		</dict>
-		<key>Resources/libpng16.16.dylib</key>
+		<key>Resources/libftd2xx_arm.1.4.24.dylib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xkFLB+GwhMMy2PZVOSw4rnC9Zds=
+			LF6zDrrjtCmp4qE06sYr9IQj/SA=
 			</data>
 			<key>hash2</key>
 			<data>
-			BBTn2wFEkdW+ZuujFcEspxgYe14JqBSFKUDyF7e9Mgk=
+			UDvWrvY6h8+8t1mEZQxLPn81j/4JQUoz/kgDvMNmbEM=
+			</data>
+		</dict>
+		<key>Resources/libftd2xx_x86.1.4.24.dylib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LF6zDrrjtCmp4qE06sYr9IQj/SA=
+			</data>
+			<key>hash2</key>
+			<data>
+			UDvWrvY6h8+8t1mEZQxLPn81j/4JQUoz/kgDvMNmbEM=
 			</data>
 		</dict>
 		<key>Resources/m65.osx</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6T45n3M8hcfcUdhzDP9XyvzxHJg=
+			06UVlveoLtQyHQxjfJdap+HVQEc=
 			</data>
 			<key>hash2</key>
 			<data>
-			2ftfHlBkdTGLHsayJoQI7AS0/xBKBoqimLjkla7aLNs=
+			z74WtxakmMNQAXaluJjUsxqyLVMghMMY1PDAWi1bmqM=
 			</data>
 		</dict>
 		<key>Resources/m65connect65.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hOl8aVbdDsBHlEsRc02+zaRg2J8=
+			SwAn1C9pH9moRwxTCdaLGmZDmbk=
 			</data>
 			<key>hash2</key>
 			<data>
-			qeeUMXUYtmMErjzLnwFrd7Tjnfz0BfcA1OeUBZOXJWc=
+			2AjIxAe7PSrMUJgIPaNLEJk6UkXuBpu3q2pYVIrJu2E=
 			</data>
 		</dict>
 		<key>Resources/mega65_ftp.osx</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			47K4IJ/3zPdxtSzEwyJbHmjjWpI=
+			Pw3yk59bdJnYdTyuGqPfzhqS1Sg=
 			</data>
 			<key>hash2</key>
 			<data>
-			708DzSKN7UdYGjqQfyphRnooczoBqo1WCT5WZcDLri0=
+			a1oaLH2CAuYEpte9f61jQM77jyz7DMp5S7m5KsOX2kI=
 			</data>
 		</dict>
 		<key>Resources/mega65stripes.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			M3R3wolgr+PbbFJQ21Iws+1s8Yg=
+			5FuPtDDK9R+bsTG8HbfK2/dCsIY=
 			</data>
 			<key>hash2</key>
 			<data>
-			FkzcrNOiRODcjnqY+KUSPyV0KAOvbVQMqAqQ9IBymoQ=
+			2j5Ehsb64bLIrXGYLuBUJ4Dx1yn18csjyvrDiBvYLYQ=
 			</data>
 		</dict>
 		<key>Resources/path</key>
@@ -953,33 +995,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			J5i7bTDX3akSeuC4WKmQ0UO/Atk=
+			lXWHriJqd/09hYMfxikoUieBxJA=
 			</data>
 			<key>hash2</key>
 			<data>
-			eS1KBl5L28WqJtU8W36Q/mHerqW8gYN885kfaNtjKjs=
+			kjJDqaHORdqlg6SEBV659gk69ot5QzlxikFkqqurfc8=
 			</data>
 		</dict>
 		<key>Resources/slash@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			KLWNTsQZSQrzoq0sk8P82WYDygI=
+			fmm8+Gom8nmJ/4c+AJgdo22VzpA=
 			</data>
 			<key>hash2</key>
 			<data>
-			BndRdXHI2t2QRtwNvobAJkLxzVLq5DmaxSFJpimGdUg=
+			8aZfhymtRqU53Alf/SP/9eISGu7Dr7HbRoCOrfyfGHY=
 			</data>
 		</dict>
 		<key>Resources/trashconsole.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yZPi688rIYHy4P47igEDSnZXvS0=
+			w0mdk1YHncwBNZCOAUL1RaFwx4k=
 			</data>
 			<key>hash2</key>
 			<data>
-			UhpkEiR5ri271AHXe4GE3MH4B8fRYq6KAVloPFLWCiM=
+			fgRFvaLV+WItyTdV2gu48+Q/TlxPrVNdJMzxJVgwavI=
 			</data>
 		</dict>
 	</dict>

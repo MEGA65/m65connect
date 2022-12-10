@@ -3,15 +3,15 @@ Protected Class D2XX
 	#tag Method, Flags = &h0
 		Shared Sub FTClose()
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64.dll"
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib"
 		  #EndIf
 		  
 		  #If TargetLinux Then
-		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.8"
+		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.27"
 		  #EndIf
 		  
 		  Var Status As UInt32
@@ -39,17 +39,21 @@ Protected Class D2XX
 		  Var numDevs As UInt64 // Amount of 
 		  
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64.dll"
 		    Var EndOfLine As String = EndOfLine.Windows
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    //Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    // ARM
+		    // Const D2XXLib = "../Resources/libftd2xx_arm.1.4.24.dylib" 
+		    // Intel
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib"
 		    Var EndOfLine As String = EndOfLine.macOS
 		  #EndIf
 		  
 		  #If TargetLinux Then
-		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.8"
+		    Const D2XXLib = "M65Connect Libs/llibftd2xx.so.1.4.27"
 		    Var EndOfLine As String = EndOfLine.UNIX
 		  #EndIf
 		  
@@ -80,17 +84,17 @@ Protected Class D2XX
 	#tag Method, Flags = &h0
 		Shared Sub FTGetBitMode()
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64.dll"
 		    Var EndOfLine As String = EndOfLine.Windows
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib"
 		    Var EndOfLine As String = EndOfLine.macOS
 		  #EndIf
 		  
 		  #If TargetLinux Then
-		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.8"
+		    Const D2XXLib = "M65Connect Libs/llibftd2xx.so.1.4.27"
 		    Var EndOfLine As String = EndOfLine.UNIX
 		  #EndIf
 		  
@@ -119,17 +123,17 @@ Protected Class D2XX
 		  // Windows only funciton (usable only after FTOpen)
 		  // Not properly working, returns sometimes a long Integer value (maybe USB driver problem)
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64.dll"
 		    Var EndOfLine As String = EndOfLine.Windows
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib"
 		    Var EndOfLine As String = EndOfLine.macOS
 		  #EndIf
 		  
 		  #If TargetLinux Then
-		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.8"
+		    Const D2XXLib = "M65Connect Libs/llibftd2xx.so.1.4.27"
 		    Var EndOfLine As String = EndOfLine.UNIX
 		  #EndIf
 		  
@@ -157,17 +161,17 @@ Protected Class D2XX
 	#tag Method, Flags = &h0
 		Shared Function FTGetDeviceInfoDetail() As Integer
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64.dll"
 		    Var EndOfLine As String = Chr(13)
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib"
 		    Var EndOfLine As String = Chr(10)
 		  #EndIf
 		  
 		  #If TargetLinux Then
-		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.8"
+		    Const D2XXLib = "M65Connect Libs/llibftd2xx.so.1.4.27"
 		    Var EndOfLine As String = Chr(10)
 		  #EndIf
 		  
@@ -267,17 +271,17 @@ Protected Class D2XX
 	#tag Method, Flags = &h0
 		Shared Sub FTGetLatencyTimer()
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64.dll"
 		    Var EndOfLine As String = EndOfLine.Windows
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib"
 		    Var EndOfLine As String = EndOfLine.macOS
 		  #EndIf
 		  
 		  #If TargetLinux Then
-		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.8"
+		    Const D2XXLib = "M65Connect Libs/llibftd2xx.so.1.4.27"
 		    Var EndOfLine As String = EndOfLine.UNIX
 		  #EndIf
 		  
@@ -302,17 +306,17 @@ Protected Class D2XX
 	#tag Method, Flags = &h0
 		Shared Sub FTGetQueueStatus()
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64.dll"
 		    Var EndOfLine As String = EndOfLine.Windows
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib"
 		    Var EndOfLine As String = EndOfLine.macOS
 		  #EndIf
 		  
 		  #If TargetLinux Then
-		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.8"
+		    Const D2XXLib = "M65Connect Libs/llibftd2xx.so.1.4.27"
 		    Var EndOfLine As String = EndOfLine.UNIX
 		  #EndIf
 		  
@@ -340,17 +344,17 @@ Protected Class D2XX
 		  // Doc: https://www.ftdichip.com/Support/Documents/ProgramGuides/D2XX_Programmer's_Guide(FT_000071).pdf
 		  
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64.dll"
 		    Var EndOfLine As String = EndOfLine.Windows
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib"
 		    Var EndOfLine As String = EndOfLine.macOS
 		  #EndIf
 		  
 		  #If TargetLinux Then
-		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.8"
+		    Const D2XXLib = "M65Connect Libs/llibftd2xx.so.1.4.27"
 		    Var EndOfLine As String = EndOfLine.UNIX
 		  #EndIf
 		  
@@ -378,17 +382,17 @@ Protected Class D2XX
 	#tag Method, Flags = &h0
 		Shared Sub FTRead()
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64.dll"
 		    Var EndOfLine As String = EndOfLine.Windows
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib"
 		    Var EndOfLine As String = EndOfLine.macOS
 		  #EndIf
 		  
 		  #If TargetLinux Then
-		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.8"
+		    Const D2XXLib = "M65Connect Libs/llibftd2xx.so.1.4.27"
 		    Var EndOfLine As String = EndOfLine.UNIX
 		  #EndIf
 		  
@@ -421,12 +425,12 @@ Protected Class D2XX
 	#tag Method, Flags = &h0
 		Shared Sub FTResetDevice()
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64.dll"
 		    Var EndOfLine As String = EndOfLine.Windows
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib"
 		    Var EndOfLine As String = EndOfLine.macOS
 		  #EndIf
 		  
@@ -458,17 +462,17 @@ Protected Class D2XX
 	#tag Method, Flags = &h0
 		Shared Sub FTSetBaudRate()
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64.dll"
 		    Var EndOfLine As String = EndOfLine.Windows
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib"
 		    Var EndOfLine As String = EndOfLine.macOS
 		  #EndIf
 		  
 		  #If TargetLinux Then
-		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.8"
+		    Const D2XXLib = "M65Connect Libs/llibftd2xx.so.1.4.27"
 		    Var EndOfLine As String = EndOfLine.UNIX
 		  #EndIf
 		  
@@ -494,17 +498,17 @@ Protected Class D2XX
 	#tag Method, Flags = &h0
 		Shared Sub FTSetBitMode()
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64.dll"
 		    Var EndOfLine As String = EndOfLine.Windows
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib"
 		    Var EndOfLine As String = EndOfLine.macOS
 		  #EndIf
 		  
 		  #If TargetLinux Then
-		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.8"
+		    Const D2XXLib = "M65Connect Libs/llibftd2xx.so.1.4.27"
 		    Var EndOfLine As String = EndOfLine.UNIX
 		  #EndIf
 		  
@@ -532,17 +536,17 @@ Protected Class D2XX
 	#tag Method, Flags = &h0
 		Shared Sub FTSetChars()
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64.dll"
 		    Var EndOfLine As String = EndOfLine.Windows
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib"
 		    Var EndOfLine As String = EndOfLine.macOS
 		  #EndIf
 		  
 		  #If TargetLinux Then
-		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.8"
+		    Const D2XXLib = "M65Connect Libs/llibftd2xx.so.1.4.27"
 		    Var EndOfLine As String = EndOfLine.UNIX
 		  #EndIf
 		  
@@ -573,17 +577,17 @@ Protected Class D2XX
 	#tag Method, Flags = &h0
 		Shared Sub FTSetDataCharacteristics()
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64dll"
 		    Var EndOfLine As String = EndOfLine.Windows
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib"
 		    Var EndOfLine As String = EndOfLine.macOS
 		  #EndIf
 		  
 		  #If TargetLinux Then
-		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.8"
+		    Const D2XXLib = "M65Connect Libs/llibftd2xx.so.1.4.27"
 		    Var EndOfLine As String = EndOfLine.UNIX
 		  #EndIf
 		  
@@ -613,17 +617,17 @@ Protected Class D2XX
 	#tag Method, Flags = &h0
 		Shared Sub FTSetFlowControl()
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64.dll"
 		    Var EndOfLine As String = EndOfLine.Windows
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib"
 		    Var EndOfLine As String = EndOfLine.macOS
 		  #EndIf
 		  
 		  #If TargetLinux Then
-		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.8"
+		    Const D2XXLib = "M65Connect Libs/llibftd2xx.so.1.4.27"
 		    Var EndOfLine As String = EndOfLine.UNIX
 		  #EndIf
 		  
@@ -654,17 +658,17 @@ Protected Class D2XX
 	#tag Method, Flags = &h0
 		Shared Sub FTSetLatencyTimer()
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64.dll"
 		    Var EndOfLine As String = EndOfLine.Windows
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib"
 		    Var EndOfLine As String = EndOfLine.macOS
 		  #EndIf
 		  
 		  #If TargetLinux Then
-		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.8"
+		    Const D2XXLib = "M65Connect Libs/llibftd2xx.so.1.4.27"
 		    Var EndOfLine As String = EndOfLine.UNIX
 		  #EndIf
 		  
@@ -689,17 +693,17 @@ Protected Class D2XX
 	#tag Method, Flags = &h0
 		Shared Sub FTSetTimeouts()
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64.dll"
 		    Var EndOfLine As String = EndOfLine.Windows
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib"
 		    Var EndOfLine As String = EndOfLine.macOS
 		  #EndIf
 		  
 		  #If TargetLinux Then
-		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.8"
+		    Const D2XXLib = "M65Connect Libs/llibftd2xx.so.1.4.27"
 		    Var EndOfLine As String = EndOfLine.UNIX
 		  #EndIf
 		  
@@ -726,17 +730,17 @@ Protected Class D2XX
 	#tag Method, Flags = &h0
 		Shared Sub FTSetUSBParameters()
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64.dll"
 		    Var EndOfLine As String = EndOfLine.Windows
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib"
 		    Var EndOfLine As String = EndOfLine.macOS
 		  #EndIf
 		  
 		  #If TargetLinux Then
-		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.8"
+		    Const D2XXLib = "M65Connect Libs/llibftd2xx.so.1.4.27"
 		    Var EndOfLine As String = EndOfLine.UNIX
 		  #EndIf
 		  
@@ -763,17 +767,17 @@ Protected Class D2XX
 	#tag Method, Flags = &h0
 		Shared Sub FTWrite()
 		  #If TargetWindows Then
-		    Const D2XXLib = "ftd2xx.dll"
+		    Const D2XXLib = "ftd2xx64.dll"
 		    Var EndOfLine As String = EndOfLine.Windows
 		  #EndIf
 		  
 		  #If TargetMacOS Then
-		    Const D2XXLib = "../Resources/libftd2xx.1.4.16.dylib"
+		    Const D2XXLib = "../Resources/libftd2xx_x86.1.4.24.dylib"
 		    Var EndOfLine As String = EndOfLine.macOS
 		  #EndIf
 		  
 		  #If TargetLinux Then
-		    Const D2XXLib = "M65Connect Libs/libftd2xx.so.1.4.8"
+		    Const D2XXLib = "M65Connect Libs/llibftd2xx.so.1.4.27"
 		    Var EndOfLine As String = EndOfLine.UNIX
 		  #EndIf
 		  
