@@ -242,10 +242,10 @@ Begin Window MainWindow
       Backdrop        =   1597054975
       DoubleBuffer    =   False
       Enabled         =   True
-      Height          =   24
+      Height          =   23
       Index           =   -2147483648
       InitialParent   =   ""
-      Left            =   963
+      Left            =   960
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   False
@@ -259,7 +259,7 @@ Begin Window MainWindow
       Top             =   76
       Transparent     =   True
       Visible         =   True
-      Width           =   17
+      Width           =   18
    End
    Begin TextField CommandText
       AllowAutoDeactivate=   True
@@ -1872,281 +1872,281 @@ End
 
 	#tag MenuHandler
 		Function CommandDevices() As Boolean Handles CommandDevices.Action
-			// Show infos of all available devices
-			Var Status As Integer
-			Status = D2XX.FTGetDeviceInfoDetail()
+		  // Show infos of all available devices
+		  Var Status As Integer
+		  Status = D2XX.FTGetDeviceInfoDetail()
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function CommandGo64() As Boolean Handles CommandGo64.Action
-			// Go 64 mode
-			M65.Send("Go64", "", "", False, False, "", False)
-			
-			
+		  // Go 64 mode
+		  M65.Send("Go64", "", "", False, False, "", False)
+		  
+		  
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function CommandManualDisCon() As Boolean Handles CommandManualDisCon.Action
-			Terminal.ManualDisConnect()
-			
+		  Terminal.ManualDisConnect()
+		  
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function CommandNTSC() As Boolean Handles CommandNTSC.Action
-			// Switch M65 to NTSC mode
-			M65.Send("NTSC", "", "", False, False, "", False)
-			
-			
+		  // Switch M65 to NTSC mode
+		  M65.Send("NTSC", "", "", False, False, "", False)
+		  
+		  
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function CommandPAL() As Boolean Handles CommandPAL.Action
-			// Switch M65 to PAL mode
-			M65.Send("PAL", "", "", False, False, "", False)
-			
+		  // Switch M65 to PAL mode
+		  M65.Send("PAL", "", "", False, False, "", False)
+		  
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function CommandReset() As Boolean Handles CommandReset.Action
-			// Reset MEGA65
-			M65.Send("Reset", "", "", False, False, "", False)
+		  // Reset MEGA65
+		  M65.Send("Reset", "", "", False, False, "", False)
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function CommandScreenshot() As Boolean Handles CommandScreenshot.Action
-			// Coming from menu
-			WinPreview.M65Mode = False
-			WinPreview.Show
+		  // Coming from menu
+		  WinPreview.M65Mode = False
+		  WinPreview.Show
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function FileApplyROMPatchFile() As Boolean Handles FileApplyROMPatchFile.Action
-			WinApplyPatch.ShowModal()
+		  WinApplyPatch.ShowModal()
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function FileCreateBITfromCOR() As Boolean Handles FileCreateBITfromCOR.Action
-			//WinCreateBITfromCOR.TextSourceFile.Value = ""
-			//WinCreateBITfromCOR.TextName.Value =""
-			//WinCreateBITfromCOR.TextVersion.Value = ""
-			
-			WinCreateBITfromCOR.ShowModal()
+		  //WinCreateBITfromCOR.TextSourceFile.Value = ""
+		  //WinCreateBITfromCOR.TextName.Value =""
+		  //WinCreateBITfromCOR.TextVersion.Value = ""
+		  
+		  WinCreateBITfromCOR.ShowModal()
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function FileCreateCOR() As Boolean Handles FileCreateCOR.Action
-			// Reset COR windows and open it
-			WinCreateCOR.TextSourceFile.Value = ""
-			WinCreateCOR.TextName.Value =""
-			WinCreateCOR.TextVersion.Value = ""
-			
-			WinCreateCOR.ShowModal()
+		  // Reset COR windows and open it
+		  WinCreateCOR.TextSourceFile.Value = ""
+		  WinCreateCOR.TextName.Value =""
+		  WinCreateCOR.TextVersion.Value = ""
+		  
+		  WinCreateCOR.ShowModal()
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function FileCreateMCS() As Boolean Handles FileCreateMCS.Action
-			// Reset MCS windows and open it
-			WinCreateMCS.TextSourceFile.Value = ""
-			
-			WinCreateMCS.ShowModal()
+		  // Reset MCS windows and open it
+		  WinCreateMCS.TextSourceFile.Value = ""
+		  
+		  WinCreateMCS.ShowModal()
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function FileCreateROMPatchFile() As Boolean Handles FileCreateROMPatchFile.Action
-			WinCreatePatch.ShowModal()
-			
+		  WinCreatePatch.ShowModal()
+		  
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function FilePRGAutoload() As Boolean Handles FilePRGAutoload.Action
-			// Create file record list
-			//M65.GetPRGList()
-			
-			If FilePRGAutoload.Value = "Start PRG Autoload" Then
-			PRGListener.RunMode = Timer.RunModes.Multiple
-			FilePRGAutoload.Value  = "Stop PRG Autoload"
-			MainWindow.StatusText.Value = "PRG Autoload started"
-			Else 
-			PRGListener.RunMode = Timer.RunModes.Off
-			FilePRGAutoload.Value  = "Start PRG Autoload"
-			MainWindow.StatusText.Value = "PRG Autoload stopped"
-			End If
-			
-			
+		  // Create file record list
+		  //M65.GetPRGList()
+		  
+		  If FilePRGAutoload.Value = "Start PRG Autoload" Then
+		    PRGListener.RunMode = Timer.RunModes.Multiple
+		    FilePRGAutoload.Value  = "Stop PRG Autoload"
+		    MainWindow.StatusText.Value = "PRG Autoload started"
+		  Else 
+		    PRGListener.RunMode = Timer.RunModes.Off
+		    FilePRGAutoload.Value  = "Start PRG Autoload"
+		    MainWindow.StatusText.Value = "PRG Autoload stopped"
+		  End If
+		  
+		  
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function FileROMConfig() As Boolean Handles FileROMConfig.Action
-			WinROMConfig.ShowModal
-			
+		  WinROMConfig.ShowModal
+		  
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function FileSaveConsoleSelection() As Boolean Handles FileSaveConsoleSelection.Action
-			// Save marked Console text
-			Var Now As DateTime = DateTime.Now
-			Var Current As String = Now.ToString(Locale.Current)
-			Var Digit As New RegEx
-			Digit.searchPattern = "\D"   // Replace non-digit signs from date
-			Digit.replacementPattern = ""
-			Digit.Options.ReplaceAllMatches = True
-			Var LogDate As String = Digit.Replace(Current)
-			
-			// Get savepath and savefile
-			Var Selection As String = Console.SelectedText // Linux: on opening Dialog the selection will be removed
-			Var PreferenceFolder As FolderItem = SpecialFolder.Documents.Child("MEGA65").Child("M65Connect")
-			Var Dialog As New SaveFileDialog
-			Var PathFile As FolderItem
-			Dialog.InitialFolder = PreferenceFolder
-			Dialog.SuggestedFileName = "ConsoleLog" + LogDate + ".txt"
-			PathFile = Dialog.ShowModal
-			// User pressed Save/Ok
-			If PathFile <> Nil Then
-			Var Output As TextOutputStream = TextOutputStream.Create(PathFile) 
-			Output.Write(Selection)
-			Output.Close
-			
-			MainWindow.StatusText.Value = "Console log selection saved"
-			End If
+		  // Save marked Console text
+		  Var Now As DateTime = DateTime.Now
+		  Var Current As String = Now.ToString(Locale.Current)
+		  Var Digit As New RegEx
+		  Digit.searchPattern = "\D"   // Replace non-digit signs from date
+		  Digit.replacementPattern = ""
+		  Digit.Options.ReplaceAllMatches = True
+		  Var LogDate As String = Digit.Replace(Current)
+		  
+		  // Get savepath and savefile
+		  Var Selection As String = Console.SelectedText // Linux: on opening Dialog the selection will be removed
+		  Var PreferenceFolder As FolderItem = SpecialFolder.Documents.Child("MEGA65").Child("M65Connect")
+		  Var Dialog As New SaveFileDialog
+		  Var PathFile As FolderItem
+		  Dialog.InitialFolder = PreferenceFolder
+		  Dialog.SuggestedFileName = "ConsoleLog" + LogDate + ".txt"
+		  PathFile = Dialog.ShowModal
+		  // User pressed Save/Ok
+		  If PathFile <> Nil Then
+		    Var Output As TextOutputStream = TextOutputStream.Create(PathFile) 
+		    Output.Write(Selection)
+		    Output.Close
+		    
+		    MainWindow.StatusText.Value = "Console log selection saved"
+		  End If
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function FileSaveConsoleText() As Boolean Handles FileSaveConsoleText.Action
-			// Save whole Console text
-			Var Now As DateTime = DateTime.Now
-			Var Current As String = Now.ToString(Locale.Current)
-			Var Digit As New RegEx
-			Digit.searchPattern = "\D"   // Find/replace non-digit signs from date
-			Digit.replacementPattern = ""
-			Digit.Options.ReplaceAllMatches = True
-			Var LogDate As String = Digit.Replace(Current)
-			
-			// Get savepath and savefile
-			Var PreferenceFolder As FolderItem = SpecialFolder.Documents.Child("MEGA65").Child("M65Connect")
-			Var Dialog As New SaveFileDialog
-			Var PathFile As FolderItem
-			Dialog.InitialFolder = PreferenceFolder
-			Dialog.SuggestedFileName = "ConsoleLog" + LogDate + ".txt"
-			PathFile = Dialog.ShowModal
-			// User pressed Save/Ok
-			If PathFile <> Nil Then
-			Var Output As TextOutputStream = TextOutputStream.Create(PathFile) 
-			Output.Write(Console.Value)
-			Output.Close
-			
-			MainWindow.StatusText.Value = "Console log saved"
-			End If
-			
+		  // Save whole Console text
+		  Var Now As DateTime = DateTime.Now
+		  Var Current As String = Now.ToString(Locale.Current)
+		  Var Digit As New RegEx
+		  Digit.searchPattern = "\D"   // Find/replace non-digit signs from date
+		  Digit.replacementPattern = ""
+		  Digit.Options.ReplaceAllMatches = True
+		  Var LogDate As String = Digit.Replace(Current)
+		  
+		  // Get savepath and savefile
+		  Var PreferenceFolder As FolderItem = SpecialFolder.Documents.Child("MEGA65").Child("M65Connect")
+		  Var Dialog As New SaveFileDialog
+		  Var PathFile As FolderItem
+		  Dialog.InitialFolder = PreferenceFolder
+		  Dialog.SuggestedFileName = "ConsoleLog" + LogDate + ".txt"
+		  PathFile = Dialog.ShowModal
+		  // User pressed Save/Ok
+		  If PathFile <> Nil Then
+		    Var Output As TextOutputStream = TextOutputStream.Create(PathFile) 
+		    Output.Write(Console.Value)
+		    Output.Close
+		    
+		    MainWindow.StatusText.Value = "Console log saved"
+		  End If
+		  
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function FileSDCard() As Boolean Handles FileSDCard.Action
-			// Open SD Card Manager
-			WinSDCard.ShowModal()
+		  // Open SD Card Manager
+		  WinSDCard.ShowModal()
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function FileSendBasic() As Boolean Handles FileSendBasic.Action
-			WinSendBasic.ShowModal()
+		  WinSendBasic.ShowModal()
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function FileSendBitstream() As Boolean Handles FileSendBitstream.Action
-			// Choose and send Bitstream file
-			MainWindow.SendBIT()
-			
-			
+		  // Choose and send Bitstream file
+		  MainWindow.SendBIT()
+		  
+		  
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function FileSendHickup() As Boolean Handles FileSendHickup.Action
-			// Choose and send a Hickup file
-			MainWindow.SendM65()
+		  // Choose and send a Hickup file
+		  MainWindow.SendM65()
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function FileSendPRG() As Boolean Handles FileSendPRG.Action
-			// Choose and send a PRG file
-			MainWindow.SendPRG()
-			
+		  // Choose and send a PRG file
+		  MainWindow.SendPRG()
+		  
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function FileSendROM() As Boolean Handles FileSendROM.Action
-			// Choose and send a ROM file
-			MainWindow.SendBIN()
+		  // Choose and send a ROM file
+		  MainWindow.SendBIN()
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function FileSendSID() As Boolean Handles FileSendSID.Action
-			// Choose and send a SID file
-			MainWindow.SendSID()
+		  // Choose and send a SID file
+		  MainWindow.SendSID()
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function HelpAbout() As Boolean Handles HelpAbout.Action
-			WinAbout.ShowModal()
-			
+		  WinAbout.ShowModal()
+		  
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function HelpManual() As Boolean Handles HelpManual.Action
-			WinHelp.ShowModal()
-			
+		  WinHelp.ShowModal()
+		  
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function SettingsConnecttion() As Boolean Handles SettingsConnecttion.Action
-			// Show Connection Settings window
-			WinSetConnection.ShowModal()
-			
+		  // Show Connection Settings window
+		  WinSetConnection.ShowModal()
+		  
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function SettingsConsole() As Boolean Handles SettingsConsole.Action
-			// Show Connection Settings window
-			WinSetConsole.ShowModal()
-			
+		  // Show Connection Settings window
+		  WinSetConsole.ShowModal()
+		  
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function SettingsFilePath() As Boolean Handles SettingsFilePath.Action
-			// Show File Path Settings window
-			WinSetPath.ShowModal()
-			
+		  // Show File Path Settings window
+		  WinSetPath.ShowModal()
+		  
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function SettingsFileSend() As Boolean Handles SettingsFileSend.Action
-			WinSetFile.ShowModal()
+		  WinSetFile.ShowModal()
 		End Function
 	#tag EndMenuHandler
 
