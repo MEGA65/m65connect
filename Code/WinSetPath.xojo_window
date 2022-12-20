@@ -581,7 +581,7 @@ Begin Window WinSetPath
          CaptionAlignment=   3
          CaptionDelta    =   0
          CaptionPosition =   1
-         Enabled         =   False
+         Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
          FontUnit        =   0
@@ -625,7 +625,7 @@ Begin Window WinSetPath
          CaptionAlignment=   3
          CaptionDelta    =   0
          CaptionPosition =   1
-         Enabled         =   False
+         Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
          FontUnit        =   0

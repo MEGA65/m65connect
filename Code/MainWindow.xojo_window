@@ -2419,12 +2419,22 @@ End
 		    Else
 		      
 		      // If MEGA65 File Transfer helper is open it flushes the Terminal with "MEGA65FT1.0" > force Reset
-		      If SerialConnect.Read(10, Encodings.UTF8).IndexOf("MEGA65FT") <> -1 Then
-		        M65.Send("Reset", "", "", False, False, "", False)
-		        Exit
-		      End If
+		      'If SerialConnect.Read(10, Encodings.UTF8).IndexOf("MEGA65FT") <> -1 Then
+		      'M65.Send("Reset", "", "", False, False, "", False)
+		      'Exit
+		      'End If
 		      
-		      Console.Value = Console.Value + SerialConnect.ReadAll(Encodings.UTF8)
+		      Var LineFeed As String
+		      #If TargetWindows Then
+		        LineFeed = Chr(13) + Chr(13)
+		      #Else
+		        LineFeed = Chr(10) + Chr(10)
+		      #EndIf
+		      
+		      // balla
+		      // msgbox (SerialConnect.ReadAll(Encodings.UTF8) )
+		      Var Result As String = SerialConnect.ReadAll(Encodings.UTF8)
+		      Console.Value = Console.Value + Result.Mid(2, Result.Length -2).Trim + LineFeed
 		      
 		      Terminal.BufferSize = 0
 		      
@@ -2679,17 +2689,14 @@ End
 		  // Command, action on ENTER key
 		  If Terminal.Mode = "T" Then 
 		    If key = Chr(10) Or key = Chr(13) Then
-		      If CommandText.Value.Trim.Length  > 0 Then
-		        
-		        If Terminal.SetClearConsole Then
-		          Console.Value = ""
-		        End If
-		        
-		        // Send command
-		        SendThread.Write(CommandText.Value.Trim)
-		        
-		        CommandText.Value = ""
+		      If Terminal.SetClearConsole Then
+		        Console.Value = ""
 		      End If
+		      
+		      // Send command
+		      SendThread.Write(CommandText.Value.Trim)
+		      
+		      CommandText.Value = ""
 		    End If
 		  End If
 		  

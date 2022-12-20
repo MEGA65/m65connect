@@ -2730,7 +2730,8 @@ End
 		  
 		  // Check for timeout
 		  TimeOutCurrent = TimeOutCurrent + 100
-		  If TimeOutCurrent >= WinSDCard.FTPBar.MaximumValue  + 5000 Then
+		  // current: 5000
+		  If TimeOutCurrent >= WinSDCard.FTPBar.MaximumValue  + 20000 Then
 		    // Timeout reached
 		    FTPBarTimer.RunMode = Timer.RunModes.Off
 		    

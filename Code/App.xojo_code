@@ -187,7 +187,8 @@ Inherits Application
 		  #If TargetWindows Then
 		    WinSetPath.GroupVivadoPath.Visible = True
 		    If M65.SetPathVivado.Length = 0 Then
-		      M65.LocateVivado()
+		      // todo: to be tested
+		      //M65.LocateVivado()
 		    End If
 		  #Else
 		    // Hide Vivado path settings
