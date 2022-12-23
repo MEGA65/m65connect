@@ -686,3 +686,159 @@ Code/Builds - M65Connect/Windows 64 bit/M65Connect/M65Connect Resources/xc3sprog
 Code/Builds - M65Connect/Windows 64 bit/M65Connect/M65Connect.exe
 Code/Builds - M65Connect/Windows 64 bit/M65Connect/readme_driver_installation.txt
 Code/Builds - M65Connect/Windows 64 bit/M65Connect/XojoGUIFramework64.dll
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/XojoGUIFrameworkARM64.dll
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/vcruntime140_1.dll
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/vcruntime140.dll
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/vccorlib140.dll
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/readme_driver_installation.txt
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/msvcp140.dll
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect.exe
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/xc3sprog.exe
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/README.Win32
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/Readme.JTAG_Timing
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/README
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/multiboot/xtp038.hex
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/multiboot/xtp038.bit
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/multiboot/README
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/multiboot/mb_xc6_spi_0x01_0x19.hex
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/multiboot/mb_xc6_spi_0x01_0x19.bit
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/multiboot/mb_xc6_spi_0x01_0x19.bin
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/libusb0/usb.h
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/javr.exe
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/devlist.txt
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/contrib/xc3sprog_411.bb
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/cablelist.txt
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/byte-order.txt
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc6slx75-t-fg484.bit
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc6slx45-fg484.bit
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc6slx16_cs324.bit
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc6s_t_fg484.ucf
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc6s_fg484.ucf
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc6s_cs324.ucf
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc3se_starter_fg320.ucf
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc3se_starter.bit
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc3se-fg320.ucf
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc3sd3400-fg676.bit.gz
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc3sd1800-fg676.bit
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc3sa_vq100.ucf
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc3sa_vq100.bit
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc3s700an.bit
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc3s50an.bit
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc3s500e_godil.v
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc3s500e_godil.ucf
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc3s500e_godil.bit
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc3s400an.bit
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc3s250e_godil.v
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc3s250e_godil.ucf
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc3s250e_godil.bit
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc3s200an.bit
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/xc3s1400an.bit
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/sp3adsp-fg676.ucf
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/README.txt
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/bscan_xc7_spi.vhd
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/bscan_xc5_spi.vhd
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/bscan_s6_spi_isf_ext.v
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/bscan_s3e_starter.v
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/bscan_s3a_spi_isf_ext.v
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/bscan_s3_spi_isf.vhd
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/bscan_s3_spi_isf.v
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/bscan_spi/bscan_common.v
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/xc3sprog/.DS_Store
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/trashconsole.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/slash@2x.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/slash.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/SD Card Essentials/SPRITED.M65
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/SD Card Essentials/ROMLOAD.M65
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/SD Card Essentials/POPCORN.MOD
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/SD Card Essentials/ONBOARD.M65
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/SD Card Essentials/MONITOR.M65
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/SD Card Essentials/MEGAINFO.M65
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/SD Card Essentials/MAKEDISK.M65
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/SD Card Essentials/M65THUMB.M65
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/SD Card Essentials/FREEZER.M65
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/SD Card Essentials/DEFAULTP.FPK
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/SD Card Essentials/C65THUMB.M65
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/SD Card Essentials/C64THUMB.M65
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/SD Card Essentials/BANNER.M65
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/SD Card Essentials/AUDIOMIX.M65
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/SD Card Essentials/.DS_Store
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/romdiff.exe
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/path
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/MegaKeyboard.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/mega65stripes.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/mega65_ftp.exe
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/m65connect65.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/m65.exe
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/locate_vivado.bat
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/KeyHoverStretch.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/KeyHover.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/info@2x.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/info.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/folderfind@2x.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/folderfind.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/folderdel@2x.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/folderdel.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/folderadd@2x.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/folderadd.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/file
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/emptyd81.bin
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/console
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/connection
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/cmddelete@2x.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/cmddelete.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/cmdcopyright@2x.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/cmdcopyright.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/cmdcopyleft@2x.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/cmdcopyleft.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/close@2x.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/close.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/C_uppercase.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/C_lowercase.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/bzip2.exe
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/bzip2.dll
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/bunzip2.exe
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/bspatch.exe
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/bsdiff.exe
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/bit2mcs.exe
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/bit2core.exe
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/B_uppercase.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/B_lowercase.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/add@2x.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/add.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/A_uppercase.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Resources/A_lowercase.png
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Libs/ShellARM64.dll
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Libs/RegExARM64.dll
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Libs/Internet EncodingsARM64.dll
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Libs/GZipARM64.dll
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Libs/GUIKitARM64.dll
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Libs/CryptoARM64.dll
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/M65Connect Libs/Appearance PakARM64.dll
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/icuuc65.dll
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/icuin65.dll
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/icudt65.dll
+Code/Builds - M65Connect/Windows ARM 64 bit/M65Connect/ftd2xx.dll
+Code/Builds - M65Connect/Windows ARM 64 bit/.DS_Store
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/vcruntime140_1.dll
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/vcruntime140.dll
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/vccorlib140.dll
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/msvcr120.dll
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/msvcp140.dll
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/msvcp120.dll
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/M65Connect Resources/xc3sprog/.DS_Store
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/M65Connect Resources/trashconsole.png
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/M65Connect Resources/SD Card Essentials/BANNER.M65
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/M65Connect Resources/SD Card Essentials/.DS_Store
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/M65Connect Resources/romdiff.exe
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/M65Connect Resources/locate_vivado.bat
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/M65Connect Resources/emptyd81.bin
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/M65Connect Resources/connection
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/M65Connect Resources/bzip2.exe
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/M65Connect Resources/bzip2.dll
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/M65Connect Resources/bunzip2.exe
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/M65Connect Resources/bit2mcs.exe
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/M65Connect Resources/bit2core.exe
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/icuuc65.dll
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/icuin65.dll
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/icudt65.dll
+Code/Builds - M65Connect/Windows 64 bit/M65Connect/ftd2xx.dll
