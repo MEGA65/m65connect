@@ -29,6 +29,7 @@ COMMAND OPERATIONS
 
 - Reset MEGA65
 - Switch to 64 mode
+- Switch to 65 mode
 - Switch graphic mode
 - Take screenshot
 - Dis/Connect to MEGA65 at runtime
@@ -38,8 +39,8 @@ COMMAND OPERATIONS
 
 Hardware Requirements
 ---------------------
-In order to use M65Connect you need a MEGA65 Prototype, DevKit, final MEGA65 or equivalent hardware (Nexys board) with an attached JTAG (TE0790-03) device.
-See further details in the inline manual.
+In order to use M65Connect you need a MEGA65 Prototype, DevKit, final MEGA65 or equivalent hardware (Nexys board) with a LAN cable or an attached JTAG (TE0790-03) device.
+See further details here: https://mega65.atlassian.net/wiki/spaces/MEGA65/pages/48365569/M65Connect
 
 
 Download Builds
@@ -55,6 +56,8 @@ Project Installation
 
 Change Log
 ----------
+- 05/07/2023: V2.2 : Local SD Card support, file restrictions removed, many other minor changes
+- 20/12/2022: V2.1 : Implementation of latest refactored cli tools, minor fixes
 - 18/07/2022: V2.0 : D81 image support added
 - 28/05/2022: V1.9 : Minor changes, support of changed mega65_ftp
 - 05/12/2021: V1.8 : ROM Configurator added, SD Card Manager fix, sub-windows centered, visual adjustment in SD Card Manager
