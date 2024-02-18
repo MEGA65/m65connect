@@ -56,6 +56,7 @@ Project Installation
 
 Change Log
 ----------
+- 16/02/2024: V2.3 : LAN support added, manual moved to Wiki, Go65 added
 - 05/07/2023: V2.2 : Local SD Card support, file restrictions removed, many other minor changes
 - 20/12/2022: V2.1 : Implementation of latest refactored cli tools, minor fixes
 - 18/07/2022: V2.0 : D81 image support added
