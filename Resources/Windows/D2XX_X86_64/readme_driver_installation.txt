@@ -20,7 +20,7 @@ Still not working?
 ------------------
 If it's still not working it's very likely you have installed the wrong drivers. Please uninstall them first from the devices and install other/newer drivers.
 
-To check/test if Windows can find the the USB devices at all, turn the MEGA65 off/on to see if unknown devices appear in the Device Manager of Windows.
+To check/test if Windows can find the USB devices at all, turn the MEGA65 off/on to see if unknown devices appear in the Device Manager of Windows.
 
 Another issue might be, that a frozen instance of M65Connect (or on of its CLI tools) are blocking the ports: Open Task Manager and kill all possible entries called "M65...", "MEGA65..." and "Multifunctional Tool to interact..."
 
