@@ -17,8 +17,6 @@ FILE OPERATIONS
 - Start/Stop PRG Autoload
 - Create ROM patch file
 - Apply ROM patch file
-- Create COR file
-- Create MCS file
 - Send supported file types by Drag&Drop
 - Access the internal SD Card by the SD Card Manager
 - Customize ROMs with the ROM Configurator
