@@ -45,6 +45,9 @@ Download Builds
 ---------------
 You can download the latest builds for Windows, Mac and Linux from here: https://files.mega65.org
 
+Manual
+------
+The online manual of M65Connect can be found here: https://mega65.atlassian.net/wiki/spaces/MEGA65/pages/48365569/M65Connect
 
 Project Installation
 --------------------
